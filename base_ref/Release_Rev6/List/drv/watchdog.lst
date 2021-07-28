@@ -1,0 +1,176 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:30
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\watchdog.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\watchdog.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\watchdog.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\watchdog.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\watchdog.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\watchdog.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\watchdog.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "watchdog.h"
+     32          /*
+     33           * 看门狗使能函数
+     34           * 打开看门狗
+     35           */
+
+   \                                 In section .text, align 2, keep-with-next
+     36          void enable_watchdog()
+     37          {
+   \                     enable_watchdog: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     38          
+     39              RCC_ClearFlag();
+   \        0x2   0x.... 0x....      BL       RCC_ClearFlag
+     40          
+     41              RCC_APB1PeriphClockCmd(RCC_APB1Periph_WWDG, ENABLE);
+   \        0x6   0x2101             MOVS     R1,#+1
+   \        0x8   0xF44F 0x6000      MOV      R0,#+2048
+   \        0xC   0x.... 0x....      BL       RCC_APB1PeriphClockCmd
+     42              WWDG_SetPrescaler(WWDG_Prescaler_8);
+   \       0x10   0xF44F 0x70C0      MOV      R0,#+384
+   \       0x14   0x.... 0x....      BL       WWDG_SetPrescaler
+     43              WWDG_SetWindowValue(127);
+   \       0x18   0x207F             MOVS     R0,#+127
+   \       0x1A   0x.... 0x....      BL       WWDG_SetWindowValue
+     44              WWDG_Enable(127);
+   \       0x1E   0xE8BD 0x4002      POP      {R1,LR}
+   \       0x22   0x207F             MOVS     R0,#+127
+   \       0x24   0x.... 0x....      B.W      WWDG_Enable
+     45          }
+     46          /*
+     47           * 看门狗禁止函数
+     48           * 关闭看门狗
+     49           */
+
+   \                                 In section .text, align 2, keep-with-next
+     50          void disable_watchdog()
+     51          {
+   \                     disable_watchdog: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     52          
+     53              mark_watchdog();
+   \        0x2   0x207F             MOVS     R0,#+127
+   \        0x4   0x.... 0x....      BL       WWDG_SetCounter
+     54              RCC_APB1PeriphClockCmd(RCC_APB1Periph_WWDG, DISABLE);
+   \        0x8   0xE8BD 0x4004      POP      {R2,LR}
+   \        0xC   0x2100             MOVS     R1,#+0
+   \        0xE   0xF44F 0x6000      MOV      R0,#+2048
+   \       0x12   0x.... 0x....      B.W      RCC_APB1PeriphClockCmd
+     55          }
+     56          /*
+     57           * 喂狗函数
+     58           */
+
+   \                                 In section .text, align 2, keep-with-next
+     59          void mark_watchdog()
+     60          {
+     61              WWDG_SetCounter(127);
+   \                     mark_watchdog: (+1)
+   \        0x0   0x207F             MOVS     R0,#+127
+   \        0x2   0x.... 0x....      B.W      WWDG_SetCounter
+     62          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   disable_watchdog
+         0   -> RCC_APB1PeriphClockCmd
+         8   -> WWDG_SetCounter
+       8   enable_watchdog
+         8   -> RCC_APB1PeriphClockCmd
+         8   -> RCC_ClearFlag
+         0   -> WWDG_Enable
+         8   -> WWDG_SetPrescaler
+         8   -> WWDG_SetWindowValue
+       0   mark_watchdog
+         0   -> WWDG_SetCounter
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      22  disable_watchdog
+      40  enable_watchdog
+       6  mark_watchdog
+
+ 
+ 68 bytes in section .text
+ 
+ 68 bytes of CODE memory
+
+Errors: none
+Warnings: none

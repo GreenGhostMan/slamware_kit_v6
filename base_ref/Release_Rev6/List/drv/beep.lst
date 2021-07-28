@@ -1,0 +1,491 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:28
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\beep.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\beep.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\beep.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\beep.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\beep.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\beep.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\beep.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "beep.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void _delay_ms(uint32_t)
+   \                     _delay_ms: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x4604             MOV      R4,R0
+   \        0x4   0xE003             B.N      ??_delay_ms_0
+   \                     ??_delay_ms_1: (+1)
+   \        0x6   0xF44F 0x707A      MOV      R0,#+1000
+   \        0xA   0x.... 0x....      BL       _delay_us
+   \                     ??_delay_ms_0: (+1)
+   \        0xE   0x4620             MOV      R0,R4
+   \       0x10   0x1E44             SUBS     R4,R0,#+1
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0xD1F7             BNE.N    ??_delay_ms_1
+   \       0x16   0xBD10             POP      {R4,PC}
+     32          
+
+   \                                 In section .bss, align 4
+     33          static _u32 _delay = 0;
+   \                     _delay:
+   \        0x0                      DS8 4
+   \        0x4                      DS8 4
+     34          static _u32 _startMs = 0;
+     35          /*
+     36           * 蜂鸣器初始化函数
+     37           * PWM输出，频率可调
+     38           */
+
+   \                                 In section .text, align 2, keep-with-next
+     39          void init_beep(void)
+     40          {
+   \                     init_beep: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xB088             SUB      SP,SP,#+32
+     41              GPIO_InitTypeDef GPIO_InitStructure;
+     42              TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+     43              TIM_OCInitTypeDef TIM_OCInitStructure;
+     44          
+     45              RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+   \        0x4   0x2101             MOVS     R1,#+1
+   \        0x6   0x2001             MOVS     R0,#+1
+   \        0x8   0x.... 0x....      BL       RCC_APB1PeriphClockCmd
+     46              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+   \        0xC   0x2101             MOVS     R1,#+1
+   \        0xE   0x2004             MOVS     R0,#+4
+   \       0x10   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     47              RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+   \       0x14   0x2101             MOVS     R1,#+1
+   \       0x16   0x2001             MOVS     R0,#+1
+   \       0x18   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     48              GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable, ENABLE);
+   \       0x1C   0x2101             MOVS     R1,#+1
+   \       0x1E   0x....             LDR.N    R0,??DataTable5
+   \       0x20   0x.... 0x....      BL       GPIO_PinRemapConfig
+     49              GPIO_PinRemapConfig(GPIO_FullRemap_TIM2, ENABLE);
+   \       0x24   0x2101             MOVS     R1,#+1
+   \       0x26   0x....             LDR.N    R0,??DataTable5_1
+   \       0x28   0x.... 0x....      BL       GPIO_PinRemapConfig
+     50          
+     51              GPIO_InitStructure.GPIO_Pin = BEEP_PIN;
+   \       0x2C   0xF44F 0x4000      MOV      R0,#+32768
+     52              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+   \       0x30   0x2118             MOVS     R1,#+24
+   \       0x32   0xF8AD 0x0000      STRH     R0,[SP, #+0]
+   \       0x36   0xF88D 0x1003      STRB     R1,[SP, #+3]
+     53              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+   \       0x3A   0x2203             MOVS     R2,#+3
+   \       0x3C   0xF88D 0x2002      STRB     R2,[SP, #+2]
+     54              GPIO_Init(BEEP_GPIO, &GPIO_InitStructure);
+   \       0x40   0x.... 0x....      BL       ?Subroutine1
+     55              TIM_TimeBaseStructure.TIM_Period = TIME_PERIOD;
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x44   0x21FF             MOVS     R1,#+255
+   \       0x46   0xF8AD 0x1008      STRH     R1,[SP, #+8]
+     56              TIM_TimeBaseStructure.TIM_Prescaler = CPU_FREQ / TIME_PRESCALER / BEEP_INIT_HZ;
+   \       0x4A   0x22B3             MOVS     R2,#+179
+     57              TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+   \       0x4C   0x2100             MOVS     R1,#+0
+   \       0x4E   0xF8AD 0x100A      STRH     R1,[SP, #+10]
+     58              TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+   \       0x52   0xF8AD 0x1006      STRH     R1,[SP, #+6]
+   \       0x56   0xF8AD 0x2004      STRH     R2,[SP, #+4]
+     59              TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
+   \       0x5A   0xA901             ADD      R1,SP,#+4
+   \       0x5C   0xF04F 0x4080      MOV      R0,#+1073741824
+   \       0x60   0x.... 0x....      BL       TIM_TimeBaseInit
+     60          
+     61              TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
+     62              TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   \       0x64   0x2201             MOVS     R2,#+1
+   \       0x66   0xF8AD 0x2012      STRH     R2,[SP, #+18]
+     63              TIM_OCInitStructure.TIM_Pulse = 1;
+   \       0x6A   0xF8AD 0x2016      STRH     R2,[SP, #+22]
+   \       0x6E   0x2170             MOVS     R1,#+112
+   \       0x70   0xF8AD 0x1010      STRH     R1,[SP, #+16]
+     64              TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_High;
+   \       0x74   0x2200             MOVS     R2,#+0
+   \       0x76   0xF8AD 0x2018      STRH     R2,[SP, #+24]
+     65              TIM_OC1Init(TIM2, &TIM_OCInitStructure);
+   \       0x7A   0xA904             ADD      R1,SP,#+16
+   \       0x7C   0xF04F 0x4080      MOV      R0,#+1073741824
+   \       0x80   0x.... 0x....      BL       TIM_OC1Init
+     66          
+     67              TIM_CtrlPWMOutputs(TIM2, ENABLE);
+   \       0x84   0x2101             MOVS     R1,#+1
+   \       0x86   0xF04F 0x4080      MOV      R0,#+1073741824
+   \       0x8A   0x.... 0x....      BL       TIM_CtrlPWMOutputs
+     68              TIM_OC1PreloadConfig(TIM2, TIM_OCPreload_Enable);
+   \       0x8E   0x2108             MOVS     R1,#+8
+   \       0x90   0xF04F 0x4080      MOV      R0,#+1073741824
+   \       0x94   0x.... 0x....      BL       TIM_OC1PreloadConfig
+     69              TIM_ARRPreloadConfig(TIM2, ENABLE);
+   \       0x98   0x2101             MOVS     R1,#+1
+   \       0x9A   0xF04F 0x4080      MOV      R0,#+1073741824
+   \       0x9E   0x.... 0x....      BL       TIM_ARRPreloadConfig
+     70              TIM_Cmd(TIM2, ENABLE);
+   \       0xA2   0x2101             MOVS     R1,#+1
+   \       0xA4   0xF04F 0x4080      MOV      R0,#+1073741824
+   \       0xA8   0x.... 0x....      BL       TIM_Cmd
+     71          }
+   \       0xAC   0xB009             ADD      SP,SP,#+36
+   \       0xAE   0xBD00             POP      {PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine1: (+1)
+   \        0x0   0x4669             MOV      R1,SP
+   \        0x2   0x....             LDR.N    R0,??DataTable5_2
+   \        0x4   0x.... 0x....      B.W      GPIO_Init
+     72          /*
+     73           * 蜂鸣器使能函数
+     74           */
+     75          static void enable_beep(void)
+     76          {
+     77              GPIO_InitTypeDef GPIO_InitStructure;
+     78              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+     79              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
+     80          
+     81              GPIO_InitStructure.GPIO_Pin = BEEP_PIN;
+     82              GPIO_Init(BEEP_GPIO, &GPIO_InitStructure);
+     83          }
+     84          /*
+     85           * 蜂鸣器禁止函数
+     86           */
+     87          static void disable_beep(void)
+     88          {
+     89              GPIO_InitTypeDef GPIO_InitStructure;
+     90              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+     91              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+     92          
+     93              GPIO_InitStructure.GPIO_Pin = BEEP_PIN;
+     94              GPIO_Init(BEEP_GPIO, &GPIO_InitStructure);
+     95          }
+     96          /*
+     97           * 蜂鸣器打开函数
+     98           */
+
+   \                                 In section .text, align 2, keep-with-next
+     99          static void start_beep(void)
+    100          {
+   \                     start_beep: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    101              enable_beep();
+   \        0x2   0x2003             MOVS     R0,#+3
+   \        0x4   0x2118             MOVS     R1,#+24
+   \        0x6   0x....             B.N      ?Subroutine0
+    102          }
+    103          /*
+    104           * 蜂鸣器关闭函数
+    105           */
+
+   \                                 In section .text, align 2, keep-with-next
+    106          static void stop_beep(void)
+    107          {
+   \                     stop_beep: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    108              disable_beep();
+   \        0x2   0x2003             MOVS     R0,#+3
+   \        0x4   0x2110             MOVS     R1,#+16
+   \        0x6                      REQUIRE ?Subroutine0
+   \        0x6                      ;; // Fall through to label ?Subroutine0
+    109          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0xF88D 0x0002      STRB     R0,[SP, #+2]
+   \        0x4   0xF88D 0x1003      STRB     R1,[SP, #+3]
+   \        0x8   0xF44F 0x4200      MOV      R2,#+32768
+   \        0xC   0xF8AD 0x2000      STRH     R2,[SP, #+0]
+   \       0x10   0x.... 0x....      BL       ?Subroutine1
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0x14   0xBD01             POP      {R0,PC}
+    110          
+
+   \                                 In section .data, align 4
+   \        0x0   0x0000'0000        DC32 0, 1'046, 1'175, 1'318, 1'397, 1'568, 1'760, 1'976
+
+   \              0x0000'0416  
+
+   \              0x0000'0497  
+
+   \              0x0000'0526  
+
+   \              0x0000'0575  
+
+   \              0x0000'0620  
+
+   \              0x0000'06E0  
+
+   \              0x0000'07B8
+    111          static _u32 HighFrequency[] = { 0, 1046, 1175, 1318, 1397, 1568, 1760, 1976 };          //高频发声
+    112          /*
+    113           * 蜂鸣器PWM频率设置函数
+    114           */
+    115          static void set_beep_frequency(_u32 frequency)
+    116          {
+    117              TIM2->PSC = CPU_FREQ / TIME_PRESCALER / frequency;
+    118          }
+    119          /*
+    120           * 蜂鸣器PWM脉宽设置函数
+    121           */
+    122          static void set_beep_sound(_u32 sound)
+    123          {
+    124              TIM2->CCR1 = sound;
+    125          }
+    126          /*
+    127           * 蜂鸣器上电特定发声函数
+    128           */
+
+   \                                 In section .text, align 2, keep-with-next
+    129          void play_poweron(void)
+    130          {
+   \                     play_poweron: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    131              stop_beep();
+   \        0x2   0x.... 0x....      BL       stop_beep
+    132              set_beep_frequency(HighFrequency[5]);
+   \        0x6   0x....             LDR.N    R4,??DataTable5_3
+   \        0x8   0x20B3             MOVS     R0,#+179
+   \        0xA   0x8020             STRH     R0,[R4, #+0]
+    133              start_beep();
+   \        0xC   0x.... 0x....      BL       start_beep
+    134              _delay_ms(500);
+   \       0x10   0xF44F 0x70FA      MOV      R0,#+500
+   \       0x14   0x.... 0x....      BL       _delay_ms
+    135              stop_beep();
+   \       0x18   0x.... 0x....      BL       stop_beep
+    136              _delay_ms(800);
+   \       0x1C   0xF44F 0x7048      MOV      R0,#+800
+   \       0x20   0x.... 0x....      BL       _delay_ms
+    137              set_beep_frequency(HighFrequency[5]);
+   \       0x24   0x20B3             MOVS     R0,#+179
+   \       0x26   0x8020             STRH     R0,[R4, #+0]
+    138              start_beep();
+   \       0x28   0x.... 0x....      BL       start_beep
+    139              _delay_ms(500);
+   \       0x2C   0xF44F 0x70FA      MOV      R0,#+500
+   \       0x30   0x.... 0x....      BL       _delay_ms
+    140              stop_beep();
+   \       0x34   0xE8BD 0x4010      POP      {R4,LR}
+   \       0x38   0x....             B.N      stop_beep
+    141          }
+    142          /*
+    143           * 蜂鸣器任意发声函数
+    144           */
+
+   \                                 In section .text, align 2, keep-with-next
+    145          void beep_beeper(_u32 frequency, _u32 delay, _u8 sound)
+    146          {
+   \                     beep_beeper: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+    147              _delay = delay;
+   \        0x2   0x....             LDR.N    R6,??DataTable5_4
+   \        0x4   0x6031             STR      R1,[R6, #+0]
+   \        0x6   0x4604             MOV      R4,R0
+   \        0x8   0x4615             MOV      R5,R2
+    148              _startMs = getms();
+   \        0xA   0x.... 0x....      BL       getms
+   \        0xE   0x6070             STR      R0,[R6, #+4]
+    149              stop_beep();
+   \       0x10   0x.... 0x....      BL       stop_beep
+    150              set_beep_sound(sound);
+   \       0x14   0x....             LDR.N    R0,??DataTable5_3
+    151              set_beep_frequency(frequency);
+   \       0x16   0x....             LDR.N    R1,??DataTable5_5
+   \       0x18   0x8185             STRH     R5,[R0, #+12]
+   \       0x1A   0xFBB1 0xF1F4      UDIV     R1,R1,R4
+   \       0x1E   0x8001             STRH     R1,[R0, #+0]
+    152              start_beep();
+   \       0x20   0xE8BD 0x4070      POP      {R4-R6,LR}
+   \       0x24   0x....             B.N      start_beep
+    153          }
+    154          /*
+    155           * 蜂鸣器延时关闭函数
+    156           */
+
+   \                                 In section .text, align 2, keep-with-next
+    157          void heartbeat_beep(void)
+    158          {
+   \                     heartbeat_beep: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    159              if ((getms() - _startMs) > _delay) {
+   \        0x2   0x.... 0x....      BL       getms
+   \        0x6   0x....             LDR.N    R1,??DataTable5_4
+   \        0x8   0x680A             LDR      R2,[R1, #+0]
+   \        0xA   0x6849             LDR      R1,[R1, #+4]
+   \        0xC   0x1A40             SUBS     R0,R0,R1
+   \        0xE   0x4282             CMP      R2,R0
+   \       0x10   0xD202             BCS.N    ??heartbeat_beep_0
+    160                  stop_beep();
+   \       0x12   0xE8BD 0x4001      POP      {R0,LR}
+   \       0x16   0x....             B.N      stop_beep
+    161              }
+    162          }
+   \                     ??heartbeat_beep_0: (+1)
+   \       0x18   0xBD01             POP      {R0,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \        0x0   0x0030'0200        DC32     0x300200
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \        0x0   0x0018'0300        DC32     0x180300
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_2:
+   \        0x0   0x4001'0800        DC32     0x40010800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_3:
+   \        0x0   0x4000'0028        DC32     0x40000028
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_4:
+   \        0x0   0x....'....        DC32     _delay
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_5:
+   \        0x0   0x0004'4AA2        DC32     0x44aa2
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   _delay_ms
+         8   -> _delay_us
+      16   beep_beeper
+        16   -> getms
+         0   -> start_beep
+        16   -> stop_beep
+       8   heartbeat_beep
+         8   -> getms
+         0   -> stop_beep
+      40   init_beep
+        40   -> GPIO_Init
+        40   -> GPIO_PinRemapConfig
+        40   -> RCC_APB1PeriphClockCmd
+        40   -> RCC_APB2PeriphClockCmd
+        40   -> TIM_ARRPreloadConfig
+        40   -> TIM_Cmd
+        40   -> TIM_CtrlPWMOutputs
+        40   -> TIM_OC1Init
+        40   -> TIM_OC1PreloadConfig
+        40   -> TIM_TimeBaseInit
+       8   play_poweron
+         8   -> _delay_ms
+         8   -> start_beep
+         0   -> stop_beep
+         8   -> stop_beep
+       8   start_beep
+         8   -> GPIO_Init
+       8   stop_beep
+         8   -> GPIO_Init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+       4  ??DataTable5_5
+      22  ?Subroutine0
+       8  ?Subroutine1
+      32  HighFrequency
+       8  _delay
+          _startMs
+      24  _delay_ms
+      38  beep_beeper
+      26  heartbeat_beep
+     176  init_beep
+      58  play_poweron
+       8  start_beep
+       6  stop_beep
+
+ 
+   8 bytes in section .bss
+  32 bytes in section .data
+ 390 bytes in section .text
+ 
+ 390 bytes of CODE memory
+  40 bytes of DATA memory
+
+Errors: none
+Warnings: none

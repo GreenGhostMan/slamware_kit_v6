@@ -1,0 +1,317 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:29
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\serial_channel.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\serial_channel.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\serial_channel.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\serial_channel.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\serial_channel.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\serial_channel.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\serial_channel.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+     32          #include "drv/serial_channel.h"
+     33          
+
+   \                                 In section .bss, align 4
+     34          static infra_channel_desc_t _channel;
+   \                     _channel:
+   \        0x0                      DS8 32
+   \       0x20                      DS8 4
+   \       0x24                      DS8 512
+     35          static interchip_rx_proc_t _rx_proc;
+     36          
+     37          //串口通道的接收缓存区
+     38          static _u8 _serialRxBuffer[CONFIG_DRV_SERIALCHANNEL_RXBUFFERSIZE];
+     39          
+     40          /*
+     41           * 串口中断回调函数
+     42           * 串口接收中断里会调用该函数
+     43           */
+
+   \                                 In section .text, align 2, keep-with-next
+     44          static void _serial_on_rx_t(int id, _u32 data)
+     45          {
+   \                     _serial_on_rx_t: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable5
+   \        0x2   0x6A03             LDR      R3,[R0, #+32]
+   \        0x4   0x2B00             CMP      R3,#+0
+   \        0x6   0xD100             BNE.N    ??_serial_on_rx_t_0
+   \        0x8   0x4770             BX       LR
+   \                     ??_serial_on_rx_t_0: (+1)
+   \        0xA   0xB580             PUSH     {R7,LR}
+     46              if (_rx_proc) {
+     47                  _u8 data_u8 = data;
+   \        0xC   0xF88D 0x1000      STRB     R1,[SP, #+0]
+     48                  _rx_proc(&_channel, &data_u8, 1);
+   \       0x10   0x2201             MOVS     R2,#+1
+   \       0x12   0x4669             MOV      R1,SP
+   \       0x14   0x4798             BLX      R3
+     49              }
+     50          
+     51          }
+   \       0x16   0xBD01             POP      {R0,PC}
+     52          /*
+     53           * 注册上层协议函数
+     54           * 指定了该串口通道下对应的上层协议，如interchip
+     55           */
+
+   \                                 In section .text, align 2, keep-with-next
+     56          static void _register_rx_callback(infra_channel_desc_t * handle, interchip_rx_proc_t proc)
+     57          {
+     58              _rx_proc = proc;
+   \                     _register_rx_callback: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable5
+   \        0x2   0x6201             STR      R1,[R0, #+32]
+     59          }
+   \        0x4   0x4770             BX       LR
+     60          /*
+     61           * 串口通道设置数据到发送缓存区函数
+     62           * 调用更底层的环形发送缓存区来缓存
+     63           */
+
+   \                                 In section .text, align 2, keep-with-next
+     64          static _s32 _set_tx_buffer(infra_channel_desc_t * handle, const void *data, size_t size, size_t offset)
+     65          {
+     66              return usart_txbuffer_set((USART_TypeDef *) _channel._medialayer_data, data, size, offset);
+   \                     _set_tx_buffer: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable5
+   \        0x2   0x6840             LDR      R0,[R0, #+4]
+   \        0x4   0x.... 0x....      B.W      usart_txbuffer_set
+     67          }
+     68          /*
+     69           * 串口通道发送函数
+     70           * 调用等底层的发送函数将环形缓存区的数据全部发送出去
+     71           */
+
+   \                                 In section .text, align 2, keep-with-next
+     72          static void _flush_tx(infra_channel_desc_t * handle, size_t size)
+     73          {
+     74              usart_txbuffer_flush((USART_TypeDef *) _channel._medialayer_data, size);
+   \                     _flush_tx: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable5
+   \        0x2   0x6840             LDR      R0,[R0, #+4]
+   \        0x4   0x.... 0x....      B.W      usart_txbuffer_flush
+     75          }
+     76          /*
+     77           * 串口初始化函数
+     78           * 指定了接收缓存区，接收中断的回调函数等
+     79           */
+
+   \                                 In section .text, align 2, keep-with-next
+     80          _s32 drv_serialchannel_init(USART_TypeDef * USARTx, _u32 baud)
+     81          {
+   \                     drv_serialchannel_init: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x4604             MOV      R4,R0
+     82              if (!usart_begin(USARTx, baud))
+   \        0x4   0x.... 0x....      BL       usart_begin
+   \        0x8   0xB1A8             CBZ.N    R0,??drv_serialchannel_init_0
+     83                  return 0;
+     84          
+     85              _rx_proc = NULL;
+   \        0xA   0x....             LDR.N    R0,??DataTable5
+   \        0xC   0x2100             MOVS     R1,#+0
+   \        0xE   0x6201             STR      R1,[R0, #+32]
+     86              _channel.rxbuffer = _serialRxBuffer;
+   \       0x10   0xF100 0x0224      ADD      R2,R0,#+36
+     87              _channel._medialayer_data = USARTx;
+     88              _channel.register_rx_callback = &_register_rx_callback;
+   \       0x14   0x....             LDR.N    R1,??DataTable5_1
+   \       0x16   0x6081             STR      R1,[R0, #+8]
+   \       0x18   0x6002             STR      R2,[R0, #+0]
+   \       0x1A   0x6044             STR      R4,[R0, #+4]
+     89              _channel.tx_buffer_set = &_set_tx_buffer;
+     90              _channel.tx_flush = &_flush_tx;
+   \       0x1C   0x....             LDR.N    R1,??DataTable5_2
+   \       0x1E   0x....             LDR.N    R2,??DataTable5_3
+   \       0x20   0x6101             STR      R1,[R0, #+16]
+   \       0x22   0x60C2             STR      R2,[R0, #+12]
+     91          
+     92              _channel.rxbuffersize = sizeof(_serialRxBuffer);
+   \       0x24   0xF44F 0x7100      MOV      R1,#+512
+   \       0x28   0x8281             STRH     R1,[R0, #+20]
+     93              _channel.txbuffersize = CONFIG_DRV_SERIALCHANNEL_TXBUFFERSIZE;
+   \       0x2A   0x82C1             STRH     R1,[R0, #+22]
+     94          
+     95              usart_setrecv_func(USARTx, _serial_on_rx_t);
+   \       0x2C   0x4620             MOV      R0,R4
+   \       0x2E   0x....             LDR.N    R1,??DataTable5_4
+   \       0x30   0x.... 0x....      BL       usart_setrecv_func
+     96          
+     97              return 1;
+   \       0x34   0x2001             MOVS     R0,#+1
+   \                     ??drv_serialchannel_init_0: (+1)
+   \       0x36   0xBD10             POP      {R4,PC}
+     98          }
+     99          /*
+    100           * 串口通道关闭函数
+    101           * 取消绑定的中断接收回调函数和该串口通道对应的uart
+    102           */
+
+   \                                 In section .text, align 2, keep-with-next
+    103          void drv_serialchannel_shutdown(USART_TypeDef * USARTx)
+    104          {
+   \                     drv_serialchannel_shutdown: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x4604             MOV      R4,R0
+    105              usart_setrecv_func(USARTx, NULL);
+   \        0x4   0x2100             MOVS     R1,#+0
+   \        0x6   0x.... 0x....      BL       usart_setrecv_func
+    106              usart_shutdown(USARTx);
+   \        0xA   0x4620             MOV      R0,R4
+   \        0xC   0xE8BD 0x4010      POP      {R4,LR}
+   \       0x10   0x.... 0x....      B.W      usart_shutdown
+    107          }
+    108          /*
+    109           * 获取当前串口通道函数
+    110           */
+
+   \                                 In section .text, align 2, keep-with-next
+    111          infra_channel_desc_t *drv_serialchannel_getchannel()
+    112          {
+    113              return &_channel;
+   \                     drv_serialchannel_getchannel: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable5
+   \        0x2   0x4770             BX       LR
+    114          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \        0x0   0x....'....        DC32     _channel
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \        0x0   0x....'....        DC32     _register_rx_callback
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_2:
+   \        0x0   0x....'....        DC32     _flush_tx
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_3:
+   \        0x0   0x....'....        DC32     _set_tx_buffer
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_4:
+   \        0x0   0x....'....        DC32     _serial_on_rx_t
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   _flush_tx
+         0   -> usart_txbuffer_flush
+       0   _register_rx_callback
+       8   _serial_on_rx_t
+         8   -- Indirect call
+       0   _set_tx_buffer
+         0   -> usart_txbuffer_set
+       0   drv_serialchannel_getchannel
+       8   drv_serialchannel_init
+         8   -> usart_begin
+         8   -> usart_setrecv_func
+       8   drv_serialchannel_shutdown
+         8   -> usart_setrecv_func
+         0   -> usart_shutdown
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+       4  ??DataTable5_2
+       4  ??DataTable5_3
+       4  ??DataTable5_4
+     548  _channel
+          _rx_proc
+          _serialRxBuffer
+       8  _flush_tx
+       6  _register_rx_callback
+      24  _serial_on_rx_t
+       8  _set_tx_buffer
+       4  drv_serialchannel_getchannel
+      56  drv_serialchannel_init
+      20  drv_serialchannel_shutdown
+
+ 
+ 548 bytes in section .bss
+ 146 bytes in section .text
+ 
+ 146 bytes of CODE memory
+ 548 bytes of DATA memory
+
+Errors: none
+Warnings: none

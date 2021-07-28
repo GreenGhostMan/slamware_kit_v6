@@ -1,0 +1,852 @@
+###############################################################################
+#
+# IAR ELF Linker V9.10.2.313/W64 for ARM                  28/Jul/2021  15:57:40
+# Copyright 2007-2021 IAR Systems AB.
+#
+#    Output file  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Exe\base_ref.out
+#    Map file     =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\base_ref.map
+#    Command line =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\base_ref.map.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\battery.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\beep.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\binary_config.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\boarddrv.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\bump.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\bump_monitor.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\core\core_cm3.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\distir.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\drv_ctrlbus.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\utils\filters.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\health_monitor.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\homeir.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\revision6\hwconf.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\net\interchip.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\irdecoder.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\led.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\main.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\misc.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\motor.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\request_handler.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\serial_channel.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\softdelay.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\sonar.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\stm32f10x\startup_stm32f10x_hd.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_adc.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_bkp.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_can.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_cec.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_crc.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_dac.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_dbgmcu.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_dma.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_exti.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_flash.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_fsmc.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_gpio.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_i2c.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\stm32f10x_it.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_iwdg.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_pwr.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_rcc.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_rtc.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_sdio.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_spi.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_tim.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_usart.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src\stm32f10x_wwdg.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\stm32f10x\system_stm32f10x.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\usart.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\utils\util.o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\watchdog.o
+#        --no_out_extension -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Exe\base_ref.out
+#        --redirect _Printf=_PrintfSmallNoMb --redirect _Scanf=_ScanfSmallNoMb
+#        --map
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\base_ref.map
+#        --config
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\iar_ldscript\stm32f10x_flash.icf
+#        --semihosting --entry __iar_program_start --inline --vfe --text_out
+#        locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+__dlib_version  = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at address 0x800'0000 { ro section .intvec };
+"P1":  place in [from 0x800'0000 to 0x807'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block HEAP with size = 512, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address    Size  Object
+  -------            ----         -------    ----  ------
+"A0":                                       0x130
+  .intvec            ro code   0x800'0000   0x130  startup_stm32f10x_hd.o [4]
+                             - 0x800'0130   0x130
+
+"P1":                                      0x49e6
+  .text              ro code   0x800'0130   0x634  motor.o [9]
+  .text              ro code   0x800'0764   0x118  stm32f10x_rcc.o [5]
+  .text              ro code   0x800'087c   0x140  stm32f10x_gpio.o [5]
+  .text              ro code   0x800'09bc   0x4ac  stm32f10x_tim.o [5]
+  .text              ro code   0x800'0e68     0x6  ABImemclr.o [13]
+  .text              ro code   0x800'0e6e    0x3a  packbits_init_single.o [13]
+  .text              ro code   0x800'0ea8    0x60  softdelay.o [6]
+  .text              ro code   0x800'0f08    0x88  stm32f10x_exti.o [5]
+  .text              ro code   0x800'0f90    0x74  misc.o [5]
+  .text              ro code   0x800'1004    0x1a  U32ToFlt.o [12]
+  .text              ro code   0x800'1020    0xd8  FltMul.o [12]
+  .text              ro code   0x800'10f8    0x28  FltCmpGe.o [12]
+  .text              ro code   0x800'1120    0x24  S32ToFlt.o [12]
+  .text              ro code   0x800'1144   0x16e  FltAddSub.o [12]
+  .text              ro code   0x800'12b4    0x28  FltCmpLe.o [12]
+  .text              ro code   0x800'12dc    0x26  FltToS32.o [12]
+  .text              ro code   0x800'1304    0xa4  boarddrv.o [6]
+  .text              ro code   0x800'13a8    0x48  FltToDbl.o [12]
+  .text              ro code   0x800'13f0   0x1aa  DblMul.o [12]
+  .text              ro code   0x800'159c    0x68  DblToFlt.o [12]
+  .text              ro code   0x800'1604    0x1c  U32ToDbl.o [12]
+  .text              ro code   0x800'1620   0x246  DblDiv.o [12]
+  .text              ro code   0x800'1868    0x18  FltToU32.o [12]
+  .text              ro code   0x800'1880   0x188  beep.o [9]
+  .text              ro code   0x800'1a08    0x12  ABImemset_small.o [13]
+  .text              ro code   0x800'1a1c   0x106  I64DivMod_small.o [13]
+  .text              ro code   0x800'1b24   0x118  stm32f10x_adc.o [5]
+  .text              ro code   0x800'1c3c     0x2  I64DivZer.o [13]
+  .text              ro code   0x800'1c40   0x510  request_handler.o [8]
+  .text              ro code   0x800'2150   0x2aa  interchip.o [7]
+  .text              ro code   0x800'23fc   0x148  health_monitor.o [9]
+  .text              ro code   0x800'2544    0x18  strcpy.o [13]
+  .text              ro code   0x800'255c    0xc0  drv_ctrlbus.o [9]
+  .text              ro code   0x800'261c     0x6  ABImemclr4.o [13]
+  .text              ro code   0x800'2624   0x118  FltDiv.o [12]
+  .text              ro code   0x800'273c   0x3ec  cos_sin64.o [12]
+  .text              ro code   0x800'2b28    0x88  bump_monitor.o [8]
+  .text              ro code   0x800'2bb0    0x1c  FltCmpEq.o [12]
+  .text              ro code   0x800'2bcc   0x228  homeir.o [9]
+  .text              ro code   0x800'2df4    0x5e  bump.o [9]
+  .text              ro code   0x800'2e54   0x1e0  distir.o [9]
+  .text              ro code   0x800'3034   0x354  sonar.o [9]
+  .text              ro code   0x800'3388   0x1f0  battery.o [9]
+  .text              ro code   0x800'3578    0x18  ABImemcpy_small.o [13]
+  .text              ro code   0x800'3590    0x1e  strncpy_small.o [13]
+  .text              ro code   0x800'35b0    0x32  ABImemset48.o [13]
+  .text              ro code   0x800'35e4    0x34  DblCmpLe.o [12]
+  .text              ro code   0x800'3618   0x24e  DblAddSub.o [12]
+  .text              ro code   0x800'3868    0x36  DblToS32.o [12]
+  .text              ro code   0x800'38a0    0x22  S32ToDbl.o [12]
+  .text              ro code   0x800'38c4   0x10c  irdecoder.o [9]
+  .text              ro code   0x800'39d0   0x16e  led.o [9]
+  .text              ro code   0x800'3b3e    0x28  filters.o [10]
+  .text              ro code   0x800'3b68   0x370  usart.o [6]
+  .text              ro code   0x800'3ed8   0x1f8  stm32f10x_usart.o [5]
+  .text              ro code   0x800'40d0   0x124  stm32f10x_dma.o [5]
+  .text              ro code   0x800'41f4   0x22a  hwconf.o [2]
+  .text              ro code   0x800'4420    0x24  stm32f10x_flash.o [5]
+  .text              ro code   0x800'4444   0x138  main.o [8]
+  .text              ro code   0x800'457c    0x94  serial_channel.o [9]
+  .text              ro code   0x800'4610    0x2e  watchdog.o [9]
+  .text              ro code   0x800'4640    0x4c  stm32f10x_wwdg.o [5]
+  .rodata            const     0x800'468c   0x134  binary_config.o [8]
+  .text              ro code   0x800'47c0    0xec  system_stm32f10x.o [4]
+  .rodata            const     0x800'48ac    0x50  sonar.o [9]
+  .text              ro code   0x800'48fc    0x38  zero_init3.o [13]
+  .text              ro code   0x800'4934    0x28  data_init.o [13]
+  .iar.init_table    const     0x800'495c    0x20  - Linker created -
+  .text              ro code   0x800'497c    0x1e  cmain.o [13]
+  .text              ro code   0x800'499a     0x4  exit.o [11]
+  .text              ro code   0x800'49a0     0xa  cexit.o [13]
+  .text              ro code   0x800'49ac    0x14  exit.o [14]
+  .text              ro code   0x800'49c0    0x1c  cstartup_M.o [13]
+  .text              ro code   0x800'49dc    0x10  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'49ec    0x10  stm32f10x_it.o [1]
+  .rodata            const     0x800'49fc     0x4  binary_config.o [8]
+  .text              ro code   0x800'4a00     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a04     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a08     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a0c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a10     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a14     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a18     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a1c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a20     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a24     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a28     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a2c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a30     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a34     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a38     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a3c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a40     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a44     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a48     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a4c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a50     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a54     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a58     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a5c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a60     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a64     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a68     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a6c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a70     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a74     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a78     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a7c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a80     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a84     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a88     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a8c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a90     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a94     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a98     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4a9c     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4aa0     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4aa4     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4aa8     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4aac     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ab0     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ab4     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ab8     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4abc     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ac0     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ac4     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ac8     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4acc     0x4  startup_stm32f10x_hd.o [4]
+  .text              ro code   0x800'4ad0     0x4  startup_stm32f10x_hd.o [4]
+  .rodata            const     0x800'4ad4     0x0  zero_init3.o [13]
+  .rodata            const     0x800'4ad4     0x0  packbits_init_single.o [13]
+  Initializer bytes  const     0x800'4ad4    0x42  <for P2-1>
+                             - 0x800'4b16  0x49e6
+
+"P2", part 1 of 3:                           0x84
+  P2-1                        0x2000'0000    0x84  <Init block>
+    .data            inited   0x2000'0000    0x28  battery.o [9]
+    .data            inited   0x2000'0028     0x4  boarddrv.o [6]
+    .data            inited   0x2000'002c    0x28  distir.o [9]
+    .data            inited   0x2000'0054     0xc  request_handler.o [8]
+    .data            inited   0x2000'0060     0x4  softdelay.o [6]
+    .data            inited   0x2000'0064    0x14  stm32f10x_rcc.o [5]
+    .data            inited   0x2000'0078     0xc  usart.o [6]
+                            - 0x2000'0084    0x84
+
+"P2", part 2 of 3:                          0xcd0
+  .bss               zero     0x2000'0084   0x600  usart.o [6]
+  .bss               zero     0x2000'0684   0x224  serial_channel.o [9]
+  .bss               zero     0x2000'08a8   0x198  usart.o [6]
+  .bss               zero     0x2000'0a40   0x190  health_monitor.o [9]
+  .bss               zero     0x2000'0bd0    0x6c  homeir.o [9]
+  .bss               zero     0x2000'0c3c    0x54  motor.o [9]
+  .bss               zero     0x2000'0c90    0x50  sonar.o [9]
+  .bss               zero     0x2000'0ce0    0x20  distir.o [9]
+  .bss               zero     0x2000'0d00    0x20  drv_ctrlbus.o [9]
+  .bss               zero     0x2000'0d20    0x10  health_monitor.o [9]
+  .bss               zero     0x2000'0d30     0xc  led.o [9]
+  .bss               zero     0x2000'0d3c     0x8  beep.o [9]
+  .bss               zero     0x2000'0d44     0x8  boarddrv.o [6]
+  .bss               zero     0x2000'0d4c     0x4  main.o [8]
+  .bss               zero     0x2000'0d50     0x1  bump_monitor.o [8]
+  .bss               zero     0x2000'0d51     0x1  hwconf.o [2]
+  .bss               zero     0x2000'0d52     0x1  sonar.o [9]
+                            - 0x2000'0d53   0xccf
+
+"P2", part 3 of 3:                          0x400
+  CSTACK                      0x2000'0d58   0x400  <Block>
+    CSTACK           uninit   0x2000'0d58   0x400  <Block tail>
+                            - 0x2000'1158   0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+   0x800'4b16   0x807'ffff  0x7'b4ea
+  0x2000'0d54  0x2000'0d57       0x4
+  0x2000'1158  0x2000'ffff    0xeea8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0xccf:
+          0x2000'0084  0xccf
+
+Copy/packbits (__iar_packbits_init_single3)
+    1 source range, total size 0x42 (50% of destination):
+           0x800'4ad4   0x42
+    1 destination range, total size 0x84:
+          0x2000'0000   0x84
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                  ro code  ro data  rw data
+    ------                  -------  -------  -------
+command line/config:
+    -------------------------------------------------
+    Total:
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs: [1]
+    stm32f10x_it.o               16
+    -------------------------------------------------
+    Total:                       16
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\revision6: [2]
+    hwconf.o                    554                 1
+    -------------------------------------------------
+    Total:                      554                 1
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\core: [3]
+    -------------------------------------------------
+    Total:
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\stm32f10x: [4]
+    startup_stm32f10x_hd.o      532
+    system_stm32f10x.o          236
+    -------------------------------------------------
+    Total:                      768
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src: [5]
+    misc.o                      116
+    stm32f10x_adc.o             280
+    stm32f10x_dma.o             292
+    stm32f10x_exti.o            136
+    stm32f10x_flash.o            36
+    stm32f10x_gpio.o            320
+    stm32f10x_rcc.o             280       10       20
+    stm32f10x_tim.o           1'196
+    stm32f10x_usart.o           504
+    stm32f10x_wwdg.o             76
+    -------------------------------------------------
+    Total:                    3'236       10       20
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x: [6]
+    boarddrv.o                  164        2       12
+    softdelay.o                  96        2        4
+    usart.o                     880        6    1'956
+    -------------------------------------------------
+    Total:                    1'140       10    1'972
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\net: [7]
+    interchip.o                 682
+    -------------------------------------------------
+    Total:                      682
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source: [8]
+    binary_config.o                      312
+    bump_monitor.o              136                 1
+    main.o                      312                 4
+    request_handler.o         1'296        6       12
+    -------------------------------------------------
+    Total:                    1'744      318       17
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv: [9]
+    battery.o                   496       20       40
+    beep.o                      392                 8
+    bump.o                       94
+    distir.o                    480       20       72
+    drv_ctrlbus.o               192                32
+    health_monitor.o            328               416
+    homeir.o                    552               108
+    irdecoder.o                 268
+    led.o                       366                12
+    motor.o                   1'588                84
+    serial_channel.o            148               548
+    sonar.o                     852       80       81
+    watchdog.o                   46
+    -------------------------------------------------
+    Total:                    5'802      120    1'401
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\utils: [10]
+    filters.o                    40
+    -------------------------------------------------
+    Total:                       40
+
+dl7M_tln.a: [11]
+    exit.o                        4
+    -------------------------------------------------
+    Total:                        4
+
+m7M_tl.a: [12]
+    DblAddSub.o                 590
+    DblCmpLe.o                   52
+    DblDiv.o                    582
+    DblMul.o                    426
+    DblToFlt.o                  104
+    DblToS32.o                   54
+    FltAddSub.o                 366
+    FltCmpEq.o                   28
+    FltCmpGe.o                   40
+    FltCmpLe.o                   40
+    FltDiv.o                    280
+    FltMul.o                    216
+    FltToDbl.o                   72
+    FltToS32.o                   38
+    FltToU32.o                   24
+    S32ToDbl.o                   34
+    S32ToFlt.o                   36
+    U32ToDbl.o                   28
+    U32ToFlt.o                   26
+    cos_sin64.o               1'004
+    -------------------------------------------------
+    Total:                    4'040
+
+rt7M_tl.a: [13]
+    ABImemclr.o                   6
+    ABImemclr4.o                  6
+    ABImemcpy_small.o            24
+    ABImemset48.o                50
+    ABImemset_small.o            18
+    I64DivMod_small.o           262
+    I64DivZer.o                   2
+    cexit.o                      10
+    cmain.o                      30
+    cstartup_M.o                 28
+    data_init.o                  40
+    packbits_init_single.o       58
+    strcpy.o                     24
+    strncpy_small.o              30
+    zero_init3.o                 56
+    -------------------------------------------------
+    Total:                      644
+
+shb_l.a: [14]
+    exit.o                       20
+    -------------------------------------------------
+    Total:                       20
+
+    Gaps                         42
+    Linker created                        32    1'024
+-----------------------------------------------------
+    Grand Total:             18'732      490    4'435
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base    0x800'495c          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'497c          --   Gb  - Linker created -
+?main                    0x800'497d         Code  Gb  cmain.o [13]
+ADCPrescTable           0x2000'0074    0x4  Data  Lc  stm32f10x_rcc.o [5]
+ADC_Cmd                  0x800'1b63   0x12  Code  Gb  stm32f10x_adc.o [5]
+ADC_GetCalibrationStatus
+                         0x800'1b8f    0x4  Code  Gb  stm32f10x_adc.o [5]
+ADC_GetResetCalibrationStatus
+                         0x800'1b7f    0x6  Code  Gb  stm32f10x_adc.o [5]
+ADC_Init                 0x800'1b25   0x3e  Code  Gb  stm32f10x_adc.o [5]
+ADC_RegularChannelConfig
+                         0x800'1b99   0x40  Code  Gb  stm32f10x_adc.o [5]
+ADC_ResetCalibration     0x800'1b75    0xa  Code  Gb  stm32f10x_adc.o [5]
+ADC_StartCalibration     0x800'1b85    0xa  Code  Gb  stm32f10x_adc.o [5]
+ADC_TempSensorVrefintCmd
+                         0x800'1c17   0x18  Code  Gb  stm32f10x_adc.o [5]
+APBAHBPrescTable        0x2000'0064   0x10  Data  Lc  stm32f10x_rcc.o [5]
+BusFault_Handler         0x800'49f3    0x2  Code  Gb  stm32f10x_it.o [1]
+CSTACK$$Base            0x2000'0d58          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'1158          --   Gb  - Linker created -
+DMA_Cmd                  0x800'41a3   0x18  Code  Gb  stm32f10x_dma.o [5]
+DMA_DeInit               0x800'40d1   0x9a  Code  Gb  stm32f10x_dma.o [5]
+DMA_Init                 0x800'416b   0x38  Code  Gb  stm32f10x_dma.o [5]
+DebugMon_Handler         0x800'49f7    0x2  Code  Gb  stm32f10x_it.o [1]
+EXTI15_10_IRQHandler     0x800'2d15   0x62  Code  Gb  homeir.o [9]
+EXTI2_IRQHandler         0x800'03b7   0x1c  Code  Gb  motor.o [9]
+EXTI3_IRQHandler         0x800'03d3   0x1c  Code  Gb  motor.o [9]
+EXTI9_5_IRQHandler       0x800'30fb   0xba  Code  Gb  sonar.o [9]
+EXTI_ClearITPendingBit   0x800'0f81    0x2  Code  Gb  stm32f10x_exti.o [5]
+EXTI_GetITStatus         0x800'0f6b   0x16  Code  Gb  stm32f10x_exti.o [5]
+EXTI_Init                0x800'0f09   0x62  Code  Gb  stm32f10x_exti.o [5]
+FLASH_Unlock             0x800'4421    0x2  Code  Gb  stm32f10x_flash.o [5]
+GPIO_EXTILineConfig      0x800'0993   0x22  Code  Gb  stm32f10x_gpio.o [5]
+GPIO_Init                0x800'087d   0xa4  Code  Gb  stm32f10x_gpio.o [5]
+GPIO_PinRemapConfig      0x800'0941   0x52  Code  Gb  stm32f10x_gpio.o [5]
+GPIO_ReadInputDataBit    0x800'0921    0xe  Code  Gb  stm32f10x_gpio.o [5]
+GPIO_ResetBits           0x800'0933    0x4  Code  Gb  stm32f10x_gpio.o [5]
+GPIO_SetBits             0x800'092f    0x4  Code  Gb  stm32f10x_gpio.o [5]
+GPIO_WriteBit            0x800'0937    0xa  Code  Gb  stm32f10x_gpio.o [5]
+HardFault_Handler        0x800'49ef    0x2  Code  Gb  stm32f10x_it.o [1]
+MemManage_Handler        0x800'49f1    0x2  Code  Gb  stm32f10x_it.o [1]
+NMI_Handler              0x800'49ed    0x2  Code  Gb  stm32f10x_it.o [1]
+NVIC_Init                0x800'0f9b   0x56  Code  Gb  misc.o [5]
+NVIC_PriorityGroupConfig
+                         0x800'0f91    0xa  Code  Gb  misc.o [5]
+PendSV_Handler           0x800'49fb    0x2  Code  Gb  stm32f10x_it.o [1]
+RCC_ADCCLKConfig         0x800'076b    0xa  Code  Gb  stm32f10x_rcc.o [5]
+RCC_AHBPeriphClockCmd    0x800'07e5   0x14  Code  Gb  stm32f10x_rcc.o [5]
+RCC_APB1PeriphClockCmd   0x800'080d   0x14  Code  Gb  stm32f10x_rcc.o [5]
+RCC_APB1PeriphResetCmd   0x800'0835   0x14  Code  Gb  stm32f10x_rcc.o [5]
+RCC_APB2PeriphClockCmd   0x800'07f9   0x14  Code  Gb  stm32f10x_rcc.o [5]
+RCC_APB2PeriphResetCmd   0x800'0821   0x14  Code  Gb  stm32f10x_rcc.o [5]
+RCC_ClearFlag            0x800'0849    0xc  Code  Gb  stm32f10x_rcc.o [5]
+RCC_GetClocksFreq        0x800'0775   0x70  Code  Gb  stm32f10x_rcc.o [5]
+Region$$Table$$Base      0x800'495c          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'497c          --   Gb  - Linker created -
+SONAR_TRIG               0x800'304b   0x18  Code  Lc  sonar.o [9]
+SVC_Handler              0x800'49f9    0x2  Code  Gb  stm32f10x_it.o [1]
+SysTick_Handler          0x800'1307    0xa  Code  Gb  boarddrv.o [6]
+SystemInit               0x800'47c1   0xd6  Code  Gb  system_stm32f10x.o [4]
+TIM_ARRPreloadConfig     0x800'0dcf   0x12  Code  Gb  stm32f10x_tim.o [5]
+TIM_Cmd                  0x800'0da5   0x14  Code  Gb  stm32f10x_tim.o [5]
+TIM_CtrlPWMOutputs       0x800'0db9   0x16  Code  Gb  stm32f10x_tim.o [5]
+TIM_DeInit               0x800'09bd  0x1a8  Code  Gb  stm32f10x_tim.o [5]
+TIM_GetCounter           0x800'0e23    0x4  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC1Init              0x800'0bed   0x7e  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC1PreloadConfig     0x800'0de7    0x6  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC2Init              0x800'0c6b   0x72  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC2PreloadConfig     0x800'0df5    0x6  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC3Init              0x800'0cdd   0x70  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC3PreloadConfig     0x800'0e05    0x6  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC4Init              0x800'0d4d   0x58  Code  Gb  stm32f10x_tim.o [5]
+TIM_OC4PreloadConfig     0x800'0e13    0x6  Code  Gb  stm32f10x_tim.o [5]
+TIM_TimeBaseInit         0x800'0b65   0x88  Code  Gb  stm32f10x_tim.o [5]
+USART1_IRQHandler        0x800'3e0d   0x1a  Code  Gb  usart.o [6]
+USART2_IRQHandler        0x800'3e27   0x18  Code  Gb  usart.o [6]
+USART3_IRQHandler        0x800'3e5f   0x1a  Code  Gb  usart.o [6]
+USART_Cmd                0x800'4029   0x14  Code  Gb  stm32f10x_usart.o [5]
+USART_DMACmd             0x800'406f   0x10  Code  Gb  stm32f10x_usart.o [5]
+USART_DeInit             0x800'3ed9   0x88  Code  Gb  stm32f10x_usart.o [5]
+USART_GetFlagStatus      0x800'4085    0xe  Code  Gb  stm32f10x_usart.o [5]
+USART_GetITStatus        0x800'4093   0x3e  Code  Gb  stm32f10x_usart.o [5]
+USART_ITConfig           0x800'403d   0x32  Code  Gb  stm32f10x_usart.o [5]
+USART_Init               0x800'3f61   0x9c  Code  Gb  stm32f10x_usart.o [5]
+USART_StructInit         0x800'4011   0x18  Code  Gb  stm32f10x_usart.o [5]
+UsageFault_Handler       0x800'49f5    0x2  Code  Gb  stm32f10x_it.o [1]
+WWDG_Enable              0x800'467b    0xa  Code  Gb  stm32f10x_wwdg.o [5]
+WWDG_SetCounter          0x800'4671    0xa  Code  Gb  stm32f10x_wwdg.o [5]
+WWDG_SetPrescaler        0x800'4641    0xe  Code  Gb  stm32f10x_wwdg.o [5]
+WWDG_SetWindowValue      0x800'464f   0x22  Code  Gb  stm32f10x_wwdg.o [5]
+__aeabi_cdcmple          0x800'35e5         Code  Gb  DblCmpLe.o [12]
+__aeabi_cfcmpeq          0x800'2bb1         Code  Gb  FltCmpEq.o [12]
+__aeabi_cfcmple          0x800'12b5         Code  Gb  FltCmpLe.o [12]
+__aeabi_cfrcmple         0x800'10f9         Code  Gb  FltCmpGe.o [12]
+__aeabi_d2f              0x800'159d         Code  Gb  DblToFlt.o [12]
+__aeabi_d2iz             0x800'3869         Code  Gb  DblToS32.o [12]
+__aeabi_dadd             0x800'3619         Code  Gb  DblAddSub.o [12]
+__aeabi_ddiv             0x800'1621         Code  Gb  DblDiv.o [12]
+__aeabi_dmul             0x800'13f1         Code  Gb  DblMul.o [12]
+__aeabi_f2d              0x800'13a9         Code  Gb  FltToDbl.o [12]
+__aeabi_f2iz             0x800'12dd         Code  Gb  FltToS32.o [12]
+__aeabi_f2uiz            0x800'1869         Code  Gb  FltToU32.o [12]
+__aeabi_fadd             0x800'1145         Code  Gb  FltAddSub.o [12]
+__aeabi_fdiv             0x800'2625         Code  Gb  FltDiv.o [12]
+__aeabi_fmul             0x800'1021         Code  Gb  FltMul.o [12]
+__aeabi_fsub             0x800'1225         Code  Gb  FltAddSub.o [12]
+__aeabi_i2d              0x800'38a1         Code  Gb  S32ToDbl.o [12]
+__aeabi_i2f              0x800'1121         Code  Gb  S32ToFlt.o [12]
+__aeabi_ldiv0            0x800'1c3d         Code  Gb  I64DivZer.o [13]
+__aeabi_memclr           0x800'0e69         Code  Gb  ABImemclr.o [13]
+__aeabi_memclr4          0x800'261d         Code  Gb  ABImemclr4.o [13]
+__aeabi_ui2d             0x800'1605         Code  Gb  U32ToDbl.o [12]
+__aeabi_ui2f             0x800'1005         Code  Gb  U32ToFlt.o [12]
+__cmain                  0x800'497d         Code  Gb  cmain.o [13]
+__exit                   0x800'49ad   0x14  Code  Gb  exit.o [14]
+__iar_Memset4_word       0x800'35b1         Code  Gb  ABImemset48.o [13]
+__iar_Memset8_word       0x800'35b1         Code  Gb  ABImemset48.o [13]
+__iar_Sin64              0x800'273d  0x356  Code  Lc  cos_sin64.o [12]
+__iar_cos64              0x800'2b21    0x4  Code  Gb  cos_sin64.o [12]
+__iar_cos_medium         0x800'2b21    0x4  Code  Gb  cos_sin64.o [12]
+__iar_cos_medium64       0x800'2b21    0x4  Code  Gb  cos_sin64.o [12]
+__iar_cos_mediuml        0x800'2b21    0x4  Code  Gb  cos_sin64.o [12]
+__iar_data_init3         0x800'4935   0x28  Code  Gb  data_init.o [13]
+__iar_packbits_init_single3
+                         0x800'0e6f   0x3a  Code  Gb  packbits_init_single.o [13]
+__iar_program_start      0x800'49c1         Code  Gb  cstartup_M.o [13]
+__iar_sin64              0x800'2b25    0x4  Code  Gb  cos_sin64.o [12]
+__iar_sin_medium         0x800'2b25    0x4  Code  Gb  cos_sin64.o [12]
+__iar_sin_medium64       0x800'2b25    0x4  Code  Gb  cos_sin64.o [12]
+__iar_sin_mediuml        0x800'2b25    0x4  Code  Gb  cos_sin64.o [12]
+__iar_small_Memcpy       0x800'357d         Code  Gb  ABImemcpy_small.o [13]
+__iar_small_Memset       0x800'1a09         Code  Gb  ABImemset_small.o [13]
+__iar_small_Memset_word
+                         0x800'1a09         Code  Gb  ABImemset_small.o [13]
+__iar_small_memcpy       0x800'3579         Code  Gb  ABImemcpy_small.o [13]
+__iar_small_memcpy4      0x800'3579         Code  Gb  ABImemcpy_small.o [13]
+__iar_small_memcpy8      0x800'3579         Code  Gb  ABImemcpy_small.o [13]
+__iar_small_memset       0x800'1a09         Code  Gb  ABImemset_small.o [13]
+__iar_small_strncpy      0x800'3591         Code  Gb  strncpy_small.o [13]
+__iar_small_uldivmod     0x800'1a1d         Code  Gb  I64DivMod_small.o [13]
+__iar_zero_init3         0x800'48fd   0x38  Code  Gb  zero_init3.o [13]
+__vector_table           0x800'0000         Data  Gb  startup_stm32f10x_hd.o [4]
+_abort_proc             0x2000'0028    0x4  Data  Lc  boarddrv.o [6]
+_adcSamplePairs         0x2000'002c   0x28  Data  Lc  distir.o [9]
+_battery_sample_batteryvoltage
+                         0x800'33bf   0x48  Code  Lc  battery.o [9]
+_board_hw_ver           0x2000'0d51    0x1  Data  Lc  hwconf.o [2]
+_cachedIrDistance       0x2000'0ce4   0x14  Data  Lc  distir.o [9]
+_cachedIrresult         0x2000'0cf8    0x4  Data  Lc  distir.o [9]
+_call_main               0x800'4989         Code  Gb  cmain.o [13]
+_channel                0x2000'0684   0x20  Data  Lc  serial_channel.o [9]
+_currentSamplePos       0x2000'0ce0    0x1  Data  Lc  distir.o [9]
+_def_on_rx               0x800'3e79   0x30  Code  Lc  usart.o [6]
+_default_abort_proc      0x800'1305    0x2  Code  Lc  boarddrv.o [6]
+_delay                  0x2000'0d3c    0x4  Data  Lc  beep.o [9]
+_delay_ms                0x800'1881   0x18  Code  Lc  beep.o [9]
+_delay_us                0x800'0ee5   0x1c  Code  Gb  softdelay.o [6]
+_encoderTicksDelta      0x2000'0c50    0x8  Data  Lc  motor.o [9]
+_exit                    0x800'49a1         Code  Gb  cexit.o [13]
+_flush_tx                0x800'45a3    0x8  Code  Lc  serial_channel.o [9]
+_getBufID                0x800'3b8f   0x1a  Code  Lc  usart.o [6]
+_getPortID               0x800'3b69   0x26  Code  Lc  usart.o [6]
+_interchip_on_rx         0x800'2151   0xdc  Code  Lc  interchip.o [7]
+_irLastSampleTime       0x2000'0cfc    0x4  Data  Lc  distir.o [9]
+_irSampleStage          0x2000'0ce2    0x1  Data  Lc  distir.o [9]
+_irWorkingStatus        0x2000'0ce1    0x1  Data  Lc  distir.o [9]
+_lastEncoderTicksDelta  0x2000'0c58    0x8  Data  Lc  motor.o [9]
+_lastOdometerSpeedAbs   0x2000'0c60    0x8  Data  Lc  motor.o [9]
+_motorCtrlStates        0x2000'0c3c    0x2  Data  Lc  motor.o [9]
+_motorDeltaTicks        0x2000'0c40    0x8  Data  Lc  motor.o [9]
+_motorDistAccumulated   0x2000'0c48    0x8  Data  Lc  motor.o [9]
+_motorDistTailing       0x2000'0c70    0x8  Data  Lc  motor.o [9]
+_motorSpeedMm           0x2000'0c68    0x8  Data  Lc  motor.o [9]
+_on_beacon_decode_ready
+                         0x800'2d79   0x48  Code  Lc  homeir.o [9]
+_on_signal_swap          0x800'2cff   0x16  Code  Lc  homeir.o [9]
+_pwrAdcSampleState      0x2000'0006    0x1  Data  Lc  battery.o [9]
+_pwrCachedBattVoltADCVal
+                        0x2000'0008    0x2  Data  Lc  battery.o [9]
+_pwrFilterBattVoltQueue
+                        0x2000'0014   0x14  Data  Lc  battery.o [9]
+_pwrFilterPos           0x2000'0005    0x1  Data  Lc  battery.o [9]
+_register_rx_callback    0x800'4595    0x6  Code  Lc  serial_channel.o [9]
+_rx_proc                0x2000'06a4    0x4  Data  Lc  serial_channel.o [9]
+_rx_proc                0x2000'0078    0xc  Data  Lc  usart.o [6]
+_rx_ringbuf             0x2000'08a8  0x198  Data  Lc  usart.o [6]
+_serialRxBuffer         0x2000'06a8  0x200  Data  Lc  serial_channel.o [9]
+_serial_on_rx_t          0x800'457d   0x18  Code  Lc  serial_channel.o [9]
+_set_tx_buffer           0x800'459b    0x8  Code  Lc  serial_channel.o [9]
+_set_walkingmotor_duty   0x800'0143   0x10  Code  Lc  motor.o [9]
+_stallMode              0x2000'0d50    0x1  Data  Lc  bump_monitor.o [8]
+_startMs                0x2000'0d40    0x4  Data  Lc  beep.o [9]
+_switchToState           0x800'38f3    0xe  Code  Lc  irdecoder.o [9]
+_systick_val            0x2000'0d48    0x4  Data  Lc  boarddrv.o [6]
+_ticks_per_us           0x2000'0060    0x4  Data  Gb  softdelay.o [6]
+_tx_buf                 0x2000'0084  0x600  Data  Lc  usart.o [6]
+_withinDuration          0x800'38df   0x14  Code  Lc  irdecoder.o [9]
+adc_read_final           0x800'1383    0x2  Code  Gb  boarddrv.o [6]
+adc_read_start           0x800'1365   0x1e  Code  Gb  boarddrv.o [6]
+add_to_avg_filter_u16    0x800'3b3f   0x16  Code  Gb  filters.o [10]
+alert                    0x800'1311    0x8  Code  Gb  boarddrv.o [6]
+alert_flg               0x2000'0d44    0x1  Data  Lc  boarddrv.o [6]
+baseInfo                0x2000'0d04   0x1c  Data  Gb  drv_ctrlbus.o [9]
+batteryElectricityPercentage
+                        0x2000'0010    0x4  Data  Lc  battery.o [9]
+batteryFrequency        0x2000'000c    0x4  Data  Lc  battery.o [9]
+battery_low_cb           0x800'4445   0x1a  Code  Lc  main.o [8]
+beacon_cache            0x2000'0bd0   0x30  Data  Lc  homeir.o [9]
+beep_beeper              0x800'19af   0x26  Code  Gb  beep.o [9]
+board_set_abort_proc     0x800'1321    0x6  Code  Gb  boarddrv.o [6]
+brake_walkingmotor       0x800'05c1   0x14  Code  Gb  motor.o [9]
+bumpermonitor_clamp_motorcmd
+                         0x800'2b83   0x26  Code  Gb  bump_monitor.o [8]
+bumpermonitor_filter_motorcmd
+                         0x800'2b5d   0x26  Code  Gb  bump_monitor.o [8]
+chargeInsertedTs        0x2000'0002    0x1  Data  Lc  battery.o [9]
+chargeSound             0x2000'0000    0x1  Data  Lc  battery.o [9]
+charge_detect_getstatus
+                         0x800'3391   0x1e  Code  Gb  battery.o [9]
+clear_alert              0x800'1319    0x8  Code  Gb  boarddrv.o [6]
+clear_drv_ctrlbus_ncmd   0x800'25c7   0x16  Code  Gb  drv_ctrlbus.o [9]
+control_walkingmotor_speed
+                         0x800'04ff   0xba  Code  Gb  motor.o [9]
+cos                      0x800'2b21    0x4  Code  Gb  cos_sin64.o [12]
+cosl                     0x800'2b21    0x4  Code  Gb  cos_sin64.o [12]
+currentNcmd             0x2000'0d00    0x1  Data  Lc  drv_ctrlbus.o [9]
+dcInsertedTs            0x2000'0004    0x1  Data  Lc  battery.o [9]
+decoder_ctx             0x2000'0c00   0x3c  Data  Lc  homeir.o [9]
+drv_led_cmd              0x800'39e7   0x34  Code  Lc  led.o [9]
+drv_led_init             0x800'3ac7   0x30  Code  Gb  led.o [9]
+drv_led_reset            0x800'3a6f    0x6  Code  Lc  led.o [9]
+drv_led_set              0x800'3a75   0x52  Code  Gb  led.o [9]
+drv_led_shutdown         0x800'3af7   0x2c  Code  Gb  led.o [9]
+drv_serialchannel_getchannel
+                         0x800'45f7    0x4  Code  Gb  serial_channel.o [9]
+drv_serialchannel_init   0x800'45ab   0x38  Code  Gb  serial_channel.o [9]
+drv_serialchannel_shutdown
+                         0x800'45e3   0x14  Code  Gb  serial_channel.o [9]
+drv_towerlocator_heartbeat
+                         0x800'2c91   0x6e  Code  Gb  homeir.o [9]
+drv_towerlocator_init    0x800'2bcd   0xc4  Code  Gb  homeir.o [9]
+enable_watchdog          0x800'4611   0x28  Code  Gb  watchdog.o [9]
+envSensorData2CtrlBusData
+                         0x800'1c41   0x16  Code  Lc  request_handler.o [8]
+exit                     0x800'499b    0x4  Code  Gb  exit.o [11]
+g_health_desc           0x2000'0a40  0x190  Data  Lc  health_monitor.o [9]
+g_health_map            0x2000'0d24    0xc  Data  Lc  health_monitor.o [9]
+g_health_status         0x2000'0d20    0x2  Data  Lc  health_monitor.o [9]
+g_sonar                 0x2000'0c90   0x50  Data  Lc  sonar.o [9]
+g_sonar_cfg              0x800'48ac   0x50  Data  Lc  sonar.o [9]
+g_sonar_ch              0x2000'0d52    0x1  Data  Lc  sonar.o [9]
+get_bump_bitmap          0x800'2e1d   0x16  Code  Gb  bump.o [9]
+get_dc_charge_status     0x800'33af    0x8  Code  Gb  battery.o [9]
+get_distir_value         0x800'300f    0x4  Code  Gb  distir.o [9]
+get_drv_ctrlbus_ncmd     0x800'25f9    0x6  Code  Gb  drv_ctrlbus.o [9]
+get_electricitypercentage
+                         0x800'3389    0x8  Code  Gb  battery.o [9]
+get_home_charge_status   0x800'33b7    0x8  Code  Gb  battery.o [9]
+getms                    0x800'1327    0x6  Code  Gb  boarddrv.o [6]
+getus                    0x800'132d   0x38  Code  Gb  boarddrv.o [6]
+health_monitor_clear     0x800'2509   0x30  Code  Gb  health_monitor.o [9]
+health_monitor_get_desc
+                         0x800'24e9   0x20  Code  Gb  health_monitor.o [9]
+health_monitor_get_error
+                         0x800'24cb   0x1e  Code  Gb  health_monitor.o [9]
+health_monitor_get_status
+                         0x800'24b9   0x12  Code  Gb  health_monitor.o [9]
+health_monitor_heartbeat
+                         0x800'2469   0x50  Code  Gb  health_monitor.o [9]
+health_monitor_init      0x800'23fd    0x4  Code  Gb  health_monitor.o [9]
+health_monitor_register
+                         0x800'2421   0x48  Code  Gb  health_monitor.o [9]
+heartbeat_battery        0x800'3487   0xd2  Code  Gb  battery.o [9]
+heartbeat_beep           0x800'19d5   0x1a  Code  Gb  beep.o [9]
+heartbeat_bumpermonitor
+                         0x800'2b33   0x2a  Code  Gb  bump_monitor.o [8]
+heartbeat_distir         0x800'2f33   0xdc  Code  Gb  distir.o [9]
+homeir_Init              0x800'2dcb    0x2  Code  Gb  homeir.o [9]
+homeir_getleftdata       0x800'2dd5    0x6  Code  Gb  homeir.o [9]
+homeir_getmaindata       0x800'2dcf    0x6  Code  Gb  homeir.o [9]
+homeir_getrightdata      0x800'2ddb    0x8  Code  Gb  homeir.o [9]
+homeir_heartbeat         0x800'2dcd    0x2  Code  Gb  homeir.o [9]
+init_battery             0x800'3407   0x74  Code  Gb  battery.o [9]
+init_beep                0x800'1899   0xb0  Code  Gb  beep.o [9]
+init_board               0x800'420b  0x1cc  Code  Gb  hwconf.o [2]
+init_brushmotor          0x800'061b   0x28  Code  Gb  motor.o [9]
+init_bump_detect         0x800'2df5   0x28  Code  Gb  bump.o [9]
+init_bumpermonitor       0x800'2b29    0xa  Code  Gb  bump_monitor.o [8]
+init_distir              0x800'2e6b   0xc4  Code  Gb  distir.o [9]
+init_drv_ctrlbus         0x800'2575   0x52  Code  Gb  drv_ctrlbus.o [9]
+init_ontheground_detect
+                         0x800'05d5   0x1e  Code  Gb  motor.o [9]
+init_walkingmotor        0x800'0153  0x12c  Code  Gb  motor.o [9]
+init_walkingmotor_odometer
+                         0x800'03ef   0xbe  Code  Gb  motor.o [9]
+irdecoder_init           0x800'38c5    0xe  Code  Gb  irdecoder.o [9]
+irdecoder_on_signal      0x800'3901   0xc6  Code  Gb  irdecoder.o [9]
+irdecoder_reset          0x800'38d3    0xc  Code  Gb  irdecoder.o [9]
+isChargeInserted        0x2000'0001    0x1  Data  Lc  battery.o [9]
+isDcInserted            0x2000'0003    0x1  Data  Lc  battery.o [9]
+is_bumped                0x800'2e3d   0x16  Code  Gb  bump.o [9]
+is_drv_ctrlbus_ncmd      0x800'25e9   0x10  Code  Gb  drv_ctrlbus.o [9]
+is_first_motor_data     0x2000'0054    0x1  Data  Lc  request_handler.o [8]
+is_ontheground           0x800'05f9   0x22  Code  Gb  motor.o [9]
+last_motor_l_speed      0x2000'0058    0x4  Data  Lc  request_handler.o [8]
+last_motor_r_speed      0x2000'005c    0x4  Data  Lc  request_handler.o [8]
+led_b                   0x2000'0d38    0x4  Data  Lc  led.o [9]
+led_g                   0x2000'0d34    0x4  Data  Lc  led.o [9]
+led_r                   0x2000'0d30    0x4  Data  Lc  led.o [9]
+main                     0x800'4495   0xc0  Code  Gb  main.o [8]
+mark_watchdog            0x800'4639    0x6  Code  Gb  watchdog.o [9]
+net_bind                 0x800'222d   0x32  Code  Gb  interchip.o [7]
+net_flush_pkt            0x800'22cd   0x44  Code  Gb  interchip.o [7]
+net_get_request_cmd      0x800'23c9   0x10  Code  Gb  interchip.o [7]
+net_get_request_data     0x800'23eb   0x10  Code  Gb  interchip.o [7]
+net_get_request_size     0x800'23d9   0x12  Code  Gb  interchip.o [7]
+net_pkt_pushdata         0x800'228b   0x42  Code  Gb  interchip.o [7]
+net_poll_request         0x800'2353   0x76  Code  Gb  interchip.o [7]
+net_prepare_pkt          0x800'2265   0x26  Code  Gb  interchip.o [7]
+net_send_ans             0x800'2347    0xc  Code  Gb  interchip.o [7]
+net_send_errorcode       0x800'2335   0x12  Code  Gb  interchip.o [7]
+net_send_pkt             0x800'2311   0x24  Code  Gb  interchip.o [7]
+on_abort_mode            0x800'4481   0x14  Code  Lc  main.o [8]
+on_host_request          0x800'1c57  0x4c6  Code  Gb  request_handler.o [8]
+ontheground_frequency   0x2000'0c8c    0x4  Data  Lc  motor.o [9]
+pinMode                  0x800'2e55   0x16  Code  Lc  distir.o [9]
+pinMode                  0x800'255d   0x16  Code  Lc  drv_ctrlbus.o [9]
+pinMode                  0x800'41f5   0x16  Code  Lc  hwconf.o [2]
+pinMode                  0x800'39d1   0x16  Code  Lc  led.o [9]
+pinMode                  0x800'0131   0x12  Code  Lc  motor.o [9]
+pinMode                  0x800'3035   0x16  Code  Lc  sonar.o [9]
+play_poweron             0x800'1975   0x3a  Code  Gb  beep.o [9]
+set_walkingmotor_lduty   0x800'027f   0x90  Code  Gb  motor.o [9]
+set_walkingmotor_rduty   0x800'030f   0x90  Code  Gb  motor.o [9]
+set_walkingmotor_speed   0x800'05b9    0x8  Code  Gb  motor.o [9]
+shutdownHeartbeatFrequency
+                        0x2000'0d4c    0x4  Data  Gb  main.o [8]
+shutdown_heartbeat       0x800'445f   0x22  Code  Gb  main.o [8]
+sin                      0x800'2b25    0x4  Code  Gb  cos_sin64.o [12]
+sinl                     0x800'2b25    0x4  Code  Gb  cos_sin64.o [12]
+slamware_config          0x800'468c  0x134  Data  Gb  binary_config.o [8]
+slamware_config_size     0x800'49fc    0x4  Data  Gb  binary_config.o [8]
+softdelay_calibrate      0x800'0ea9   0x3c  Code  Gb  softdelay.o [6]
+sonar_distance           0x800'3099   0x62  Code  Lc  sonar.o [9]
+sonar_get                0x800'3313   0x1c  Code  Gb  sonar.o [9]
+sonar_heartbeat          0x800'31b5  0x15e  Code  Gb  sonar.o [9]
+sonar_init               0x800'332f   0x38  Code  Gb  sonar.o [9]
+sonar_shutdown           0x800'3063   0x36  Code  Lc  sonar.o [9]
+speedErri               0x2000'0c80    0x8  Data  Lc  motor.o [9]
+speedLastErr            0x2000'0c78    0x8  Data  Lc  motor.o [9]
+speedctl_frequency      0x2000'0c88    0x4  Data  Lc  motor.o [9]
+speedctl_heartbeat       0x800'0643   0xd4  Code  Gb  motor.o [9]
+start_beep               0x800'1949    0x8  Code  Lc  beep.o [9]
+stop_beep                0x800'1951    0x6  Code  Lc  beep.o [9]
+strcpy                   0x800'2545         Code  Gb  strcpy.o [13]
+usart_begin              0x800'3bf3   0xcc  Code  Gb  usart.o [6]
+usart_setrecv_func       0x800'3dcd   0x1e  Code  Gb  usart.o [6]
+usart_shutdown           0x800'3baf   0x44  Code  Gb  usart.o [6]
+usart_txbuffer_flush     0x800'3d39   0x94  Code  Gb  usart.o [6]
+usart_txbuffer_set       0x800'3cbf   0x7a  Code  Gb  usart.o [6]
+walkingmotor_cumulate_ldist_mm
+                         0x800'04cf    0x6  Code  Gb  motor.o [9]
+walkingmotor_cumulate_rdist_mm
+                         0x800'04d5    0x6  Code  Gb  motor.o [9]
+walkingmotor_delta_ldist_mm_f
+                         0x800'04db    0xc  Code  Gb  motor.o [9]
+walkingmotor_delta_rdist_mm_f
+                         0x800'04e7    0xa  Code  Gb  motor.o [9]
+
+
+[1] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs
+[2] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\revision6
+[3] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\core
+[4] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\CMSIS\stm32f10x
+[5] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\FWLib\src
+[6] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x
+[7] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\net
+[8] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source
+[9] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+[10] = C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\utils
+[11] = dl7M_tln.a
+[12] = m7M_tl.a
+[13] = rt7M_tl.a
+[14] = shb_l.a
+
+  18'732 bytes of readonly  code memory
+     490 bytes of readonly  data memory
+   4'435 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

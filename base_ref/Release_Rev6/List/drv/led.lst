@@ -1,0 +1,784 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:29
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\led.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\led.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\led.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\led.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\led.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\led.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\led.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void _delay_ms(uint32_t)
+   \                     _delay_ms: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x4604             MOV      R4,R0
+   \        0x4   0xE003             B.N      ??_delay_ms_0
+   \                     ??_delay_ms_1: (+1)
+   \        0x6   0xF44F 0x707A      MOV      R0,#+1000
+   \        0xA   0x.... 0x....      BL       _delay_us
+   \                     ??_delay_ms_0: (+1)
+   \        0xE   0x4620             MOV      R0,R4
+   \       0x10   0x1E44             SUBS     R4,R0,#+1
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0xD1F7             BNE.N    ??_delay_ms_1
+   \       0x16   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void pinMode(GPIO_TypeDef *, uint16_t, GPIOMode_TypeDef, GPIOSpeed_TypeDef)
+   \                     pinMode: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+   \        0x6   0xF88D 0x3002      STRB     R3,[SP, #+2]
+   \        0xA   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \        0xE   0x4669             MOV      R1,SP
+   \       0x10   0x.... 0x....      BL       GPIO_Init
+   \       0x14   0xBD01             POP      {R0,PC}
+     32          #include "drv/led.h"
+     33          
+     34          /**
+     35           @defgroup led led driver
+     36           @addtogroup drivers
+     37           @{
+     38           */
+     39          
+     40          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV == 2)
+     41          static int led_r, led_g, led_b;
+     42          
+     43          /**
+     44           @brief LED initialize.
+     45           @param none.
+     46           @return none.
+     47           */
+     48          void drv_led_init(void)
+     49          {
+     50              pinMode(LED_RED_PORT,   LED_RED_PIN,   GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+     51              pinMode(LED_GREEN_PORT, LED_GREEN_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+     52              pinMode(LED_BLUE_PORT,  LED_BLUE_PIN,  GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+     53          
+     54              PIN_SET(LED_RED_PORT,   LED_RED_PIN, 0);
+     55              PIN_SET(LED_GREEN_PORT, LED_GREEN_PIN, 0);
+     56              PIN_SET(LED_BLUE_PORT,  LED_BLUE_PIN, 0);
+     57              led_r = led_g = led_b = 0;
+     58          }
+     59          
+     60          /**
+     61           @brief LED shutdown.
+     62           @param none.
+     63           @return none.
+     64           */
+     65          void drv_led_shutdown(void)
+     66          {
+     67              pinMode(LED_RED_PORT,   LED_RED_PIN,   GPIO_Mode_Out_OD, GPIO_Speed_50MHz);
+     68              pinMode(LED_GREEN_PORT, LED_GREEN_PIN, GPIO_Mode_Out_OD, GPIO_Speed_50MHz);
+     69              pinMode(LED_BLUE_PORT,  LED_BLUE_PIN,  GPIO_Mode_Out_OD, GPIO_Speed_50MHz);
+     70          
+     71              PIN_SET(LED_RED_PORT,   LED_RED_PIN,   0);
+     72              PIN_SET(LED_GREEN_PORT, LED_GREEN_PIN, 0);
+     73              PIN_SET(LED_BLUE_PORT,  LED_BLUE_PIN,  0);
+     74              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, DISABLE);
+     75              led_r = led_g = led_b = 0;
+     76          }
+     77          
+     78          /**
+     79           @brief LED color set.
+     80           @param r - red color, 0/1.
+     81           @param g - green color, 0/1.
+     82           @param b - blue color, 0/1.
+     83           @return none.
+     84           */
+     85          void drv_led_set(int r, int g, int b)
+     86          {
+     87              if (led_r != r) {
+     88                  led_r = r;
+     89                      
+     90                  if (r) {
+     91                      PIN_SET(LED_RED_PORT, LED_RED_PIN, 1);
+     92                  } else {
+     93                      PIN_SET(LED_RED_PORT, LED_RED_PIN, 0);
+     94                  }
+     95              }
+     96          
+     97              if (led_g != g) {
+     98                  led_g = g;
+     99                      
+    100                  if (g) {
+    101                      PIN_SET(LED_GREEN_PORT, LED_GREEN_PIN, 1);
+    102                  } else {
+    103                      PIN_SET(LED_GREEN_PORT, LED_GREEN_PIN, 0);
+    104                  }
+    105              }
+    106          
+    107              if (led_b != b) {
+    108                  led_b = b;
+    109                      
+    110                  if (b) {
+    111                      PIN_SET(LED_BLUE_PORT, LED_BLUE_PIN, 1);
+    112                  } else {
+    113                      PIN_SET(LED_BLUE_PORT, LED_BLUE_PIN, 0);
+    114                  }
+    115              }
+    116          }
+    117          
+    118          #elif defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    119          /**
+    120           @brief INK1002 color led driver.
+    121           */
+    122          
+
+   \                                 In section .bss, align 4
+    123          static int led_r, led_g, led_b;
+   \                     led_r:
+   \        0x0                      DS8 4
+   \        0x4                      DS8 4
+   \        0x8                      DS8 4
+    124          
+    125          /**
+    126           @brief 250ns delay macro.
+    127          
+    128           the delay should be within 250ns+-75ns.
+    129           The real delay time may be a little bit different by OS level.
+    130           The delay in OS size, is about 250ns.
+    131           The delay in OS none, is about 260ns.
+    132           */
+    133          #define delay_250ns()  do {    \
+    134                  __NOP();    \
+    135                  __NOP();    \
+    136                  __NOP();    \
+    137                  __NOP();    \
+    138                  __NOP();    \
+    139                  __NOP();    \
+    140                  __NOP();    \
+    141                  __NOP();    \
+    142                  __NOP();    \
+    143                  __NOP();    \
+    144          } while (0)
+    145          
+    146          /**
+    147           @brief Color led bit command.
+    148           @param bit - bit value, 0 or 1.
+    149           @return none.
+    150          
+    151            Bit 0 command pulse.
+    152              ____
+    153             |    |________________|
+    154             0.25us      1.0us
+    155          
+    156            Bit 1 command pulse
+    157              ________________
+    158             |                |____|
+    159                  1.0us       0.25us
+    160          
+    161            RESET command
+    162             |_____________________|
+    163                  >= 24us
+    164           */
+    165          static void drv_led_bit(uint8_t bit)
+    166          {
+    167              if (bit) {
+    168                  PIN_SET(LED_COLOR_PORT, LED_COLOR_PIN, 1);
+    169                  delay_250ns();
+    170                  delay_250ns();
+    171                  delay_250ns();
+    172                  delay_250ns();
+    173                  PIN_SET(LED_COLOR_PORT, LED_COLOR_PIN, 0);
+    174                  delay_250ns();
+    175              } else {
+    176                  PIN_SET(LED_COLOR_PORT, LED_COLOR_PIN, 1);
+    177                  delay_250ns();
+    178                  PIN_SET(LED_COLOR_PORT, LED_COLOR_PIN, 0);
+    179                  delay_250ns();
+    180                  delay_250ns();
+    181                  delay_250ns();
+    182                  delay_250ns();
+    183              }
+    184          }
+    185          
+    186          /**
+    187           @brief Color led byte command send.
+    188           @param cmd - byte command.
+    189           @return none.
+    190           */
+
+   \                                 In section .text, align 2, keep-with-next
+    191          static void drv_led_cmd(uint8_t cmd)
+    192          {
+   \                     drv_led_cmd: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    193              int8_t i;
+    194          
+    195              for (i = 7; i >= 0; i--) {
+   \        0x2   0x2107             MOVS     R1,#+7
+   \        0x4   0x....             LDR.N    R2,??DataTable4
+   \        0x6   0xF44F 0x7380      MOV      R3,#+256
+    196                  drv_led_bit(cmd & (1<<i));
+   \                     ??drv_led_cmd_0: (+1)
+   \        0xA   0x2401             MOVS     R4,#+1
+   \        0xC   0x408C             LSLS     R4,R4,R1
+   \        0xE   0x4220             TST      R0,R4
+   \       0x10   0x6013             STR      R3,[R2, #+0]
+   \       0x12   0x.... 0x....      BL       ?Subroutine1
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \       0x16   0xD003             BEQ.N    ??drv_led_cmd_1
+   \       0x18   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0x1C   0x6053             STR      R3,[R2, #+4]
+   \       0x1E   0xE002             B.N      ??CrossCallReturnLabel_1
+   \                     ??drv_led_cmd_1: (+1)
+   \       0x20   0x6053             STR      R3,[R2, #+4]
+   \       0x22   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x26   0x.... 0x....      BL       ?Subroutine1
+    197              }
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \       0x2A   0x1E49             SUBS     R1,R1,#+1
+   \       0x2C   0xB24C             SXTB     R4,R1
+   \       0x2E   0x2C00             CMP      R4,#+0
+   \       0x30   0xD5EB             BPL.N    ??drv_led_cmd_0
+    198          }
+   \       0x32   0xBD10             POP      {R4,PC}
+    199          
+    200          /**
+    201           @brief LED reset.
+    202           @param none.
+    203           @return none.
+    204          
+    205           Just wait for the active of new settings.
+    206           */
+
+   \                                 In section .text, align 2, keep-with-next
+    207          static void drv_led_reset(void)
+    208          {
+    209              _delay_us(20);
+   \                     drv_led_reset: (+1)
+   \        0x0   0x2014             MOVS     R0,#+20
+   \        0x2   0x.... 0x....      B.W      _delay_us
+    210          }
+    211          
+    212          /**
+    213           @brief LED color set.
+    214           @param r - red color, 0 ~ 255.
+    215           @param g - green color, 0 ~ 255.
+    216           @param b - blue color, 0 ~ 255.
+    217           @return none.
+    218           */
+
+   \                                 In section .text, align 2, keep-with-next
+    219          void drv_led_set(int r, int g, int b)
+    220          {
+   \                     drv_led_set: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+    221              uint8_t reset = false;
+   \        0x2   0x2300             MOVS     R3,#+0
+    222          
+    223              if (r < 0 || r > 0xFF) {
+   \        0x4   0xF5B0 0x7F80      CMP      R0,#+256
+   \        0x8   0xBF3C             ITT      CC
+   \        0xA   0xF5B1 0x7F80      CMPCC    R1,#+256
+   \        0xE   0xF5B2 0x7F80      CMPCC    R2,#+256
+    224                  return ;
+    225              }
+    226              if (g < 0 || g > 0xFF) {
+    227                  return ;
+    228              }
+    229              if (b < 0 || b > 0xFF) {
+   \       0x12   0xD21D             BCS.N    ??drv_led_set_0
+    230                  return ;
+    231              }
+    232          
+    233              if (led_r != r) {
+   \       0x14   0x....             LDR.N    R4,??DataTable4_1
+   \       0x16   0x6825             LDR      R5,[R4, #+0]
+   \       0x18   0x4285             CMP      R5,R0
+   \       0x1A   0xBF1C             ITT      NE
+   \       0x1C   0x6020             STRNE    R0,[R4, #+0]
+   \       0x1E   0x2301             MOVNE    R3,#+1
+    234                  led_r = r;
+    235                  reset = true;
+    236              }
+    237          
+    238              if (led_g != g) {
+   \       0x20   0x6860             LDR      R0,[R4, #+4]
+   \       0x22   0x4288             CMP      R0,R1
+   \       0x24   0xBF1C             ITT      NE
+   \       0x26   0x6061             STRNE    R1,[R4, #+4]
+   \       0x28   0x2301             MOVNE    R3,#+1
+    239                  led_g = g;
+    240                  reset = true;
+    241              }
+    242          
+    243              if (led_b != b) {
+   \       0x2A   0x68A0             LDR      R0,[R4, #+8]
+   \       0x2C   0x4290             CMP      R0,R2
+   \       0x2E   0xBF18             IT       NE
+   \       0x30   0x60A2             STRNE    R2,[R4, #+8]
+    244                  led_b = b;
+    245                  reset = true;
+   \       0x32   0xD100             BNE.N    ??drv_led_set_1
+    246              }
+    247          
+    248              if (reset) {
+   \       0x34   0xB163             CBZ.N    R3,??drv_led_set_0
+    249                  drv_led_cmd(led_g);
+   \                     ??drv_led_set_1: (+1)
+   \       0x36   0x6860             LDR      R0,[R4, #+4]
+   \       0x38   0xB2C0             UXTB     R0,R0
+   \       0x3A   0x.... 0x....      BL       drv_led_cmd
+    250                  drv_led_cmd(led_r);
+   \       0x3E   0x6821             LDR      R1,[R4, #+0]
+   \       0x40   0xB2C8             UXTB     R0,R1
+   \       0x42   0x.... 0x....      BL       drv_led_cmd
+    251                  drv_led_cmd(led_b);
+   \       0x46   0x68A0             LDR      R0,[R4, #+8]
+   \       0x48   0xE8BD 0x4032      POP      {R1,R4,R5,LR}
+   \       0x4C   0xB2C0             UXTB     R0,R0
+   \       0x4E   0x....             B.N      drv_led_cmd
+    252                  /* FIXME: to make the settings active, should wait reset.
+    253                   * But it'll waste a little time. So let caller do this.
+    254                   */
+    255          //      drv_led_reset();
+    256              }
+    257          }
+   \                     ??drv_led_set_0: (+1)
+   \       0x50   0xBD31             POP      {R0,R4,R5,PC}
+    258          
+    259          /**
+    260           @brief Color LED initialize.
+    261           @param none.
+    262           @return none.
+    263           */
+
+   \                                 In section .text, align 2, keep-with-next
+    264          void drv_led_init(void)
+    265          {
+   \                     drv_led_init: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    266          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 5)
+    267              pinMode(LED_COLOR_PORT, LED_COLOR_PIN, GPIO_Mode_Out_OD, GPIO_Speed_50MHz);
+   \        0x2   0x....             LDR.N    R4,??DataTable4_2
+   \        0x4   0x2303             MOVS     R3,#+3
+   \        0x6   0x2214             MOVS     R2,#+20
+   \        0x8   0x.... 0x....      BL       ?Subroutine4
+    268          #else
+    269              pinMode(LED_COLOR_PORT, LED_COLOR_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+    270          #endif
+    271              PIN_SET(LED_COLOR_PORT, LED_COLOR_PIN, 0);
+   \                     ??CrossCallReturnLabel_17: (+1)
+   \        0xC   0xF44F 0x7280      MOV      R2,#+256
+   \       0x10   0x6162             STR      R2,[R4, #+20]
+    272              _delay_us(100);
+   \       0x12   0x2064             MOVS     R0,#+100
+   \       0x14   0x.... 0x....      BL       _delay_us
+    273          
+    274              led_r = led_g = led_b = -1;
+   \       0x18   0x....             LDR.N    R0,??DataTable4_1
+   \       0x1A   0xF04F 0x31FF      MOV      R1,#+4294967295
+   \       0x1E   0x6081             STR      R1,[R0, #+8]
+   \       0x20   0x6041             STR      R1,[R0, #+4]
+   \       0x22   0x6001             STR      R1,[R0, #+0]
+    275              drv_led_set(0, 0, 0);
+   \       0x24   0x2200             MOVS     R2,#+0
+   \       0x26   0x.... 0x....      BL       ?Subroutine3
+    276              drv_led_reset();
+   \                     ??CrossCallReturnLabel_15: (+1)
+   \       0x2A   0xE8BD 0x4010      POP      {R4,LR}
+   \       0x2E   0x....             B.N      drv_led_reset
+    277          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine4: (+1)
+   \        0x0   0xF44F 0x7180      MOV      R1,#+256
+   \        0x4   0x4620             MOV      R0,R4
+   \        0x6   0x....             B.N      pinMode
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine3: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \                     ??Subroutine3_0: (+1)
+   \        0x2   0x2000             MOVS     R0,#+0
+   \        0x4   0x....             B.N      drv_led_set
+    278          
+    279          /**
+    280           @brief Color LED shutdonw.
+    281           @param none.
+    282           @return none.
+    283           */
+
+   \                                 In section .text, align 2, keep-with-next
+    284          void drv_led_shutdown(void)
+    285          {
+   \                     drv_led_shutdown: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    286              pinMode(LED_COLOR_PORT, LED_COLOR_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+   \        0x2   0x....             LDR.N    R4,??DataTable4_2
+   \        0x4   0x2303             MOVS     R3,#+3
+   \        0x6   0x2210             MOVS     R2,#+16
+   \        0x8   0x.... 0x....      BL       ?Subroutine4
+    287              PIN_SET(LED_COLOR_PORT, LED_COLOR_PIN, 0);
+   \                     ??CrossCallReturnLabel_16: (+1)
+   \        0xC   0xF44F 0x7280      MOV      R2,#+256
+   \       0x10   0x6162             STR      R2,[R4, #+20]
+    288              drv_led_set(0, 0, 0);
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0x2200             MOVS     R2,#+0
+   \       0x16   0x.... 0x....      BL       ??Subroutine3_0
+    289              drv_led_reset();
+   \                     ??CrossCallReturnLabel_13: (+1)
+   \       0x1A   0x2014             MOVS     R0,#+20
+   \       0x1C   0x.... 0x....      BL       _delay_us
+    290              led_r = led_g = led_b = 0;
+   \       0x20   0x....             LDR.N    R0,??DataTable4_1
+   \       0x22   0x2100             MOVS     R1,#+0
+   \       0x24   0x6081             STR      R1,[R0, #+8]
+   \       0x26   0x6041             STR      R1,[R0, #+4]
+   \       0x28   0x6001             STR      R1,[R0, #+0]
+    291          }
+   \       0x2A   0xBD10             POP      {R4,PC}
+    292          
+    293          /**
+    294           @brief Color LED test.
+    295           @param none.
+    296           @return none.
+    297           */
+
+   \                                 In section .text, align 2, keep-with-next
+    298          void drv_led_test(void)
+    299          {
+   \                     drv_led_test: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+    300              int r, g, b;
+    301          
+    302              while (1) {
+    303                  r = g = b = 0;
+   \                     ??drv_led_test_0: (+1)
+   \        0x2   0x2400             MOVS     R4,#+0
+   \        0x4   0x2500             MOVS     R5,#+0
+   \        0x6   0x2600             MOVS     R6,#+0
+    304                  while (r != 0xFF) {
+    305                      drv_led_set(r++, 0, 0);
+   \                     ??drv_led_test_1: (+1)
+   \        0x8   0x2200             MOVS     R2,#+0
+   \        0xA   0x.... 0x....      BL       ?Subroutine5
+    306                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_21: (+1)
+   \        0xE   0x.... 0x....      BL       ?Subroutine2
+    307                  }
+   \                     ??CrossCallReturnLabel_10: (+1)
+   \       0x12   0x1C76             ADDS     R6,R6,#+1
+   \       0x14   0x2EFF             CMP      R6,#+255
+   \       0x16   0xD1F7             BNE.N    ??drv_led_test_1
+    308                  while (g != 0xFF) {
+    309                      drv_led_set(0, g++, 0);
+   \                     ??drv_led_test_2: (+1)
+   \       0x18   0x2200             MOVS     R2,#+0
+   \       0x1A   0x4629             MOV      R1,R5
+   \       0x1C   0x.... 0x....      BL       ??Subroutine3_0
+    310                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_12: (+1)
+   \       0x20   0x.... 0x....      BL       ?Subroutine2
+    311                  }
+   \                     ??CrossCallReturnLabel_9: (+1)
+   \       0x24   0x1C6D             ADDS     R5,R5,#+1
+   \       0x26   0x2DFF             CMP      R5,#+255
+   \       0x28   0xD1F6             BNE.N    ??drv_led_test_2
+    312                  while (b != 0xFF) {
+    313                      drv_led_set(0, 0, b++);
+   \                     ??drv_led_test_3: (+1)
+   \       0x2A   0x4622             MOV      R2,R4
+   \       0x2C   0x.... 0x....      BL       ?Subroutine3
+    314                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_14: (+1)
+   \       0x30   0x.... 0x....      BL       ?Subroutine2
+    315                  }
+   \                     ??CrossCallReturnLabel_8: (+1)
+   \       0x34   0x1C64             ADDS     R4,R4,#+1
+   \       0x36   0x2CFF             CMP      R4,#+255
+   \       0x38   0xD1F7             BNE.N    ??drv_led_test_3
+    316                  r = g = b = 0;
+   \       0x3A   0x2400             MOVS     R4,#+0
+   \       0x3C   0x2500             MOVS     R5,#+0
+   \       0x3E   0x2600             MOVS     R6,#+0
+    317                  while (r != 0xFF) {
+    318                      drv_led_set(r++, g++, 0);
+   \                     ??drv_led_test_4: (+1)
+   \       0x40   0x2200             MOVS     R2,#+0
+   \       0x42   0x4629             MOV      R1,R5
+   \       0x44   0x.... 0x....      BL       ??Subroutine5_0
+    319                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_19: (+1)
+   \       0x48   0x.... 0x....      BL       ?Subroutine2
+    320                  }
+   \                     ??CrossCallReturnLabel_7: (+1)
+   \       0x4C   0x1C6D             ADDS     R5,R5,#+1
+   \       0x4E   0x1C76             ADDS     R6,R6,#+1
+   \       0x50   0x2EFF             CMP      R6,#+255
+   \       0x52   0xD1F5             BNE.N    ??drv_led_test_4
+    321                  r = g = b = 0;
+   \       0x54   0x2500             MOVS     R5,#+0
+   \       0x56   0x2600             MOVS     R6,#+0
+    322                  while (r != 0xFF) {
+    323                      drv_led_set(r++, 0, b++);
+   \                     ??drv_led_test_5: (+1)
+   \       0x58   0x4622             MOV      R2,R4
+   \       0x5A   0x.... 0x....      BL       ?Subroutine5
+    324                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_20: (+1)
+   \       0x5E   0x.... 0x....      BL       ?Subroutine2
+    325                  }
+   \                     ??CrossCallReturnLabel_6: (+1)
+   \       0x62   0x1C64             ADDS     R4,R4,#+1
+   \       0x64   0x1C76             ADDS     R6,R6,#+1
+   \       0x66   0x2EFF             CMP      R6,#+255
+   \       0x68   0xD1F6             BNE.N    ??drv_led_test_5
+    326                  r = g = b = 0;
+   \       0x6A   0x2400             MOVS     R4,#+0
+   \       0x6C   0x2600             MOVS     R6,#+0
+    327                  while (g != 0xFF) {
+    328                      drv_led_set(0, g++, b++);
+   \                     ??drv_led_test_6: (+1)
+   \       0x6E   0x4622             MOV      R2,R4
+   \       0x70   0x4629             MOV      R1,R5
+   \       0x72   0x.... 0x....      BL       ??Subroutine3_0
+    329                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_11: (+1)
+   \       0x76   0x.... 0x....      BL       ?Subroutine2
+    330                  }
+   \                     ??CrossCallReturnLabel_5: (+1)
+   \       0x7A   0x1C64             ADDS     R4,R4,#+1
+   \       0x7C   0x1C6D             ADDS     R5,R5,#+1
+   \       0x7E   0x2DFF             CMP      R5,#+255
+   \       0x80   0xD1F5             BNE.N    ??drv_led_test_6
+    331                  r = g = b = 0;
+   \       0x82   0x2400             MOVS     R4,#+0
+   \       0x84   0x2500             MOVS     R5,#+0
+    332                  while (r != 0xFF) {
+    333                      drv_led_set(r++, g++, b++);
+   \                     ??drv_led_test_7: (+1)
+   \       0x86   0x4622             MOV      R2,R4
+   \       0x88   0x4629             MOV      R1,R5
+   \       0x8A   0x.... 0x....      BL       ??Subroutine5_0
+    334                      _delay_ms(10);
+   \                     ??CrossCallReturnLabel_18: (+1)
+   \       0x8E   0x.... 0x....      BL       ?Subroutine2
+    335                  }
+   \                     ??CrossCallReturnLabel_4: (+1)
+   \       0x92   0x1C64             ADDS     R4,R4,#+1
+   \       0x94   0x1C6D             ADDS     R5,R5,#+1
+   \       0x96   0x1C76             ADDS     R6,R6,#+1
+   \       0x98   0x2EFF             CMP      R6,#+255
+   \       0x9A   0xD1F4             BNE.N    ??drv_led_test_7
+   \       0x9C   0xE7B1             B.N      ??drv_led_test_0
+    336              }
+    337          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine5: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \                     ??Subroutine5_0: (+1)
+   \        0x2   0x4630             MOV      R0,R6
+   \        0x4   0x....             B.N      drv_led_set
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine2: (+1)
+   \        0x0   0x200A             MOVS     R0,#+10
+   \        0x2   0x....             B.N      _delay_ms
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine1: (+1)
+   \        0x0   0xBF00             Nop
+   \        0x2   0xBF00             Nop
+   \        0x4   0xBF00             Nop
+   \        0x6   0xBF00             Nop
+   \        0x8   0xBF00             Nop
+   \        0xA   0xBF00             Nop
+   \        0xC   0xBF00             Nop
+   \        0xE   0xBF00             Nop
+   \       0x10   0xBF00             Nop
+   \       0x12   0xBF00             Nop
+   \       0x14   0x4770             BX       LR
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0xBF00             Nop
+   \        0x2   0xBF00             Nop
+   \        0x4   0xBF00             Nop
+   \        0x6   0xBF00             Nop
+   \        0x8   0xBF00             Nop
+   \        0xA   0xBF00             Nop
+   \        0xC   0xBF00             Nop
+   \        0xE   0xBF00             Nop
+   \       0x10   0xBF00             Nop
+   \       0x12   0xBF00             Nop
+   \       0x14   0xBF00             Nop
+   \       0x16   0xBF00             Nop
+   \       0x18   0xBF00             Nop
+   \       0x1A   0xBF00             Nop
+   \       0x1C   0xBF00             Nop
+   \       0x1E   0xBF00             Nop
+   \       0x20   0xBF00             Nop
+   \       0x22   0xBF00             Nop
+   \       0x24   0xBF00             Nop
+   \       0x26   0xBF00             Nop
+   \       0x28   0xBF00             Nop
+   \       0x2A   0xBF00             Nop
+   \       0x2C   0xBF00             Nop
+   \       0x2E   0xBF00             Nop
+   \       0x30   0xBF00             Nop
+   \       0x32   0xBF00             Nop
+   \       0x34   0xBF00             Nop
+   \       0x36   0xBF00             Nop
+   \       0x38   0xBF00             Nop
+   \       0x3A   0xBF00             Nop
+   \       0x3C   0x4770             BX       LR
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \        0x0   0x4001'1010        DC32     0x40011010
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \        0x0   0x....'....        DC32     led_r
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_2:
+   \        0x0   0x4001'1000        DC32     0x40011000
+    338          
+    339          #endif
+    340          
+    341          /** @} */
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   _delay_ms
+         8   -> _delay_us
+       8   drv_led_cmd
+       8   drv_led_init
+         8   -> _delay_us
+         0   -> drv_led_reset
+         8   -> drv_led_set
+         8   -> pinMode
+       0   drv_led_reset
+         0   -> _delay_us
+      16   drv_led_set
+         0   -> drv_led_cmd
+        16   -> drv_led_cmd
+       8   drv_led_shutdown
+         8   -> _delay_us
+         8   -> drv_led_set
+         8   -> pinMode
+      16   drv_led_test
+        16   -> _delay_ms
+        16   -> drv_led_set
+       8   pinMode
+         8   -> GPIO_Init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+      62  ?Subroutine0
+      22  ?Subroutine1
+       4  ?Subroutine2
+       6  ?Subroutine3
+       8  ?Subroutine4
+       6  ?Subroutine5
+      24  _delay_ms
+      52  drv_led_cmd
+      48  drv_led_init
+       6  drv_led_reset
+      82  drv_led_set
+      44  drv_led_shutdown
+     158  drv_led_test
+      12  led_r
+          led_g
+          led_b
+      22  pinMode
+
+ 
+  12 bytes in section .bss
+ 556 bytes in section .text
+ 
+ 556 bytes of CODE memory
+  12 bytes of DATA memory
+
+Errors: none
+Warnings: none

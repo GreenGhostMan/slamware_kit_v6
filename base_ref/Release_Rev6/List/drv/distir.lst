@@ -1,0 +1,682 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:27
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\distir.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\distir.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\distir.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\distir.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\distir.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\distir.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\distir.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void pinMode(GPIO_TypeDef *, uint16_t, GPIOMode_TypeDef, GPIOSpeed_TypeDef)
+   \                     pinMode: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+   \        0x6   0xF88D 0x3002      STRB     R3,[SP, #+2]
+   \        0xA   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \        0xE   0x4669             MOV      R1,SP
+   \       0x10   0x.... 0x....      BL       GPIO_Init
+   \       0x14   0xBD01             POP      {R0,PC}
+     32          #include "distir.h"
+     33          
+     34          #define IR_CARRIER_FREQ  400000                                 //单位：hz
+     35          #define IR_CARRIER_EMIT_WIDTH 20                                //单位：ms
+     36          #define IR_SENSOR_DROP_THRESHOLD  100                           //跌落判定阈值
+     37          #define IR_SENSOR_MAX_ADC_DIFF    3500
+     38          #define IRPWM_TIMER_PERIOD (CPU_FREQ/IR_CARRIER_FREQ -1)        //PWM周期
+     39          #define IRPWM_TIMER_FRONT_PW      (IRPWM_TIMER_PERIOD/10)       //前红外占空比
+     40          #define IRPWM_TIMER_BOTTOM_PW     (IRPWM_TIMER_PERIOD/10)       //底下红外占空比
+     41          
+     42          #define IR_FRONT_BLOCK_DISTANCE  30                             //单位：mm
+     43          
+     44          enum IR_WORKING_STATUS_T {
+     45              STATUS_ADC_IDLE = 0,
+     46              STATUS_ADC_PENDING = 1,
+     47              STATUS_WAIT = 2,
+     48          };
+     49          
+     50          enum IR_SAMPLE_STAGE_T {
+     51              STATUS_IR_SAMPLE_BACKGROUND = 0,
+     52              STATUS_IR_SAMPLE_LOADED = 1,
+     53          };
+     54          
+     55          typedef struct _adcSamplePair {
+     56              _u16 bitPos;
+     57              _u16 adcPin;
+     58              _s16 lastAdcval;
+     59              _s16 lastAdcdiff;
+     60              _u8  saturated;
+     61          } adcSamplePair_t;
+     62          
+     63          #define IRSENSOR_FRONT_R1_BIT    (0x1<<IRSENSOR_FRONT_R1_ID)
+     64          #define IRSENSOR_FRONT_R2_BIT    (0x1<<IRSENSOR_FRONT_R2_ID)
+     65          #define IRSENSOR_FRONT_R3_BIT    (0x1<<IRSENSOR_FRONT_R3_ID)
+     66          #define IRSENSOR_FRONT_R4_BIT    (0x1<<IRSENSOR_FRONT_R4_ID)
+     67          
+     68          #define IRSENSOR_BOTTOM_BIT_BASE 8
+     69          
+     70          #define IRSENSOR_BOTTOM_R1_BIT   (0x1<<(IRSENSOR_BOTTOM_R1_ID+IRSENSOR_BOTTOM_BIT_BASE))
+     71          #define IRSENSOR_BOTTOM_R2_BIT   (0x1<<(IRSENSOR_BOTTOM_R2_ID+IRSENSOR_BOTTOM_BIT_BASE))
+     72          #define IRSENSOR_BOTTOM_R3_BIT   (0x1<<(IRSENSOR_BOTTOM_R3_ID+IRSENSOR_BOTTOM_BIT_BASE))
+     73          #define IRSENSOR_BOTTOM_R4_BIT   (0x1<<(IRSENSOR_BOTTOM_R4_ID+IRSENSOR_BOTTOM_BIT_BASE))
+     74          
+
+   \                                 In section .data, align 4
+     75          static adcSamplePair_t _adcSamplePairs[] = {
+   \                     _adcSamplePairs:
+   \        0x0   0x0100 0x000C      DC16 256, 12, 0, 0
+
+   \               0x0000 0x000
+
+   \              0
+   \        0x8   0x00               DC8 0
+   \        0x9                      DS8 1
+   \        0xA   0x0200 0x000B      DC16 512, 11, 0, 0
+
+   \               0x0000 0x000
+
+   \              0
+   \       0x12   0x00               DC8 0
+   \       0x13                      DS8 1
+   \       0x14   0x0400 0x000E      DC16 1'024, 14, 0, 0
+
+   \               0x0000 0x000
+
+   \              0
+   \       0x1C   0x00               DC8 0
+   \       0x1D                      DS8 1
+   \       0x1E   0x0800 0x0004      DC16 2'048, 4, 0, 0
+
+   \               0x0000 0x000
+
+   \              0
+   \       0x26   0x00               DC8 0
+   \       0x27                      DS8 1
+     76          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+     77          #else
+     78              {IRSENSOR_FRONT_R1_BIT, FRONT_IR_R1_ADC_CH},
+     79              {IRSENSOR_FRONT_R2_BIT, FRONT_IR_R2_ADC_CH},
+     80              {IRSENSOR_FRONT_R3_BIT, FRONT_IR_R3_ADC_CH},
+     81              {IRSENSOR_FRONT_R4_BIT, FRONT_IR_R4_ADC_CH},
+     82          #endif
+     83              {IRSENSOR_BOTTOM_R1_BIT, BOTTOM_IR_R1_ADC_CH},
+     84              {IRSENSOR_BOTTOM_R2_BIT, BOTTOM_IR_R2_ADC_CH},
+     85              {IRSENSOR_BOTTOM_R3_BIT, BOTTOM_IR_R3_ADC_CH},
+     86              {IRSENSOR_BOTTOM_R4_BIT, BOTTOM_IR_R4_ADC_CH},
+     87          };
+     88          
+
+   \                                 In section .bss, align 4
+     89          static _u8 _currentSamplePos;
+   \                     _currentSamplePos:
+   \        0x0                      DS8 1
+   \        0x1                      DS8 1
+   \        0x2                      DS8 1
+   \        0x3                      DS8 1
+   \        0x4                      DS8 20
+   \       0x18                      DS8 4
+   \       0x1C                      DS8 4
+     90          static irDistance_t _cachedIrDistance;
+     91          static _u32 _cachedIrresult;
+     92          
+     93          static _u8 _irWorkingStatus;
+     94          static _u8 _irSampleStage;
+     95          static _u32 _irLastSampleTime;
+     96          
+     97          static _s32 init_dev_irdetector();
+     98          static void heartbeat_dev_irdetector();
+     99          static _u32 read_dev_irdetector();
+    100          /*
+    101           * 红外测距初始化函数
+    102           */
+
+   \                                 In section .text, align 2, keep-with-next
+    103          void init_distir(void)
+    104          {
+   \                     init_distir: (+1)
+   \        0x0   0xB518             PUSH     {R3,R4,LR}
+   \        0x2   0xB087             SUB      SP,SP,#+28
+    105              init_dev_irdetector();
+   \        0x4   0x210A             MOVS     R1,#+10
+   \        0x6   0xA804             ADD      R0,SP,#+16
+   \        0x8   0x.... 0x....      BL       __aeabi_memclr4
+   \        0xC   0x4668             MOV      R0,SP
+   \        0xE   0x2100             MOVS     R1,#+0
+   \       0x10   0x2200             MOVS     R2,#+0
+   \       0x12   0x2300             MOVS     R3,#+0
+   \       0x14   0x2400             MOVS     R4,#+0
+   \       0x16   0xE880 0x001E      STM      R0,{R1-R4}
+   \       0x1A   0x21B3             MOVS     R1,#+179
+   \       0x1C   0xF8AD 0x1014      STRH     R1,[SP, #+20]
+   \       0x20   0x9204             STR      R2,[SP, #+16]
+   \       0x22   0xF8AD 0x2016      STRH     R2,[SP, #+22]
+   \       0x26   0x....             LDR.N    R4,??DataTable3
+   \       0x28   0x4620             MOV      R0,R4
+   \       0x2A   0x.... 0x....      BL       TIM_DeInit
+   \       0x2E   0xA904             ADD      R1,SP,#+16
+   \       0x30   0x4620             MOV      R0,R4
+   \       0x32   0x.... 0x....      BL       TIM_TimeBaseInit
+   \       0x36   0x2102             MOVS     R1,#+2
+   \       0x38   0xF8AD 0x1008      STRH     R1,[SP, #+8]
+   \       0x3C   0x2060             MOVS     R0,#+96
+   \       0x3E   0x2201             MOVS     R2,#+1
+   \       0x40   0xF8AD 0x0000      STRH     R0,[SP, #+0]
+   \       0x44   0xF8AD 0x2002      STRH     R2,[SP, #+2]
+   \       0x48   0x2100             MOVS     R1,#+0
+   \       0x4A   0x9101             STR      R1,[SP, #+4]
+   \       0x4C   0x4620             MOV      R0,R4
+   \       0x4E   0x4669             MOV      R1,SP
+   \       0x50   0x.... 0x....      BL       TIM_OC2Init
+   \       0x54   0x2108             MOVS     R1,#+8
+   \       0x56   0x4620             MOV      R0,R4
+   \       0x58   0x.... 0x....      BL       TIM_OC2PreloadConfig
+   \       0x5C   0x2101             MOVS     R1,#+1
+   \       0x5E   0x4620             MOV      R0,R4
+   \       0x60   0x.... 0x....      BL       TIM_Cmd
+   \       0x64   0x....             LDR.N    R4,??DataTable3_1
+   \       0x66   0x2303             MOVS     R3,#+3
+   \       0x68   0x2210             MOVS     R2,#+16
+   \       0x6A   0x2180             MOVS     R1,#+128
+   \       0x6C   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \       0x70   0x2201             MOVS     R2,#+1
+   \       0x72   0x2180             MOVS     R1,#+128
+   \       0x74   0x4620             MOV      R0,R4
+   \       0x76   0x.... 0x....      BL       GPIO_WriteBit
+   \       0x7A   0x2303             MOVS     R3,#+3
+   \       0x7C   0x2200             MOVS     R2,#+0
+   \       0x7E   0x2104             MOVS     R1,#+4
+   \       0x80   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \       0x84   0x2303             MOVS     R3,#+3
+   \       0x86   0x2200             MOVS     R2,#+0
+   \       0x88   0x2102             MOVS     R1,#+2
+   \       0x8A   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x8E   0x2303             MOVS     R3,#+3
+   \       0x90   0x2200             MOVS     R2,#+0
+   \       0x92   0x2110             MOVS     R1,#+16
+   \       0x94   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0x98   0x2303             MOVS     R3,#+3
+   \       0x9A   0x2200             MOVS     R2,#+0
+   \       0x9C   0x2110             MOVS     R1,#+16
+   \       0x9E   0x....             LDR.N    R0,??DataTable3_2
+   \       0xA0   0x....             LDR.N    R4,??DataTable3_3
+   \       0xA2   0x.... 0x....      BL       pinMode
+   \       0xA6   0x2000             MOVS     R0,#+0
+   \       0xA8   0x7060             STRB     R0,[R4, #+1]
+   \       0xAA   0x70A0             STRB     R0,[R4, #+2]
+   \       0xAC   0x61A0             STR      R0,[R4, #+24]
+   \       0xAE   0x61E0             STR      R0,[R4, #+28]
+   \       0xB0   0x7020             STRB     R0,[R4, #+0]
+    106              memset(&_cachedIrDistance, 0, sizeof(_cachedIrDistance));
+   \       0xB2   0x2114             MOVS     R1,#+20
+   \       0xB4   0x1D20             ADDS     R0,R4,#+4
+   \       0xB6   0x.... 0x....      BL       __aeabi_memclr4
+    107              _cachedIrDistance.bottomSensorBitmap = (_u32) (-1);
+   \       0xBA   0xF04F 0x30FF      MOV      R0,#+4294967295
+   \       0xBE   0x6160             STR      R0,[R4, #+20]
+    108          }
+   \       0xC0   0xB008             ADD      SP,SP,#+32
+   \       0xC2   0xBD10             POP      {R4,PC}
+    109          /*
+    110           * 红外测距处理函数
+    111           */
+
+   \                                 In section .text, align 2, keep-with-next
+    112          void heartbeat_distir(void)
+    113          {
+   \                     heartbeat_distir: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+    114              heartbeat_dev_irdetector();
+   \        0x2   0x....             LDR.N    R6,??DataTable3_3
+   \        0x4   0x....             LDR.N    R5,??DataTable3_4
+   \        0x6   0x7871             LDRB     R1,[R6, #+1]
+   \        0x8   0x....             LDR.N    R0,??DataTable3_5
+   \        0xA   0x240A             MOVS     R4,#+10
+   \        0xC   0x2900             CMP      R1,#+0
+   \        0xE   0xD03C             BEQ.N    ??heartbeat_distir_0
+   \       0x10   0x2902             CMP      R1,#+2
+   \       0x12   0xD043             BEQ.N    ??heartbeat_distir_1
+   \       0x14   0xD24A             BCS.N    ??heartbeat_distir_2
+   \       0x16   0x6801             LDR      R1,[R0, #+0]
+   \       0x18   0x0789             LSLS     R1,R1,#+30
+   \       0x1A   0xD547             BPL.N    ??heartbeat_distir_2
+   \       0x1C   0x.... 0x....      BL       adc_read_final
+   \       0x20   0x7832             LDRB     R2,[R6, #+0]
+   \       0x22   0x4601             MOV      R1,R0
+   \       0x24   0x4610             MOV      R0,R2
+   \       0x26   0x4360             MULS     R0,R4,R0
+   \       0x28   0x182B             ADDS     R3,R5,R0
+   \       0x2A   0x78B0             LDRB     R0,[R6, #+2]
+   \       0x2C   0xB938             CBNZ.N   R0,??heartbeat_distir_3
+   \       0x2E   0x8099             STRH     R1,[R3, #+4]
+   \       0x30   0xF640 0x37B8      MOVW     R7,#+3000
+   \       0x34   0x42B9             CMP      R1,R7
+   \       0x36   0x4189             SBCS     R1,R1,R1
+   \       0x38   0x0FC9             LSRS     R1,R1,#+31
+   \       0x3A   0x7219             STRB     R1,[R3, #+8]
+   \       0x3C   0xE00E             B.N      ??heartbeat_distir_4
+   \                     ??heartbeat_distir_3: (+1)
+   \       0x3E   0xF9B3 0xC004      LDRSH    R12,[R3, #+4]
+   \       0x42   0x881F             LDRH     R7,[R3, #+0]
+   \       0x44   0xEBAC 0x0101      SUB      R1,R12,R1
+   \       0x48   0xF8D6 0xC018      LDR      R12,[R6, #+24]
+   \       0x4C   0x2965             CMP      R1,#+101
+   \       0x4E   0xBFA6             ITTE     GE
+   \       0x50   0xEA2C 0x0707      BICGE    R7,R12,R7
+   \       0x54   0x80D9             STRHGE   R1,[R3, #+6]
+   \       0x56   0xEA47 0x070C      ORRLT    R7,R7,R12
+   \       0x5A   0x61B7             STR      R7,[R6, #+24]
+   \                     ??heartbeat_distir_4: (+1)
+   \       0x5C   0x1C52             ADDS     R2,R2,#+1
+   \       0x5E   0x7032             STRB     R2,[R6, #+0]
+   \       0x60   0xB2D2             UXTB     R2,R2
+   \       0x62   0x2A04             CMP      R2,#+4
+   \       0x64   0xD320             BCC.N    ??heartbeat_distir_5
+   \       0x66   0x2100             MOVS     R1,#+0
+   \       0x68   0x7031             STRB     R1,[R6, #+0]
+   \       0x6A   0x....             LDR.N    R1,??DataTable3_6
+   \       0x6C   0xB918             CBNZ.N   R0,??heartbeat_distir_6
+   \       0x6E   0x2011             MOVS     R0,#+17
+   \       0x70   0x8008             STRH     R0,[R1, #+0]
+   \       0x72   0x2001             MOVS     R0,#+1
+   \       0x74   0xE002             B.N      ??heartbeat_distir_7
+   \                     ??heartbeat_distir_6: (+1)
+   \       0x76   0x2200             MOVS     R2,#+0
+   \       0x78   0x800A             STRH     R2,[R1, #+0]
+   \       0x7A   0x2000             MOVS     R0,#+0
+   \                     ??heartbeat_distir_7: (+1)
+   \       0x7C   0x70B0             STRB     R0,[R6, #+2]
+   \       0x7E   0x2002             MOVS     R0,#+2
+   \       0x80   0x7070             STRB     R0,[R6, #+1]
+   \       0x82   0x.... 0x....      BL       getms
+   \       0x86   0x61F0             STR      R0,[R6, #+28]
+   \       0x88   0xE010             B.N      ??heartbeat_distir_2
+   \                     ??heartbeat_distir_0: (+1)
+   \       0x8A   0x7832             LDRB     R2,[R6, #+0]
+   \       0x8C   0x1CA9             ADDS     R1,R5,#+2
+   \       0x8E   0x4362             MULS     R2,R4,R2
+   \       0x90   0x5A89             LDRH     R1,[R1, R2]
+   \       0x92   0xB2C9             UXTB     R1,R1
+   \       0x94   0x.... 0x....      BL       adc_read_start
+   \       0x98   0x2001             MOVS     R0,#+1
+   \       0x9A   0xE006             B.N      ??heartbeat_distir_8
+   \                     ??heartbeat_distir_1: (+1)
+   \       0x9C   0x.... 0x....      BL       getms
+   \       0xA0   0x69F1             LDR      R1,[R6, #+28]
+   \       0xA2   0x1A40             SUBS     R0,R0,R1
+   \       0xA4   0x2815             CMP      R0,#+21
+   \       0xA6   0xD301             BCC.N    ??heartbeat_distir_2
+   \                     ??heartbeat_distir_5: (+1)
+   \       0xA8   0x2000             MOVS     R0,#+0
+   \                     ??heartbeat_distir_8: (+1)
+   \       0xAA   0x7070             STRB     R0,[R6, #+1]
+    115              _u32 currentBitmap = read_dev_irdetector();
+   \                     ??heartbeat_distir_2: (+1)
+   \       0xAC   0x69B1             LDR      R1,[R6, #+24]
+    116          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    117          #else
+    118              for (size_t pos = 0; pos <= _countof(_cachedIrDistance.frontSensorDistMmQ16); ++pos) {
+    119                  int isBlocked = !(currentBitmap & (0x1 << pos));
+    120                  if (isBlocked) {
+    121                      int relativeDistEst = (int) _adcSamplePairs[pos].lastAdcdiff * IR_FRONT_BLOCK_DISTANCE / IR_SENSOR_MAX_ADC_DIFF;
+    122                      if (relativeDistEst >= IR_FRONT_BLOCK_DISTANCE)
+    123                          relativeDistEst = IR_FRONT_BLOCK_DISTANCE - 1;
+    124                      _cachedIrDistance.frontSensorDistMmQ16[pos] = ((IR_FRONT_BLOCK_DISTANCE - relativeDistEst) << 16);
+    125                  } else {
+    126                      _cachedIrDistance.frontSensorDistMmQ16[pos] = 0;
+    127                  }
+    128              }
+    129          #endif
+    130              _cachedIrDistance.bottomSensorBitmap = 0xFF;
+    131              for (size_t pos = IRSENSOR_BOTTOM_R1_ID; pos <= IRSENSOR_BOTTOM_R4_ID; ++pos) {
+   \       0xAE   0x2200             MOVS     R2,#+0
+   \       0xB0   0x23FF             MOVS     R3,#+255
+    132                  int isDropDetected = (currentBitmap & (0x1 << (pos + IRSENSOR_BOTTOM_BIT_BASE)));
+    133                  if (isDropDetected && !_adcSamplePairs[pos].saturated) {
+   \                     ??heartbeat_distir_9: (+1)
+   \       0xB2   0xF102 0x0008      ADD      R0,R2,#+8
+   \       0xB6   0xFA41 0xF700      ASR      R7,R1,R0
+   \       0xBA   0x07F8             LSLS     R0,R7,#+31
+   \       0xBC   0xD509             BPL.N    ??heartbeat_distir_10
+   \       0xBE   0xF105 0x0708      ADD      R7,R5,#+8
+   \       0xC2   0xFB04 0xFE02      MUL      LR,R4,R2
+   \       0xC6   0xF817 0x000E      LDRB     R0,[R7, LR]
+   \       0xCA   0xB910             CBNZ.N   R0,??heartbeat_distir_10
+    134                      _cachedIrDistance.bottomSensorBitmap &= ~(0x1 << pos);
+   \       0xCC   0x2701             MOVS     R7,#+1
+   \       0xCE   0x4097             LSLS     R7,R7,R2
+   \       0xD0   0x43BB             BICS     R3,R3,R7
+    135                  }
+    136              }
+   \                     ??heartbeat_distir_10: (+1)
+   \       0xD2   0x1C52             ADDS     R2,R2,#+1
+   \       0xD4   0x2A04             CMP      R2,#+4
+   \       0xD6   0xD3EC             BCC.N    ??heartbeat_distir_9
+    137          }
+   \       0xD8   0x6173             STR      R3,[R6, #+20]
+   \       0xDA   0xBDF1             POP      {R0,R4-R7,PC}
+    138          /*
+    139           * 获得红外测距数据函数
+    140           */
+
+   \                                 In section .text, align 2, keep-with-next
+    141          const irDistance_t *get_distir_value()
+    142          {
+    143              return &_cachedIrDistance;
+   \                     get_distir_value: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable3_7
+   \        0x2   0x4770             BX       LR
+    144          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0x4620             MOV      R0,R4
+   \        0x2   0x....             B.N      pinMode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \        0x0   0x4000'0400        DC32     0x40000400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_1:
+   \        0x0   0x4001'1000        DC32     0x40011000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_2:
+   \        0x0   0x4001'0800        DC32     0x40010800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_3:
+   \        0x0   0x....'....        DC32     _currentSamplePos
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_4:
+   \        0x0   0x....'....        DC32     _adcSamplePairs
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_5:
+   \        0x0   0x4001'2800        DC32     0x40012800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_6:
+   \        0x0   0x4000'0438        DC32     0x40000438
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3_7:
+   \        0x0   0x....'....        DC32     _currentSamplePos+0x4
+    145          /*
+    146           * 红外测距PWM发送初始化函数
+    147           */
+    148          static int init_dev_irdetector()
+    149          {
+    150          
+    151              TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+    152              TIM_OCInitTypeDef TIM_OCInitStructure;
+    153          
+    154              memset(&TIM_TimeBaseStructure, 0, sizeof(TIM_TimeBaseStructure));
+    155              memset(&TIM_OCInitStructure, 0, sizeof(TIM_OCInitStructure));
+    156          
+    157              TIM_TimeBaseStructure.TIM_Period = IRPWM_TIMER_PERIOD;
+    158              TIM_TimeBaseStructure.TIM_Prescaler = 0;
+    159              TIM_TimeBaseStructure.TIM_ClockDivision = 0;
+    160              TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    161          
+    162              TIM_DeInit(GET_TIM(IR_EMITTER_TIMER_ID));
+    163              TIM_TimeBaseInit(GET_TIM(IR_EMITTER_TIMER_ID), &TIM_TimeBaseStructure);
+    164          
+    165              TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM1;
+    166              TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_Low;
+    167              TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+    168              TIM_OCInitStructure.TIM_OutputNState = TIM_OutputNState_Disable;
+    169              TIM_OCInitStructure.TIM_Pulse = 0;
+    170          
+    171          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    172          #else
+    173              INIT_OC_FOR(FRONT_IR_E_TIMER_CH, IR_EMITTER_TIMER_ID);
+    174          #endif
+    175              INIT_OC_FOR(BOTTOM_IR_E_TIMER_CH, IR_EMITTER_TIMER_ID);
+    176          
+    177              TIM_Cmd(GET_TIM(IR_EMITTER_TIMER_ID), ENABLE);
+    178          
+    179          #if   IR_EMITTER_TIMER_ID==1
+    180              TIM_CtrlPWMOutputs(TIM1, ENABLE);
+    181          #endif
+    182          
+    183          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    184          #else
+    185              pinMode(FRONT_IR_E_PORT, FRONT_IR_E_PIN, GPIO_Mode_AF_PP, GPIO_Speed_50MHz);
+    186              pinMode(FRONT_IR_R1_PORT, FRONT_IR_R1_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    187              pinMode(FRONT_IR_R2_PORT, FRONT_IR_R2_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    188              pinMode(FRONT_IR_R3_PORT, FRONT_IR_R3_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    189              pinMode(FRONT_IR_R4_PORT, FRONT_IR_R4_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    190          #endif
+    191          
+    192              pinMode(BOTTOM_IR_E_PORT, BOTTOM_IR_E_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+    193              pinSet(BOTTOM_IR_E_PORT, BOTTOM_IR_E_PIN, Bit_SET);
+    194              pinMode(BOTTOM_IR_R1_PORT, BOTTOM_IR_R1_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    195              pinMode(BOTTOM_IR_R2_PORT, BOTTOM_IR_R2_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    196              pinMode(BOTTOM_IR_R3_PORT, BOTTOM_IR_R3_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    197              pinMode(BOTTOM_IR_R4_PORT, BOTTOM_IR_R4_PIN, GPIO_Mode_AIN, GPIO_Speed_50MHz);
+    198              _irWorkingStatus = STATUS_ADC_IDLE;
+    199              _irSampleStage = STATUS_IR_SAMPLE_BACKGROUND;
+    200              _cachedIrresult = 0;
+    201              _irLastSampleTime = 0;
+    202              _currentSamplePos = 0;
+    203              return 1;
+    204          }
+    205          /*
+    206           * 红外测距ADC轮训采样函数
+    207           */
+    208          static void heartbeat_dev_irdetector()
+    209          {
+    210              switch (_irWorkingStatus) {
+    211              case STATUS_WAIT:                                                           //等待红外PWM发送时间，再进行采样。一般是在采背景值之后发出PWM
+    212                  {
+    213                      if (getms() - _irLastSampleTime > IR_CARRIER_EMIT_WIDTH) {
+    214                          _irWorkingStatus = STATUS_ADC_IDLE;
+    215                      }
+    216                  }
+    217                  break;
+    218              case STATUS_ADC_IDLE:                                                       //可以进行采样时，则轮流切换ADC采样通道，每个通道即是红外接收点
+    219                  {
+    220                      _u16 adcPin = _adcSamplePairs[_currentSamplePos].adcPin;
+    221                      adc_read_start(GET_ADC(IR_SENSOR_SAMPLE_ADC), adcPin);
+    222                      _irWorkingStatus = STATUS_ADC_PENDING;
+    223                  }
+    224                  break;
+    225              case STATUS_ADC_PENDING:
+    226                  {
+    227                      if (adc_read_is_ready(GET_ADC(IR_SENSOR_SAMPLE_ADC))) {             //采样结束，进行采样值的保存
+    228                          int result = adc_read_final(GET_ADC(IR_SENSOR_SAMPLE_ADC));
+    229          
+    230                          if (_irSampleStage == STATUS_IR_SAMPLE_BACKGROUND) {            //采样、存储背景ADC值
+    231                              _adcSamplePairs[_currentSamplePos].lastAdcval = result;
+    232                              if (result >= 0 && result < IR_SATURATED_THRESHOLD) {
+    233                                  _adcSamplePairs[_currentSamplePos].saturated = 1;
+    234                              } else {
+    235                                  _adcSamplePairs[_currentSamplePos].saturated = 0;
+    236                              }
+    237                          } else {                                                        //采样、存储测距值
+    238                              _u16 relatedBit = _adcSamplePairs[_currentSamplePos].bitPos;
+    239                              int adcDiff = _adcSamplePairs[_currentSamplePos].lastAdcval - result;
+    240                              if (adcDiff > IR_SENSOR_DROP_THRESHOLD) {
+    241                                  _cachedIrresult &= ~relatedBit;
+    242                                  _adcSamplePairs[_currentSamplePos].lastAdcdiff = adcDiff;
+    243          
+    244                              } else {
+    245                                  _cachedIrresult |= relatedBit;
+    246                              }
+    247                          }
+    248                          if (++_currentSamplePos >= _countof(_adcSamplePairs)) {
+    249                              _currentSamplePos = 0;
+    250                              if (_irSampleStage == STATUS_IR_SAMPLE_BACKGROUND) {        //一轮采样结束，如果是背景采样结束则发红外PWM，进行测距
+    251          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    252          #else
+    253                                  RAW_PWM_SET(FRONT_IR_E_TIMER_CH, IR_EMITTER_TIMER_ID, IRPWM_TIMER_FRONT_PW);
+    254          #endif
+    255                                  RAW_PWM_SET(BOTTOM_IR_E_TIMER_CH, IR_EMITTER_TIMER_ID, IRPWM_TIMER_BOTTOM_PW);
+    256                                  _irSampleStage = STATUS_IR_SAMPLE_LOADED;
+    257          
+    258                              } else {                                                    //一轮采样结束，如果是测距采样结束则停止发红外PWM，等待下轮背景采样
+    259          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    260          #else
+    261                                  RAW_PWM_SET(FRONT_IR_E_TIMER_CH, IR_EMITTER_TIMER_ID, 0);
+    262          #endif
+    263                                  RAW_PWM_SET(BOTTOM_IR_E_TIMER_CH, IR_EMITTER_TIMER_ID, 0);
+    264          
+    265                                  _irSampleStage = STATUS_IR_SAMPLE_BACKGROUND;
+    266                              }
+    267                              _irWorkingStatus = STATUS_WAIT;
+    268                              _irLastSampleTime = getms();
+    269                          } else {
+    270                              _irWorkingStatus = STATUS_ADC_IDLE;
+    271                          }
+    272          
+    273                      }
+    274          
+    275                  }
+    276                  break;
+    277              }
+    278          }
+    279          /*
+    280           * 获得红外测距的碰撞状态函数
+    281           */
+    282          static _u32 read_dev_irdetector()
+    283          {
+    284              return _cachedIrresult;
+    285          }
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   get_distir_value
+      24   heartbeat_distir
+        24   -> adc_read_final
+        24   -> adc_read_start
+        24   -> getms
+      40   init_distir
+        40   -> GPIO_WriteBit
+        40   -> TIM_Cmd
+        40   -> TIM_DeInit
+        40   -> TIM_OC2Init
+        40   -> TIM_OC2PreloadConfig
+        40   -> TIM_TimeBaseInit
+        40   -> __aeabi_memclr4
+        40   -> pinMode
+       8   pinMode
+         8   -> GPIO_Init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  ??DataTable3_1
+       4  ??DataTable3_2
+       4  ??DataTable3_3
+       4  ??DataTable3_4
+       4  ??DataTable3_5
+       4  ??DataTable3_6
+       4  ??DataTable3_7
+       4  ?Subroutine0
+      40  _adcSamplePairs
+      32  _currentSamplePos
+          _irWorkingStatus
+          _irSampleStage
+          _cachedIrDistance
+          _cachedIrresult
+          _irLastSampleTime
+       4  get_distir_value
+     220  heartbeat_distir
+     196  init_distir
+      22  pinMode
+
+ 
+  32 bytes in section .bss
+  40 bytes in section .data
+ 478 bytes in section .text
+ 
+ 478 bytes of CODE memory
+  72 bytes of DATA memory
+
+Errors: none
+Warnings: none

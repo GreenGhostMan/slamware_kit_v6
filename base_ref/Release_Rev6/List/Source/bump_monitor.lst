@@ -1,0 +1,320 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:39
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\bump_monitor.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source\bump_monitor.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\bump_monitor.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\bump_monitor.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source\bump_monitor.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\bump_monitor.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\bump_monitor.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+     32          #include "bump_monitor.h"
+     33          #include "drv/bump.h"
+     34          #include "drv/motor.h"
+     35          
+     36          #define CONF_STALL_AUTO_CANCELLATION_DURATION  1000     //ms
+     37          
+     38          enum {
+     39              STALLMODE_IDLE = 0,
+     40              STALLMODE_NO_FORWARD = 1,
+     41              STALLMODE_NO_BACKWARD = 2,
+     42          };
+     43          
+
+   \                                 In section .bss, align 4
+   \        0x0                      DS8 4
+     44          static _u32 _lastHitTs;
+
+   \                                 In section .bss, align 1
+     45          static _u8 _stallMode;
+   \                     _stallMode:
+   \        0x0                      DS8 1
+     46          /*
+     47           * 离开阻塞状态函数
+     48           */
+     49          static void leave_stall_mode(void)
+     50          {
+     51              _stallMode = STALLMODE_IDLE;
+     52          }
+     53          /*
+     54           * 进入阻塞状态函数
+     55           */
+     56          static void enter_stall_mode(int mode)
+     57          {
+     58              _stallMode = mode;
+     59              _lastHitTs = getms();
+     60          
+     61              set_walkingmotor_speed(0, 0);       //进入阻塞时，急停
+     62              brake_walkingmotor();
+     63          }
+     64          /*
+     65           * 阻塞状态初始化函数
+     66           */
+
+   \                                 In section .text, align 2, keep-with-next
+     67          _s32 init_bumpermonitor(void)
+     68          {
+     69              _lastHitTs = 0;
+     70              _stallMode = STALLMODE_IDLE;
+   \                     init_bumpermonitor: (+1)
+   \        0x0   0x....             LDR.N    R1,??DataTable3
+   \        0x2   0x2000             MOVS     R0,#+0
+   \        0x4   0x7008             STRB     R0,[R1, #+0]
+     71              return 1;
+   \        0x6   0x2001             MOVS     R0,#+1
+   \        0x8   0x4770             BX       LR
+     72          }
+
+   \                                 In section .text, align 2, keep-with-next
+     73          void shutdown_bumpermonitor(void)
+     74          {
+     75          }
+   \                     shutdown_bumpermonitor: (+1)
+   \        0x0   0x4770             BX       LR
+     76          /*
+     77           * 碰撞检测处理函数
+     78           */
+
+   \                                 In section .text, align 2, keep-with-next
+     79          _s32 heartbeat_bumpermonitor(void)
+     80          {
+   \                     heartbeat_bumpermonitor: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     81              if (is_bumped()) {
+   \        0x2   0x.... 0x....      BL       is_bumped
+   \        0x6   0x....             LDR.N    R4,??DataTable3
+   \        0x8   0xB160             CBZ.N    R0,??heartbeat_bumpermonitor_0
+     82                  if (_stallMode == STALLMODE_IDLE) {
+   \        0xA   0x7820             LDRB     R0,[R4, #+0]
+   \        0xC   0xB958             CBNZ.N   R0,??heartbeat_bumpermonitor_1
+     83                      enter_stall_mode(STALLMODE_NO_FORWARD);
+   \        0xE   0x2101             MOVS     R1,#+1
+   \       0x10   0x7021             STRB     R1,[R4, #+0]
+   \       0x12   0x.... 0x....      BL       getms
+   \       0x16   0x2100             MOVS     R1,#+0
+   \       0x18   0x2000             MOVS     R0,#+0
+   \       0x1A   0x.... 0x....      BL       set_walkingmotor_speed
+   \       0x1E   0x.... 0x....      BL       brake_walkingmotor
+     84                  }
+     85              } else {
+   \       0x22   0xE000             B.N      ??heartbeat_bumpermonitor_1
+     86                  leave_stall_mode();
+   \                     ??heartbeat_bumpermonitor_0: (+1)
+   \       0x24   0x7020             STRB     R0,[R4, #+0]
+     87              }
+     88              return 1;
+   \                     ??heartbeat_bumpermonitor_1: (+1)
+   \       0x26   0x2001             MOVS     R0,#+1
+   \       0x28   0xBD10             POP      {R4,PC}
+     89          }
+     90          /*
+     91           * 设定速度的合法性判断函数
+     92           * 具体是根据当前的碰撞状态
+     93           */
+
+   \                                 In section .text, align 2, keep-with-next
+     94          _s32 bumpermonitor_filter_motorcmd(_s32 spdLeft, _s32 spdRight)
+     95          {
+     96              switch (_stallMode) {
+   \                     bumpermonitor_filter_motorcmd: (+1)
+   \        0x0   0x....             LDR.N    R2,??DataTable3
+   \        0x2   0x7813             LDRB     R3,[R2, #+0]
+   \        0x4   0x2B01             CMP      R3,#+1
+   \        0x6   0xD002             BEQ.N    ??bumpermonitor_filter_motorcmd_0
+   \        0x8   0x2B02             CMP      R3,#+2
+   \        0xA   0xD006             BEQ.N    ??bumpermonitor_filter_motorcmd_1
+   \        0xC   0xE003             B.N      ??bumpermonitor_filter_motorcmd_2
+     97              case STALLMODE_IDLE:
+     98                  break;
+     99              case STALLMODE_NO_FORWARD:
+    100                  if (spdLeft > 0 || spdRight > 0) {
+   \                     ??bumpermonitor_filter_motorcmd_0: (+1)
+   \        0xE   0x2800             CMP      R0,#+0
+   \       0x10   0xBFD8             IT       LE
+   \       0x12   0x2900             CMPLE    R1,#+0
+   \       0x14   0xDC05             BGT.N    ??bumpermonitor_filter_motorcmd_3
+    101                      return 1;
+    102                  }
+    103                  break;
+    104              case STALLMODE_NO_BACKWARD:
+    105                  if (spdLeft < 0 || spdRight < 0) {
+    106                      return 1;
+    107                  }
+    108                  break;
+    109              }
+    110              return 0;
+   \                     ??bumpermonitor_filter_motorcmd_2: (+1)
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0x4770             BX       LR
+   \                     ??bumpermonitor_filter_motorcmd_1: (+1)
+   \       0x1A   0x2800             CMP      R0,#+0
+   \       0x1C   0xBF58             IT       PL
+   \       0x1E   0x2900             CMPPL    R1,#+0
+   \       0x20   0xD5F9             BPL.N    ??bumpermonitor_filter_motorcmd_2
+   \                     ??bumpermonitor_filter_motorcmd_3: (+1)
+   \       0x22   0x2001             MOVS     R0,#+1
+   \       0x24   0x4770             BX       LR
+    111          }
+    112          
+
+   \                                 In section .text, align 2, keep-with-next
+    113          float bumpermonitor_clamp_motorcmd(float motorSpd)
+    114          {
+   \                     bumpermonitor_clamp_motorcmd: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    115            switch (_stallMode) {
+   \        0x2   0x....             LDR.N    R1,??DataTable3
+   \        0x4   0x780A             LDRB     R2,[R1, #+0]
+   \        0x6   0x2A01             CMP      R2,#+1
+   \        0x8   0xD002             BEQ.N    ??bumpermonitor_clamp_motorcmd_0
+   \        0xA   0x2A02             CMP      R2,#+2
+   \        0xC   0xD005             BEQ.N    ??bumpermonitor_clamp_motorcmd_1
+   \        0xE   0xBD02             POP      {R1,PC}
+    116              case STALLMODE_IDLE:
+    117                  break;
+    118              case STALLMODE_NO_FORWARD:
+    119                   // robot cannot move forward 
+    120                  if(motorSpd > 0)
+   \                     ??bumpermonitor_clamp_motorcmd_0: (+1)
+   \       0x10   0x2100             MOVS     R1,#+0
+   \       0x12   0x.... 0x....      BL       __aeabi_cfrcmple
+   \       0x16   0xD304             BCC.N    ??bumpermonitor_clamp_motorcmd_2
+    121                  {
+    122                    return 0;
+    123                  }
+    124                  break;
+    125              case STALLMODE_NO_BACKWARD:
+    126                   // robot cannot move forward
+    127                  if(motorSpd < 0)
+    128                  {
+    129                    return 0;
+    130                  }
+    131                  break;  
+    132              }
+    133            return motorSpd;
+   \                     ??bumpermonitor_clamp_motorcmd_3: (+1)
+   \       0x18   0xBD02             POP      {R1,PC}
+   \                     ??bumpermonitor_clamp_motorcmd_1: (+1)
+   \       0x1A   0x2100             MOVS     R1,#+0
+   \       0x1C   0x.... 0x....      BL       __aeabi_cfcmple
+   \       0x20   0xD2FA             BCS.N    ??bumpermonitor_clamp_motorcmd_3
+   \                     ??bumpermonitor_clamp_motorcmd_2: (+1)
+   \       0x22   0x2000             MOVS     R0,#+0
+   \       0x24   0xBD02             POP      {R1,PC}
+    134          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \        0x0   0x....'....        DC32     _stallMode
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   bumpermonitor_clamp_motorcmd
+         8 __aeabi_cfcmple
+         8 __aeabi_cfrcmple
+       0   bumpermonitor_filter_motorcmd
+       8   heartbeat_bumpermonitor
+         8   -> brake_walkingmotor
+         8   -> getms
+         8   -> is_bumped
+         8   -> set_walkingmotor_speed
+       0   init_bumpermonitor
+       0   shutdown_bumpermonitor
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  _lastHitTs
+       1  _stallMode
+      38  bumpermonitor_clamp_motorcmd
+      38  bumpermonitor_filter_motorcmd
+      42  heartbeat_bumpermonitor
+      10  init_bumpermonitor
+       2  shutdown_bumpermonitor
+
+ 
+   5 bytes in section .bss
+ 134 bytes in section .text
+ 
+ 134 bytes of CODE memory
+   5 bytes of DATA memory
+
+Errors: none
+Warnings: 1

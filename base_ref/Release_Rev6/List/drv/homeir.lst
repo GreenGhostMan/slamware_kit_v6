@@ -1,0 +1,1247 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:29
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\homeir.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\homeir.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\homeir.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\homeir.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\homeir.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\homeir.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\homeir.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+     31          #include "common/common.h"
+     32          #include "homeir.h"
+     33          #include "irdecoder.h"
+     34          
+     35          #define TOWERID_MAIN_BEACON      0
+     36          #define TOWERID_LEFT_BEACON      1
+     37          #define TOWERID_RIGHT_BEACON     2
+     38          
+     39          #define TOWERID_MAIN_PROBE       0
+     40          #define TOWERID_LEFT_PROBE       1
+     41          #define TOWERID_RIGHT_PROBE      2
+     42          
+     43          #define TOWERLOCATOR_BEACON_MAIN    12
+     44          #define TOWERLOCATOR_BEACON_LEFT    80
+     45          #define TOWERLOCATOR_BEACON_RIGHT   2
+     46          
+     47          #define TOWERLOCATOR_BEACON_EPOCH_DURATION  (130000UL*2) //us
+     48          
+     49          #define IR_SENSOR_TOWER_INT_PORT GPIO_PortSourceGPIOD
+     50          #define IR_SENSOR_TOWER1_INTLINE 14
+     51          #define IR_SENSOR_TOWER2_INTLINE 13
+     52          #define IR_SENSOR_TOWER3_INTLINE 12
+     53          
+     54          #define IR_SENSOR_TOWER1_PORT     GPIOD
+     55          #define IR_SENSOR_TOWER2_PORT     GPIOD
+     56          #define IR_SENSOR_TOWER3_PORT     GPIOD
+     57          
+     58          #define IR_SENSOR_TOWER1_PIN      GPIO_Pin_14
+     59          #define IR_SENSOR_TOWER2_PIN      GPIO_Pin_13
+     60          #define IR_SENSOR_TOWER3_PIN      GPIO_Pin_12
+     61          
+     62          #define IR_SENSOR_TOWER_IRQn    EXTI15_10_IRQn
+     63          
+     64          typedef struct _irdecoder_data_cache_t {
+     65              _u8  beaconbit;
+     66              _u32 beaconLastTs[3];
+     67          } irdecoder_data_cache_t;
+     68          
+
+   \                                 In section .bss, align 4
+     69          static  irdecoder_context_t    decoder_ctx[3];
+     70          static  irdecoder_data_cache_t beacon_cache[3];
+   \                     beacon_cache:
+   \        0x0                      DS8 48
+   \       0x30                      DS8 60
+     71          
+     72          
+     73          #ifdef _IR_TOWER_RAW_DEBUG
+     74          static _u32 _dumpBuffer[64];
+     75          static _u8  _dumpBits[64];
+     76          static _u8 _dumpInitial;
+     77          static _u8 _dumpState;
+     78          static _u8 _dumpPos;
+     79          #endif
+     80          
+     81          static void _on_beacon_decode_ready (irdecoder_context_t * context, _u32 data, _u32 ts);
+     82          
+
+   \                                 In section .text, align 2, keep-with-next
+     83          int drv_towerlocator_init(void)
+     84          {
+   \                     drv_towerlocator_init: (+1)
+   \        0x0   0xB57F             PUSH     {R0-R6,LR}
+     85              RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);                          //外部中断，需要使能AFIO时钟
+   \        0x2   0x2101             MOVS     R1,#+1
+   \        0x4   0x2001             MOVS     R0,#+1
+   \        0x6   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     86          
+     87              GPIO_InitTypeDef GPIO_InitStructure;
+     88              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);                         //使能PORTA,PORTC时钟
+   \        0xA   0x2101             MOVS     R1,#+1
+   \        0xC   0x2020             MOVS     R0,#+32
+   \        0xE   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     89              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+   \       0x12   0x2003             MOVS     R0,#+3
+     90              GPIO_InitStructure.GPIO_Pin  = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14;//P
+   \       0x14   0xF44F 0x41E0      MOV      R1,#+28672
+   \       0x18   0xF88D 0x0006      STRB     R0,[SP, #+6]
+   \       0x1C   0xF8AD 0x1004      STRH     R1,[SP, #+4]
+     91              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;                                 
+   \       0x20   0x2248             MOVS     R2,#+72
+   \       0x22   0xF88D 0x2007      STRB     R2,[SP, #+7]
+     92          
+     93              GPIO_Init(GPIOD, &GPIO_InitStructure);
+   \       0x26   0xA901             ADD      R1,SP,#+4
+   \       0x28   0x....             LDR.N    R0,??DataTable9
+   \       0x2A   0x....             LDR.N    R4,??DataTable9_1
+   \       0x2C   0x.... 0x....      ADR.W    R6,_on_beacon_decode_ready
+   \       0x30   0x.... 0x....      BL       GPIO_Init
+     94              
+     95              EXTI_InitTypeDef EXTI_InitStructure;
+     96              
+     97              GPIO_EXTILineConfig(IR_SENSOR_TOWER_INT_PORT, GET_EXTINT_PIN(IR_SENSOR_TOWER1_INTLINE));
+   \       0x34   0x210E             MOVS     R1,#+14
+   \       0x36   0x2003             MOVS     R0,#+3
+   \       0x38   0x.... 0x....      BL       GPIO_EXTILineConfig
+     98              GPIO_EXTILineConfig(IR_SENSOR_TOWER_INT_PORT, GET_EXTINT_PIN(IR_SENSOR_TOWER2_INTLINE));
+   \       0x3C   0x210D             MOVS     R1,#+13
+   \       0x3E   0x2003             MOVS     R0,#+3
+   \       0x40   0x.... 0x....      BL       GPIO_EXTILineConfig
+     99              GPIO_EXTILineConfig(IR_SENSOR_TOWER_INT_PORT, GET_EXTINT_PIN(IR_SENSOR_TOWER3_INTLINE));
+   \       0x44   0x210C             MOVS     R1,#+12
+   \       0x46   0x2003             MOVS     R0,#+3
+   \       0x48   0x.... 0x....      BL       GPIO_EXTILineConfig
+    100              
+    101              // Configure EXTI lines
+    102              EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+   \       0x4C   0x2100             MOVS     R1,#+0
+    103              // for precision, EXTI_Trigger_Rising_Falling can be used. But it brings more
+    104              //  overheads
+    105              EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;  
+   \       0x4E   0x2210             MOVS     R2,#+16
+   \       0x50   0xF88D 0x100C      STRB     R1,[SP, #+12]
+   \       0x54   0xF88D 0x200D      STRB     R2,[SP, #+13]
+    106              EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+   \       0x58   0x2101             MOVS     R1,#+1
+    107              
+    108              EXTI_InitStructure.EXTI_Line = GET_EXTINT_LINE(IR_SENSOR_TOWER1_INTLINE);
+   \       0x5A   0xF44F 0x4280      MOV      R2,#+16384
+   \       0x5E   0xF88D 0x100E      STRB     R1,[SP, #+14]
+   \       0x62   0x9202             STR      R2,[SP, #+8]
+    109              EXTI_Init(&EXTI_InitStructure);
+   \       0x64   0xA802             ADD      R0,SP,#+8
+   \       0x66   0x.... 0x....      BL       EXTI_Init
+    110              
+    111              EXTI_InitStructure.EXTI_Line = GET_EXTINT_LINE(IR_SENSOR_TOWER2_INTLINE);
+   \       0x6A   0xF44F 0x5000      MOV      R0,#+8192
+   \       0x6E   0x9002             STR      R0,[SP, #+8]
+    112              EXTI_Init(&EXTI_InitStructure);
+   \       0x70   0x2500             MOVS     R5,#+0
+   \       0x72   0xA802             ADD      R0,SP,#+8
+   \       0x74   0x.... 0x....      BL       EXTI_Init
+    113              
+    114              EXTI_InitStructure.EXTI_Line = GET_EXTINT_LINE(IR_SENSOR_TOWER3_INTLINE);
+   \       0x78   0xF44F 0x5080      MOV      R0,#+4096
+   \       0x7C   0x9002             STR      R0,[SP, #+8]
+    115              EXTI_Init(&EXTI_InitStructure);   
+   \       0x7E   0xA802             ADD      R0,SP,#+8
+   \       0x80   0x.... 0x....      BL       EXTI_Init
+    116              
+    117              NVIC_InitTypeDef NVIC_InitStructure;
+    118              NVIC_InitStructure.NVIC_IRQChannel = IR_SENSOR_TOWER_IRQn;
+   \       0x84   0x2128             MOVS     R1,#+40
+   \       0x86   0xF88D 0x1000      STRB     R1,[SP, #+0]
+    119              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+   \       0x8A   0x2201             MOVS     R2,#+1
+    120              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;
+   \       0x8C   0x2103             MOVS     R1,#+3
+   \       0x8E   0xF88D 0x2001      STRB     R2,[SP, #+1]
+   \       0x92   0xF88D 0x1002      STRB     R1,[SP, #+2]
+    121              NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+   \       0x96   0xF88D 0x2003      STRB     R2,[SP, #+3]
+    122              NVIC_Init(&NVIC_InitStructure);  
+   \       0x9A   0x4668             MOV      R0,SP
+   \       0x9C   0x.... 0x....      BL       NVIC_Init
+    123            
+    124              
+    125              memset(beacon_cache, 0, sizeof(beacon_cache));
+   \       0xA0   0x2130             MOVS     R1,#+48
+   \       0xA2   0x4620             MOV      R0,R4
+   \       0xA4   0x.... 0x....      BL       __aeabi_memclr4
+    126                     
+    127              for (size_t pos = 0; pos < _countof(decoder_ctx); ++pos)
+    128              {
+    129                  decoder_ctx[pos].userData = pos;
+   \                     ??drv_towerlocator_init_0: (+1)
+   \       0xA8   0x2014             MOVS     R0,#+20
+   \       0xAA   0x4368             MULS     R0,R0,R5
+   \       0xAC   0x4420             ADD      R0,R4,R0
+    130                  irdecoder_init(&decoder_ctx[pos], _on_beacon_decode_ready);
+   \       0xAE   0x4631             MOV      R1,R6
+   \       0xB0   0x6405             STR      R5,[R0, #+64]
+   \       0xB2   0x3030             ADDS     R0,R0,#+48
+   \       0xB4   0x.... 0x....      BL       irdecoder_init
+    131              }
+   \       0xB8   0x1C6D             ADDS     R5,R5,#+1
+   \       0xBA   0x2D03             CMP      R5,#+3
+   \       0xBC   0xD3F4             BCC.N    ??drv_towerlocator_init_0
+    132          
+    133              return 1;
+   \       0xBE   0x2001             MOVS     R0,#+1
+   \       0xC0   0xB004             ADD      SP,SP,#+16
+   \       0xC2   0xBD70             POP      {R4-R6,PC}
+    134          }
+    135          
+    136          
+    137          
+
+   \                                 In section .text, align 2, keep-with-next
+    138          void drv_towerlocator_shutdown(void)
+    139          {
+   \                     drv_towerlocator_shutdown: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+    140              // disable EXIT
+    141              EXTI_InitTypeDef EXTI_InitStructure;
+    142              // Configure EXTI lines
+    143              EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    144              // for precision, EXTI_Trigger_Rising_Falling can be used. But it brings more
+    145              //  overheads
+    146              EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;  
+   \        0x2   0x2210             MOVS     R2,#+16
+   \        0x4   0xF88D 0x2005      STRB     R2,[SP, #+5]
+   \        0x8   0x2100             MOVS     R1,#+0
+    147              EXTI_InitStructure.EXTI_LineCmd = DISABLE;
+    148              
+    149              EXTI_InitStructure.EXTI_Line = GET_EXTINT_LINE(IR_SENSOR_TOWER1_INTLINE);
+   \        0xA   0xF44F 0x4280      MOV      R2,#+16384
+   \        0xE   0xF88D 0x1004      STRB     R1,[SP, #+4]
+   \       0x12   0xF88D 0x1006      STRB     R1,[SP, #+6]
+   \       0x16   0x9200             STR      R2,[SP, #+0]
+    150              EXTI_Init(&EXTI_InitStructure);
+   \       0x18   0x4668             MOV      R0,SP
+   \       0x1A   0x.... 0x....      BL       EXTI_Init
+    151              
+    152              EXTI_InitStructure.EXTI_Line = GET_EXTINT_LINE(IR_SENSOR_TOWER2_INTLINE);
+   \       0x1E   0xF44F 0x5100      MOV      R1,#+8192
+   \       0x22   0x9100             STR      R1,[SP, #+0]
+    153              EXTI_Init(&EXTI_InitStructure);
+   \       0x24   0x4668             MOV      R0,SP
+   \       0x26   0x.... 0x....      BL       EXTI_Init
+    154              
+    155              EXTI_InitStructure.EXTI_Line = GET_EXTINT_LINE(IR_SENSOR_TOWER3_INTLINE);
+   \       0x2A   0xF44F 0x5080      MOV      R0,#+4096
+   \       0x2E   0x9000             STR      R0,[SP, #+0]
+    156              EXTI_Init(&EXTI_InitStructure);    
+   \       0x30   0x4668             MOV      R0,SP
+   \       0x32   0x.... 0x....      BL       EXTI_Init
+    157              
+    158          }
+   \       0x36   0xBD07             POP      {R0-R2,PC}
+    159          
+    160          
+    161          static void _update_beacon_epoch(int probeID, _u32 current_uS)
+    162          {
+    163              _u32 irqsave = enter_critical_section();
+    164              for (size_t pos = 0; pos < _countof(beacon_cache[probeID].beaconLastTs); ++pos)
+    165              {
+    166                  _u8 currentbit = (0x1<<pos);
+    167                  if (beacon_cache[probeID].beaconbit & currentbit) {
+    168                      if ( (beacon_cache[probeID].beaconLastTs[pos] < current_uS) && (current_uS - beacon_cache[probeID].beaconLastTs[pos] >= TOWERLOCATOR_BEACON_EPOCH_DURATION))
+    169                      {
+    170                          beacon_cache[probeID].beaconbit &= ~currentbit;
+    171                          beacon_cache[probeID].beaconLastTs[pos] = current_uS;       
+    172                      }
+    173                  }
+    174              }  
+    175              leave_critical_section(irqsave);
+    176          }
+    177          
+
+   \                                 In section .text, align 2, keep-with-next
+    178          void drv_towerlocator_heartbeat(void)
+    179          {
+   \                     drv_towerlocator_heartbeat: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+    180              // timeout check...
+    181          
+    182              for (size_t pos = 0; pos < _countof(decoder_ctx); ++pos)
+   \        0x2   0x2500             MOVS     R5,#+0
+   \        0x4   0x....             LDR.N    R4,??DataTable9_1
+    183              {
+    184                  irdecoder_on_idle_tick(&decoder_ctx[pos]);
+   \                     ??drv_towerlocator_heartbeat_0: (+1)
+   \        0x6   0x2114             MOVS     R1,#+20
+   \        0x8   0x4369             MULS     R1,R1,R5
+   \        0xA   0x4421             ADD      R1,R4,R1
+   \        0xC   0xF101 0x0030      ADD      R0,R1,#+48
+   \       0x10   0x.... 0x....      BL       irdecoder_on_idle_tick
+    185                  
+    186              }
+   \       0x14   0x1C6D             ADDS     R5,R5,#+1
+   \       0x16   0x2D03             CMP      R5,#+3
+   \       0x18   0xD3F5             BCC.N    ??drv_towerlocator_heartbeat_0
+    187              
+    188              _u32 current_uS = getus();
+   \       0x1A   0x.... 0x....      BL       getus
+   \       0x1E   0x4602             MOV      R2,R0
+    189              
+    190              for (size_t pos = 0; pos < _countof(beacon_cache); ++pos) {
+   \       0x20   0x2300             MOVS     R3,#+0
+   \       0x22   0xF3EF 0x8510      MRS      R5,PRIMASK
+    191                  _update_beacon_epoch(pos, current_uS);
+   \                     ??drv_towerlocator_heartbeat_1: (+1)
+   \       0x26   0xB672             CPSID    I
+   \       0x28   0x2700             MOVS     R7,#+0
+   \       0x2A   0x011E             LSLS     R6,R3,#+4
+   \                     ??drv_towerlocator_heartbeat_2: (+1)
+   \       0x2C   0x2101             MOVS     R1,#+1
+   \       0x2E   0x5DA0             LDRB     R0,[R4, R6]
+   \       0x30   0x40B9             LSLS     R1,R1,R7
+   \       0x32   0x4208             TST      R0,R1
+   \       0x34   0xD012             BEQ.N    ??drv_towerlocator_heartbeat_3
+   \       0x36   0x19A0             ADDS     R0,R4,R6
+   \       0x38   0xEB00 0x0087      ADD      R0,R0,R7, LSL #+2
+   \       0x3C   0xF8D0 0xC004      LDR      R12,[R0, #+4]
+   \       0x40   0x4594             CMP      R12,R2
+   \       0x42   0xD20B             BCS.N    ??drv_towerlocator_heartbeat_3
+   \       0x44   0xEBA2 0x0C0C      SUB      R12,R2,R12
+   \       0x48   0x.... 0x....      LDR.W    LR,??DataTable9_2
+   \       0x4C   0x45F4             CMP      R12,LR
+   \       0x4E   0xD305             BCC.N    ??drv_towerlocator_heartbeat_3
+   \       0x50   0xF814 0xC006      LDRB     R12,[R4, R6]
+   \       0x54   0xEA2C 0x0101      BIC      R1,R12,R1
+   \       0x58   0x55A1             STRB     R1,[R4, R6]
+   \       0x5A   0x6042             STR      R2,[R0, #+4]
+   \                     ??drv_towerlocator_heartbeat_3: (+1)
+   \       0x5C   0x1C7F             ADDS     R7,R7,#+1
+   \       0x5E   0x2F03             CMP      R7,#+3
+   \       0x60   0xD3E4             BCC.N    ??drv_towerlocator_heartbeat_2
+   \       0x62   0xF385 0x8810      MSR      PRIMASK,R5
+    192              }
+   \       0x66   0x1C5B             ADDS     R3,R3,#+1
+   \       0x68   0x2B03             CMP      R3,#+3
+   \       0x6A   0xD3DC             BCC.N    ??drv_towerlocator_heartbeat_1
+    193          
+    194              
+    195          #ifdef _IR_TOWER_BEACON_DEBUG
+    196              static _u32 lastts = 0;
+    197              
+    198              if (getms() - lastts > 300) {
+    199                  lastts = getms();
+    200                  
+    201                  printf("%02x %02x %02x\r\n",  (_u32)beacon_cache[0].beaconbit,  (_u32)beacon_cache[1].beaconbit,  (_u32)beacon_cache[2].beaconbit);
+    202              }
+    203              
+    204          #endif
+    205              
+    206          #ifdef _IR_TOWER_RAW_DEBUG    
+    207              if (_dumpState) {
+    208                  printf("Initial %d\r\n", (int)_dumpInitial);
+    209                  
+    210                  for (size_t pos = 0; pos < _countof(_dumpBuffer); ++pos)
+    211                  {
+    212                      drv_watchdog_mark();
+    213                      printf("#%d %lu %lu %d\r\n", pos, _dumpBuffer[pos], pos?(_dumpBuffer[pos] - _dumpBuffer[pos-1]):0, (int)_dumpBits[pos]);
+    214                  }
+    215                  _dumpState = 0;
+    216              }
+    217          #endif
+    218          }
+   \       0x6C   0xBDF1             POP      {R0,R4-R7,PC}
+    219          
+
+   \                                 In section .text, align 2, keep-with-next
+    220          _u32 drv_towerlocator_get_beacon(int id)
+    221          {
+    222              return beacon_cache[id].beaconbit;
+   \                     drv_towerlocator_get_beacon: (+1)
+   \        0x0   0x....             LDR.N    R1,??DataTable9_1
+   \        0x2   0x0100             LSLS     R0,R0,#+4
+   \        0x4   0x5C08             LDRB     R0,[R1, R0]
+   \        0x6   0x4770             BX       LR
+    223          }
+    224          
+
+   \                                 In section .text, align 2, keep-with-next
+    225          _u32 drv_towerlocator_get_beacon_timestamp(int id, int beacon)
+    226          {
+    227              if (id < _countof(beacon_cache) && beacon < _countof(beacon_cache[id].beaconLastTs)) {
+   \                     drv_towerlocator_get_beacon_timestamp: (+1)
+   \        0x0   0x2803             CMP      R0,#+3
+   \        0x2   0xBF38             IT       CC
+   \        0x4   0x2903             CMPCC    R1,#+3
+   \        0x6   0xD206             BCS.N    ??drv_towerlocator_get_beacon_timestamp_0
+    228                  return beacon_cache[id].beaconLastTs[beacon];
+   \        0x8   0x....             LDR.N    R2,??DataTable9_1
+   \        0xA   0xEB02 0x1000      ADD      R0,R2,R0, LSL #+4
+   \        0xE   0xEB00 0x0181      ADD      R1,R0,R1, LSL #+2
+   \       0x12   0x6848             LDR      R0,[R1, #+4]
+   \       0x14   0x4770             BX       LR
+    229              }
+    230              return 0;
+   \                     ??drv_towerlocator_get_beacon_timestamp_0: (+1)
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0x4770             BX       LR
+    231          }
+    232          
+
+   \                                 In section .text, align 2, keep-with-next
+    233          static void _on_signal_swap(int id, int currentLvl)
+    234          {
+    235          #ifdef _IR_TOWER_RAW_DEBUG    
+    236              if (id == 0) {
+    237                  if (_dumpState == 0) {
+    238                      if (_dumpPos == 0) {
+    239                          _dumpInitial = currentLvl;
+    240                      }
+    241                      _dumpBits[_dumpPos] = currentLvl?1:0;
+    242                      _dumpBuffer[_dumpPos++] = getus();
+    243                      
+    244                      if (_dumpPos == _countof(_dumpBuffer)) {
+    245                          _dumpPos = 0;
+    246                          _dumpState = 1;
+    247                      }
+    248                  }
+    249              }
+    250          #endif
+    251              
+    252              irdecoder_on_signal(&decoder_ctx[id], currentLvl?0:1); //received signal level is inversed
+   \                     _on_signal_swap: (+1)
+   \        0x0   0x1E49             SUBS     R1,R1,#+1
+   \        0x2   0x....             LDR.N    R3,??DataTable9_1
+   \        0x4   0x4189             SBCS     R1,R1,R1
+   \        0x6   0x2214             MOVS     R2,#+20
+   \        0x8   0x4350             MULS     R0,R2,R0
+   \        0xA   0x181A             ADDS     R2,R3,R0
+   \        0xC   0x0FC9             LSRS     R1,R1,#+31
+   \        0xE   0xF102 0x0030      ADD      R0,R2,#+48
+   \       0x12   0x.... 0x....      B.W      irdecoder_on_signal
+    253          }
+    254          
+    255          // interrupt handler
+    256          
+    257          #if IR_SENSOR_TOWER_IRQn!=EXTI15_10_IRQn
+    258          #error "IR_SENSOR_TOWER_IRQn!=EXTI15_10_IRQn"
+    259          #endif
+    260          
+    261          
+
+   \                                 In section .text, align 2, keep-with-next
+    262          void EXTI15_10_IRQHandler(void)
+    263          {
+   \                     EXTI15_10_IRQHandler: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    264              //check which pin has signaled the interrupt
+    265              
+    266              if (EXTI_GetITStatus(GET_EXTINT_LINE(IR_SENSOR_TOWER1_INTLINE))!= RESET) {
+   \        0x2   0xF44F 0x4080      MOV      R0,#+16384
+   \        0x6   0x.... 0x....      BL       EXTI_GetITStatus
+   \        0xA   0x....             LDR.N    R4,??DataTable9_3
+   \        0xC   0xB148             CBZ.N    R0,??EXTI15_10_IRQHandler_0
+    267                  EXTI_ClearITPendingBit(GET_EXTINT_LINE(IR_SENSOR_TOWER1_INTLINE));
+   \        0xE   0xF44F 0x4080      MOV      R0,#+16384
+   \       0x12   0x.... 0x....      BL       EXTI_ClearITPendingBit
+    268                  _on_signal_swap(TOWERID_MAIN_PROBE, PIN_READ(IR_SENSOR_TOWER1_PORT, IR_SENSOR_TOWER1_PIN));
+   \       0x16   0x6821             LDR      R1,[R4, #+0]
+   \       0x18   0xF401 0x4180      AND      R1,R1,#0x4000
+   \       0x1C   0x2000             MOVS     R0,#+0
+   \       0x1E   0x.... 0x....      BL       _on_signal_swap
+    269              }
+    270              
+    271              if (EXTI_GetITStatus(GET_EXTINT_LINE(IR_SENSOR_TOWER2_INTLINE))!= RESET) {
+   \                     ??EXTI15_10_IRQHandler_0: (+1)
+   \       0x22   0xF44F 0x5000      MOV      R0,#+8192
+   \       0x26   0x.... 0x....      BL       EXTI_GetITStatus
+   \       0x2A   0xB148             CBZ.N    R0,??EXTI15_10_IRQHandler_1
+    272                  EXTI_ClearITPendingBit(GET_EXTINT_LINE(IR_SENSOR_TOWER2_INTLINE));
+   \       0x2C   0xF44F 0x5000      MOV      R0,#+8192
+   \       0x30   0x.... 0x....      BL       EXTI_ClearITPendingBit
+    273                  _on_signal_swap(TOWERID_LEFT_PROBE, PIN_READ(IR_SENSOR_TOWER2_PORT, IR_SENSOR_TOWER2_PIN));
+   \       0x34   0x6821             LDR      R1,[R4, #+0]
+   \       0x36   0xF401 0x5100      AND      R1,R1,#0x2000
+   \       0x3A   0x2001             MOVS     R0,#+1
+   \       0x3C   0x.... 0x....      BL       _on_signal_swap
+    274              }
+    275          
+    276              if (EXTI_GetITStatus(GET_EXTINT_LINE(IR_SENSOR_TOWER3_INTLINE))!= RESET) {
+   \                     ??EXTI15_10_IRQHandler_1: (+1)
+   \       0x40   0xF44F 0x5080      MOV      R0,#+4096
+   \       0x44   0x.... 0x....      BL       EXTI_GetITStatus
+   \       0x48   0xB150             CBZ.N    R0,??EXTI15_10_IRQHandler_2
+    277                  EXTI_ClearITPendingBit(GET_EXTINT_LINE(IR_SENSOR_TOWER3_INTLINE));
+   \       0x4A   0xF44F 0x5080      MOV      R0,#+4096
+   \       0x4E   0x.... 0x....      BL       EXTI_ClearITPendingBit
+    278                  _on_signal_swap(TOWERID_RIGHT_PROBE, PIN_READ(IR_SENSOR_TOWER3_PORT, IR_SENSOR_TOWER3_PIN));
+   \       0x52   0x6821             LDR      R1,[R4, #+0]
+   \       0x54   0xE8BD 0x4010      POP      {R4,LR}
+   \       0x58   0xF401 0x5180      AND      R1,R1,#0x1000
+   \       0x5C   0x2002             MOVS     R0,#+2
+   \       0x5E   0x....             B.N      _on_signal_swap
+    279              }    
+    280          }
+   \                     ??EXTI15_10_IRQHandler_2: (+1)
+   \       0x60   0xBD10             POP      {R4,PC}
+    281          
+    282          
+
+   \                                 In section .text, align 4, keep-with-next
+    283          static void _on_beacon_decode_ready (irdecoder_context_t * context, _u32 data, _u32 ts)
+    284          {   
+   \                     _on_beacon_decode_ready: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    285              switch (data) {
+   \        0x2   0x2902             CMP      R1,#+2
+   \        0x4   0x....             LDR.N    R3,??DataTable9_1
+   \        0x6   0xD016             BEQ.N    ??_on_beacon_decode_ready_0
+   \        0x8   0x290C             CMP      R1,#+12
+   \        0xA   0xD002             BEQ.N    ??_on_beacon_decode_ready_1
+   \        0xC   0x2950             CMP      R1,#+80
+   \        0xE   0xD009             BEQ.N    ??_on_beacon_decode_ready_2
+   \       0x10   0xBD10             POP      {R4,PC}
+    286              case TOWERLOCATOR_BEACON_MAIN:
+    287                  beacon_cache[context->userData].beaconbit |= (0x1<<TOWERID_MAIN_BEACON);
+   \                     ??_on_beacon_decode_ready_1: (+1)
+   \       0x12   0x6901             LDR      R1,[R0, #+16]
+   \       0x14   0x0109             LSLS     R1,R1,#+4
+   \       0x16   0x5C5C             LDRB     R4,[R3, R1]
+   \       0x18   0xF044 0x0401      ORR      R4,R4,#0x1
+   \       0x1C   0x.... 0x....      BL       ?Subroutine0
+    288                  beacon_cache[context->userData].beaconLastTs[TOWERID_MAIN_BEACON] = ts;
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0x20   0x604A             STR      R2,[R1, #+4]
+    289                  
+    290                  break;
+   \       0x22   0xBD10             POP      {R4,PC}
+    291              case TOWERLOCATOR_BEACON_LEFT:
+    292                  beacon_cache[context->userData].beaconbit |= (0x1<<TOWERID_LEFT_BEACON);
+   \                     ??_on_beacon_decode_ready_2: (+1)
+   \       0x24   0x6901             LDR      R1,[R0, #+16]
+   \       0x26   0x0109             LSLS     R1,R1,#+4
+   \       0x28   0x5C5C             LDRB     R4,[R3, R1]
+   \       0x2A   0xF044 0x0402      ORR      R4,R4,#0x2
+   \       0x2E   0x.... 0x....      BL       ?Subroutine0
+    293                  beacon_cache[context->userData].beaconLastTs[TOWERID_LEFT_BEACON] = ts;        
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x32   0x608A             STR      R2,[R1, #+8]
+    294                  break;
+   \       0x34   0xBD10             POP      {R4,PC}
+    295                  
+    296              case TOWERLOCATOR_BEACON_RIGHT:
+    297                  beacon_cache[context->userData].beaconbit |= (0x1<<TOWERID_RIGHT_BEACON);
+   \                     ??_on_beacon_decode_ready_0: (+1)
+   \       0x36   0x6901             LDR      R1,[R0, #+16]
+   \       0x38   0x0109             LSLS     R1,R1,#+4
+   \       0x3A   0x5C5C             LDRB     R4,[R3, R1]
+   \       0x3C   0xF044 0x0404      ORR      R4,R4,#0x4
+   \       0x40   0x.... 0x....      BL       ?Subroutine0
+    298                  beacon_cache[context->userData].beaconLastTs[TOWERID_RIGHT_BEACON] = ts;
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \       0x44   0x60CA             STR      R2,[R1, #+12]
+    299                  break;
+    300                  
+    301              }
+    302              
+    303          #if 0
+    304              if (context->userData == 0) {
+    305                  char buffer[10];
+    306                  sprintf(buffer, "%d\r\n", data);
+    307                  usart_tx(GET_USART(1), buffer, strlen(buffer));
+    308              }
+    309          #endif
+    310          }
+   \       0x46   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0x545C             STRB     R4,[R3, R1]
+   \        0x2   0x6900             LDR      R0,[R0, #+16]
+   \        0x4   0xEB03 0x1100      ADD      R1,R3,R0, LSL #+4
+   \        0x8   0x4770             BX       LR
+    311          
+    312          
+
+   \                                 In section .text, align 2, keep-with-next
+    313          void homeir_Init(void)
+    314          {
+    315            drv_towerlocator_init();
+   \                     homeir_Init: (+1)
+   \        0x0   0x....             B.N      drv_towerlocator_init
+    316          }
+
+   \                                 In section .text, align 2, keep-with-next
+    317          void homeir_heartbeat(void)
+    318          {
+    319            drv_towerlocator_heartbeat();
+   \                     homeir_heartbeat: (+1)
+   \        0x0   0x....             B.N      drv_towerlocator_heartbeat
+    320          }
+    321          
+
+   \                                 In section .text, align 2, keep-with-next
+    322          uint8_t homeir_getmaindata(void)
+    323          {
+    324            return drv_towerlocator_get_beacon(TOWERID_MAIN_PROBE);
+   \                     homeir_getmaindata: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable9_1
+   \        0x2   0x7800             LDRB     R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+    325          }
+    326          
+
+   \                                 In section .text, align 2, keep-with-next
+    327          uint8_t homeir_getleftdata(void)
+    328          {
+    329            return drv_towerlocator_get_beacon(TOWERID_LEFT_PROBE);
+   \                     homeir_getleftdata: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable9_1
+   \        0x2   0x7C00             LDRB     R0,[R0, #+16]
+   \        0x4   0x4770             BX       LR
+    330          }
+    331          
+
+   \                                 In section .text, align 2, keep-with-next
+    332          uint8_t homeir_getrightdata(void)
+    333          {
+    334            return drv_towerlocator_get_beacon(TOWERID_RIGHT_PROBE);
+   \                     homeir_getrightdata: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable9_1
+   \        0x2   0xF890 0x0020      LDRB     R0,[R0, #+32]
+   \        0x6   0x4770             BX       LR
+    335          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9:
+   \        0x0   0x4001'1400        DC32     0x40011400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_1:
+   \        0x0   0x....'....        DC32     beacon_cache
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_2:
+   \        0x0   0x0003'F7A0        DC32     0x3f7a0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable9_3:
+   \        0x0   0x4001'1408        DC32     0x40011408
+    336          
+    337          
+    338          #else
+    339          
+    340          #include "homeir.h"
+    341          
+    342          uint8_t homeir_data[3] = {0};
+    343          
+    344          void homeir_Init(void)
+    345          {
+    346            GPIO_InitTypeDef GPIO_InitStructure;
+    347            NVIC_InitTypeDef NVIC_InitStructure;
+    348            TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
+    349            TIM_ICInitTypeDef  TIM_ICInitStructure;  
+    350          
+    351            RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE); //使能PORTB时钟 
+    352            RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    353            RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);	//TIM5 时钟使能 
+    354            
+    355            GPIO_PinRemapConfig(GPIO_Remap_TIM4, ENABLE);
+    356          
+    357            GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14;
+    358            GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPD; 		//上拉输入 
+    359            GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    360            GPIO_Init(GPIOD, &GPIO_InitStructure);
+    361          
+    362          
+    363            TIM_TimeBaseStructure.TIM_Period = 60000; //设定计数器自动重装值 最大10ms溢出  
+    364            TIM_TimeBaseStructure.TIM_Prescaler =(72-1); 	//预分频器,1M的计数频率,1us加1.	   
+    365            TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1; //设置时钟分割:TDTS = Tck_tim
+    366            TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;  //TIM向上计数模式
+    367          
+    368            TIM_TimeBaseInit(TIM4, &TIM_TimeBaseStructure); //根据指定的参数初始化TIMx
+    369          
+    370            TIM_ICInitStructure.TIM_Channel = TIM_Channel_3;  // 选择输入端 IC3映射到TI4上
+    371            TIM_ICInitStructure.TIM_ICPolarity = TIM_ICPolarity_Rising;	//上升沿捕获
+    372            TIM_ICInitStructure.TIM_ICSelection = TIM_ICSelection_DirectTI;
+    373            TIM_ICInitStructure.TIM_ICPrescaler = TIM_ICPSC_DIV1;	 //配置输入分频,不分频 
+    374            TIM_ICInitStructure.TIM_ICFilter = 0x03;//IC4F=0011 配置输入滤波器 8个定时器时钟周期滤波
+    375            TIM_ICInit(TIM4, &TIM_ICInitStructure);//初始化定时器输入捕获通道
+    376            
+    377            TIM_ICInitStructure.TIM_Channel = TIM_Channel_1;
+    378            TIM_ICInit(TIM4, &TIM_ICInitStructure);
+    379            
+    380            TIM_ICInitStructure.TIM_Channel = TIM_Channel_2;
+    381            TIM_ICInit(TIM4, &TIM_ICInitStructure);
+    382          
+    383            TIM_Cmd(TIM4, ENABLE ); 	//使能定时器
+    384          
+    385            NVIC_InitStructure.NVIC_IRQChannel = TIM4_IRQn;  //TIM中断
+    386            NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;  //先占优先级
+    387            NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;  //从优先级
+    388            NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE; //IRQ通道被使能
+    389            NVIC_Init(&NVIC_InitStructure);  //根据NVIC_InitStruct中指定的参数初始化外设NVIC寄存器	
+    390          
+    391            TIM_ITConfig(TIM4, TIM_IT_Update|TIM_IT_CC1|TIM_IT_CC2|TIM_IT_CC3, ENABLE);//允许更新中断 ,允许CC2IE捕获中断
+    392            //TIM_ITConfig(TIM4, TIM_IT_Update|TIM_IT_CC1, ENABLE);
+    393          }
+    394          
+    395          uint8_t HOME_IR_R1_Data = 0;
+    396          uint8_t HOME_IR_R1_KeyVal = 0;
+    397          uint8_t HOME_IR_R1_Flag = 0;
+    398          uint32_t TIMOC1_val = 0;
+    399          uint32_t TIMOC1_Data = 0;
+    400          uint8_t TIMOC1_sta = 0;
+    401          
+    402          uint8_t HOME_IR_R2_Data = 0;
+    403          uint8_t HOME_IR_R2_KeyVal = 0;
+    404          uint8_t HOME_IR_R2_Flag = 0;
+    405          uint32_t TIMOC2_val = 0;
+    406          uint32_t TIMOC2_Data = 0;
+    407          uint8_t TIMOC2_sta = 0;
+    408          
+    409          uint8_t HOME_IR_R3_Data = 0;
+    410          uint8_t HOME_IR_R3_KeyVal = 0;
+    411          uint8_t HOME_IR_R3_Flag = 0;
+    412          uint32_t TIMOC3_val = 0;
+    413          uint32_t TIMOC3_Data = 0;
+    414          uint8_t TIMOC3_sta = 0;
+    415          uint8_t TIMUpdateFlag = 0;
+    416          void TIM4_IRQHandler(void)
+    417          {	    	 
+    418            if(TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET)
+    419            {
+    420              TIM_ClearFlag(TIM4, TIM_IT_Update);
+    421              TIMUpdateFlag = 1;
+    422              //GPIOE->ODR ^= ((1 << 1));
+    423          
+    424            }
+    425            /**********************************************************************************/
+    426            if(TIM_GetITStatus(TIM4, TIM_IT_CC1) != RESET)
+    427            {
+    428              TIM_ClearFlag(TIM4, TIM_IT_CC1);
+    429              
+    430              if(1 == GPIO_ReadInputDataBit(GPIOD, HOME_IR_R1))//上升沿捕获
+    431              {
+    432                TIMUpdateFlag = 0;
+    433                TIMOC1_val = TIM_GetCapture1(TIM4);
+    434          
+    435                TIM_OC1PolarityConfig(TIM4, TIM_ICPolarity_Falling);		//CC1P=1 设置为下降沿捕获	
+    436                
+    437          
+    438              }
+    439              else //下降沿捕获
+    440              {
+    441                
+    442                if(1 == TIMUpdateFlag)
+    443                {
+    444                  TIMUpdateFlag = 0;
+    445                  TIMOC1_Data = TIM_GetCapture1(TIM4) + 60000 - TIMOC1_val;//读取CCR1也可以清CC1IF标志位
+    446                }
+    447                else/**/
+    448                {
+    449                  TIMOC1_Data = TIM_GetCapture1(TIM4) - TIMOC1_val;
+    450                }
+    451                TIM_OC1PolarityConfig(TIM4, TIM_ICPolarity_Rising); //CC4P=0	设置为上升沿捕获
+    452                
+    453                
+    454                if(TIMOC1_Data > (HOME_IR_START_TIME - HOME_IR_START_ERROR) && TIMOC1_Data < (HOME_IR_START_TIME + HOME_IR_START_ERROR))		//4500为标准值4.5ms  成功接收到了引导码
+    455                {//DBG_OUT("TIMOC1_sta = 0x%x \r\n", TIMOC1_sta);
+    456                  if(TIMOC1_sta == HOME_IR_CHARGING_DOCK)
+    457                  {
+    458                      HOME_IR_R1_Flag = 1;
+    459                      HOME_IR_R1_KeyVal = HOME_IR_R1_Data;
+    460                  }
+    461                  TIMOC1_sta = 0x01;
+    462                  HOME_IR_R1_Data = 0;
+    463                  
+    464                  return;
+    465                  /**/
+    466                }
+    467                
+    468                if(TIMOC1_sta != 0)
+    469                {
+    470                  
+    471                  if(TIMOC1_Data > (HOME_IR_BIT_LOW_TIME - HOME_IR_BIT_LOW_ERROR) && TIMOC1_Data < (HOME_IR_BIT_LOW_TIME + HOME_IR_BIT_LOW_ERROR))			//560为标准值,560us
+    472                  {
+    473                    TIMOC1_sta <<= 1;
+    474                    HOME_IR_R1_Data <<= 1;	//左移一位.
+    475                    HOME_IR_R1_Data |= 0;	//接收到0	   
+    476                  }
+    477                  else if(TIMOC1_Data > (HOME_IR_BIT_HIGH_TIME - HOME_IR_BIT_HIGH_ERROR) && TIMOC1_Data < (HOME_IR_BIT_HIGH_TIME + HOME_IR_BIT_HIGH_ERROR))	//1680为标准值,1680us
+    478                  {
+    479                    TIMOC1_sta <<= 1;
+    480                    HOME_IR_R1_Data <<= 1;	//左移一位.
+    481                    HOME_IR_R1_Data |= 1;	//接收到1
+    482                  }
+    483                  else if(TIMOC1_Data > 2200 && TIMOC1_Data < 2600)	//得到按键键值增加的信息 2500为标准值2.5ms
+    484                  {		
+    485                  }
+    486                  else if(TIMOC1_Data > 4200 && TIMOC1_Data < 4700)		//4500为标准值4.5ms
+    487                  {//正常情况这里不会得到引导码
+    488                    //TIMOC3_sta |= (1 << 0);
+    489                    //HOME_IR_R3_Data = 0;
+    490                  }
+    491                }
+    492                else
+    493                {
+    494                  
+    495                }
+    496                
+    497              }				 		     	    					   
+    498            }  
+    499            /**********************************************************************************/
+    500            if(TIM_GetITStatus(TIM4, TIM_IT_CC2) != RESET)
+    501            {
+    502              TIM_ClearFlag(TIM4, TIM_IT_CC2);
+    503              
+    504              if(1 == GPIO_ReadInputDataBit(GPIOD, HOME_IR_R2))//上升沿捕获
+    505              {
+    506                TIMUpdateFlag = 0;
+    507                TIMOC2_val = TIM_GetCapture2(TIM4);
+    508          
+    509                TIM_OC2PolarityConfig(TIM4, TIM_ICPolarity_Falling);		//CC1P=1 设置为下降沿捕获	
+    510                
+    511          
+    512              }
+    513              else //下降沿捕获
+    514              {
+    515                
+    516                if(1 == TIMUpdateFlag)
+    517                {
+    518                  TIMUpdateFlag = 0;
+    519                  TIMOC2_Data = TIM_GetCapture2(TIM4) + 60000 - TIMOC2_val;//读取CCR1也可以清CC1IF标志位
+    520                }
+    521                else/**/
+    522                {
+    523                  TIMOC2_Data = TIM_GetCapture2(TIM4) - TIMOC2_val;
+    524                }
+    525                TIM_OC2PolarityConfig(TIM4, TIM_ICPolarity_Rising); //CC4P=0	设置为上升沿捕获
+    526                
+    527                
+    528                if(TIMOC2_Data > (HOME_IR_START_TIME - HOME_IR_START_ERROR) && TIMOC2_Data < (HOME_IR_START_TIME + HOME_IR_START_ERROR))		//4500为标准值4.5ms  成功接收到了引导码
+    529                {//DBG_OUT("TIMOC1_sta = 0x%x \r\n", TIMOC1_sta);
+    530                  if(TIMOC2_sta == HOME_IR_CHARGING_DOCK)
+    531                  {
+    532                      HOME_IR_R2_Flag = 1;
+    533                      HOME_IR_R2_KeyVal = HOME_IR_R2_Data;
+    534                  }
+    535                  TIMOC2_sta = 0x01;
+    536                  HOME_IR_R2_Data = 0;
+    537                  
+    538                  return;
+    539                  /**/
+    540                }
+    541                
+    542                if(TIMOC2_sta != 0)
+    543                {
+    544                  
+    545                  if(TIMOC2_Data > (HOME_IR_BIT_LOW_TIME - HOME_IR_BIT_LOW_ERROR) && TIMOC2_Data < (HOME_IR_BIT_LOW_TIME + HOME_IR_BIT_LOW_ERROR))			//560为标准值,560us
+    546                  {
+    547                    TIMOC2_sta <<= 1;
+    548                    HOME_IR_R2_Data <<= 1;	//左移一位.
+    549                    HOME_IR_R2_Data |= 0;	//接收到0	   
+    550                  }
+    551                  else if(TIMOC2_Data > (HOME_IR_BIT_HIGH_TIME - HOME_IR_BIT_HIGH_ERROR) && TIMOC2_Data < (HOME_IR_BIT_HIGH_TIME + HOME_IR_BIT_HIGH_ERROR))	//1680为标准值,1680us
+    552                  {
+    553                    TIMOC2_sta <<= 1;
+    554                    HOME_IR_R2_Data <<= 1;	//左移一位.
+    555                    HOME_IR_R2_Data |= 1;	//接收到1
+    556                  }
+    557                  else if(TIMOC2_Data > 2200 && TIMOC2_Data < 2600)	//得到按键键值增加的信息 2500为标准值2.5ms
+    558                  {		
+    559                  }
+    560                  else if(TIMOC2_Data > 4200 && TIMOC2_Data < 4700)		//4500为标准值4.5ms
+    561                  {//正常情况这里不会得到引导码
+    562                    //TIMOC3_sta |= (1 << 0);
+    563                    //HOME_IR_R3_Data = 0;
+    564                  }
+    565                }
+    566                else
+    567                {
+    568                  
+    569                }
+    570                
+    571              }				 		     	    					   
+    572            }   
+    573            /**********************************************************************************/
+    574            if(TIM_GetITStatus(TIM4, TIM_IT_CC3) != RESET)
+    575            {
+    576              TIM_ClearFlag(TIM4, TIM_IT_CC3);
+    577              
+    578              if(1 == GPIO_ReadInputDataBit(GPIOD, HOME_IR_R3))//上升沿捕获
+    579              {
+    580                TIMUpdateFlag = 0;
+    581                TIMOC3_val = TIM_GetCapture3(TIM4);
+    582          
+    583                TIM_OC3PolarityConfig(TIM4, TIM_ICPolarity_Falling);		//CC1P=1 设置为下降沿捕获	
+    584                
+    585          
+    586              }
+    587              else //下降沿捕获
+    588              {
+    589                
+    590                if(1 == TIMUpdateFlag)
+    591                {
+    592                  TIMUpdateFlag = 0;
+    593                  TIMOC3_Data = TIM_GetCapture3(TIM4) + 60000 - TIMOC3_val;//读取CCR1也可以清CC1IF标志位
+    594                }
+    595                else/**/
+    596                {
+    597                  TIMOC3_Data = TIM_GetCapture3(TIM4) - TIMOC3_val;
+    598                }
+    599                TIM_OC3PolarityConfig(TIM4, TIM_ICPolarity_Rising); //CC4P=0	设置为上升沿捕获
+    600                
+    601                
+    602                if(TIMOC3_Data > (HOME_IR_START_TIME - HOME_IR_START_ERROR) && TIMOC3_Data < (HOME_IR_START_TIME + HOME_IR_START_ERROR))		//4500为标准值4.5ms  成功接收到了引导码
+    603                {//DBG_OUT("TIMOC1_sta = 0x%x \r\n", TIMOC1_sta);
+    604                  if(TIMOC3_sta == HOME_IR_CHARGING_DOCK)
+    605                  {
+    606                      HOME_IR_R3_Flag = 1;
+    607                      HOME_IR_R3_KeyVal = HOME_IR_R3_Data;
+    608                  }
+    609                  TIMOC3_sta = 0x01;
+    610                  HOME_IR_R3_Data = 0;
+    611                  
+    612                  return;
+    613                  /**/
+    614                }
+    615                
+    616                if(TIMOC3_sta != 0)
+    617                {
+    618                  
+    619                  if(TIMOC3_Data > (HOME_IR_BIT_LOW_TIME - HOME_IR_BIT_LOW_ERROR) && TIMOC3_Data < (HOME_IR_BIT_LOW_TIME + HOME_IR_BIT_LOW_ERROR))			//560为标准值,560us
+    620                  {
+    621                    TIMOC3_sta <<= 1;
+    622                    HOME_IR_R3_Data <<= 1;	//左移一位.
+    623                    HOME_IR_R3_Data |= 0;	//接收到0	   
+    624                  }
+    625                  else if(TIMOC3_Data > (HOME_IR_BIT_HIGH_TIME - HOME_IR_BIT_HIGH_ERROR) && TIMOC3_Data < (HOME_IR_BIT_HIGH_TIME + HOME_IR_BIT_HIGH_ERROR))	//1680为标准值,1680us
+    626                  {
+    627                    TIMOC3_sta <<= 1;
+    628                    HOME_IR_R3_Data <<= 1;	//左移一位.
+    629                    HOME_IR_R3_Data |= 1;	//接收到1
+    630                  }
+    631                  else if(TIMOC3_Data > 2200 && TIMOC3_Data < 2600)	//得到按键键值增加的信息 2500为标准值2.5ms
+    632                  {		
+    633                  }
+    634                  else if(TIMOC3_Data > 4200 && TIMOC3_Data < 4700)		//4500为标准值4.5ms
+    635                  {//正常情况这里不会得到引导码
+    636                    //TIMOC3_sta |= (1 << 0);
+    637                    //HOME_IR_R3_Data = 0;
+    638                  }
+    639                }
+    640                else
+    641                {
+    642                  
+    643                }
+    644                
+    645              }	
+    646            }   
+    647           
+    648            /**********************************************************************************/
+    649          }
+    650          
+    651          /*
+    652          void TIM4_IRQHandler(void)
+    653          { 		    	 
+    654            if(TIM_GetITStatus(TIM4, TIM_IT_Update) != RESET)
+    655            {
+    656              TIM_ClearFlag(TIM4, TIM_IT_Update);
+    657              TIMUpdateFlag = 1;
+    658              GPIOE->ODR ^= ((1 << 1));
+    659            }
+    660            
+    661            if(TIM_GetITStatus(TIM4, TIM_IT_CC3) != RESET)
+    662            {
+    663              TIM_ClearFlag(TIM4, TIM_IT_CC3);
+    664              
+    665              if(1 == GPIO_ReadInputDataBit(GPIOD, HOME_IR_R3))//上升沿捕获
+    666              {
+    667                TIMOC3_val = TIM_GetCapture3(TIM4);
+    668          
+    669                TIM_OC3PolarityConfig(TIM4, TIM_ICPolarity_Falling);		//CC1P=1 设置为下降沿捕获	
+    670                
+    671          
+    672              }
+    673              else //下降沿捕获
+    674              {
+    675                
+    676                if(1 == TIMUpdateFlag)
+    677                {
+    678                  TIMUpdateFlag = 0;
+    679                  TIMOC3_Data = TIM_GetCapture3(TIM4) + 60000 - TIMOC3_val;//读取CCR1也可以清CC1IF标志位
+    680                  
+    681                }
+    682                else
+    683                {
+    684                  TIMOC3_Data = TIM_GetCapture3(TIM4) - TIMOC3_val;
+    685                }
+    686                TIM_OC3PolarityConfig(TIM4, TIM_ICPolarity_Rising); //CC4P=0	设置为上升沿捕获
+    687                
+    688          
+    689                if(TIMOC3_sta != 0)		//4500为标准值4.5ms  成功接收到了引导码
+    690                {
+    691                  
+    692                  TIMUpdateFlag = 0;
+    693                  TIMOC3_sta <<= 1;
+    694                  if(TIMOC3_Data > 300 && TIMOC3_Data < 800)			//560为标准值,560us
+    695                  {
+    696                    HOME_IR_R3_Data <<= 1;	//左移一位.
+    697                    HOME_IR_R3_Data |= 0;	//接收到0	   
+    698                  }
+    699                  else if(TIMOC3_Data > 1400 && TIMOC3_Data < 1800)	//1680为标准值,1680us
+    700                  {
+    701                    HOME_IR_R3_Data <<= 1;	//左移一位.
+    702                    HOME_IR_R3_Data |= 1;	//接收到1
+    703                  }
+    704                  else if(TIMOC3_Data > 2200 && TIMOC3_Data < 2600)	//得到按键键值增加的信息 2500为标准值2.5ms
+    705                  {		
+    706                  }
+    707                  else if(TIMOC3_Data > 4200 && TIMOC3_Data < 4700)		//4500为标准值4.5ms
+    708                  {
+    709                    HOME_IR_R3_Data = 0;
+    710                    return;
+    711                  }
+    712                  
+    713                }
+    714                else if(TIMOC3_Data > 4200 && TIMOC3_Data < 4700)		//4500为标准值4.5ms  成功接收到了引导码
+    715                {
+    716                  GPIOE->ODR |= ((1 << 0));
+    717                  
+    718                  TIMOC3_sta |= (1 << 0);
+    719                  HOME_IR_R3_Flag = 1;
+    720                  HOME_IR_R3_KeyVal = HOME_IR_R3_Data;
+    721                  HOME_IR_R3_Data = 0;
+    722          
+    723                  GPIOE->ODR &= ~((1 << 0));
+    724                }
+    725                
+    726              }				 		     	    					   
+    727            }   
+    728          }*/
+    729          
+    730          uint8_t homeir_getmaindata(void)
+    731          {
+    732              return homeir_data[HOME_IR_MAIN];
+    733          }
+    734          uint8_t homeir_getleftdata(void)
+    735          {
+    736              return homeir_data[HOME_IR_LEFT];
+    737          }
+    738          uint8_t homeir_getrightdata(void)
+    739          {
+    740              return homeir_data[HOME_IR_RIGHT];
+    741          }
+    742          
+    743          uint8_t homeir_GetData(void)
+    744          { 
+    745              if(HOME_IR_R1_Flag == 1)
+    746              {
+    747                  HOME_IR_R1_Flag = 0;
+    748                  //DBG_OUT("HOME_IR_R1 = 0x%x \r\n", HOME_IR_R1_KeyVal);
+    749                  homeir_data[HOME_IR_RIGHT] = HOME_IR_R1_KeyVal;
+    750              }
+    751          
+    752              
+    753              if(HOME_IR_R2_Flag == 1)
+    754              {
+    755                  HOME_IR_R2_Flag = 0;
+    756                  //DBG_OUT("HOME_IR_R2 = 0x%x \r\n", HOME_IR_R2_KeyVal);
+    757                  homeir_data[HOME_IR_LEFT] = HOME_IR_R2_KeyVal;
+    758              }
+    759          
+    760              
+    761              if(HOME_IR_R3_Flag == 1)
+    762              {
+    763                  HOME_IR_R3_Flag = 0;
+    764                  //DBG_OUT("HOME_IR_R3 = 0x%x \r\n", HOME_IR_R3_KeyVal);
+    765                  homeir_data[HOME_IR_MAIN] = HOME_IR_R3_KeyVal;
+    766              }
+    767          
+    768            
+    769            return HOME_IR_R3_Data;
+    770          }
+    771          
+    772          uint32_t homeir_heartbeat_frequency = 0;
+    773          void homeir_heartbeat(void)
+    774          {
+    775              if(HOME_IR_R1_Flag == 1)
+    776              {
+    777                  HOME_IR_R1_Flag = 0;
+    778                  //DBG_OUT("HOME_IR_R1 = 0x%x \r\n", HOME_IR_R1_KeyVal);
+    779                  homeir_data[HOME_IR_RIGHT] = HOME_IR_R1_KeyVal;
+    780              }
+    781          
+    782              
+    783              if(HOME_IR_R2_Flag == 1)
+    784              {
+    785                  HOME_IR_R2_Flag = 0;
+    786                  //DBG_OUT("HOME_IR_R2 = 0x%x \r\n", HOME_IR_R2_KeyVal);
+    787                  homeir_data[HOME_IR_LEFT] = HOME_IR_R2_KeyVal;
+    788              }
+    789          
+    790              
+    791              if(HOME_IR_R3_Flag == 1)
+    792              {
+    793                  HOME_IR_R3_Flag = 0;
+    794                  //DBG_OUT("HOME_IR_R3 = 0x%x \r\n", HOME_IR_R3_KeyVal);
+    795                  homeir_data[HOME_IR_MAIN] = HOME_IR_R3_KeyVal;
+    796              }
+    797              
+    798              if((getms() - homeir_heartbeat_frequency) >= 100)
+    799              {
+    800                  homeir_heartbeat_frequency = getms();
+    801                  
+    802                  homeir_data[HOME_IR_MAIN] = 0;
+    803                  homeir_data[HOME_IR_LEFT] = 0;
+    804                  homeir_data[HOME_IR_RIGHT] = 0;
+    805              }
+    806              
+    807                  
+    808              //DBG_OUT("%x  ", (uint8_t)homeir_getmaindata());
+    809              //DBG_OUT("%x  ", (uint8_t)homeir_getleftdata());
+    810              //DBG_OUT("%x  \r\n", (uint8_t)homeir_getrightdata());
+    811          }
+    812          
+    813          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   EXTI15_10_IRQHandler
+         8   -> EXTI_ClearITPendingBit
+         8   -> EXTI_GetITStatus
+         0   -> _on_signal_swap
+         8   -> _on_signal_swap
+       8   _on_beacon_decode_ready
+       0   _on_signal_swap
+         0   -> irdecoder_on_signal
+       0   drv_towerlocator_get_beacon
+       0   drv_towerlocator_get_beacon_timestamp
+      24   drv_towerlocator_heartbeat
+        24   -> getus
+        24   -> irdecoder_on_idle_tick
+      32   drv_towerlocator_init
+        32   -> EXTI_Init
+        32   -> GPIO_EXTILineConfig
+        32   -> GPIO_Init
+        32   -> NVIC_Init
+        32   -> RCC_APB2PeriphClockCmd
+        32   -> __aeabi_memclr4
+        32   -> irdecoder_init
+      16   drv_towerlocator_shutdown
+        16   -> EXTI_Init
+       0   homeir_Init
+         0   -> drv_towerlocator_init
+       0   homeir_getleftdata
+       0   homeir_getmaindata
+       0   homeir_getrightdata
+       0   homeir_heartbeat
+         0   -> drv_towerlocator_heartbeat
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable9
+       4  ??DataTable9_1
+       4  ??DataTable9_2
+       4  ??DataTable9_3
+      10  ?Subroutine0
+      98  EXTI15_10_IRQHandler
+      72  _on_beacon_decode_ready
+      22  _on_signal_swap
+     108  beacon_cache
+          decoder_ctx
+       8  drv_towerlocator_get_beacon
+      26  drv_towerlocator_get_beacon_timestamp
+     110  drv_towerlocator_heartbeat
+     196  drv_towerlocator_init
+      56  drv_towerlocator_shutdown
+       2  homeir_Init
+       6  homeir_getleftdata
+       6  homeir_getmaindata
+       8  homeir_getrightdata
+       2  homeir_heartbeat
+
+ 
+ 108 bytes in section .bss
+ 638 bytes in section .text
+ 
+ 638 bytes of CODE memory
+ 108 bytes of DATA memory
+
+Errors: none
+Warnings: none

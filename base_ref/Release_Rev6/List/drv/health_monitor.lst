@@ -1,0 +1,569 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:28
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\health_monitor.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\health_monitor.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\health_monitor.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\health_monitor.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\health_monitor.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\health_monitor.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\health_monitor.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          #include "common/common.h"
+     31          #include "health_monitor.h"
+     32          
+
+   \                                 In section .bss, align 4
+     33          static health_status_t g_health_status; /**< Global health status. */
+   \                     g_health_status:
+   \        0x0                      DS8 2
+   \        0x2                      DS8 2
+   \        0x4                      DS8 12
+
+   \                                 In section .bss, align 4
+   \        0x0                      DS8 4
+     34          static _u32 g_health_ticks = 0;         /**< Health monitor ticks. */
+     35          
+
+   \                                 In section .bss, align 4
+     36          static health_desc_t g_health_desc[CONFIG_HEALTH_MONITOR_NUM];  /**< Health description table. */
+   \                     g_health_desc:
+   \        0x0                      DS8 400
+     37          static _u8 g_health_map[CONFIG_HEALTH_MONITOR_NUM];     /**< Health id hash table. */
+     38          
+     39          #define eid_mask_level(eid)     ((eid) & ~SLAMWARECORE_HEALTH_ERROR_LEVEL_MASK)
+     40          
+     41          /*
+     42           * health monitor?????
+     43           */
+
+   \                                 In section .text, align 2, keep-with-next
+     44          void health_monitor_init(void)
+     45          {
+   \                     health_monitor_init: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     46              memset(g_health_map, 0, sizeof(g_health_map));
+   \        0x2   0x....             B.N      ?Subroutine0
+     47              memset(g_health_desc, 0, sizeof(g_health_desc));
+     48              memset(&g_health_status, 0, sizeof(health_status_t));
+     49              return ;
+     50          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0x....             LDR.N    R4,??DataTable8
+   \        0x2   0x210A             MOVS     R1,#+10
+   \        0x4   0x1D20             ADDS     R0,R4,#+4
+   \        0x6   0x.... 0x....      BL       __aeabi_memclr4
+   \        0xA   0xF44F 0x71C8      MOV      R1,#+400
+   \        0xE   0x....             LDR.N    R0,??DataTable8_1
+   \       0x10   0x.... 0x....      BL       __aeabi_memclr4
+   \       0x14   0x4620             MOV      R0,R4
+   \       0x16   0xE8BD 0x4010      POP      {R4,LR}
+   \       0x1A   0x2102             MOVS     R1,#+2
+   \       0x1C   0x.... 0x....      B.W      __aeabi_memclr4
+     51          
+     52          /*
+     53           * health monitor????
+     54           */
+
+   \                                 In section .text, align 2, keep-with-next
+     55          void health_monitor_exit(void)
+     56          {
+   \                     health_monitor_exit: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     57              memset(g_health_map, 0, sizeof(g_health_map));
+   \        0x2                      REQUIRE ?Subroutine0
+   \        0x2                      ;; // Fall through to label ?Subroutine0
+     58              memset(g_health_desc, 0, sizeof(g_health_desc));
+     59              memset(&g_health_status, 0, sizeof(health_status_t));
+     60              return ;
+     61          }
+     62          
+     63          /*
+     64           * ??health monitor????
+     65           */
+
+   \                                 In section .text, align 2, keep-with-next
+     66          bool health_monitor_register(_u32 eid, const char *desc, health_cb_t hcb)
+     67          {
+   \                     health_monitor_register: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+     68              _u8 i;
+     69          
+     70              eid = eid_mask_level(eid);
+   \        0x2   0xF030 0x6370      BICS     R3,R0,#0xF000000
+   \        0x6   0x460C             MOV      R4,R1
+     71              if (eid == HEALTH_MONITOR_EID_NONE) {
+   \        0x8   0xD00E             BEQ.N    ??health_monitor_register_0
+     72                  return false;
+     73              }
+     74              if (hcb == NULL || desc == NULL) {
+   \        0xA   0x0010             MOVS     R0,R2
+   \        0xC   0xBF18             IT       NE
+   \        0xE   0x2C00             CMPNE    R4,#+0
+   \       0x10   0xD00A             BEQ.N    ??health_monitor_register_0
+     75                  return false;
+     76              }
+     77          
+     78              for (i = 0; i < CONFIG_HEALTH_MONITOR_NUM; i++) {
+   \       0x12   0x2100             MOVS     R1,#+0
+   \       0x14   0x....             LDR.N    R5,??DataTable8_1
+     79                  /* Skip used slot. */
+     80                  if (eid_mask_level(g_health_desc[i].eid) != HEALTH_MONITOR_EID_NONE) {
+   \                     ??health_monitor_register_1: (+1)
+   \       0x16   0x2628             MOVS     R6,#+40
+   \       0x18   0x434E             MULS     R6,R6,R1
+   \       0x1A   0x59A8             LDR      R0,[R5, R6]
+   \       0x1C   0xF030 0x6070      BICS     R0,R0,#0xF000000
+   \       0x20   0xD004             BEQ.N    ??health_monitor_register_2
+     81                      continue;
+   \       0x22   0x1C49             ADDS     R1,R1,#+1
+   \       0x24   0x290A             CMP      R1,#+10
+   \       0x26   0xDBF6             BLT.N    ??health_monitor_register_1
+     82                  }
+     83                  /* Empty slot, fill it. */
+     84                  g_health_desc[i].eid = eid;
+     85                  g_health_desc[i].hcb = hcb;
+     86                  memset(g_health_desc[i].desc, 0, sizeof(g_health_desc[i].desc));
+     87                  strncpy(g_health_desc[i].desc, desc, sizeof(g_health_desc[i].desc));
+     88                  return true;
+     89              }
+     90              return false;
+   \                     ??health_monitor_register_0: (+1)
+   \       0x28   0x2000             MOVS     R0,#+0
+   \       0x2A   0xBD70             POP      {R4-R6,PC}
+   \                     ??health_monitor_register_2: (+1)
+   \       0x2C   0x51AB             STR      R3,[R5, R6]
+   \       0x2E   0x4435             ADD      R5,R5,R6
+   \       0x30   0x2120             MOVS     R1,#+32
+   \       0x32   0x626A             STR      R2,[R5, #+36]
+   \       0x34   0x1D28             ADDS     R0,R5,#+4
+   \       0x36   0x.... 0x....      BL       __aeabi_memclr
+   \       0x3A   0x2220             MOVS     R2,#+32
+   \       0x3C   0x4621             MOV      R1,R4
+   \       0x3E   0x1D28             ADDS     R0,R5,#+4
+   \       0x40   0x.... 0x....      BL       strncpy
+   \       0x44   0x2001             MOVS     R0,#+1
+   \       0x46   0xBD70             POP      {R4-R6,PC}
+     91          }
+     92          
+     93          /*
+     94           * ??health monitor????
+     95           */
+
+   \                                 In section .text, align 2, keep-with-next
+     96          bool health_monitor_deregister(_u32 eid)
+     97          {
+   \                     health_monitor_deregister: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     98              _u8 i;
+     99          
+    100              eid = eid_mask_level(eid);
+   \        0x2   0xF030 0x6070      BICS     R0,R0,#0xF000000
+    101              if (eid == HEALTH_MONITOR_EID_NONE) {
+   \        0x6   0xD017             BEQ.N    ??health_monitor_deregister_0
+    102                  return false;
+    103              }
+    104          
+    105              for (i = 0; i < CONFIG_HEALTH_MONITOR_NUM; i++) {
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0x....             LDR.N    R2,??DataTable8_1
+    106                  if (eid == eid_mask_level(g_health_desc[i].eid)) {
+   \                     ??health_monitor_deregister_1: (+1)
+   \        0xC   0x2328             MOVS     R3,#+40
+   \        0xE   0x434B             MULS     R3,R3,R1
+   \       0x10   0x58D4             LDR      R4,[R2, R3]
+   \       0x12   0xF024 0x6470      BIC      R4,R4,#0xF000000
+   \       0x16   0x42A0             CMP      R0,R4
+   \       0x18   0xD003             BEQ.N    ??health_monitor_deregister_2
+   \       0x1A   0x1C49             ADDS     R1,R1,#+1
+   \       0x1C   0x290A             CMP      R1,#+10
+   \       0x1E   0xDBF5             BLT.N    ??health_monitor_deregister_1
+   \       0x20   0xE00A             B.N      ??health_monitor_deregister_0
+    107                      g_health_desc[i].eid  = HEALTH_MONITOR_EID_NONE;
+   \                     ??health_monitor_deregister_2: (+1)
+   \       0x22   0x2000             MOVS     R0,#+0
+   \       0x24   0x50D0             STR      R0,[R2, R3]
+    108                      g_health_desc[i].hcb  = NULL;
+    109                      memset(g_health_desc[i].desc, 0, sizeof(g_health_desc[i].desc));
+   \       0x26   0x2120             MOVS     R1,#+32
+   \       0x28   0x18D0             ADDS     R0,R2,R3
+   \       0x2A   0x2200             MOVS     R2,#+0
+   \       0x2C   0x6242             STR      R2,[R0, #+36]
+   \       0x2E   0x1D00             ADDS     R0,R0,#+4
+   \       0x30   0x.... 0x....      BL       __aeabi_memclr
+    110                      return true;
+   \       0x34   0x2001             MOVS     R0,#+1
+   \       0x36   0xBD10             POP      {R4,PC}
+    111                  }
+    112              }
+    113              return false;
+   \                     ??health_monitor_deregister_0: (+1)
+   \       0x38   0x2000             MOVS     R0,#+0
+   \       0x3A   0xBD10             POP      {R4,PC}
+    114          }
+    115          
+    116          /*
+    117           * health monitor????
+    118           */
+
+   \                                 In section .text, align 2, keep-with-next
+    119          void health_monitor_heartbeat(void)
+    120          {
+   \                     health_monitor_heartbeat: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+    121              _u8  i;
+    122              _u8  error;
+    123          
+    124              if (getms() - g_health_ticks < CONFIG_HEALTH_MONITOR_TICKS) {
+   \        0x2   0x.... 0x....      BL       getms
+   \        0x6   0x2864             CMP      R0,#+100
+   \        0x8   0xD321             BCC.N    ??health_monitor_heartbeat_0
+    125                  return ;
+    126              }
+    127          
+    128              /* Poll all health monitor objects for current health status. */
+    129              g_health_status.count = 0;
+   \        0xA   0x....             LDR.N    R4,??DataTable8
+    130              g_health_status.flag  = 0;
+    131              for (i = 0; i < CONFIG_HEALTH_MONITOR_NUM; i++) {
+   \        0xC   0x....             LDR.N    R5,??DataTable8_1
+   \        0xE   0x2000             MOVS     R0,#+0
+   \       0x10   0x8020             STRH     R0,[R4, #+0]
+   \       0x12   0x2700             MOVS     R7,#+0
+    132                  if (eid_mask_level(g_health_desc[i].eid) == HEALTH_MONITOR_EID_NONE) {
+   \                     ??health_monitor_heartbeat_1: (+1)
+   \       0x14   0x2628             MOVS     R6,#+40
+   \       0x16   0x437E             MULS     R6,R6,R7
+   \       0x18   0x59A8             LDR      R0,[R5, R6]
+   \       0x1A   0xF030 0x6070      BICS     R0,R0,#0xF000000
+   \       0x1E   0xBF1E             ITTT     NE
+   \       0x20   0x19A8             ADDNE    R0,R5,R6
+   \       0x22   0x6A40             LDRNE    R0,[R0, #+36]
+   \       0x24   0x2800             CMPNE    R0,#+0
+    133                      continue;
+    134                  }
+    135                  if (g_health_desc[i].hcb == NULL) {
+   \       0x26   0xD00F             BEQ.N    ??health_monitor_heartbeat_2
+    136                      continue;
+    137                  }
+    138                  error = g_health_desc[i].hcb();
+   \       0x28   0x4780             BLX      R0
+    139                  if (error) {
+   \       0x2A   0xB120             CBZ.N    R0,??health_monitor_heartbeat_3
+    140                      g_health_map[g_health_status.count++] = i;
+   \       0x2C   0x7861             LDRB     R1,[R4, #+1]
+   \       0x2E   0x1862             ADDS     R2,R4,R1
+   \       0x30   0x1C49             ADDS     R1,R1,#+1
+   \       0x32   0x7117             STRB     R7,[R2, #+4]
+   \       0x34   0x7061             STRB     R1,[R4, #+1]
+    141                  }
+    142                  g_health_desc[i].eid  = eid_mask_level(g_health_desc[i].eid);
+    143                  g_health_desc[i].eid |= error << 24;
+   \                     ??health_monitor_heartbeat_3: (+1)
+   \       0x36   0x59A9             LDR      R1,[R5, R6]
+   \       0x38   0xF021 0x6170      BIC      R1,R1,#0xF000000
+   \       0x3C   0xEA41 0x6100      ORR      R1,R1,R0, LSL #+24
+   \       0x40   0x51A9             STR      R1,[R5, R6]
+    144                  g_health_status.flag |= error;
+   \       0x42   0x7822             LDRB     R2,[R4, #+0]
+   \       0x44   0x4310             ORRS     R0,R0,R2
+   \       0x46   0x7020             STRB     R0,[R4, #+0]
+    145              }
+   \                     ??health_monitor_heartbeat_2: (+1)
+   \       0x48   0x1C7F             ADDS     R7,R7,#+1
+   \       0x4A   0x2F0A             CMP      R7,#+10
+   \       0x4C   0xDBE2             BLT.N    ??health_monitor_heartbeat_1
+    146          
+    147              return ;
+   \                     ??health_monitor_heartbeat_0: (+1)
+   \       0x4E   0xBDF1             POP      {R0,R4-R7,PC}
+    148          }
+    149          
+    150          /*
+    151           * ????health????
+    152           */
+
+   \                                 In section .text, align 2, keep-with-next
+    153          bool health_monitor_get_status(_u8 *status, _u8 *count)
+    154          {
+    155              if (status != NULL) {
+   \                     health_monitor_get_status: (+1)
+   \        0x0   0x....             LDR.N    R2,??DataTable8
+   \        0x2   0xB108             CBZ.N    R0,??health_monitor_get_status_0
+    156                  *status = g_health_status.flag;
+   \        0x4   0x7813             LDRB     R3,[R2, #+0]
+   \        0x6   0x7003             STRB     R3,[R0, #+0]
+    157              }
+    158              if (count != NULL) {
+   \                     ??health_monitor_get_status_0: (+1)
+   \        0x8   0xB109             CBZ.N    R1,??health_monitor_get_status_1
+    159                  *count = g_health_status.count;
+   \        0xA   0x7850             LDRB     R0,[R2, #+1]
+   \        0xC   0x7008             STRB     R0,[R1, #+0]
+    160              }
+    161              return true;
+   \                     ??health_monitor_get_status_1: (+1)
+   \        0xE   0x2001             MOVS     R0,#+1
+   \       0x10   0x4770             BX       LR
+    162          }
+    163          
+    164          /*
+    165           * ???????,??health????
+    166           */
+
+   \                                 In section .text, align 2, keep-with-next
+    167          _u32 health_monitor_get_error(_u8 id)
+    168          {
+    169              _u8 i;
+    170          
+    171              if (id >= g_health_status.count) {
+   \                     health_monitor_get_error: (+1)
+   \        0x0   0x....             LDR.N    R1,??DataTable8
+   \        0x2   0x784B             LDRB     R3,[R1, #+1]
+   \        0x4   0x4298             CMP      R0,R3
+   \        0x6   0xD203             BCS.N    ??health_monitor_get_error_0
+    172                  return HEALTH_MONITOR_EID_NONE;
+    173              }
+    174              /* Look up health descriptor table index from hash table. */
+    175              i = g_health_map[id];
+   \        0x8   0x4408             ADD      R0,R1,R0
+   \        0xA   0x7901             LDRB     R1,[R0, #+4]
+    176              if (i >= CONFIG_HEALTH_MONITOR_NUM) {
+   \        0xC   0x290A             CMP      R1,#+10
+   \        0xE   0xDB01             BLT.N    ??health_monitor_get_error_1
+    177                  return HEALTH_MONITOR_EID_NONE;
+   \                     ??health_monitor_get_error_0: (+1)
+   \       0x10   0x2000             MOVS     R0,#+0
+   \       0x12   0x4770             BX       LR
+    178              }
+    179              return g_health_desc[i].eid;
+   \                     ??health_monitor_get_error_1: (+1)
+   \       0x14   0x2028             MOVS     R0,#+40
+   \       0x16   0x....             LDR.N    R2,??DataTable8_1
+   \       0x18   0x4341             MULS     R1,R0,R1
+   \       0x1A   0x5850             LDR      R0,[R2, R1]
+   \       0x1C   0x4770             BX       LR
+    180          }
+    181          
+    182          /*
+    183           * ???????,??health??????
+    184           */
+
+   \                                 In section .text, align 2, keep-with-next
+    185          const char *health_monitor_get_desc(_u8 id)
+    186          {
+    187              _u8 i;
+    188          
+    189              if (id >= g_health_status.count) {
+   \                     health_monitor_get_desc: (+1)
+   \        0x0   0x....             LDR.N    R1,??DataTable8
+   \        0x2   0x784B             LDRB     R3,[R1, #+1]
+   \        0x4   0x4298             CMP      R0,R3
+   \        0x6   0xD203             BCS.N    ??health_monitor_get_desc_0
+    190                  return NULL;
+    191              }
+    192              /* Look up health descriptor table index from hash table. */
+    193              i = g_health_map[id];
+   \        0x8   0x4408             ADD      R0,R1,R0
+   \        0xA   0x7901             LDRB     R1,[R0, #+4]
+    194              if (i >= CONFIG_HEALTH_MONITOR_NUM) {
+   \        0xC   0x290A             CMP      R1,#+10
+   \        0xE   0xDB01             BLT.N    ??health_monitor_get_desc_1
+    195                  return NULL;
+   \                     ??health_monitor_get_desc_0: (+1)
+   \       0x10   0x2000             MOVS     R0,#+0
+   \       0x12   0x4770             BX       LR
+    196              }
+    197              return g_health_desc[i].desc;
+   \                     ??health_monitor_get_desc_1: (+1)
+   \       0x14   0x2028             MOVS     R0,#+40
+   \       0x16   0x....             LDR.N    R2,??DataTable8_1
+   \       0x18   0x4341             MULS     R1,R0,R1
+   \       0x1A   0x1850             ADDS     R0,R2,R1
+   \       0x1C   0x1D00             ADDS     R0,R0,#+4
+   \       0x1E   0x4770             BX       LR
+    198          }
+    199          
+    200          /*
+    201           * ?????,??health????
+    202           */
+
+   \                                 In section .text, align 2, keep-with-next
+    203          bool health_monitor_clear(_u32 eid)
+    204          {
+   \                     health_monitor_clear: (+1)
+   \        0x0   0xB530             PUSH     {R4,R5,LR}
+    205              _u8 i;
+    206          
+    207              eid = eid_mask_level(eid);
+   \        0x2   0xF030 0x6070      BICS     R0,R0,#0xF000000
+    208              if (eid == HEALTH_MONITOR_EID_NONE) {
+   \        0x6   0xD011             BEQ.N    ??health_monitor_clear_0
+    209                  return false;
+    210              }
+    211          
+    212              for (i = 0; i < CONFIG_HEALTH_MONITOR_NUM; i++) {
+   \        0x8   0x2100             MOVS     R1,#+0
+   \        0xA   0x....             LDR.N    R2,??DataTable8_1
+   \        0xC   0x2428             MOVS     R4,#+40
+    213                  if (eid == eid_mask_level(g_health_desc[i].eid)) {
+   \                     ??health_monitor_clear_1: (+1)
+   \        0xE   0xB2CB             UXTB     R3,R1
+   \       0x10   0x4363             MULS     R3,R4,R3
+   \       0x12   0x58D5             LDR      R5,[R2, R3]
+   \       0x14   0xF025 0x6570      BIC      R5,R5,#0xF000000
+   \       0x18   0x42A8             CMP      R0,R5
+   \       0x1A   0xD004             BEQ.N    ??health_monitor_clear_2
+   \       0x1C   0x1C49             ADDS     R1,R1,#+1
+   \       0x1E   0xB2CB             UXTB     R3,R1
+   \       0x20   0x2B0A             CMP      R3,#+10
+   \       0x22   0xDBF4             BLT.N    ??health_monitor_clear_1
+   \       0x24   0xE002             B.N      ??health_monitor_clear_0
+    214                      g_health_desc[i].eid = eid;
+   \                     ??health_monitor_clear_2: (+1)
+   \       0x26   0x50D0             STR      R0,[R2, R3]
+    215                      return true;
+   \       0x28   0x2001             MOVS     R0,#+1
+   \       0x2A   0xBD30             POP      {R4,R5,PC}
+    216                  }
+    217              }
+    218              return false;
+   \                     ??health_monitor_clear_0: (+1)
+   \       0x2C   0x2000             MOVS     R0,#+0
+   \       0x2E   0xBD30             POP      {R4,R5,PC}
+    219          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8:
+   \        0x0   0x....'....        DC32     g_health_status
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable8_1:
+   \        0x0   0x....'....        DC32     g_health_desc
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      12   health_monitor_clear
+       8   health_monitor_deregister
+         8   -> __aeabi_memclr
+       0   health_monitor_exit
+         0   -> __aeabi_memclr4
+         8   -> __aeabi_memclr4
+       0   health_monitor_get_desc
+       0   health_monitor_get_error
+       0   health_monitor_get_status
+      24   health_monitor_heartbeat
+        24   -- Indirect call
+        24   -> getms
+       8   health_monitor_init
+         0   -> __aeabi_memclr4
+         8   -> __aeabi_memclr4
+      16   health_monitor_register
+        16   -> __aeabi_memclr
+        16   -> strncpy
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable8
+       4  ??DataTable8_1
+      32  ?Subroutine0
+     400  g_health_desc
+      16  g_health_status
+          g_health_map
+       4  g_health_ticks
+      48  health_monitor_clear
+      60  health_monitor_deregister
+       2  health_monitor_exit
+      32  health_monitor_get_desc
+      30  health_monitor_get_error
+      18  health_monitor_get_status
+      80  health_monitor_heartbeat
+       4  health_monitor_init
+      72  health_monitor_register
+
+ 
+ 420 bytes in section .bss
+ 386 bytes in section .text
+ 
+ 386 bytes of CODE memory
+ 420 bytes of DATA memory
+
+Errors: none
+Warnings: none

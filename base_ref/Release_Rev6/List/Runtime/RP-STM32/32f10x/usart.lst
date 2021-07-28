@@ -1,0 +1,1353 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:37
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\infra_pub\arch\infra_stm32\32f10x\usart.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Runtime\RP-STM32\32f10x\usart.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\infra_pub\arch\infra_stm32\32f10x\usart.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Runtime\RP-STM32\32f10x
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\usart.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Runtime\RP-STM32\32f10x\usart.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\usart.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\infra_pub\arch\infra_stm32\32f10x\usart.c
+      1          /*
+      2           * SlamTec Infra Runtime Public
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+     32          
+     33          static void _def_on_rx(int id, uint32_t data);
+     34          /*
+     35           * 串口发送缓存区定义
+     36           */
+
+   \                                 In section .bss, align 4
+     37          static unsigned char _tx_buf[
+   \                     _tx_buf:
+   \        0x0                      DS8 1'536
+     38              0
+     39          #ifndef USART_DISABLE_USART1
+     40              + USART_MAX_TX_COUNT
+     41          #endif
+     42          #ifndef USART_DISABLE_USART2
+     43              + USART_MAX_TX_COUNT
+     44          #endif
+     45          #ifdef  USART_ENABLE_USART3
+     46              + USART_MAX_TX_COUNT
+     47          #endif
+     48          ];
+     49          /*
+     50           * 串口接收回调函数定义
+     51           */
+
+   \                                 In section .data, align 4
+     52          static proc_on_rx_t  _rx_proc[] = {
+   \                     _rx_proc:
+   \        0x0   0x....'....        DC32 _def_on_rx, _def_on_rx, _def_on_rx
+
+   \              0x....'....  
+
+   \              0x....'....
+     53          #ifndef USART_DISABLE_USART1
+     54              _def_on_rx,
+     55          #endif
+     56          #ifndef USART_DISABLE_USART2
+     57              _def_on_rx,
+     58          #endif
+     59          #ifdef  USART_ENABLE_USART3
+     60              _def_on_rx,
+     61          #endif
+     62          };
+     63          /*
+     64           * 串口接收环形缓存区定义
+     65           */
+     66          typedef struct ring_buffer {
+     67            volatile  uint8_t buffer[USART_RX_BUFFER_SIZE];
+     68            int head;
+     69            int tail;
+     70          } ring_buffer_t;
+
+   \                                 In section .bss, align 4
+     71          static ring_buffer_t _rx_ringbuf[
+   \                     _rx_ringbuf:
+   \        0x0                      DS8 408
+     72              0
+     73          #ifndef USART_DISABLE_USART1
+     74              + 1
+     75          #endif
+     76          #ifndef USART_DISABLE_USART2
+     77              + 1
+     78          #endif
+     79          #ifdef  USART_ENABLE_USART3
+     80              + 1
+     81          #endif
+     82          ];
+     83          
+     84          
+     85          /*
+     86           * 获取串口号函数
+     87           */
+
+   \                                 In section .text, align 2, keep-with-next
+     88          static int _getPortID(USART_TypeDef* USARTx)
+     89          {
+     90          
+     91          #ifndef USART_DISABLE_USART1
+     92              if (USARTx == USART1) return 1;
+   \                     _getPortID: (+1)
+   \        0x0   0x.... 0x....      LDR.W    R1,??DataTable11
+   \        0x4   0x4288             CMP      R0,R1
+   \        0x6   0xD101             BNE.N    ??_getPortID_0
+   \        0x8   0x2001             MOVS     R0,#+1
+   \        0xA   0x4770             BX       LR
+     93          #endif
+     94          #ifndef USART_DISABLE_USART2
+     95              if (USARTx == USART2) return 2;
+   \                     ??_getPortID_0: (+1)
+   \        0xC   0x.... 0x....      LDR.W    R1,??DataTable11_1
+   \       0x10   0x4288             CMP      R0,R1
+   \       0x12   0xD101             BNE.N    ??_getPortID_1
+   \       0x14   0x2002             MOVS     R0,#+2
+   \       0x16   0x4770             BX       LR
+     96          #endif
+     97          #ifdef  USART_ENABLE_USART3
+     98              if (USARTx == USART3) return 3;
+   \                     ??_getPortID_1: (+1)
+   \       0x18   0x.... 0x....      LDR.W    R1,??DataTable11_2
+   \       0x1C   0x4288             CMP      R0,R1
+   \       0x1E   0xD101             BNE.N    ??_getPortID_2
+   \       0x20   0x2003             MOVS     R0,#+3
+   \       0x22   0x4770             BX       LR
+     99          #endif
+    100              return -1;
+   \                     ??_getPortID_2: (+1)
+   \       0x24   0x....             B.N      ?Subroutine0
+    101          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0xF04F 0x30FF      MOV      R0,#+4294967295
+   \        0x4   0x4770             BX       LR
+    102          /*
+    103           * 获取串口缓存区索引函数
+    104           */
+
+   \                                 In section .text, align 2, keep-with-next
+    105          static int _getBufID(int id)
+    106          {
+    107              switch (id) {
+   \                     _getBufID: (+1)
+   \        0x0   0x2801             CMP      R0,#+1
+   \        0x2   0xD004             BEQ.N    ??_getBufID_0
+   \        0x4   0xD309             BCC.N    ??_getBufID_1
+   \        0x6   0x2803             CMP      R0,#+3
+   \        0x8   0xD005             BEQ.N    ??_getBufID_2
+   \        0xA   0xD302             BCC.N    ??_getBufID_3
+   \        0xC   0xE005             B.N      ??_getBufID_1
+    108          #ifndef USART_DISABLE_USART1
+    109              case 1:
+    110                  return USART1_BUF_ID;
+   \                     ??_getBufID_0: (+1)
+   \        0xE   0x2000             MOVS     R0,#+0
+   \       0x10   0x4770             BX       LR
+    111          #endif
+    112          #ifndef USART_DISABLE_USART2
+    113              case 2:
+    114                  return USART2_BUF_ID;
+   \                     ??_getBufID_3: (+1)
+   \       0x12   0x2001             MOVS     R0,#+1
+   \       0x14   0x4770             BX       LR
+    115          #endif
+    116          #ifdef  USART_ENABLE_USART3
+    117              case 3:
+    118                  return USART3_BUF_ID;
+   \                     ??_getBufID_2: (+1)
+   \       0x16   0x2002             MOVS     R0,#+2
+   \       0x18   0x4770             BX       LR
+    119          #endif
+    120              default:
+    121                  return -1;
+   \                     ??_getBufID_1: (+1)
+   \       0x1A                      REQUIRE ?Subroutine0
+   \       0x1A                      ;; // Fall through to label ?Subroutine0
+    122              }
+    123          }
+    124          
+    125          #define _GET_TX_BUF(id)  (_tx_buf + _getBufID(id)*USART_MAX_TX_COUNT)
+    126          /*
+    127           * 获取串口DMA通道函数
+    128           */
+    129          static DMA_Channel_TypeDef* _getDMACh(int id)
+    130          {
+    131            switch (id)
+    132            {
+    133          #ifndef USART_DISABLE_USART1
+    134            case 1:
+    135              return GET_USART_DMA_CH(1);
+    136          #endif
+    137          #ifndef USART_DISABLE_USART2
+    138            case 2:
+    139              return GET_USART_DMA_CH(2);
+    140          #endif
+    141          #ifdef  USART_ENABLE_USART3
+    142            case 3:
+    143              return GET_USART_DMA_CH(3);
+    144          #endif
+    145            default:
+    146                  return NULL;
+    147            }
+    148          }
+    149          /*
+    150           * 串口发送等待内联函数
+    151           */
+    152          static inline void _usart_tx_wait(DMA_Channel_TypeDef *chn)
+    153          {
+    154            while(chn->CNDTR);
+    155          }
+    156          
+    157          static uint32_t _getDMATCFlg(int id)
+    158          {
+    159            switch (id)
+    160            {
+    161          #ifndef USART_DISABLE_USART1
+    162            case 1:
+    163              return GET_USART_DMA_FLG(1);
+    164          #endif
+    165          #ifndef USART_DISABLE_USART2
+    166            case 2:
+    167              return GET_USART_DMA_FLG(2);
+    168          #endif
+    169          #ifdef  USART_ENABLE_USART3
+    170            case 3:
+    171              return GET_USART_DMA_FLG(3);
+    172          #endif
+    173            default:
+    174              return 0;
+    175            }
+    176          }
+    177          
+    178          
+    179          #define DEF_INIT_DMA_FOR_ID(x) \
+    180            case x:  \
+    181              { \
+    182                DMA_DeInit(GET_USART_DMA_CH(x)); \
+    183                DMA_Init(GET_USART_DMA_CH(x), &DMA_InitStructure); \
+    184              } \
+    185              break
+    186          
+    187          /*
+    188           * 串口关闭函数
+    189           * 释放串口和绑定的DMA通道
+    190           */
+
+   \                                 In section .text, align 2, keep-with-next
+    191          void usart_shutdown(USART_TypeDef* USARTx)
+    192          {
+   \                     usart_shutdown: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x4604             MOV      R4,R0
+    193              DMA_Channel_TypeDef * dma_chn;
+    194              int portid;
+    195          
+    196              // shutdown the dma...
+    197              USART_DMACmd(USARTx, USART_DMAReq_Tx, DISABLE);
+   \        0x4   0x2200             MOVS     R2,#+0
+   \        0x6   0x2180             MOVS     R1,#+128
+   \        0x8   0x.... 0x....      BL       USART_DMACmd
+    198              USART_DeInit(USARTx);
+   \        0xC   0x4620             MOV      R0,R4
+   \        0xE   0x.... 0x....      BL       USART_DeInit
+    199          
+    200              portid = _getPortID(USARTx);
+   \       0x12   0x4620             MOV      R0,R4
+   \       0x14   0x.... 0x....      BL       _getPortID
+    201              if (portid == -1) return;
+   \       0x18   0xF110 0x0F01      CMN      R0,#+1
+   \       0x1C   0xD011             BEQ.N    ??usart_shutdown_0
+    202          
+    203          
+    204              dma_chn = _getDMACh(portid);
+   \       0x1E   0x2801             CMP      R0,#+1
+   \       0x20   0x.... 0x....      LDR.W    R1,??DataTable11_3
+   \       0x24   0xD005             BEQ.N    ??usart_shutdown_1
+   \       0x26   0xD306             BCC.N    ??usart_shutdown_2
+   \       0x28   0x2803             CMP      R0,#+3
+   \       0x2A   0xD005             BEQ.N    ??usart_shutdown_3
+   \       0x2C   0xD203             BCS.N    ??usart_shutdown_2
+   \       0x2E   0x3164             ADDS     R1,R1,#+100
+   \       0x30   0xE002             B.N      ??usart_shutdown_3
+   \                     ??usart_shutdown_1: (+1)
+   \       0x32   0x3128             ADDS     R1,R1,#+40
+   \       0x34   0xE000             B.N      ??usart_shutdown_3
+   \                     ??usart_shutdown_2: (+1)
+   \       0x36   0x2100             MOVS     R1,#+0
+    205              DMA_DeInit(dma_chn);
+   \                     ??usart_shutdown_3: (+1)
+   \       0x38   0xE8BD 0x4010      POP      {R4,LR}
+   \       0x3C   0x4608             MOV      R0,R1
+   \       0x3E   0x.... 0x....      B.W      DMA_DeInit
+   \                     ??usart_shutdown_0: (+1)
+   \       0x42   0xBD10             POP      {R4,PC}
+    206          }
+    207          /*
+    208           * 串口打开函数
+    209           * 绑定DMA通道用于发送
+    210           */
+
+   \                                 In section .text, align 2, keep-with-next
+    211          int usart_begin(USART_TypeDef* USARTx, uint32_t baud)
+    212          {
+   \                     usart_begin: (+1)
+   \        0x0   0xB5F0             PUSH     {R4-R7,LR}
+   \        0x2   0xB08F             SUB      SP,SP,#+60
+   \        0x4   0x4604             MOV      R4,R0
+   \        0x6   0x460D             MOV      R5,R1
+    213            USART_InitTypeDef desc;
+    214          
+    215            int portid = _getPortID(USARTx);
+   \        0x8   0x.... 0x....      BL       _getPortID
+   \        0xC   0x4606             MOV      R6,R0
+    216          
+    217            if (portid == -1) return 0;
+   \        0xE   0xF116 0x0F01      CMN      R6,#+1
+   \       0x12   0xBF08             IT       EQ
+   \       0x14   0x2000             MOVEQ    R0,#+0
+   \       0x16   0xD057             BEQ.N    ??usart_begin_0
+    218          
+    219            DMA_InitTypeDef DMA_InitStructure;
+    220            DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralDST;
+    221            DMA_InitStructure.DMA_BufferSize = 0;
+   \       0x18   0x2200             MOVS     R2,#+0
+   \       0x1A   0x9203             STR      R2,[SP, #+12]
+   \       0x1C   0x2110             MOVS     R1,#+16
+    222            DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
+    223            DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
+   \       0x1E   0x2280             MOVS     R2,#+128
+   \       0x20   0x9205             STR      R2,[SP, #+20]
+   \       0x22   0x9102             STR      R1,[SP, #+8]
+    224            DMA_InitStructure.DMA_PeripheralDataSize = DMA_PeripheralDataSize_Byte;
+    225            DMA_InitStructure.DMA_MemoryDataSize = DMA_MemoryDataSize_Byte;
+    226            DMA_InitStructure.DMA_Mode = DMA_Mode_Normal;
+    227            DMA_InitStructure.DMA_Priority = DMA_Priority_Medium;
+   \       0x24   0xF44F 0x5280      MOV      R2,#+4096
+   \       0x28   0x9209             STR      R2,[SP, #+36]
+   \       0x2A   0x2100             MOVS     R1,#+0
+    228            DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
+    229          
+    230            DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)&USARTx->DR;
+   \       0x2C   0x1D22             ADDS     R2,R4,#+4
+    231          
+    232          
+    233            switch (portid)
+   \       0x2E   0x2E01             CMP      R6,#+1
+   \       0x30   0x9104             STR      R1,[SP, #+16]
+   \       0x32   0x9106             STR      R1,[SP, #+24]
+   \       0x34   0x9107             STR      R1,[SP, #+28]
+   \       0x36   0x9108             STR      R1,[SP, #+32]
+   \       0x38   0x910A             STR      R1,[SP, #+40]
+   \       0x3A   0x9200             STR      R2,[SP, #+0]
+   \       0x3C   0xD004             BEQ.N    ??usart_begin_1
+   \       0x3E   0xD312             BCC.N    ??usart_begin_2
+   \       0x40   0x2E03             CMP      R6,#+3
+   \       0x42   0xD007             BEQ.N    ??usart_begin_3
+   \       0x44   0xD303             BCC.N    ??usart_begin_4
+   \       0x46   0xE00E             B.N      ??usart_begin_2
+    234            {
+    235          #ifndef USART_DISABLE_USART1
+    236              DEF_INIT_DMA_FOR_ID(1);
+   \                     ??usart_begin_1: (+1)
+   \       0x48   0x.... 0x....      LDR.W    R7,??DataTable11_4
+   \       0x4C   0xE004             B.N      ??usart_begin_5
+    237          #endif
+    238          #ifndef USART_DISABLE_USART2
+    239              DEF_INIT_DMA_FOR_ID(2);
+   \                     ??usart_begin_4: (+1)
+   \       0x4E   0x.... 0x....      LDR.W    R7,??DataTable11_5
+   \       0x52   0xE001             B.N      ??usart_begin_5
+    240          #endif
+    241          #ifdef  USART_ENABLE_USART3
+    242              DEF_INIT_DMA_FOR_ID(3);
+   \                     ??usart_begin_3: (+1)
+   \       0x54   0x.... 0x....      LDR.W    R7,??DataTable11_3
+   \                     ??usart_begin_5: (+1)
+   \       0x58   0x4638             MOV      R0,R7
+   \       0x5A   0x.... 0x....      BL       DMA_DeInit
+   \       0x5E   0x4669             MOV      R1,SP
+   \       0x60   0x4638             MOV      R0,R7
+   \       0x62   0x.... 0x....      BL       DMA_Init
+    243          #endif
+    244            }
+    245          
+    246            USART_StructInit(&desc);
+   \                     ??usart_begin_2: (+1)
+   \       0x66   0xA80B             ADD      R0,SP,#+44
+   \       0x68   0x.... 0x....      BL       USART_StructInit
+    247            desc.USART_BaudRate = baud;
+   \       0x6C   0x950B             STR      R5,[SP, #+44]
+    248          
+    249            USART_Init(USARTx, &desc);
+   \       0x6E   0xA90B             ADD      R1,SP,#+44
+   \       0x70   0x4620             MOV      R0,R4
+   \       0x72   0x.... 0x....      BL       USART_Init
+    250          
+    251            USARTx->SR = 0;
+   \       0x76   0x2000             MOVS     R0,#+0
+   \       0x78   0x8020             STRH     R0,[R4, #+0]
+    252            USART_ITConfig(USARTx, USART_IT_RXNE, ENABLE);
+   \       0x7A   0x2201             MOVS     R2,#+1
+   \       0x7C   0xF240 0x5125      MOVW     R1,#+1317
+   \       0x80   0x4620             MOV      R0,R4
+   \       0x82   0x.... 0x....      BL       USART_ITConfig
+    253            USART_DMACmd(USARTx, USART_DMAReq_Tx, ENABLE);
+   \       0x86   0x2201             MOVS     R2,#+1
+   \       0x88   0x2180             MOVS     R1,#+128
+   \       0x8A   0x4620             MOV      R0,R4
+   \       0x8C   0x.... 0x....      BL       USART_DMACmd
+    254            USART_Cmd(USARTx, ENABLE);
+   \       0x90   0x2101             MOVS     R1,#+1
+   \       0x92   0x4620             MOV      R0,R4
+   \       0x94   0x.... 0x....      BL       USART_Cmd
+    255            ring_buffer_t *rx_buffer = _rx_ringbuf+_getBufID(portid);
+   \       0x98   0x2E01             CMP      R6,#+1
+   \       0x9A   0xD009             BEQ.N    ??usart_begin_6
+   \       0x9C   0xD30A             BCC.N    ??usart_begin_7
+   \       0x9E   0x2E03             CMP      R6,#+3
+   \       0xA0   0xD001             BEQ.N    ??usart_begin_8
+   \       0xA2   0xD303             BCC.N    ??usart_begin_9
+   \       0xA4   0xE006             B.N      ??usart_begin_7
+   \                     ??usart_begin_8: (+1)
+   \       0xA6   0xF44F 0x7088      MOV      R0,#+272
+   \       0xAA   0xE005             B.N      ??usart_begin_10
+   \                     ??usart_begin_9: (+1)
+   \       0xAC   0x2088             MOVS     R0,#+136
+   \       0xAE   0xE003             B.N      ??usart_begin_10
+   \                     ??usart_begin_6: (+1)
+   \       0xB0   0x2000             MOVS     R0,#+0
+   \       0xB2   0xE001             B.N      ??usart_begin_10
+   \                     ??usart_begin_7: (+1)
+   \       0xB4   0xF06F 0x0087      MVN      R0,#+135
+   \                     ??usart_begin_10: (+1)
+   \       0xB8   0x.... 0x....      LDR.W    R1,??DataTable11_6
+   \       0xBC   0x4408             ADD      R0,R1,R0
+    256            rx_buffer->head = rx_buffer->tail = 0;
+   \       0xBE   0x3080             ADDS     R0,R0,#+128
+   \       0xC0   0x2200             MOVS     R2,#+0
+   \       0xC2   0x6042             STR      R2,[R0, #+4]
+   \       0xC4   0x6002             STR      R2,[R0, #+0]
+    257          
+    258            return 1;
+   \       0xC6   0x2001             MOVS     R0,#+1
+   \                     ??usart_begin_0: (+1)
+   \       0xC8   0xB00F             ADD      SP,SP,#+60
+   \       0xCA   0xBDF0             POP      {R4-R7,PC}
+    259          }
+    260          
+    261          /*
+    262           * 串口发送等待函数
+    263           */
+
+   \                                 In section .text, align 2, keep-with-next
+    264          void usart_tx_wait(USART_TypeDef* USARTx)
+    265          {
+   \                     usart_tx_wait: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    266             int id = _getPortID(USARTx);
+   \        0x2   0x.... 0x....      BL       _getPortID
+   \        0x6   0x4604             MOV      R4,R0
+    267             if (id == -1) return;
+   \        0x8   0xF114 0x0F01      CMN      R4,#+1
+   \        0xC   0xD023             BEQ.N    ??usart_tx_wait_0
+    268          
+    269             _usart_tx_wait(_getDMACh(id));
+   \        0xE   0x2C01             CMP      R4,#+1
+   \       0x10   0x.... 0x....      LDR.W    R1,??DataTable11_7
+   \       0x14   0xD005             BEQ.N    ??usart_tx_wait_1
+   \       0x16   0xD306             BCC.N    ??usart_tx_wait_2
+   \       0x18   0x2C03             CMP      R4,#+3
+   \       0x1A   0xD005             BEQ.N    ??usart_tx_wait_3
+   \       0x1C   0xD203             BCS.N    ??usart_tx_wait_2
+   \       0x1E   0x3164             ADDS     R1,R1,#+100
+   \       0x20   0xE002             B.N      ??usart_tx_wait_3
+   \                     ??usart_tx_wait_1: (+1)
+   \       0x22   0x3128             ADDS     R1,R1,#+40
+   \       0x24   0xE000             B.N      ??usart_tx_wait_3
+   \                     ??usart_tx_wait_2: (+1)
+   \       0x26   0x2104             MOVS     R1,#+4
+   \                     ??usart_tx_wait_3: (+1)
+   \       0x28   0x6808             LDR      R0,[R1, #+0]
+   \       0x2A   0x2800             CMP      R0,#+0
+   \       0x2C   0xD1FC             BNE.N    ??usart_tx_wait_3
+    270             while (DMA_GetFlagStatus(_getDMATCFlg(id)) == RESET);
+   \                     ??usart_tx_wait_4: (+1)
+   \       0x2E   0x2C01             CMP      R4,#+1
+   \       0x30   0xD009             BEQ.N    ??usart_tx_wait_5
+   \       0x32   0xD30B             BCC.N    ??usart_tx_wait_6
+   \       0x34   0x2C03             CMP      R4,#+3
+   \       0x36   0xD001             BEQ.N    ??usart_tx_wait_7
+   \       0x38   0xD302             BCC.N    ??usart_tx_wait_8
+   \       0x3A   0xE007             B.N      ??usart_tx_wait_6
+   \                     ??usart_tx_wait_7: (+1)
+   \       0x3C   0x2020             MOVS     R0,#+32
+   \       0x3E   0xE006             B.N      ??usart_tx_wait_9
+   \                     ??usart_tx_wait_8: (+1)
+   \       0x40   0xF04F 0x7000      MOV      R0,#+33554432
+   \       0x44   0xE003             B.N      ??usart_tx_wait_9
+   \                     ??usart_tx_wait_5: (+1)
+   \       0x46   0xF44F 0x5000      MOV      R0,#+8192
+   \       0x4A   0xE000             B.N      ??usart_tx_wait_9
+   \                     ??usart_tx_wait_6: (+1)
+   \       0x4C   0x2000             MOVS     R0,#+0
+   \                     ??usart_tx_wait_9: (+1)
+   \       0x4E   0x.... 0x....      BL       DMA_GetFlagStatus
+   \       0x52   0x2800             CMP      R0,#+0
+   \       0x54   0xD0EB             BEQ.N    ??usart_tx_wait_4
+    271          }
+   \                     ??usart_tx_wait_0: (+1)
+   \       0x56   0xBD10             POP      {R4,PC}
+    272          /*
+    273           * 串口发送数据设置函数
+    274           */
+
+   \                                 In section .text, align 2, keep-with-next
+    275          int usart_txbuffer_set(USART_TypeDef* USARTx, const void * src, uint32_t size, uint32_t pos)
+    276          {
+   \                     usart_txbuffer_set: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x461D             MOV      R5,R3
+    277            DMA_Channel_TypeDef * dma_chn;
+    278            int portid;
+    279          
+    280            if (pos>=USART_MAX_TX_COUNT) return 0;
+   \        0x4   0xF5B5 0x7F00      CMP      R5,#+512
+   \        0x8   0x460C             MOV      R4,R1
+   \        0xA   0x4616             MOV      R6,R2
+   \        0xC   0xD20A             BCS.N    ??usart_txbuffer_set_0
+    281            if (size>USART_MAX_TX_COUNT-pos) size = USART_MAX_TX_COUNT-pos;
+   \        0xE   0xF5C5 0x7100      RSB      R1,R5,#+512
+   \       0x12   0x42B1             CMP      R1,R6
+   \       0x14   0xBF38             IT       CC
+   \       0x16   0x460E             MOVCC    R6,R1
+    282          
+    283            portid = _getPortID(USARTx);
+   \       0x18   0x.... 0x....      BL       _getPortID
+   \       0x1C   0x4601             MOV      R1,R0
+    284            if (portid == -1) return 0;
+   \       0x1E   0xF111 0x0F01      CMN      R1,#+1
+   \       0x22   0xD101             BNE.N    ??usart_txbuffer_set_1
+   \                     ??usart_txbuffer_set_0: (+1)
+   \       0x24   0x2000             MOVS     R0,#+0
+   \       0x26   0xBD70             POP      {R4-R6,PC}
+    285          
+    286            dma_chn = _getDMACh(portid);
+   \                     ??usart_txbuffer_set_1: (+1)
+   \       0x28   0x2901             CMP      R1,#+1
+   \       0x2A   0x.... 0x....      LDR.W    R2,??DataTable11_7
+   \       0x2E   0xD013             BEQ.N    ??usart_txbuffer_set_2
+   \       0x30   0xD314             BCC.N    ??usart_txbuffer_set_3
+   \       0x32   0x2903             CMP      R1,#+3
+   \       0x34   0xD001             BEQ.N    ??usart_txbuffer_set_4
+   \       0x36   0xD30D             BCC.N    ??usart_txbuffer_set_5
+   \       0x38   0xE010             B.N      ??usart_txbuffer_set_3
+   \                     ??usart_txbuffer_set_4: (+1)
+   \       0x3A   0x6810             LDR      R0,[R2, #+0]
+   \       0x3C   0x2800             CMP      R0,#+0
+   \       0x3E   0xD1FC             BNE.N    ??usart_txbuffer_set_4
+    287            _usart_tx_wait(dma_chn);
+    288          
+    289            memcpy(_GET_TX_BUF(portid) + pos, src, size);
+   \       0x40   0x2901             CMP      R1,#+1
+   \       0x42   0xD011             BEQ.N    ??usart_txbuffer_set_6
+   \       0x44   0xD30F             BCC.N    ??usart_txbuffer_set_7
+   \       0x46   0x2903             CMP      R1,#+3
+   \       0x48   0xD001             BEQ.N    ??usart_txbuffer_set_8
+   \       0x4A   0xD309             BCC.N    ??usart_txbuffer_set_9
+   \       0x4C   0xE00B             B.N      ??usart_txbuffer_set_7
+   \                     ??usart_txbuffer_set_8: (+1)
+   \       0x4E   0xF44F 0x6080      MOV      R0,#+1024
+   \       0x52   0xE009             B.N      ??usart_txbuffer_set_6
+   \                     ??usart_txbuffer_set_5: (+1)
+   \       0x54   0x3264             ADDS     R2,R2,#+100
+   \       0x56   0xE7F0             B.N      ??usart_txbuffer_set_4
+   \                     ??usart_txbuffer_set_2: (+1)
+   \       0x58   0x3228             ADDS     R2,R2,#+40
+   \       0x5A   0xE7EE             B.N      ??usart_txbuffer_set_4
+   \                     ??usart_txbuffer_set_3: (+1)
+   \       0x5C   0x2204             MOVS     R2,#+4
+   \       0x5E   0xE7EC             B.N      ??usart_txbuffer_set_4
+   \                     ??usart_txbuffer_set_9: (+1)
+   \       0x60   0xF44F 0x7000      MOV      R0,#+512
+   \       0x64   0xE000             B.N      ??usart_txbuffer_set_6
+   \                     ??usart_txbuffer_set_7: (+1)
+   \       0x66   0x....             LDR.N    R0,??DataTable11_8
+   \                     ??usart_txbuffer_set_6: (+1)
+   \       0x68   0x....             LDR.N    R3,??DataTable11_9
+   \       0x6A   0x4418             ADD      R0,R3,R0
+   \       0x6C   0x4632             MOV      R2,R6
+   \       0x6E   0x4621             MOV      R1,R4
+   \       0x70   0x4428             ADD      R0,R0,R5
+   \       0x72   0x.... 0x....      BL       __aeabi_memcpy
+    290          
+    291            return size;
+   \       0x76   0x4630             MOV      R0,R6
+   \       0x78   0xBD70             POP      {R4-R6,PC}
+    292          }
+    293          
+    294          /*
+    295           * 串口发送数据函数
+    296           * 将串口发送缓存区中数据全发出去
+    297           */
+
+   \                                 In section .text, align 2, keep-with-next
+    298          void usart_txbuffer_flush(USART_TypeDef* USARTx, uint32_t size)
+    299          {
+   \                     usart_txbuffer_flush: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x460C             MOV      R4,R1
+    300            DMA_Channel_TypeDef * dma_chn;
+    301            int portid;
+    302            portid = _getPortID(USARTx);
+   \        0x4   0x.... 0x....      BL       _getPortID
+   \        0x8   0x4605             MOV      R5,R0
+    303            if (portid == -1) return;
+   \        0xA   0xF115 0x0F01      CMN      R5,#+1
+   \        0xE   0xD040             BEQ.N    ??usart_txbuffer_flush_0
+    304          
+    305            dma_chn = _getDMACh(portid);
+   \       0x10   0x2D01             CMP      R5,#+1
+   \       0x12   0x....             LDR.N    R6,??DataTable11_10
+   \       0x14   0xD00A             BEQ.N    ??usart_txbuffer_flush_1
+   \       0x16   0xD30C             BCC.N    ??usart_txbuffer_flush_2
+   \       0x18   0x2D03             CMP      R5,#+3
+   \       0x1A   0xD001             BEQ.N    ??usart_txbuffer_flush_3
+   \       0x1C   0xD303             BCC.N    ??usart_txbuffer_flush_4
+   \       0x1E   0xE008             B.N      ??usart_txbuffer_flush_2
+   \                     ??usart_txbuffer_flush_3: (+1)
+   \       0x20   0xF106 0x0718      ADD      R7,R6,#+24
+   \       0x24   0xE006             B.N      ??usart_txbuffer_flush_5
+   \                     ??usart_txbuffer_flush_4: (+1)
+   \       0x26   0xF106 0x077C      ADD      R7,R6,#+124
+   \       0x2A   0xE003             B.N      ??usart_txbuffer_flush_5
+   \                     ??usart_txbuffer_flush_1: (+1)
+   \       0x2C   0xF106 0x0740      ADD      R7,R6,#+64
+   \       0x30   0xE000             B.N      ??usart_txbuffer_flush_5
+   \                     ??usart_txbuffer_flush_2: (+1)
+   \       0x32   0x2700             MOVS     R7,#+0
+    306          
+    307            DMA_Cmd(dma_chn, DISABLE);
+   \                     ??usart_txbuffer_flush_5: (+1)
+   \       0x34   0x2100             MOVS     R1,#+0
+   \       0x36   0x4638             MOV      R0,R7
+   \       0x38   0x.... 0x....      BL       DMA_Cmd
+    308            DMA1->IFCR = _getDMATCFlg(portid);
+   \       0x3C   0x2D01             CMP      R5,#+1
+   \       0x3E   0xD009             BEQ.N    ??usart_txbuffer_flush_6
+   \       0x40   0xD30B             BCC.N    ??usart_txbuffer_flush_7
+   \       0x42   0x2D03             CMP      R5,#+3
+   \       0x44   0xD001             BEQ.N    ??usart_txbuffer_flush_8
+   \       0x46   0xD302             BCC.N    ??usart_txbuffer_flush_9
+   \       0x48   0xE007             B.N      ??usart_txbuffer_flush_7
+   \                     ??usart_txbuffer_flush_8: (+1)
+   \       0x4A   0x2020             MOVS     R0,#+32
+   \       0x4C   0xE006             B.N      ??usart_txbuffer_flush_10
+   \                     ??usart_txbuffer_flush_9: (+1)
+   \       0x4E   0xF04F 0x7000      MOV      R0,#+33554432
+   \       0x52   0xE003             B.N      ??usart_txbuffer_flush_10
+   \                     ??usart_txbuffer_flush_6: (+1)
+   \       0x54   0xF44F 0x5000      MOV      R0,#+8192
+   \       0x58   0xE000             B.N      ??usart_txbuffer_flush_10
+   \                     ??usart_txbuffer_flush_7: (+1)
+   \       0x5A   0x2000             MOVS     R0,#+0
+   \                     ??usart_txbuffer_flush_10: (+1)
+   \       0x5C   0x6030             STR      R0,[R6, #+0]
+    309            dma_chn->CNDTR = size;
+    310            dma_chn->CMAR = (uint32_t)_GET_TX_BUF(portid);
+   \       0x5E   0x2D01             CMP      R5,#+1
+   \       0x60   0x607C             STR      R4,[R7, #+4]
+   \       0x62   0xD00A             BEQ.N    ??usart_txbuffer_flush_11
+   \       0x64   0xD30B             BCC.N    ??usart_txbuffer_flush_12
+   \       0x66   0x2D03             CMP      R5,#+3
+   \       0x68   0xD001             BEQ.N    ??usart_txbuffer_flush_13
+   \       0x6A   0xD303             BCC.N    ??usart_txbuffer_flush_14
+   \       0x6C   0xE007             B.N      ??usart_txbuffer_flush_12
+   \                     ??usart_txbuffer_flush_13: (+1)
+   \       0x6E   0xF44F 0x6080      MOV      R0,#+1024
+   \       0x72   0xE005             B.N      ??usart_txbuffer_flush_15
+   \                     ??usart_txbuffer_flush_14: (+1)
+   \       0x74   0xF44F 0x7000      MOV      R0,#+512
+   \       0x78   0xE002             B.N      ??usart_txbuffer_flush_15
+   \                     ??usart_txbuffer_flush_11: (+1)
+   \       0x7A   0x2000             MOVS     R0,#+0
+   \       0x7C   0xE000             B.N      ??usart_txbuffer_flush_15
+   \                     ??usart_txbuffer_flush_12: (+1)
+   \       0x7E   0x....             LDR.N    R0,??DataTable11_8
+   \                     ??usart_txbuffer_flush_15: (+1)
+   \       0x80   0x....             LDR.N    R1,??DataTable11_9
+   \       0x82   0x4408             ADD      R0,R1,R0
+   \       0x84   0x60F8             STR      R0,[R7, #+12]
+    311          
+    312            DMA_Cmd(dma_chn, ENABLE);
+   \       0x86   0x2101             MOVS     R1,#+1
+   \       0x88   0x4638             MOV      R0,R7
+   \       0x8A   0xE8BD 0x40F4      POP      {R2,R4-R7,LR}
+   \       0x8E   0x.... 0x....      B.W      DMA_Cmd
+   \                     ??usart_txbuffer_flush_0: (+1)
+   \       0x92   0xBDF1             POP      {R0,R4-R7,PC}
+    313          }
+    314          /*
+    315           * 串口发送函数
+    316           * 1、设置发送数据
+    317           * 2、将串口发送缓存区中数据全发出去
+    318           */
+
+   \                                 In section .text, align 2, keep-with-next
+    319          int usart_tx(USART_TypeDef* USARTx, const void * data, uint32_t size)
+    320          {
+   \                     usart_tx: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x4604             MOV      R4,R0
+   \        0x4   0x460D             MOV      R5,R1
+    321            if (size==0) size = strlen((char *)data);
+   \        0x6   0xB91A             CBNZ.N   R2,??usart_tx_0
+   \        0x8   0x4628             MOV      R0,R5
+   \        0xA   0x.... 0x....      BL       strlen
+   \        0xE   0x4602             MOV      R2,R0
+    322            size = usart_txbuffer_set(USARTx, data, size, 0);
+   \                     ??usart_tx_0: (+1)
+   \       0x10   0x2300             MOVS     R3,#+0
+   \       0x12   0x4629             MOV      R1,R5
+   \       0x14   0x4620             MOV      R0,R4
+   \       0x16   0x.... 0x....      BL       usart_txbuffer_set
+   \       0x1A   0x4605             MOV      R5,R0
+    323            usart_txbuffer_flush(USARTx, size);
+   \       0x1C   0x4629             MOV      R1,R5
+   \       0x1E   0x4620             MOV      R0,R4
+   \       0x20   0x.... 0x....      BL       usart_txbuffer_flush
+    324            return size;
+   \       0x24   0x4628             MOV      R0,R5
+   \       0x26   0xBD32             POP      {R1,R4,R5,PC}
+    325          }
+    326          /*
+    327           * 串口发送单个字符函数
+    328           */
+
+   \                                 In section .text, align 2, keep-with-next
+    329          int usart_tx_putc(USART_TypeDef* USARTx, int c)
+    330          {
+   \                     usart_tx_putc: (+1)
+   \        0x0   0xB502             PUSH     {R1,LR}
+    331            return usart_tx(USARTx, &c, 1);
+   \        0x2   0x2201             MOVS     R2,#+1
+   \        0x4   0x4669             MOV      R1,SP
+   \        0x6   0x.... 0x....      BL       usart_tx
+   \        0xA   0xBD02             POP      {R1,PC}
+    332          }
+    333          /*
+    334           * 串口清空接收缓存区函数
+    335           */
+
+   \                                 In section .text, align 2, keep-with-next
+    336          void usart_recv_flush(USART_TypeDef* USARTx)
+    337          {
+   \                     usart_recv_flush: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x4604             MOV      R4,R0
+    338            int portid = _getPortID(USARTx);
+   \        0x4   0x.... 0x....      BL       _getPortID
+    339            if (portid == -1) return;
+   \        0x8   0xF110 0x0F01      CMN      R0,#+1
+   \        0xC   0xD006             BEQ.N    ??usart_recv_flush_0
+    340          
+    341            ring_buffer_t *rx_buffer = _rx_ringbuf+_getBufID(portid);
+   \        0xE   0x.... 0x....      BL       ?Subroutine2
+    342            rx_buffer->head = rx_buffer->tail = 0;
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0x12   0x3080             ADDS     R0,R0,#+128
+   \       0x14   0x2200             MOVS     R2,#+0
+   \       0x16   0x6042             STR      R2,[R0, #+4]
+   \       0x18   0x6002             STR      R2,[R0, #+0]
+    343            USARTx->SR = 0;
+   \       0x1A   0x8022             STRH     R2,[R4, #+0]
+    344          }
+   \                     ??usart_recv_flush_0: (+1)
+   \       0x1C   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine2: (+1)
+   \        0x0   0x2801             CMP      R0,#+1
+   \        0x2   0xD009             BEQ.N    ??Subroutine2_0
+   \        0x4   0xD30A             BCC.N    ??Subroutine2_1
+   \        0x6   0x2803             CMP      R0,#+3
+   \        0x8   0xD001             BEQ.N    ??Subroutine2_2
+   \        0xA   0xD303             BCC.N    ??Subroutine2_3
+   \        0xC   0xE006             B.N      ??Subroutine2_1
+   \                     ??Subroutine2_2: (+1)
+   \        0xE   0xF44F 0x7088      MOV      R0,#+272
+   \       0x12   0xE005             B.N      ??Subroutine2_4
+   \                     ??Subroutine2_3: (+1)
+   \       0x14   0x2088             MOVS     R0,#+136
+   \       0x16   0xE003             B.N      ??Subroutine2_4
+   \                     ??Subroutine2_0: (+1)
+   \       0x18   0x2000             MOVS     R0,#+0
+   \       0x1A   0xE001             B.N      ??Subroutine2_4
+   \                     ??Subroutine2_1: (+1)
+   \       0x1C   0xF06F 0x0087      MVN      R0,#+135
+   \                     ??Subroutine2_4: (+1)
+   \       0x20   0x....             LDR.N    R1,??DataTable11_6
+   \       0x22   0x4408             ADD      R0,R1,R0
+   \       0x24   0x4770             BX       LR
+    345          /*
+    346           * 串口是否有接收数据判定函数
+    347           */
+
+   \                                 In section .text, align 2, keep-with-next
+    348          uint32_t usart_recv_avail(USART_TypeDef* USARTx)
+    349          {
+   \                     usart_recv_avail: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    350            int portid = _getPortID(USARTx);
+   \        0x2   0x.... 0x....      BL       _getPortID
+    351            if (portid == -1) return 0;
+   \        0x6   0xF110 0x0F01      CMN      R0,#+1
+   \        0xA   0xD101             BNE.N    ??usart_recv_avail_0
+   \        0xC   0x2000             MOVS     R0,#+0
+   \        0xE   0xBD02             POP      {R1,PC}
+    352          
+    353            ring_buffer_t *rx_buffer = _rx_ringbuf+_getBufID(portid);
+   \                     ??usart_recv_avail_0: (+1)
+   \       0x10   0x.... 0x....      BL       ?Subroutine2
+    354            return (USART_RX_BUFFER_SIZE +
+    355                    rx_buffer->head - rx_buffer->tail) % USART_RX_BUFFER_SIZE;
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x14   0xF850 0x2F80      LDR      R2,[R0, #+128]!
+   \       0x18   0x6840             LDR      R0,[R0, #+4]
+   \       0x1A   0x3280             ADDS     R2,R2,#+128
+   \       0x1C   0x1A10             SUBS     R0,R2,R0
+   \       0x1E   0x1181             ASRS     R1,R0,#+6
+   \       0x20   0xEB00 0x6251      ADD      R2,R0,R1, LSR #+25
+   \       0x24   0x11D2             ASRS     R2,R2,#+7
+   \       0x26   0xEBA0 0x10C2      SUB      R0,R0,R2, LSL #+7
+   \       0x2A   0xBD02             POP      {R1,PC}
+    356          }
+    357          /*
+    358           * 串口接收获取数据函数
+    359           */
+
+   \                                 In section .text, align 2, keep-with-next
+    360          size_t usart_recv_gets(USART_TypeDef* USARTx, unsigned char * buf, size_t size)
+    361          {
+   \                     usart_recv_gets: (+1)
+   \        0x0   0xB5F8             PUSH     {R3-R7,LR}
+   \        0x2   0x4604             MOV      R4,R0
+   \        0x4   0x460D             MOV      R5,R1
+   \        0x6   0x4616             MOV      R6,R2
+    362              size_t actual_get = 0;
+   \        0x8   0x2700             MOVS     R7,#+0
+   \        0xA   0xE001             B.N      ??usart_recv_gets_0
+    363              while (size--) {
+    364                  int current =  usart_recv_getc( USARTx);
+    365                  if (current == -1) break;
+    366                  buf[actual_get++] = (unsigned char)current;
+   \                     ??usart_recv_gets_1: (+1)
+   \        0xC   0x55E8             STRB     R0,[R5, R7]
+   \        0xE   0x1C7F             ADDS     R7,R7,#+1
+   \                     ??usart_recv_gets_0: (+1)
+   \       0x10   0x4630             MOV      R0,R6
+   \       0x12   0x1E46             SUBS     R6,R0,#+1
+   \       0x14   0xB128             CBZ.N    R0,??usart_recv_gets_2
+   \       0x16   0x4620             MOV      R0,R4
+   \       0x18   0x.... 0x....      BL       usart_recv_getc
+   \       0x1C   0xF110 0x0F01      CMN      R0,#+1
+   \       0x20   0xD1F4             BNE.N    ??usart_recv_gets_1
+    367              }
+    368          
+    369              return actual_get;
+   \                     ??usart_recv_gets_2: (+1)
+   \       0x22   0x4638             MOV      R0,R7
+   \       0x24   0xBDF2             POP      {R1,R4-R7,PC}
+    370          }
+    371          /*
+    372           * 串口接收获取单个字符函数
+    373           */
+
+   \                                 In section .text, align 2, keep-with-next
+    374          int usart_recv_getc(USART_TypeDef* USARTx)
+    375          {
+   \                     usart_recv_getc: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    376            int portid = _getPortID(USARTx);
+   \        0x2   0x.... 0x....      BL       _getPortID
+    377            if (portid == -1) return -1;
+   \        0x6   0xF110 0x0F01      CMN      R0,#+1
+   \        0xA   0xD007             BEQ.N    ??usart_recv_getc_0
+    378          
+    379            ring_buffer_t *rx_buffer = _rx_ringbuf+_getBufID(portid);
+   \        0xC   0x.... 0x....      BL       ?Subroutine2
+    380            if (rx_buffer->head == rx_buffer->tail) {
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \       0x10   0xF100 0x0180      ADD      R1,R0,#+128
+   \       0x14   0x684A             LDR      R2,[R1, #+4]
+   \       0x16   0x680B             LDR      R3,[R1, #+0]
+   \       0x18   0x4293             CMP      R3,R2
+   \       0x1A   0xD102             BNE.N    ??usart_recv_getc_1
+    381              return -1;
+   \                     ??usart_recv_getc_0: (+1)
+   \       0x1C   0xF04F 0x30FF      MOV      R0,#+4294967295
+   \       0x20   0xBD10             POP      {R4,PC}
+    382            } else {
+    383              unsigned char c = rx_buffer->buffer[rx_buffer->tail];
+   \                     ??usart_recv_getc_1: (+1)
+   \       0x22   0x5C80             LDRB     R0,[R0, R2]
+    384              rx_buffer->tail = (rx_buffer->tail + 1) % USART_RX_BUFFER_SIZE;
+   \       0x24   0x1C52             ADDS     R2,R2,#+1
+   \       0x26   0x1193             ASRS     R3,R2,#+6
+   \       0x28   0xEB02 0x6453      ADD      R4,R2,R3, LSR #+25
+   \       0x2C   0x11E4             ASRS     R4,R4,#+7
+   \       0x2E   0xEBA2 0x12C4      SUB      R2,R2,R4, LSL #+7
+   \       0x32   0x604A             STR      R2,[R1, #+4]
+    385              return c;
+   \       0x34   0xBD10             POP      {R4,PC}
+    386            }
+    387          }
+    388          /*
+    389           * 设置串口中断接收回调函数
+    390           */
+
+   \                                 In section .text, align 2, keep-with-next
+    391          void usart_setrecv_func(USART_TypeDef* USARTx, proc_on_rx_t proc)
+    392          {
+   \                     usart_setrecv_func: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x460C             MOV      R4,R1
+    393            int portid = _getPortID(USARTx);
+   \        0x4   0x.... 0x....      BL       _getPortID
+    394            if (portid == -1) return;
+   \        0x8   0xF110 0x0F01      CMN      R0,#+1
+   \        0xC   0xD006             BEQ.N    ??usart_setrecv_func_0
+    395          
+    396            if (proc==NULL) proc =_def_on_rx;
+   \        0xE   0x0021             MOVS     R1,R4
+   \       0x10   0xBF08             IT       EQ
+   \       0x12   0x.... 0x....      ADREQ.W  R4,_def_on_rx
+    397            _rx_proc[_getBufID(portid)] = proc;
+   \       0x16   0x.... 0x....      BL       ?Subroutine3
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \       0x1A   0x500C             STR      R4,[R1, R0]
+    398          }
+   \                     ??usart_setrecv_func_0: (+1)
+   \       0x1C   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine3: (+1)
+   \        0x0   0x2801             CMP      R0,#+1
+   \        0x2   0xD008             BEQ.N    ??Subroutine3_0
+   \        0x4   0xD309             BCC.N    ??Subroutine3_1
+   \        0x6   0x2803             CMP      R0,#+3
+   \        0x8   0xD001             BEQ.N    ??Subroutine3_2
+   \        0xA   0xD302             BCC.N    ??Subroutine3_3
+   \        0xC   0xE005             B.N      ??Subroutine3_1
+   \                     ??Subroutine3_2: (+1)
+   \        0xE   0x2008             MOVS     R0,#+8
+   \       0x10   0xE005             B.N      ??Subroutine3_4
+   \                     ??Subroutine3_3: (+1)
+   \       0x12   0x2004             MOVS     R0,#+4
+   \       0x14   0xE003             B.N      ??Subroutine3_4
+   \                     ??Subroutine3_0: (+1)
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0xE001             B.N      ??Subroutine3_4
+   \                     ??Subroutine3_1: (+1)
+   \       0x1A   0xF06F 0x0003      MVN      R0,#+3
+   \                     ??Subroutine3_4: (+1)
+   \       0x1E   0x....             LDR.N    R1,??DataTable11_11
+   \       0x20   0x4770             BX       LR
+    399          /*
+    400           * 获取串口中断接收回调函数
+    401           */
+
+   \                                 In section .text, align 2, keep-with-next
+    402          proc_on_rx_t usart_getrecv_func(USART_TypeDef* USARTx)
+    403          {
+   \                     usart_getrecv_func: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    404            int portid = _getPortID(USARTx);
+   \        0x2   0x.... 0x....      BL       _getPortID
+    405            if (portid == -1) return NULL;
+   \        0x6   0xF110 0x0F01      CMN      R0,#+1
+   \        0xA   0xD101             BNE.N    ??usart_getrecv_func_0
+   \        0xC   0x2000             MOVS     R0,#+0
+   \        0xE   0xBD02             POP      {R1,PC}
+    406            return _rx_proc[_getBufID(portid)];
+   \                     ??usart_getrecv_func_0: (+1)
+   \       0x10   0x.... 0x....      BL       ?Subroutine3
+   \                     ??CrossCallReturnLabel_4: (+1)
+   \       0x14   0x5808             LDR      R0,[R1, R0]
+   \       0x16   0xBD02             POP      {R1,PC}
+    407          }
+    408          //------------------------------
+    409          
+    410          
+    411          #define DEF_RX_HANDLER_FOR_ID(id) \
+    412          void USART##id##_IRQHandler(void)  \
+    413          {  \
+    414            if(USART_GetITStatus(USART##id, USART_IT_RXNE) != RESET)  \
+    415            { \
+    416              /* Read one byte from the receive data register */  \
+    417                int c = USART##id->DR & 0xFF; \
+    418                _rx_proc[USART##id##_BUF_ID](id, c); \
+    419            } \
+    420            if(USART_GetFlagStatus(USART##id,USART_FLAG_ORE)==SET) \
+    421              /* Overflow? */ \
+    422            { \
+    423                USART##id->SR = (uint16_t)~USART_FLAG_ORE; \
+    424                int c = USART##id->DR; \
+    425            } \
+    426          }
+    427          
+    428          #ifndef USART_DISABLE_USART1
+    429          // USART1 Int handler
+
+   \                                 In section .text, align 2, keep-with-next
+    430          DEF_RX_HANDLER_FOR_ID(1)
+   \                     USART1_IRQHandler: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x....             LDR.N    R4,??DataTable11
+   \        0x4   0x.... 0x....      BL       ?Subroutine4
+   \                     ??CrossCallReturnLabel_7: (+1)
+   \        0x8   0xB130             CBZ.N    R0,??USART1_IRQHandler_0
+   \        0xA   0x....             LDR.N    R2,??DataTable11_11
+   \        0xC   0x88A1             LDRH     R1,[R4, #+4]
+   \        0xE   0x6813             LDR      R3,[R2, #+0]
+   \       0x10   0xF001 0x01FF      AND      R1,R1,#0xFF
+   \       0x14   0x2001             MOVS     R0,#+1
+   \       0x16   0x4798             BLX      R3
+   \                     ??USART1_IRQHandler_0: (+1)
+   \       0x18   0x....             B.N      ?Subroutine1
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine1: (+1)
+   \        0x0   0x2108             MOVS     R1,#+8
+   \        0x2   0x4620             MOV      R0,R4
+   \        0x4   0x.... 0x....      BL       USART_GetFlagStatus
+   \        0x8   0x2801             CMP      R0,#+1
+   \        0xA   0xD103             BNE.N    ??Subroutine1_0
+   \        0xC   0xF64F 0x70F7      MOVW     R0,#+65527
+   \       0x10   0x8020             STRH     R0,[R4, #+0]
+   \       0x12   0x88A1             LDRH     R1,[R4, #+4]
+   \                     ??Subroutine1_0: (+1)
+   \       0x14   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine4: (+1)
+   \        0x0   0xF240 0x5125      MOVW     R1,#+1317
+   \        0x4   0x4620             MOV      R0,R4
+   \        0x6   0x.... 0x....      B.W      USART_GetITStatus
+    431          #endif
+    432          #ifndef USART_DISABLE_USART2
+    433          // USART2 Int handler
+
+   \                                 In section .text, align 2, keep-with-next
+    434          DEF_RX_HANDLER_FOR_ID(2)
+   \                     USART2_IRQHandler: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x....             LDR.N    R4,??DataTable11_1
+   \        0x4   0x.... 0x....      BL       ?Subroutine4
+   \                     ??CrossCallReturnLabel_6: (+1)
+   \        0x8   0xB130             CBZ.N    R0,??USART2_IRQHandler_0
+   \        0xA   0x....             LDR.N    R2,??DataTable11_11
+   \        0xC   0x88A1             LDRH     R1,[R4, #+4]
+   \        0xE   0x6853             LDR      R3,[R2, #+4]
+   \       0x10   0xF001 0x01FF      AND      R1,R1,#0xFF
+   \       0x14   0x2002             MOVS     R0,#+2
+   \       0x16   0x4798             BLX      R3
+   \                     ??USART2_IRQHandler_0: (+1)
+   \       0x18                      REQUIRE ?Subroutine1
+   \       0x18                      ;; // Fall through to label ?Subroutine1
+    435          #endif
+    436          #ifdef  USART_ENABLE_USART3
+    437          // USART2 Int handler
+
+   \                                 In section .text, align 2, keep-with-next
+    438          DEF_RX_HANDLER_FOR_ID(3)
+   \                     USART3_IRQHandler: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0x....             LDR.N    R4,??DataTable11_2
+   \        0x4   0x.... 0x....      BL       ?Subroutine4
+   \                     ??CrossCallReturnLabel_5: (+1)
+   \        0x8   0xB130             CBZ.N    R0,??USART3_IRQHandler_0
+   \        0xA   0x....             LDR.N    R2,??DataTable11_11
+   \        0xC   0x88A1             LDRH     R1,[R4, #+4]
+   \        0xE   0x6893             LDR      R3,[R2, #+8]
+   \       0x10   0xF001 0x01FF      AND      R1,R1,#0xFF
+   \       0x14   0x2003             MOVS     R0,#+3
+   \       0x16   0x4798             BLX      R3
+   \                     ??USART3_IRQHandler_0: (+1)
+   \       0x18   0x....             B.N      ?Subroutine1
+    439          #endif
+    440          
+    441          /*
+    442           * 默认串口中断接收回调函数
+    443           */
+
+   \                                 In section .text, align 4, keep-with-next
+    444          static void _def_on_rx(int id, uint32_t data)
+    445          {
+   \                     _def_on_rx: (+1)
+   \        0x0   0xB570             PUSH     {R4-R6,LR}
+   \        0x2   0x460C             MOV      R4,R1
+    446            ring_buffer_t *rx_buffer = _rx_ringbuf+_getBufID(id);
+   \        0x4   0x.... 0x....      BL       _getBufID
+   \        0x8   0x2188             MOVS     R1,#+136
+   \        0xA   0x4348             MULS     R0,R1,R0
+   \        0xC   0x....             LDR.N    R2,??DataTable11_6
+   \        0xE   0x4410             ADD      R0,R2,R0
+    447            int i = (rx_buffer->head + 1) % USART_RX_BUFFER_SIZE;
+   \       0x10   0xF100 0x0180      ADD      R1,R0,#+128
+   \       0x14   0x680A             LDR      R2,[R1, #+0]
+   \       0x16   0x1C53             ADDS     R3,R2,#+1
+   \       0x18   0x119D             ASRS     R5,R3,#+6
+   \       0x1A   0xEB03 0x6655      ADD      R6,R3,R5, LSR #+25
+   \       0x1E   0x11F6             ASRS     R6,R6,#+7
+    448          
+    449            if (i != rx_buffer->tail) {
+   \       0x20   0x684D             LDR      R5,[R1, #+4]
+   \       0x22   0xEBA3 0x13C6      SUB      R3,R3,R6, LSL #+7
+   \       0x26   0x42AB             CMP      R3,R5
+   \       0x28   0xBF1C             ITT      NE
+   \       0x2A   0x5484             STRBNE   R4,[R0, R2]
+   \       0x2C   0x600B             STRNE    R3,[R1, #+0]
+    450              rx_buffer->buffer[rx_buffer->head] = data;
+    451              rx_buffer->head = i;
+    452            }
+    453          }
+   \       0x2E   0xBD70             POP      {R4-R6,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11:
+   \        0x0   0x4001'3800        DC32     0x40013800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_1:
+   \        0x0   0x4000'4400        DC32     0x40004400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_2:
+   \        0x0   0x4000'4800        DC32     0x40004800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_3:
+   \        0x0   0x4002'001C        DC32     0x4002001c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_4:
+   \        0x0   0x4002'0044        DC32     0x40020044
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_5:
+   \        0x0   0x4002'0080        DC32     0x40020080
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_6:
+   \        0x0   0x....'....        DC32     _rx_ringbuf
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_7:
+   \        0x0   0x4002'0020        DC32     0x40020020
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_8:
+   \        0x0   0xFFFF'FE00        DC32     0xfffffe00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_9:
+   \        0x0   0x....'....        DC32     _tx_buf
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_10:
+   \        0x0   0x4002'0004        DC32     0x40020004
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable11_11:
+   \        0x0   0x....'....        DC32     _rx_proc
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   USART1_IRQHandler
+         8   -- Indirect call
+         8   -> USART_GetFlagStatus
+         8   -> USART_GetITStatus
+       8   USART2_IRQHandler
+         8   -- Indirect call
+         8   -> USART_GetFlagStatus
+         8   -> USART_GetITStatus
+       8   USART3_IRQHandler
+         8   -- Indirect call
+         8   -> USART_GetFlagStatus
+         8   -> USART_GetITStatus
+      16   _def_on_rx
+        16   -> _getBufID
+       0   _getBufID
+       0   _getPortID
+      80   usart_begin
+        80   -> DMA_DeInit
+        80   -> DMA_Init
+        80   -> USART_Cmd
+        80   -> USART_DMACmd
+        80   -> USART_ITConfig
+        80   -> USART_Init
+        80   -> USART_StructInit
+        80   -> _getPortID
+       8   usart_getrecv_func
+         8   -> _getPortID
+       8   usart_recv_avail
+         8   -> _getPortID
+       8   usart_recv_flush
+         8   -> _getPortID
+       8   usart_recv_getc
+         8   -> _getPortID
+      24   usart_recv_gets
+        24   -> usart_recv_getc
+       8   usart_setrecv_func
+         8   -> _getPortID
+       8   usart_shutdown
+         0   -> DMA_DeInit
+         8   -> USART_DMACmd
+         8   -> USART_DeInit
+         8   -> _getPortID
+      16   usart_tx
+        16   -> strlen
+        16   -> usart_txbuffer_flush
+        16   -> usart_txbuffer_set
+       8   usart_tx_putc
+         8   -> usart_tx
+       8   usart_tx_wait
+         8   -> DMA_GetFlagStatus
+         8   -> _getPortID
+      24   usart_txbuffer_flush
+         0   -> DMA_Cmd
+        24   -> DMA_Cmd
+        24   -> _getPortID
+      16   usart_txbuffer_set
+        16   -> __aeabi_memcpy
+        16   -> _getPortID
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable11
+       4  ??DataTable11_1
+       4  ??DataTable11_10
+       4  ??DataTable11_11
+       4  ??DataTable11_2
+       4  ??DataTable11_3
+       4  ??DataTable11_4
+       4  ??DataTable11_5
+       4  ??DataTable11_6
+       4  ??DataTable11_7
+       4  ??DataTable11_8
+       4  ??DataTable11_9
+       6  ?Subroutine0
+      22  ?Subroutine1
+      38  ?Subroutine2
+      34  ?Subroutine3
+      10  ?Subroutine4
+      26  USART1_IRQHandler
+      24  USART2_IRQHandler
+      26  USART3_IRQHandler
+      48  _def_on_rx
+      26  _getBufID
+      38  _getPortID
+      12  _rx_proc
+     408  _rx_ringbuf
+   1'536  _tx_buf
+     204  usart_begin
+      24  usart_getrecv_func
+      44  usart_recv_avail
+      30  usart_recv_flush
+      54  usart_recv_getc
+      38  usart_recv_gets
+      30  usart_setrecv_func
+      68  usart_shutdown
+      40  usart_tx
+      12  usart_tx_putc
+      88  usart_tx_wait
+     148  usart_txbuffer_flush
+     122  usart_txbuffer_set
+
+ 
+ 1'944 bytes in section .bss
+    12 bytes in section .data
+ 1'248 bytes in section .text
+ 
+ 1'248 bytes of CODE memory
+ 1'956 bytes of DATA memory
+
+Errors: none
+Warnings: none

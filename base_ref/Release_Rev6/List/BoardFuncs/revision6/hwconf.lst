@@ -1,0 +1,551 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:27
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\boardfunc\revision6\hwconf.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\BoardFuncs\revision6\hwconf.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\boardfunc\revision6\hwconf.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\BoardFuncs\revision6
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\revision6
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\revision6\hwconf.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\BoardFuncs\revision6\hwconf.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\BoardFuncs\revision6\hwconf.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\boardfunc\revision6\hwconf.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void pinMode(GPIO_TypeDef *, uint16_t, GPIOMode_TypeDef, GPIOSpeed_TypeDef)
+   \                     pinMode: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+   \        0x6   0xF88D 0x3002      STRB     R3,[SP, #+2]
+   \        0xA   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \        0xE   0x4669             MOV      R1,SP
+   \       0x10   0x.... 0x....      BL       GPIO_Init
+   \       0x14   0xBD01             POP      {R0,PC}
+     32          
+
+   \                                 In section .bss, align 1
+     33          static _u8 _board_hw_ver = 0;
+   \                     _board_hw_ver:
+   \        0x0                      DS8 1
+     34          
+     35          static void RCC_Configuration(void);
+     36          static void GPIO_Configuration(void);
+     37          static void NVIC_Configuration(void);
+     38          static void ADC_Configuration(void);
+     39          
+     40          /*
+     41           * 系统时钟设定函数，时间：1ms
+     42           */
+     43          static inline void set_board_systick()
+     44          {
+     45              SysTick->LOAD = SYSTICK_1MS_TICKS - 1;
+     46              NVIC_SetPriority(SysTick_IRQn, 0);
+     47              SysTick->VAL = 0;
+     48              SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_TICKINT_Msk | SysTick_CTRL_ENABLE_Msk;
+     49              softdelay_calibrate();
+     50          }
+     51          /*
+     52           * RCC clock配置函数
+     53           */
+     54          static void RCC_Configuration(void)
+     55          {
+     56              RCC_ADCCLKConfig(RCC_PCLK2_Div6);
+     57              RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
+     58              RCC_APB2PeriphClockCmd(APB2PERIPH_INIT_LIST, ENABLE);
+     59              RCC_APB1PeriphClockCmd(APB1PERIPH_INIT_LIST, ENABLE);
+     60              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+     61              RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+     62              RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+     63          }
+     64          /*
+     65           * 中断控制器配置函数
+     66           */
+     67          static void NVIC_Configuration(void)
+     68          {
+     69              NVIC_InitTypeDef NVIC_InitStructure;
+     70              NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
+     71              NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+     72              set_board_systick();
+     73          
+     74              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
+     75              NVIC_InitStructure.NVIC_IRQChannel = GET_USARTINT_IRQ(USART1_ID);
+     76              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+     77              NVIC_Init(&NVIC_InitStructure);
+     78              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
+     79              NVIC_InitStructure.NVIC_IRQChannel = GET_USARTINT_IRQ(USART2_ID);
+     80              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
+     81              NVIC_Init(&NVIC_InitStructure);
+     82              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 3;
+     83              NVIC_InitStructure.NVIC_IRQChannel = GET_USARTINT_IRQ(USART3_ID);
+     84              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 3;
+     85              NVIC_Init(&NVIC_InitStructure);
+     86          
+     87              /* Enable line5 ~ line9 external interrupt. */
+     88              NVIC_InitStructure.NVIC_IRQChannel = EXTI9_5_IRQn;
+     89              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;
+     90              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 2;
+     91              NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+     92              NVIC_Init(&NVIC_InitStructure);  
+     93          }
+     94          /*
+     95           * GPIO配置函数
+     96           */
+     97          static void GPIO_Configuration(void)
+     98          {
+     99              PERFORM_IO_REMAP();
+    100              pinMode(USART1_PORT, USART1_TX_PIN, GPIO_Mode_AF_PP, GPIO_Speed_50MHz);
+    101              pinMode(USART1_PORT, USART1_RX_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_50MHz);
+    102              pinMode(USART2_PORT, USART2_TX_PIN, GPIO_Mode_AF_PP, GPIO_Speed_50MHz);
+    103              pinMode(USART2_PORT, USART2_RX_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_50MHz);
+    104              pinMode(USART3_PORT, USART3_TX_PIN, GPIO_Mode_AF_PP, GPIO_Speed_50MHz);
+    105              pinMode(USART3_PORT, USART3_RX_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_50MHz);
+    106          }
+    107          /*
+    108           * ADC配置函数
+    109           */
+    110          static void ADC_Configuration(void)
+    111          {
+    112              ADC_InitTypeDef ADC_InitStructure;
+    113              ADC_InitStructure.ADC_Mode = ADC_Mode_Independent;
+    114              ADC_InitStructure.ADC_ScanConvMode = DISABLE;
+    115              ADC_InitStructure.ADC_ContinuousConvMode = DISABLE;
+    116              ADC_InitStructure.ADC_ExternalTrigConv = ADC_ExternalTrigConv_None;
+    117              ADC_InitStructure.ADC_DataAlign = ADC_DataAlign_Right;
+    118              ADC_InitStructure.ADC_NbrOfChannel = 1;
+    119              ADC_Init(ADC1, &ADC_InitStructure);
+    120              ADC_Init(ADC2, &ADC_InitStructure);
+    121              ADC_Cmd(ADC1, ENABLE);
+    122              ADC_Cmd(ADC2, ENABLE);
+    123              ADC_TempSensorVrefintCmd(ENABLE);
+    124              ADC_ResetCalibration(ADC1);
+    125              ADC_ResetCalibration(ADC2);
+    126          
+    127              while (ADC_GetResetCalibrationStatus(ADC1)
+    128                     || ADC_GetResetCalibrationStatus(ADC2));
+    129          
+    130              ADC_StartCalibration(ADC1);
+    131              ADC_StartCalibration(ADC2);
+    132              while (ADC_GetCalibrationStatus(ADC1)
+    133                     || ADC_GetCalibrationStatus(ADC2));
+    134          }
+    135          /*
+    136           * 获取硬件版本设定
+    137           */
+    138          static void init_board_ver(void)
+    139          {
+    140              pinMode(HW_VER_ID1_PORT, HW_VER_ID1_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_10MHz);
+    141              pinMode(HW_VER_ID2_PORT, HW_VER_ID2_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_10MHz);
+    142          
+    143              _board_hw_ver = pinRead(HW_VER_ID2_PORT, HW_VER_ID2_PIN);
+    144              _board_hw_ver <<= 1; 
+    145              _board_hw_ver |= pinRead(HW_VER_ID1_PORT, HW_VER_ID1_PIN);
+    146          #ifdef CONFIG_BREAKOUT_REV
+    147              _board_hw_ver |= CONFIG_BREAKOUT_REV;
+    148          #else
+    149              _board_hw_ver |= 4;
+    150          #endif
+    151              return ;
+    152          }
+    153          /*
+    154           * 获取硬件版本设定
+    155           */
+
+   \                                 In section .text, align 2, keep-with-next
+    156          _u8 get_board_ver(void)
+    157          {
+    158              return _board_hw_ver;
+   \                     get_board_ver: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable2
+   \        0x2   0x7800             LDRB     R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+    159          }
+    160          /*
+    161           * MCU低级初始化
+    162           */
+
+   \                                 In section .text, align 2, keep-with-next
+    163          _s32 init_board()
+    164          {
+   \                     init_board: (+1)
+   \        0x0   0xB530             PUSH     {R4,R5,LR}
+   \        0x2   0xB085             SUB      SP,SP,#+20
+    165              RCC_Configuration();
+   \        0x4   0xF44F 0x4000      MOV      R0,#+32768
+   \        0x8   0x.... 0x....      BL       RCC_ADCCLKConfig
+   \        0xC   0x2101             MOVS     R1,#+1
+   \        0xE   0x2001             MOVS     R0,#+1
+   \       0x10   0x.... 0x....      BL       RCC_AHBPeriphClockCmd
+   \       0x14   0x2101             MOVS     R1,#+1
+   \       0x16   0xF244 0x601C      MOVW     R0,#+17948
+   \       0x1A   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+   \       0x1E   0x2101             MOVS     R1,#+1
+   \       0x20   0xF04F 0x1002      MOV      R0,#+131074
+   \       0x24   0x.... 0x....      BL       RCC_APB1PeriphClockCmd
+   \       0x28   0x2101             MOVS     R1,#+1
+   \       0x2A   0x2020             MOVS     R0,#+32
+   \       0x2C   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+   \       0x30   0x2101             MOVS     R1,#+1
+   \       0x32   0xF44F 0x2080      MOV      R0,#+262144
+   \       0x36   0x.... 0x....      BL       RCC_APB1PeriphClockCmd
+   \       0x3A   0x2101             MOVS     R1,#+1
+   \       0x3C   0x2001             MOVS     R0,#+1
+   \       0x3E   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+    166              GPIO_Configuration();
+   \       0x42   0x2101             MOVS     R1,#+1
+   \       0x44   0x....             LDR.N    R0,??DataTable2_1
+   \       0x46   0x....             LDR.N    R4,??DataTable2_2
+   \       0x48   0x....             LDR.N    R5,??DataTable2_3
+   \       0x4A   0x.... 0x....      BL       GPIO_PinRemapConfig
+   \       0x4E   0x2101             MOVS     R1,#+1
+   \       0x50   0x....             LDR.N    R0,??DataTable2_4
+   \       0x52   0x.... 0x....      BL       GPIO_PinRemapConfig
+   \       0x56   0x2101             MOVS     R1,#+1
+   \       0x58   0x....             LDR.N    R0,??DataTable2_5
+   \       0x5A   0x.... 0x....      BL       GPIO_PinRemapConfig
+   \       0x5E   0x2303             MOVS     R3,#+3
+   \       0x60   0x2218             MOVS     R2,#+24
+   \       0x62   0xF44F 0x7100      MOV      R1,#+512
+   \       0x66   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_5: (+1)
+   \       0x6A   0x2303             MOVS     R3,#+3
+   \       0x6C   0x2204             MOVS     R2,#+4
+   \       0x6E   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_7: (+1)
+   \       0x72   0x2303             MOVS     R3,#+3
+   \       0x74   0x2218             MOVS     R2,#+24
+   \       0x76   0x2104             MOVS     R1,#+4
+   \       0x78   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_4: (+1)
+   \       0x7C   0x2303             MOVS     R3,#+3
+   \       0x7E   0x2204             MOVS     R2,#+4
+   \       0x80   0x2108             MOVS     R1,#+8
+   \       0x82   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \       0x86   0x....             LDR.N    R4,??DataTable2_6
+   \       0x88   0x2303             MOVS     R3,#+3
+   \       0x8A   0x2218             MOVS     R2,#+24
+   \       0x8C   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_6: (+1)
+   \       0x90   0x2303             MOVS     R3,#+3
+   \       0x92   0x2204             MOVS     R2,#+4
+   \       0x94   0xF44F 0x6100      MOV      R1,#+2048
+   \       0x98   0x.... 0x....      BL       ??Subroutine0_0
+    167              NVIC_Configuration();
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \       0x9C   0xF44F 0x60A0      MOV      R0,#+1280
+   \       0xA0   0x.... 0x....      BL       NVIC_PriorityGroupConfig
+   \       0xA4   0x2001             MOVS     R0,#+1
+   \       0xA6   0xF88D 0x0003      STRB     R0,[SP, #+3]
+   \       0xAA   0x2200             MOVS     R2,#+0
+   \       0xAC   0x....             LDR.N    R0,??DataTable2_7
+   \       0xAE   0x....             LDR.N    R1,??DataTable2_8
+   \       0xB0   0x....             LDR.N    R3,??DataTable2_9
+   \       0xB2   0x....             LDR.N    R4,??DataTable2_10
+   \       0xB4   0x6041             STR      R1,[R0, #+4]
+   \       0xB6   0x701A             STRB     R2,[R3, #+0]
+   \       0xB8   0x6082             STR      R2,[R0, #+8]
+   \       0xBA   0x2207             MOVS     R2,#+7
+   \       0xBC   0x6002             STR      R2,[R0, #+0]
+   \       0xBE   0x.... 0x....      BL       softdelay_calibrate
+   \       0xC2   0x2003             MOVS     R0,#+3
+   \       0xC4   0xF88D 0x0001      STRB     R0,[SP, #+1]
+   \       0xC8   0x2125             MOVS     R1,#+37
+   \       0xCA   0x2201             MOVS     R2,#+1
+   \       0xCC   0x.... 0x....      BL       ?Subroutine1
+   \                     ??CrossCallReturnLabel_9: (+1)
+   \       0xD0   0x2003             MOVS     R0,#+3
+   \       0xD2   0xF88D 0x0001      STRB     R0,[SP, #+1]
+   \       0xD6   0x2126             MOVS     R1,#+38
+   \       0xD8   0x2202             MOVS     R2,#+2
+   \       0xDA   0x.... 0x....      BL       ?Subroutine1
+   \                     ??CrossCallReturnLabel_8: (+1)
+   \       0xDE   0x2003             MOVS     R0,#+3
+   \       0xE0   0xF88D 0x0001      STRB     R0,[SP, #+1]
+   \       0xE4   0x2127             MOVS     R1,#+39
+   \       0xE6   0xF88D 0x0002      STRB     R0,[SP, #+2]
+   \       0xEA   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \       0xEE   0x4668             MOV      R0,SP
+   \       0xF0   0x.... 0x....      BL       NVIC_Init
+   \       0xF4   0x2117             MOVS     R1,#+23
+   \       0xF6   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \       0xFA   0x2201             MOVS     R2,#+1
+   \       0xFC   0x2102             MOVS     R1,#+2
+   \       0xFE   0xF88D 0x2001      STRB     R2,[SP, #+1]
+   \      0x102   0xF88D 0x1002      STRB     R1,[SP, #+2]
+   \      0x106   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \      0x10A   0x4668             MOV      R0,SP
+   \      0x10C   0x.... 0x....      BL       NVIC_Init
+    168              ADC_Configuration();
+   \      0x110   0xF44F 0x2260      MOV      R2,#+917504
+   \      0x114   0x9202             STR      R2,[SP, #+8]
+   \      0x116   0x2100             MOVS     R1,#+0
+   \      0x118   0x9100             STR      R1,[SP, #+0]
+   \      0x11A   0xF8AD 0x1004      STRH     R1,[SP, #+4]
+   \      0x11E   0x9103             STR      R1,[SP, #+12]
+   \      0x120   0x2201             MOVS     R2,#+1
+   \      0x122   0xF88D 0x2010      STRB     R2,[SP, #+16]
+   \      0x126   0x4669             MOV      R1,SP
+   \      0x128   0x4620             MOV      R0,R4
+   \      0x12A   0x.... 0x....      BL       ADC_Init
+   \      0x12E   0x4669             MOV      R1,SP
+   \      0x130   0x4628             MOV      R0,R5
+   \      0x132   0x.... 0x....      BL       ADC_Init
+   \      0x136   0x2101             MOVS     R1,#+1
+   \      0x138   0x4620             MOV      R0,R4
+   \      0x13A   0x.... 0x....      BL       ADC_Cmd
+   \      0x13E   0x2101             MOVS     R1,#+1
+   \      0x140   0x4628             MOV      R0,R5
+   \      0x142   0x.... 0x....      BL       ADC_Cmd
+   \      0x146   0x2001             MOVS     R0,#+1
+   \      0x148   0x.... 0x....      BL       ADC_TempSensorVrefintCmd
+   \      0x14C   0x4620             MOV      R0,R4
+   \      0x14E   0x.... 0x....      BL       ADC_ResetCalibration
+   \      0x152   0x4628             MOV      R0,R5
+   \      0x154   0x.... 0x....      BL       ADC_ResetCalibration
+   \                     ??init_board_0: (+1)
+   \      0x158   0x4620             MOV      R0,R4
+   \      0x15A   0x.... 0x....      BL       ADC_GetResetCalibrationStatus
+   \      0x15E   0x2800             CMP      R0,#+0
+   \      0x160   0xD1FA             BNE.N    ??init_board_0
+   \      0x162   0x4628             MOV      R0,R5
+   \      0x164   0x.... 0x....      BL       ADC_GetResetCalibrationStatus
+   \      0x168   0x2800             CMP      R0,#+0
+   \      0x16A   0xD1F5             BNE.N    ??init_board_0
+   \      0x16C   0x4620             MOV      R0,R4
+   \      0x16E   0x.... 0x....      BL       ADC_StartCalibration
+   \      0x172   0x4628             MOV      R0,R5
+   \      0x174   0x.... 0x....      BL       ADC_StartCalibration
+   \                     ??init_board_1: (+1)
+   \      0x178   0x4620             MOV      R0,R4
+   \      0x17A   0x.... 0x....      BL       ADC_GetCalibrationStatus
+   \      0x17E   0x2800             CMP      R0,#+0
+   \      0x180   0xD1FA             BNE.N    ??init_board_1
+   \      0x182   0x4628             MOV      R0,R5
+   \      0x184   0x.... 0x....      BL       ADC_GetCalibrationStatus
+   \      0x188   0x2800             CMP      R0,#+0
+   \      0x18A   0xD1F5             BNE.N    ??init_board_1
+    169              FLASH_Unlock();
+   \      0x18C   0x.... 0x....      BL       FLASH_Unlock
+    170              init_board_ver();
+   \      0x190   0x....             LDR.N    R4,??DataTable2_11
+   \      0x192   0x2301             MOVS     R3,#+1
+   \      0x194   0x2204             MOVS     R2,#+4
+   \      0x196   0x2140             MOVS     R1,#+64
+   \      0x198   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \      0x19C   0x2301             MOVS     R3,#+1
+   \      0x19E   0x2204             MOVS     R2,#+4
+   \      0x1A0   0x2180             MOVS     R1,#+128
+   \      0x1A2   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \      0x1A6   0x2180             MOVS     R1,#+128
+   \      0x1A8   0x4620             MOV      R0,R4
+   \      0x1AA   0x.... 0x....      BL       GPIO_ReadInputDataBit
+   \      0x1AE   0x....             LDR.N    R5,??DataTable2
+   \      0x1B0   0x0040             LSLS     R0,R0,#+1
+   \      0x1B2   0x7028             STRB     R0,[R5, #+0]
+   \      0x1B4   0x2140             MOVS     R1,#+64
+   \      0x1B6   0x4620             MOV      R0,R4
+   \      0x1B8   0x.... 0x....      BL       GPIO_ReadInputDataBit
+   \      0x1BC   0x7829             LDRB     R1,[R5, #+0]
+   \      0x1BE   0x4308             ORRS     R0,R0,R1
+   \      0x1C0   0xF040 0x0006      ORR      R0,R0,#0x6
+   \      0x1C4   0x7028             STRB     R0,[R5, #+0]
+    171              return 1;
+   \      0x1C6   0xB005             ADD      SP,SP,#+20
+   \      0x1C8   0x2001             MOVS     R0,#+1
+   \      0x1CA   0xBD30             POP      {R4,R5,PC}
+    172          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \        0x0   0x....'....        DC32     _board_hw_ver
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \        0x0   0x0030'0200        DC32     0x300200
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \        0x0   0x4001'0800        DC32     0x40010800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \        0x0   0x4001'2800        DC32     0x40012800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \        0x0   0x001A'0C00        DC32     0x1a0c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_5:
+   \        0x0   0x0014'0010        DC32     0x140010
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_6:
+   \        0x0   0x4001'1000        DC32     0x40011000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_7:
+   \        0x0   0xE000'E010        DC32     0xe000e010
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_8:
+   \        0x0   0x0001'193F        DC32     0x1193f
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_9:
+   \        0x0   0xE000'ED23        DC32     0xe000ed23
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_10:
+   \        0x0   0x4001'2400        DC32     0x40012400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_11:
+   \        0x0   0x4001'0C00        DC32     0x40010c00
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine1: (+1)
+   \        0x0   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \        0x4   0xF88D 0x2002      STRB     R2,[SP, #+2]
+   \        0x8   0x4668             MOV      R0,SP
+   \        0xA   0x.... 0x....      B.W      NVIC_Init
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0xF44F 0x6180      MOV      R1,#+1024
+   \                     ??Subroutine0_0: (+1)
+   \        0x4   0x4620             MOV      R0,R4
+   \        0x6   0x....             B.N      pinMode
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   get_board_ver
+      32   init_board
+        32   -> ADC_Cmd
+        32   -> ADC_GetCalibrationStatus
+        32   -> ADC_GetResetCalibrationStatus
+        32   -> ADC_Init
+        32   -> ADC_ResetCalibration
+        32   -> ADC_StartCalibration
+        32   -> ADC_TempSensorVrefintCmd
+        32   -> FLASH_Unlock
+        32   -> GPIO_PinRemapConfig
+        32   -> GPIO_ReadInputDataBit
+        32   -> NVIC_Init
+        32   -> NVIC_PriorityGroupConfig
+        32   -> RCC_ADCCLKConfig
+        32   -> RCC_AHBPeriphClockCmd
+        32   -> RCC_APB1PeriphClockCmd
+        32   -> RCC_APB2PeriphClockCmd
+        32   -> pinMode
+        32   -> softdelay_calibrate
+       8   pinMode
+         8   -> GPIO_Init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_10
+       4  ??DataTable2_11
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       4  ??DataTable2_5
+       4  ??DataTable2_6
+       4  ??DataTable2_7
+       4  ??DataTable2_8
+       4  ??DataTable2_9
+       8  ?Subroutine0
+      14  ?Subroutine1
+       1  _board_hw_ver
+       6  get_board_ver
+     460  init_board
+      22  pinMode
+
+ 
+   1 byte  in section .bss
+ 558 bytes in section .text
+ 
+ 558 bytes of CODE memory
+   1 byte  of DATA memory
+
+Errors: none
+Warnings: none

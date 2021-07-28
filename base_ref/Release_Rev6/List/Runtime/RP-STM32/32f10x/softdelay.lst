@@ -1,0 +1,202 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:37
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\infra_pub\arch\infra_stm32\32f10x\softdelay.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Runtime\RP-STM32\32f10x\softdelay.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\infra_pub\arch\infra_stm32\32f10x\softdelay.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Runtime\RP-STM32\32f10x
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\softdelay.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Runtime\RP-STM32\32f10x\softdelay.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Runtime\RP-STM32\32f10x\softdelay.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\infra_pub\arch\infra_stm32\32f10x\softdelay.c
+      1          /*
+      2           * SlamTec Infra Runtime Public
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+     32          
+
+   \                                 In section .data, align 4
+     33          _u32 _ticks_per_us = 8; //true for 72Mhz with 2cycles' flash delay
+   \                     _ticks_per_us:
+   \        0x0   0x0000'0008        DC32 8
+     34          #define CALIBRATION_TICKS 500000UL
+     35          
+     36          static void _delay_loop(volatile _u32 count)
+     37          {
+     38              while(count--);
+     39          }
+     40          /*
+     41           * 微秒级延时矫正函数
+     42           */
+
+   \                                 In section .text, align 2, keep-with-next
+     43          void softdelay_calibrate()
+     44          {
+   \                     softdelay_calibrate: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+     45              _u64 startUs = getus();
+   \        0x2   0x.... 0x....      BL       getus
+   \        0x6   0x4604             MOV      R4,R0
+     46              _delay_loop(CALIBRATION_TICKS);
+   \        0x8   0x....             LDR.N    R0,??DataTable1
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x460D             MOV      R5,R1
+   \                     ??softdelay_calibrate_0: (+1)
+   \        0xE   0x9800             LDR      R0,[SP, #+0]
+   \       0x10   0x1E41             SUBS     R1,R0,#+1
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0x9100             STR      R1,[SP, #+0]
+   \       0x16   0xD1FA             BNE.N    ??softdelay_calibrate_0
+     47              _u64 usedTime = getus() - startUs;
+   \       0x18   0x.... 0x....      BL       getus
+   \       0x1C   0x1B02             SUBS     R2,R0,R4
+   \       0x1E   0xEB71 0x0305      SBCS     R3,R1,R5
+     48          
+     49              if (!usedTime) usedTime = 1;
+   \       0x22   0xBF02             ITTT     EQ
+   \       0x24   0x2A00             CMPEQ    R2,#+0
+   \       0x26   0x2201             MOVEQ    R2,#+1
+   \       0x28   0x2300             MOVEQ    R3,#+0
+     50          
+     51              _ticks_per_us = CALIBRATION_TICKS/usedTime;
+   \       0x2A   0x....             LDR.N    R0,??DataTable1
+   \       0x2C   0x2100             MOVS     R1,#+0
+   \       0x2E   0x.... 0x....      BL       __aeabi_uldivmod
+     52              if (!_ticks_per_us) _ticks_per_us = 1;
+   \       0x32   0xB900             CBNZ.N   R0,??softdelay_calibrate_1
+   \       0x34   0x2001             MOVS     R0,#+1
+   \                     ??softdelay_calibrate_1: (+1)
+   \       0x36   0x....             LDR.N    R1,??DataTable1_1
+   \       0x38   0x6008             STR      R0,[R1, #+0]
+     53          }
+   \       0x3A   0xBD31             POP      {R0,R4,R5,PC}
+     54          /*
+     55           * 微秒级延时函数
+     56           */
+
+   \                                 In section .text, align 2, keep-with-next
+     57          void _delay_us(volatile uint32_t us)
+     58          {
+   \                     _delay_us: (+1)
+   \        0x0   0xB401             PUSH     {R0}
+   \        0x2   0xB081             SUB      SP,SP,#+4
+     59              _delay_loop(us * _ticks_per_us);
+   \        0x4   0x....             LDR.N    R2,??DataTable1_1
+   \        0x6   0x9901             LDR      R1,[SP, #+4]
+   \        0x8   0x6810             LDR      R0,[R2, #+0]
+   \        0xA   0x4341             MULS     R1,R0,R1
+   \        0xC   0x9100             STR      R1,[SP, #+0]
+   \                     ??_delay_us_0: (+1)
+   \        0xE   0x9800             LDR      R0,[SP, #+0]
+   \       0x10   0x1E41             SUBS     R1,R0,#+1
+   \       0x12   0x2800             CMP      R0,#+0
+   \       0x14   0x9100             STR      R1,[SP, #+0]
+   \       0x16   0xD1FA             BNE.N    ??_delay_us_0
+     60          }
+   \       0x18   0xB002             ADD      SP,SP,#+8
+   \       0x1A   0x4770             BX       LR
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x0007'A120        DC32     0x7a120
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x....'....        DC32     _ticks_per_us
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   _delay_us
+      16   softdelay_calibrate
+        16   -> getus
+        16 __aeabi_uldivmod
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+      28  _delay_us
+       4  _ticks_per_us
+      60  softdelay_calibrate
+
+ 
+  4 bytes in section .data
+ 96 bytes in section .text
+ 
+ 96 bytes of CODE memory
+  4 bytes of DATA memory
+
+Errors: none
+Warnings: none

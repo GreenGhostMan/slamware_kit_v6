@@ -1,0 +1,450 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:30
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\irdecoder.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\irdecoder.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\irdecoder.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\irdecoder.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\irdecoder.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\irdecoder.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\irdecoder.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+     31          
+     32          #include "common/common.h"
+     33          #include "irdecoder.h"
+     34               
+     35          enum decode_states_t {
+     36              IR_DECODE_STATE_WAIT_LEADING_HIGH = 0,
+     37              IR_DECODE_STATE_WAIT_LEADING_LOW  = 1,
+     38              IR_DECODE_STATE_WAIT_BIT_HIGH     = 2,
+     39              IR_DECODE_STATE_WAIT_BIT_LOW      = 3,
+     40          };
+     41          
+     42          #define IRDECODE_DURATION_TOLERANT_uS     200
+     43          #define IRDECODE_DURATION_LEADING_HIGH    8900
+     44          #define IRDECODE_DURATION_LEADING_LOW     4600
+     45          #define IRDECODE_DURATION_BIT_HIGH        560
+     46          #define IRDECODE_DURATION_BIT_0_LOW       560
+     47          #define IRDECODE_DURATION_BIT_1_LOW       1650
+     48          
+     49          #define IRDECODE_PAYLOAD_BIT_COUNT        7
+     50          
+     51          static void _irdecoder_on_data_ready(irdecoder_context_t * context, _u32 data, _u32 ts)
+     52          {
+     53              proc_on_decode_ready_t proc = (proc_on_decode_ready_t) context->callback_proc;
+     54              if (proc) proc(context, data, ts);
+     55          }
+     56          
+
+   \                                 In section .text, align 2, keep-with-next
+     57          void irdecoder_init(irdecoder_context_t * context, proc_on_decode_ready_t callback )
+     58          {
+   \                     irdecoder_init: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+   \        0x2   0x4604             MOV      R4,R0
+   \        0x4   0x460D             MOV      R5,R1
+     59              irdecoder_reset(context);
+   \        0x6   0x.... 0x....      BL       irdecoder_reset
+     60              context->callback_proc = (void *)callback;
+   \        0xA   0x60E5             STR      R5,[R4, #+12]
+     61          }
+   \        0xC   0xBD31             POP      {R0,R4,R5,PC}
+     62          
+
+   \                                 In section .text, align 2, keep-with-next
+     63          void irdecoder_reset(irdecoder_context_t * context)
+     64          {
+     65              context->state = 0;
+   \                     irdecoder_reset: (+1)
+   \        0x0   0x2100             MOVS     R1,#+0
+   \        0x2   0x7001             STRB     R1,[R0, #+0]
+     66              context->decodePos = 0;
+   \        0x4   0x7041             STRB     R1,[R0, #+1]
+     67              context->decodeBuffer = 0;
+   \        0x6   0x6041             STR      R1,[R0, #+4]
+     68              context->lastTS = 0;
+   \        0x8   0x6081             STR      R1,[R0, #+8]
+     69          }
+   \        0xA   0x4770             BX       LR
+     70          
+
+   \                                 In section .text, align 2, keep-with-next
+     71          static int _withinDuration(_u32 src, _u32 target, _u32 error)
+     72          {
+     73              if ( (src >= target - error) && (src <= target + error) ) {
+   \                     _withinDuration: (+1)
+   \        0x0   0x1A8B             SUBS     R3,R1,R2
+   \        0x2   0x4298             CMP      R0,R3
+   \        0x4   0xBF24             ITT      CS
+   \        0x6   0x1851             ADDCS    R1,R2,R1
+   \        0x8   0x4281             CMPCS    R1,R0
+   \        0xA   0xD301             BCC.N    ??_withinDuration_0
+     74                  return 1;
+   \        0xC   0x2001             MOVS     R0,#+1
+   \        0xE   0x4770             BX       LR
+     75              } else {
+     76                  return 0;
+   \                     ??_withinDuration_0: (+1)
+   \       0x10   0x2000             MOVS     R0,#+0
+   \       0x12   0x4770             BX       LR
+     77              }
+     78          }
+     79          
+
+   \                                 In section .text, align 2, keep-with-next
+     80          static inline void _switchToState(irdecoder_context_t * context, int newState)
+     81          {
+     82              if (newState == IR_DECODE_STATE_WAIT_LEADING_LOW) {
+   \                     _switchToState: (+1)
+   \        0x0   0x2901             CMP      R1,#+1
+   \        0x2   0xD102             BNE.N    ??_switchToState_0
+     83                  // clear pending buffer..
+     84                  context->decodeBuffer = 0;
+   \        0x4   0x2200             MOVS     R2,#+0
+   \        0x6   0x6042             STR      R2,[R0, #+4]
+     85                  context->decodePos = 0;
+   \        0x8   0x7042             STRB     R2,[R0, #+1]
+     86              }
+     87              context->state = newState;
+   \                     ??_switchToState_0: (+1)
+   \        0xA   0x7001             STRB     R1,[R0, #+0]
+     88          }
+   \        0xC   0x4770             BX       LR
+     89          
+
+   \                                 In section .text, align 4, keep-with-next
+     90          void irdecoder_on_signal(irdecoder_context_t * context, int currentLvl)
+     91          {
+   \                     irdecoder_on_signal: (+1)
+   \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+   \        0x4   0x4606             MOV      R6,R0
+   \        0x6   0x460C             MOV      R4,R1
+     92              _u32 currentMicrosec = getus();    
+   \        0x8   0x.... 0x....      BL       getus
+     93              _u32 lastTS = context->lastTS;
+   \        0xC   0x68B7             LDR      R7,[R6, #+8]
+   \        0xE   0x4605             MOV      R5,R0
+     94              
+     95              
+     96              switch (context->state) {
+   \       0x10   0x7830             LDRB     R0,[R6, #+0]
+   \       0x12   0x1BEF             SUBS     R7,R5,R7
+   \       0x14   0x2803             CMP      R0,#+3
+   \       0x16   0xF242 0x28C4      MOVW     R8,#+8900
+   \       0x1A   0xD84F             BHI.N    ??irdecoder_on_signal_1
+   \       0x1C   0xE8DF 0xF000      TBB      [PC, R0]
+   \                     ??irdecoder_on_signal_0:
+   \       0x20   0x02 0x06          DC8      0x2,0x6,0xF,0x2F
+
+   \              0x0F 0x2F
+     97              case IR_DECODE_STATE_WAIT_LEADING_HIGH:
+     98                  if (currentLvl) {
+   \                     ??irdecoder_on_signal_2: (+1)
+   \       0x24   0x2C00             CMP      R4,#+0
+   \       0x26   0xD04B             BEQ.N    ??irdecoder_on_signal_3
+     99                      _switchToState(context, IR_DECODE_STATE_WAIT_LEADING_LOW);
+   \       0x28   0x2101             MOVS     R1,#+1
+   \       0x2A   0xE043             B.N      ??irdecoder_on_signal_4
+    100                  }
+    101                  break;
+    102              
+    103              case IR_DECODE_STATE_WAIT_LEADING_LOW:
+    104                  if (currentLvl == 0) {
+   \                     ??irdecoder_on_signal_5: (+1)
+   \       0x2C   0x2C00             CMP      R4,#+0
+   \       0x2E   0xD140             BNE.N    ??irdecoder_on_signal_6
+    105                      if (_withinDuration(currentMicrosec - lastTS, IRDECODE_DURATION_LEADING_HIGH, IRDECODE_DURATION_TOLERANT_uS))
+   \       0x30   0x22C8             MOVS     R2,#+200
+   \       0x32   0x4641             MOV      R1,R8
+   \       0x34   0x.... 0x....      BL       ??Subroutine0_0
+    106                      {
+    107                          _switchToState(context, IR_DECODE_STATE_WAIT_BIT_HIGH);
+    108                          break;
+    109                      }
+    110                  } 
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \       0x38   0x2800             CMP      R0,#+0
+   \       0x3A   0xD138             BNE.N    ??irdecoder_on_signal_7
+    111                  // state mismatch, revert
+    112                  _switchToState(context, IR_DECODE_STATE_WAIT_LEADING_HIGH);
+   \       0x3C   0xE039             B.N      ??irdecoder_on_signal_6
+    113                  
+    114                  break;
+    115                  
+    116              case IR_DECODE_STATE_WAIT_BIT_HIGH:
+    117                  if (currentLvl) {
+   \                     ??irdecoder_on_signal_8: (+1)
+   \       0x3E   0x2C00             CMP      R4,#+0
+   \       0x40   0xD037             BEQ.N    ??irdecoder_on_signal_6
+    118                      
+    119                      if (context->decodePos == 0) {
+   \       0x42   0x7870             LDRB     R0,[R6, #+1]
+   \       0x44   0xB938             CBNZ.N   R0,??irdecoder_on_signal_9
+    120                          // leading bit...
+    121                          if (_withinDuration(currentMicrosec - lastTS, IRDECODE_DURATION_LEADING_LOW, IRDECODE_DURATION_TOLERANT_uS))
+   \       0x46   0x22C8             MOVS     R2,#+200
+   \       0x48   0xF241 0x11F8      MOVW     R1,#+4600
+   \       0x4C   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \       0x50   0x2800             CMP      R0,#+0
+   \       0x52   0xD02E             BEQ.N    ??irdecoder_on_signal_6
+    122                          {
+    123                              _switchToState(context, IR_DECODE_STATE_WAIT_BIT_LOW);
+   \       0x54   0xE011             B.N      ??irdecoder_on_signal_10
+    124                              break; 
+    125                          } else {
+    126                          }
+    127                      } else {
+    128                          // data bit
+    129                          
+    130                          if (_withinDuration(currentMicrosec - lastTS, IRDECODE_DURATION_BIT_0_LOW, IRDECODE_DURATION_TOLERANT_uS))
+   \                     ??irdecoder_on_signal_9: (+1)
+   \       0x56   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_5: (+1)
+   \       0x5A   0xB110             CBZ.N    R0,??irdecoder_on_signal_11
+    131                          {
+    132                              context->decodeBuffer <<= 1;
+   \       0x5C   0x6870             LDR      R0,[R6, #+4]
+   \       0x5E   0x0040             LSLS     R0,R0,#+1
+   \       0x60   0xE00A             B.N      ??irdecoder_on_signal_12
+    133                              _switchToState(context, IR_DECODE_STATE_WAIT_BIT_LOW);
+    134                              break;
+    135                          } 
+    136                          
+    137                          if (_withinDuration(currentMicrosec - lastTS, IRDECODE_DURATION_BIT_1_LOW, IRDECODE_DURATION_TOLERANT_uS))
+   \                     ??irdecoder_on_signal_11: (+1)
+   \       0x62   0x22C8             MOVS     R2,#+200
+   \       0x64   0xF240 0x6172      MOVW     R1,#+1650
+   \       0x68   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x6C   0x2800             CMP      R0,#+0
+   \       0x6E   0xD020             BEQ.N    ??irdecoder_on_signal_6
+    138                          {
+    139                              context->decodeBuffer <<= 1;
+    140                              context->decodeBuffer |= 0x1;
+   \       0x70   0x6870             LDR      R0,[R6, #+4]
+   \       0x72   0x0040             LSLS     R0,R0,#+1
+   \       0x74   0xF040 0x0001      ORR      R0,R0,#0x1
+   \                     ??irdecoder_on_signal_12: (+1)
+   \       0x78   0x6070             STR      R0,[R6, #+4]
+    141                              _switchToState(context, IR_DECODE_STATE_WAIT_BIT_LOW);
+   \                     ??irdecoder_on_signal_10: (+1)
+   \       0x7A   0x2103             MOVS     R1,#+3
+   \       0x7C   0xE01A             B.N      ??irdecoder_on_signal_4
+    142                              break;
+    143                          }              
+    144                      }
+    145                  } 
+    146                  
+    147                  // state mismatch, revert
+    148                  _switchToState(context, IR_DECODE_STATE_WAIT_LEADING_HIGH);
+    149                  break;
+    150                  
+    151              case IR_DECODE_STATE_WAIT_BIT_LOW:
+    152                  if (currentLvl == 0) {
+   \                     ??irdecoder_on_signal_13: (+1)
+   \       0x7E   0xB9C4             CBNZ.N   R4,??irdecoder_on_signal_6
+    153          
+    154                      if (_withinDuration(currentMicrosec - lastTS, IRDECODE_DURATION_BIT_HIGH, IRDECODE_DURATION_TOLERANT_uS))
+   \       0x80   0x.... 0x....      BL       ?Subroutine0
+   \                     ??CrossCallReturnLabel_4: (+1)
+   \       0x84   0xB160             CBZ.N    R0,??irdecoder_on_signal_14
+    155                      {
+    156                          
+    157                          if ( context->decodePos++ >= IRDECODE_PAYLOAD_BIT_COUNT ) 
+   \       0x86   0x7870             LDRB     R0,[R6, #+1]
+   \       0x88   0x1C41             ADDS     R1,R0,#+1
+   \       0x8A   0x2807             CMP      R0,#+7
+   \       0x8C   0x7071             STRB     R1,[R6, #+1]
+   \       0x8E   0xDB0E             BLT.N    ??irdecoder_on_signal_7
+    158                          {
+    159                              // data received
+    160                              _irdecoder_on_data_ready(context, context->decodeBuffer, currentMicrosec);
+   \       0x90   0x68F3             LDR      R3,[R6, #+12]
+   \       0x92   0x0018             MOVS     R0,R3
+   \       0x94   0xD00D             BEQ.N    ??irdecoder_on_signal_6
+   \       0x96   0x6871             LDR      R1,[R6, #+4]
+   \       0x98   0x462A             MOV      R2,R5
+   \       0x9A   0x4630             MOV      R0,R6
+   \       0x9C   0x4798             BLX      R3
+    161                              
+    162                              // ready for recv a next frame...
+    163                              _switchToState(context, IR_DECODE_STATE_WAIT_LEADING_HIGH);
+   \       0x9E   0xE008             B.N      ??irdecoder_on_signal_6
+    164                          } else {
+    165                              
+    166                              _switchToState(context, IR_DECODE_STATE_WAIT_BIT_HIGH);
+    167                          }
+    168                         
+    169                          break; 
+    170                      } else {
+    171                          
+    172                          // is that a leading frame?
+    173                          if (_withinDuration(currentMicrosec - lastTS, IRDECODE_DURATION_LEADING_HIGH, IRDECODE_DURATION_TOLERANT_uS))
+   \                     ??irdecoder_on_signal_14: (+1)
+   \       0xA0   0x22C8             MOVS     R2,#+200
+   \       0xA2   0x4641             MOV      R1,R8
+   \       0xA4   0x.... 0x....      BL       ??Subroutine0_0
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0xA8   0xB118             CBZ.N    R0,??irdecoder_on_signal_6
+    174                          {
+    175                              // may be it is...
+    176                              context->decodePos = 0;
+   \       0xAA   0x2000             MOVS     R0,#+0
+   \       0xAC   0x7070             STRB     R0,[R6, #+1]
+    177                              _switchToState(context, IR_DECODE_STATE_WAIT_BIT_HIGH);                   
+    178                              break;
+    179                          }
+    180                     
+    181                      }
+   \                     ??irdecoder_on_signal_7: (+1)
+   \       0xAE   0x2102             MOVS     R1,#+2
+   \       0xB0   0xE000             B.N      ??irdecoder_on_signal_4
+    182                  }
+    183                  // state mismatch, revert
+    184                  _switchToState(context, IR_DECODE_STATE_WAIT_LEADING_HIGH);
+   \                     ??irdecoder_on_signal_6: (+1)
+   \       0xB2   0x2100             MOVS     R1,#+0
+   \                     ??irdecoder_on_signal_4: (+1)
+   \       0xB4   0x4630             MOV      R0,R6
+   \       0xB6   0x.... 0x....      BL       _switchToState
+    185                  break;
+   \       0xBA   0xE001             B.N      ??irdecoder_on_signal_3
+    186          
+    187              default:
+    188                  _switchToState(context, IR_DECODE_STATE_WAIT_LEADING_HIGH);
+   \                     ??irdecoder_on_signal_1: (+1)
+   \       0xBC   0x2000             MOVS     R0,#+0
+   \       0xBE   0x7030             STRB     R0,[R6, #+0]
+    189              }
+    190              
+    191              context->lastTS = currentMicrosec;
+   \                     ??irdecoder_on_signal_3: (+1)
+   \       0xC0   0x60B5             STR      R5,[R6, #+8]
+    192          }
+   \       0xC2   0xE8BD 0x81F0      POP      {R4-R8,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0x22C8             MOVS     R2,#+200
+   \        0x2   0xF44F 0x710C      MOV      R1,#+560
+   \                     ??Subroutine0_0: (+1)
+   \        0x6   0x4638             MOV      R0,R7
+   \        0x8   0x....             B.N      _withinDuration
+    193          
+
+   \                                 In section .text, align 2, keep-with-next
+    194          void irdecoder_on_idle_tick(irdecoder_context_t * context)
+    195          {
+    196              
+    197          }
+   \                     irdecoder_on_idle_tick: (+1)
+   \        0x0   0x4770             BX       LR
+    198          #endif
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   _switchToState
+       0   _withinDuration
+      16   irdecoder_init
+        16   -> irdecoder_reset
+       0   irdecoder_on_idle_tick
+      24   irdecoder_on_signal
+        24   -- Indirect call
+        24   -> _switchToState
+        24   -> _withinDuration
+        24   -> getus
+       0   irdecoder_reset
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+      10  ?Subroutine0
+      14  _switchToState
+      20  _withinDuration
+      14  irdecoder_init
+       2  irdecoder_on_idle_tick
+     198  irdecoder_on_signal
+      12  irdecoder_reset
+
+ 
+ 270 bytes in section .text
+ 
+ 270 bytes of CODE memory
+
+Errors: none
+Warnings: none

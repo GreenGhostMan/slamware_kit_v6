@@ -1,0 +1,1628 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:28
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\motor.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\motor.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\motor.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\motor.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\motor.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\motor.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\motor.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void pinMode(GPIO_TypeDef *, uint16_t, GPIOMode_TypeDef, GPIOSpeed_TypeDef)
+   \                     pinMode: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+   \        0x6   0xF88D 0x3002      STRB     R3,[SP, #+2]
+   \        0xA   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \        0xE   0x4669             MOV      R1,SP
+   \       0x10   0x....             B.N      ?Subroutine0
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0x.... 0x....      BL       GPIO_Init
+   \        0x4   0xBD01             POP      {R0,PC}
+     32          #include "motor.h"
+     33          #include "beep.h"
+     34          #define WALKINGMOTOR_CNT       2
+     35          #define WALKINGMOTOR_LEFT_ID   0
+     36          #define WALKINGMOTOR_RIGHT_ID  1
+     37          
+     38          static _u32 _motorDeltaTicks[WALKINGMOTOR_CNT];           //行走电机的累计编码器值
+     39          static _u32  _motorDistAccumulated[WALKINGMOTOR_CNT];     // 累计的行走距离，单位mm.
+     40          static float _motorDistTailing[WALKINGMOTOR_CNT];         // 累计的行走距离不到1mm的剩余值，用于下一次累计.
+     41          
+     42          static _u32 _encoderTicksDelta[WALKINGMOTOR_CNT];               //detla时间内的编码器值
+     43          static _u32 _lastEncoderTicksDelta[WALKINGMOTOR_CNT];           //最近一次 detla时间内的编码器值
+     44          static float _lastOdometerSpeedAbs[WALKINGMOTOR_CNT];           //最近一次 detla时间内的速度值
+     45          
+     46          static _u8 _motorCtrlStates[WALKINGMOTOR_CNT];                  //行走电机方向
+     47          static _s32 _motorSpeedMm[WALKINGMOTOR_CNT];                    //行走电机速度
+     48          
+
+   \                                 In section .rodata, align 4
+     49          const float Kp = 25.0;                  //PID 比例因子
+   \                     Kp:
+   \        0x0   0x41C8'0000        DC32 0x41c8'0000
+
+   \                                 In section .rodata, align 4
+     50          const float Ki = 6.0;                   //PID 积分因子
+   \                     Ki:
+   \        0x0   0x40C0'0000        DC32 0x40c0'0000
+
+   \                                 In section .rodata, align 4
+     51          const float Kd = 0.0;                   //PID 微分因子
+   \                     Kd:
+   \        0x0   0x0000'0000        DC32 0x0
+     52          
+     53          static float speedLastErr[WALKINGMOTOR_CNT];
+     54          static float speedErri[WALKINGMOTOR_CNT];
+     55          
+     56          #define PWM_MAX (10000)
+
+   \                                 In section .text, align 2, keep-with-next
+     57          static inline void _set_walkingmotor_duty(_u32 id, _s32 duty, _s32 ctrl)
+     58          {
+   \                     _set_walkingmotor_duty: (+1)
+   \        0x0   0x460B             MOV      R3,R1
+     59              if (id == WALKINGMOTOR_LEFT_ID) {
+   \        0x2   0x2800             CMP      R0,#+0
+   \        0x4   0x4611             MOV      R1,R2
+   \        0x6   0x4618             MOV      R0,R3
+   \        0x8   0xBF08             IT       EQ
+     60                  set_walkingmotor_lduty(duty, ctrl);
+   \        0xA   0x.... 0x....      BEQ.W    set_walkingmotor_lduty
+     61              } else {
+     62                  set_walkingmotor_rduty(duty, ctrl);
+   \        0xE   0x....             B.N      set_walkingmotor_rduty
+     63              }
+     64          }
+     65          /*
+     66           * 左右行走电机初始化函数
+     67           */
+
+   \                                 In section .text, align 2, keep-with-next
+     68          void init_walkingmotor(void)
+     69          {
+   \                     init_walkingmotor: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+   \        0x2   0xB088             SUB      SP,SP,#+32
+     70              GPIO_InitTypeDef GPIO_InitStructure;
+     71              TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
+     72              TIM_OCInitTypeDef TIM_OCInitStructure;
+     73          
+     74              RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM1, ENABLE);
+   \        0x4   0x2101             MOVS     R1,#+1
+   \        0x6   0xF44F 0x6000      MOV      R0,#+2048
+   \        0xA   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     75              RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+   \        0xE   0x2101             MOVS     R1,#+1
+   \       0x10   0x2001             MOVS     R0,#+1
+   \       0x12   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     76              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOE, ENABLE);
+   \       0x16   0x2101             MOVS     R1,#+1
+   \       0x18   0x2040             MOVS     R0,#+64
+   \       0x1A   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     77              GPIO_PinRemapConfig(GPIO_FullRemap_TIM1, ENABLE);
+   \       0x1E   0x2101             MOVS     R1,#+1
+   \       0x20   0x.... 0x....      LDR.W    R0,??DataTable22
+   \       0x24   0x.... 0x....      LDR.W    R4,??DataTable22_1
+   \       0x28   0x.... 0x....      BL       GPIO_PinRemapConfig
+     78          
+     79              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+   \       0x2C   0x.... 0x....      BL       ?Subroutine4
+     80              GPIO_InitStructure.GPIO_Pin = MOTO_LF_EN | MOTO_LB_EN | MOTO_RF_EN | MOTO_RB_EN;
+   \                     ??CrossCallReturnLabel_4: (+1)
+   \       0x30   0xF44F 0x7034      MOV      R0,#+720
+     81              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+   \       0x34   0x2110             MOVS     R1,#+16
+   \       0x36   0xF8AD 0x0000      STRH     R0,[SP, #+0]
+   \       0x3A   0xF88D 0x1003      STRB     R1,[SP, #+3]
+     82              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+   \       0x3E   0x2203             MOVS     R2,#+3
+   \       0x40   0xF88D 0x2002      STRB     R2,[SP, #+2]
+     83              GPIO_Init(MOTO_GPIO, &GPIO_InitStructure);
+   \       0x44   0x4669             MOV      R1,SP
+   \       0x46   0x4620             MOV      R0,R4
+   \       0x48   0x.... 0x....      BL       GPIO_Init
+     84          
+     85              PIN_SET(MOTO_L_PWM_GPIO_PORT, MOTO_L_PWM_GPIO_PIN, HIGH);
+   \       0x4C   0x.... 0x....      LDR.W    R0,??DataTable22_2
+   \       0x50   0xF44F 0x4180      MOV      R1,#+16384
+   \       0x54   0x6101             STR      R1,[R0, #+16]
+     86              PIN_SET(MOTO_R_PWM_GPIO_PORT, MOTO_R_PWM_GPIO_PIN, HIGH);
+   \       0x56   0xF44F 0x5200      MOV      R2,#+8192
+   \       0x5A   0x6102             STR      R2,[R0, #+16]
+     87          
+     88              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
+   \       0x5C   0x2110             MOVS     R1,#+16
+   \       0x5E   0xF88D 0x1003      STRB     R1,[SP, #+3]
+     89              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+   \       0x62   0x2203             MOVS     R2,#+3
+     90              GPIO_InitStructure.GPIO_Pin = MOTO_R_PWM_GPIO_PIN | MOTO_L_PWM_GPIO_PIN;
+   \       0x64   0xF44F 0x43C0      MOV      R3,#+24576
+   \       0x68   0xF88D 0x2002      STRB     R2,[SP, #+2]
+   \       0x6C   0xF8AD 0x3000      STRH     R3,[SP, #+0]
+     91              GPIO_Init(MOTO_R_PWM_GPIO_PORT, &GPIO_InitStructure);
+   \       0x70   0x4669             MOV      R1,SP
+   \       0x72   0x.... 0x....      BL       GPIO_Init
+     92          
+     93              PIN_SET(MOTO_GPIO, MOTO_LB_EN, LOW);
+   \       0x76   0xF44F 0x7000      MOV      R0,#+512
+   \       0x7A   0x6160             STR      R0,[R4, #+20]
+     94              PIN_SET(MOTO_GPIO, MOTO_LF_EN, LOW);
+   \       0x7C   0x2110             MOVS     R1,#+16
+   \       0x7E   0x6161             STR      R1,[R4, #+20]
+     95              PIN_SET(MOTO_GPIO, MOTO_RF_EN, LOW);
+   \       0x80   0x2040             MOVS     R0,#+64
+   \       0x82   0x6160             STR      R0,[R4, #+20]
+     96              PIN_SET(MOTO_GPIO, MOTO_RB_EN, LOW);
+   \       0x84   0x2180             MOVS     R1,#+128
+   \       0x86   0x6161             STR      R1,[R4, #+20]
+     97              TIM_TimeBaseStructure.TIM_Period = (PWM_MAX - 1);
+   \       0x88   0xF242 0x720F      MOVW     R2,#+9999
+   \       0x8C   0xF8AD 0x2008      STRH     R2,[SP, #+8]
+     98              TIM_TimeBaseStructure.TIM_Prescaler = 0;
+   \       0x90   0x2100             MOVS     R1,#+0
+   \       0x92   0x9101             STR      R1,[SP, #+4]
+     99              TIM_TimeBaseStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+   \       0x94   0xF8AD 0x100A      STRH     R1,[SP, #+10]
+    100              TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
+    101              TIM_TimeBaseInit(TIM1, &TIM_TimeBaseStructure);
+   \       0x98   0xA901             ADD      R1,SP,#+4
+   \       0x9A   0x.... 0x....      LDR.W    R4,??DataTable22_3
+   \       0x9E   0x4620             MOV      R0,R4
+   \       0xA0   0x.... 0x....      BL       TIM_TimeBaseInit
+    102              TIM_OCInitStructure.TIM_OCMode = TIM_OCMode_PWM2;
+   \       0xA4   0x2170             MOVS     R1,#+112
+   \       0xA6   0xF8AD 0x1010      STRH     R1,[SP, #+16]
+    103              TIM_OCInitStructure.TIM_OutputState = TIM_OutputState_Enable;
+   \       0xAA   0x2201             MOVS     R2,#+1
+   \       0xAC   0xF8AD 0x2012      STRH     R2,[SP, #+18]
+    104              TIM_OCInitStructure.TIM_Pulse = PWM_MAX;
+   \       0xB0   0xF242 0x7110      MOVW     R1,#+10000
+   \       0xB4   0xF8AD 0x1016      STRH     R1,[SP, #+22]
+    105              TIM_OCInitStructure.TIM_OCPolarity = TIM_OCPolarity_Low;
+   \       0xB8   0x2202             MOVS     R2,#+2
+   \       0xBA   0xF8AD 0x2018      STRH     R2,[SP, #+24]
+    106              TIM_OC4Init(TIM1, &TIM_OCInitStructure);
+   \       0xBE   0xA904             ADD      R1,SP,#+16
+   \       0xC0   0x4620             MOV      R0,R4
+   \       0xC2   0x.... 0x....      BL       TIM_OC4Init
+    107              TIM_OC4PreloadConfig(TIM1, TIM_OCPreload_Enable);
+   \       0xC6   0x2108             MOVS     R1,#+8
+   \       0xC8   0x4620             MOV      R0,R4
+   \       0xCA   0x.... 0x....      BL       TIM_OC4PreloadConfig
+    108              TIM_OC3Init(TIM1, &TIM_OCInitStructure);
+   \       0xCE   0xA904             ADD      R1,SP,#+16
+   \       0xD0   0x4620             MOV      R0,R4
+   \       0xD2   0x.... 0x....      BL       TIM_OC3Init
+    109              TIM_OC3PreloadConfig(TIM1, TIM_OCPreload_Enable);
+   \       0xD6   0x2108             MOVS     R1,#+8
+   \       0xD8   0x4620             MOV      R0,R4
+   \       0xDA   0x.... 0x....      BL       TIM_OC3PreloadConfig
+    110              TIM_CtrlPWMOutputs(TIM1, ENABLE);
+   \       0xDE   0x2101             MOVS     R1,#+1
+   \       0xE0   0x4620             MOV      R0,R4
+   \       0xE2   0x.... 0x....      BL       TIM_CtrlPWMOutputs
+    111              TIM_ARRPreloadConfig(TIM1, ENABLE);
+   \       0xE6   0x2101             MOVS     R1,#+1
+   \       0xE8   0x4620             MOV      R0,R4
+   \       0xEA   0x.... 0x....      BL       TIM_ARRPreloadConfig
+    112              TIM_Cmd(TIM1, ENABLE);
+   \       0xEE   0x2101             MOVS     R1,#+1
+   \       0xF0   0x4620             MOV      R0,R4
+   \       0xF2   0x.... 0x....      BL       TIM_Cmd
+    113          
+    114              set_walkingmotor_lduty(0, MOTOR_CTRL_STATE_RELEASE);
+   \       0xF6   0x2100             MOVS     R1,#+0
+   \       0xF8   0x2000             MOVS     R0,#+0
+   \       0xFA   0x.... 0x....      BL       set_walkingmotor_lduty
+    115              set_walkingmotor_rduty(0, MOTOR_CTRL_STATE_RELEASE);
+   \       0xFE   0x2100             MOVS     R1,#+0
+   \      0x100   0x2000             MOVS     R0,#+0
+   \      0x102   0x.... 0x....      BL       set_walkingmotor_rduty
+    116              memset(_motorSpeedMm, 0, sizeof(_motorSpeedMm));
+   \      0x106   0x.... 0x....      LDR.W    R4,??DataTable22_4
+   \      0x10A   0x2108             MOVS     R1,#+8
+   \      0x10C   0xF104 0x002C      ADD      R0,R4,#+44
+   \      0x110   0x.... 0x....      BL       __aeabi_memclr
+    117              memset(speedLastErr, 0, sizeof(speedLastErr));
+   \      0x114   0x2108             MOVS     R1,#+8
+   \      0x116   0xF104 0x003C      ADD      R0,R4,#+60
+   \      0x11A   0x.... 0x....      BL       __aeabi_memclr
+    118              memset(speedErri, 0, sizeof(speedErri));
+   \      0x11E   0x2108             MOVS     R1,#+8
+   \      0x120   0xF104 0x0044      ADD      R0,R4,#+68
+   \      0x124   0x.... 0x....      BL       __aeabi_memclr
+    119          }
+   \      0x128   0xB008             ADD      SP,SP,#+32
+   \      0x12A   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine4: (+1)
+   \        0x0   0x2101             MOVS     R1,#+1
+   \        0x2   0x2020             MOVS     R0,#+32
+   \        0x4   0x.... 0x....      B.W      RCC_APB2PeriphClockCmd
+    120          
+    121          /*
+    122           * 左行走电机释放函数
+    123           * 不使能PWM输出和控制脚
+    124           */
+    125          static void _release_walkingmotor_l()
+    126          {
+    127              PIN_SET(MOTO_L_PWM_GPIO_PORT, MOTO_L_PWM_GPIO_PIN, HIGH);
+    128              pinMode(MOTO_L_PWM_GPIO_PORT, MOTO_L_PWM_GPIO_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+    129          
+    130              _delay_us(20);              //等效于死区
+    131          
+    132              PIN_SET(MOTO_GPIO, MOTO_LB_EN, LOW);
+    133              PIN_SET(MOTO_GPIO, MOTO_LF_EN, LOW);
+    134          }
+    135          /*
+    136           * 右行走电机释放函数
+    137           * 不使能PWM输出和控制脚
+    138           */
+    139          static void _release_walkingmotor_r()
+    140          {
+    141              PIN_SET(MOTO_R_PWM_GPIO_PORT, MOTO_R_PWM_GPIO_PIN, HIGH);
+    142              pinMode(MOTO_R_PWM_GPIO_PORT, MOTO_R_PWM_GPIO_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+    143          
+    144              _delay_us(20);              //等效于死区
+    145          
+    146              PIN_SET(MOTO_GPIO, MOTO_RF_EN, LOW);
+    147              PIN_SET(MOTO_GPIO, MOTO_RB_EN, LOW);
+    148          }
+    149          /*
+    150           * 设置左行走电机占空比和方向函数
+    151           */
+
+   \                                 In section .text, align 2, keep-with-next
+    152          void set_walkingmotor_lduty(int dutyCycle, int ctrl)
+    153          {
+   \                     set_walkingmotor_lduty: (+1)
+   \        0x0   0xE92D 0x43F8      PUSH     {R3-R9,LR}
+    154              dutyCycle = abs(dutyCycle);
+    155              if (_motorCtrlStates[WALKINGMOTOR_LEFT_ID] != ctrl) {
+   \        0x4   0x.... 0x....      LDR.W    R9,??DataTable22_4
+   \        0x8   0x.... 0x....      BL       ?Subroutine6
+   \                     ??CrossCallReturnLabel_7: (+1)
+   \        0xC   0xF899 0x0000      LDRB     R0,[R9, #+0]
+   \       0x10   0x460C             MOV      R4,R1
+   \       0x12   0xBF48             IT       MI
+   \       0x14   0x426D             RSBMI    R5,R5,#+0
+   \       0x16   0x42A0             CMP      R0,R4
+   \       0x18   0xF44F 0x7700      MOV      R7,#+512
+   \       0x1C   0xD009             BEQ.N    ??set_walkingmotor_lduty_0
+    156                  _release_walkingmotor_l();                                              //方向变化，先停止电机
+   \       0x1E   0xF44F 0x4180      MOV      R1,#+16384
+   \       0x22   0x.... 0x....      BL       ?Subroutine5
+   \                     ??CrossCallReturnLabel_6: (+1)
+   \       0x26   0x2014             MOVS     R0,#+20
+   \       0x28   0x.... 0x....      BL       _delay_us
+   \       0x2C   0x6077             STR      R7,[R6, #+4]
+   \       0x2E   0x2010             MOVS     R0,#+16
+   \       0x30   0x6070             STR      R0,[R6, #+4]
+    157              }
+    158              if (ctrl == MOTOR_CTRL_STATE_RELEASE || ctrl == MOTOR_CTRL_STATE_BRAKE) {
+   \                     ??set_walkingmotor_lduty_0: (+1)
+   \       0x32   0x2C00             CMP      R4,#+0
+   \       0x34   0xBF14             ITE      NE
+   \       0x36   0x2C03             CMPNE    R4,#+3
+   \       0x38   0x2500             MOVEQ    R5,#+0
+   \       0x3A   0xF242 0x7010      MOVW     R0,#+10000
+    159                  dutyCycle = 0;
+   \       0x3E   0xD002             BEQ.N    ??set_walkingmotor_lduty_1
+    160              } else {
+    161                  if (dutyCycle > PWM_MAX)
+   \       0x40   0x4285             CMP      R5,R0
+   \       0x42   0xBFC8             IT       GT
+   \       0x44   0x4605             MOVGT    R5,R0
+    162                      dutyCycle = PWM_MAX;
+    163              }
+    164              RAW_PWM_SET(MOTO_L_PWM_CHN, MOTO_L_PWM_ID, PWM_MAX - dutyCycle);            //设定PWM占空比=(TIM3_CCR4/ TIM3_ARR)*100
+   \                     ??set_walkingmotor_lduty_1: (+1)
+   \       0x46   0x.... 0x....      LDR.W    R1,??DataTable22_5
+   \       0x4A   0x1B40             SUBS     R0,R0,R5
+    165          
+    166              switch (ctrl) {                                                             //根据设定方向，进行变向或停止
+   \       0x4C   0x2C01             CMP      R4,#+1
+   \       0x4E   0x8008             STRH     R0,[R1, #+0]
+   \       0x50   0xD006             BEQ.N    ??set_walkingmotor_lduty_2
+   \       0x52   0xD30C             BCC.N    ??set_walkingmotor_lduty_3
+   \       0x54   0x2C03             CMP      R4,#+3
+   \       0x56   0xD001             BEQ.N    ??set_walkingmotor_lduty_4
+   \       0x58   0xD306             BCC.N    ??set_walkingmotor_lduty_5
+   \       0x5A   0xE008             B.N      ??set_walkingmotor_lduty_3
+    167              case MOTOR_CTRL_STATE_RELEASE:
+    168                  break;
+    169              case MOTOR_CTRL_STATE_BRAKE:
+    170                  PIN_SET(MOTO_GPIO, MOTO_LB_EN, HIGH);
+   \                     ??set_walkingmotor_lduty_4: (+1)
+   \       0x5C   0x6037             STR      R7,[R6, #+0]
+    171                  PIN_SET(MOTO_GPIO, MOTO_LF_EN, HIGH);
+   \       0x5E   0xE004             B.N      ??set_walkingmotor_lduty_6
+    172                  break;
+    173              case MOTOR_CTRL_STATE_FORWARD:
+    174                  PIN_SET(MOTO_GPIO, MOTO_LF_EN, LOW);
+   \                     ??set_walkingmotor_lduty_2: (+1)
+   \       0x60   0x2110             MOVS     R1,#+16
+   \       0x62   0x6071             STR      R1,[R6, #+4]
+    175                  PIN_SET(MOTO_GPIO, MOTO_LB_EN, HIGH);
+   \       0x64   0x6037             STR      R7,[R6, #+0]
+    176                  break;
+   \       0x66   0xE002             B.N      ??set_walkingmotor_lduty_3
+    177              case MOTOR_CTRL_STATE_BACKWARD:
+    178                  PIN_SET(MOTO_GPIO, MOTO_LB_EN, LOW);
+   \                     ??set_walkingmotor_lduty_5: (+1)
+   \       0x68   0x6077             STR      R7,[R6, #+4]
+    179                  PIN_SET(MOTO_GPIO, MOTO_LF_EN, HIGH);
+   \                     ??set_walkingmotor_lduty_6: (+1)
+   \       0x6A   0x2010             MOVS     R0,#+16
+   \       0x6C   0x6030             STR      R0,[R6, #+0]
+    180                  break;
+    181              }
+    182              if (dutyCycle && (_motorCtrlStates[WALKINGMOTOR_LEFT_ID] != ctrl)) {
+   \                     ??set_walkingmotor_lduty_3: (+1)
+   \       0x6E   0x2D00             CMP      R5,#+0
+   \       0x70   0xBF1C             ITT      NE
+   \       0x72   0xF899 0x0000      LDRBNE   R0,[R9, #+0]
+   \       0x76   0x42A0             CMPNE    R0,R4
+   \       0x78   0xD006             BEQ.N    ??set_walkingmotor_lduty_7
+    183                  pinMode(MOTO_L_PWM_GPIO_PORT, MOTO_L_PWM_GPIO_PIN, GPIO_Mode_AF_PP, GPIO_Speed_50MHz);
+   \       0x7A   0x2303             MOVS     R3,#+3
+   \       0x7C   0x2218             MOVS     R2,#+24
+   \       0x7E   0xF44F 0x4180      MOV      R1,#+16384
+   \       0x82   0x4640             MOV      R0,R8
+   \       0x84   0x.... 0x....      BL       pinMode
+    184              }
+    185              _motorCtrlStates[WALKINGMOTOR_LEFT_ID] = ctrl;
+   \                     ??set_walkingmotor_lduty_7: (+1)
+   \       0x88   0xF889 0x4000      STRB     R4,[R9, #+0]
+    186          }
+   \       0x8C   0xE8BD 0x83F1      POP      {R0,R4-R9,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine6: (+1)
+   \        0x0   0x.... 0x....      LDR.W    R6,??DataTable22_7
+   \        0x4   0x.... 0x....      LDR.W    R8,??DataTable22_2
+   \        0x8   0x0005             MOVS     R5,R0
+   \        0xA   0x4770             BX       LR
+    187          /*
+    188           * 设置右行走电机占空比和方向函数
+    189           */
+
+   \                                 In section .text, align 2, keep-with-next
+    190          void set_walkingmotor_rduty(_s32 dutyCycle,_s32 ctrl)
+    191          {
+   \                     set_walkingmotor_rduty: (+1)
+   \        0x0   0xE92D 0x41F0      PUSH     {R4-R8,LR}
+    192              dutyCycle = abs(dutyCycle);
+    193              if (_motorCtrlStates[WALKINGMOTOR_RIGHT_ID] != ctrl) {
+   \        0x4   0x.... 0x....      LDR.W    R7,??DataTable22_4
+   \        0x8   0x.... 0x....      BL       ?Subroutine6
+   \                     ??CrossCallReturnLabel_8: (+1)
+   \        0xC   0x7878             LDRB     R0,[R7, #+1]
+   \        0xE   0x460C             MOV      R4,R1
+   \       0x10   0xBF48             IT       MI
+   \       0x12   0x426D             RSBMI    R5,R5,#+0
+   \       0x14   0x42A0             CMP      R0,R4
+   \       0x16   0xD00A             BEQ.N    ??set_walkingmotor_rduty_0
+    194                  _release_walkingmotor_r();                                              //方向变化，先停止电机
+   \       0x18   0xF44F 0x5100      MOV      R1,#+8192
+   \       0x1C   0x.... 0x....      BL       ?Subroutine5
+   \                     ??CrossCallReturnLabel_5: (+1)
+   \       0x20   0x2014             MOVS     R0,#+20
+   \       0x22   0x.... 0x....      BL       _delay_us
+   \       0x26   0x2040             MOVS     R0,#+64
+   \       0x28   0x6070             STR      R0,[R6, #+4]
+   \       0x2A   0x2180             MOVS     R1,#+128
+   \       0x2C   0x6071             STR      R1,[R6, #+4]
+    195              }
+    196              if (ctrl == MOTOR_CTRL_STATE_RELEASE || ctrl == MOTOR_CTRL_STATE_BRAKE) {
+   \                     ??set_walkingmotor_rduty_0: (+1)
+   \       0x2E   0x2C00             CMP      R4,#+0
+   \       0x30   0xBF14             ITE      NE
+   \       0x32   0x2C03             CMPNE    R4,#+3
+   \       0x34   0x2500             MOVEQ    R5,#+0
+   \       0x36   0xF242 0x7010      MOVW     R0,#+10000
+    197                  dutyCycle = 0;
+   \       0x3A   0xD002             BEQ.N    ??set_walkingmotor_rduty_1
+    198              } else {
+    199                  if (dutyCycle > PWM_MAX)
+   \       0x3C   0x4285             CMP      R5,R0
+   \       0x3E   0xBFC8             IT       GT
+   \       0x40   0x4605             MOVGT    R5,R0
+    200                      dutyCycle = PWM_MAX;
+    201              }
+    202              RAW_PWM_SET(MOTO_R_PWM_CHN, MOTO_R_PWM_ID, PWM_MAX - dutyCycle);            //设定PWM占空比=(TIM3_CCR4/ TIM3_ARR)*100
+   \                     ??set_walkingmotor_rduty_1: (+1)
+   \       0x42   0x.... 0x....      LDR.W    R1,??DataTable22_6
+   \       0x46   0x1B40             SUBS     R0,R0,R5
+    203              switch (ctrl) {                                                             //根据设定方向，进行变向或停止
+   \       0x48   0x2C01             CMP      R4,#+1
+   \       0x4A   0x8008             STRH     R0,[R1, #+0]
+   \       0x4C   0xD009             BEQ.N    ??set_walkingmotor_rduty_2
+   \       0x4E   0xD310             BCC.N    ??set_walkingmotor_rduty_3
+   \       0x50   0x2C03             CMP      R4,#+3
+   \       0x52   0xD001             BEQ.N    ??set_walkingmotor_rduty_4
+   \       0x54   0xD309             BCC.N    ??set_walkingmotor_rduty_5
+   \       0x56   0xE00C             B.N      ??set_walkingmotor_rduty_3
+    204              case MOTOR_CTRL_STATE_RELEASE:
+    205                  break;
+    206              case MOTOR_CTRL_STATE_BRAKE:
+    207                  PIN_SET(MOTO_GPIO, MOTO_RB_EN, HIGH);
+   \                     ??set_walkingmotor_rduty_4: (+1)
+   \       0x58   0x2080             MOVS     R0,#+128
+   \       0x5A   0x6030             STR      R0,[R6, #+0]
+    208                  PIN_SET(MOTO_GPIO, MOTO_RF_EN, HIGH);
+   \       0x5C   0x2240             MOVS     R2,#+64
+   \       0x5E   0x6032             STR      R2,[R6, #+0]
+    209                  break;
+   \       0x60   0xE007             B.N      ??set_walkingmotor_rduty_3
+    210              case MOTOR_CTRL_STATE_FORWARD:
+    211                  PIN_SET(MOTO_GPIO, MOTO_RF_EN, LOW);
+   \                     ??set_walkingmotor_rduty_2: (+1)
+   \       0x62   0x2140             MOVS     R1,#+64
+   \       0x64   0x6071             STR      R1,[R6, #+4]
+    212                  PIN_SET(MOTO_GPIO, MOTO_RB_EN, HIGH);
+   \       0x66   0x2080             MOVS     R0,#+128
+   \       0x68   0xE002             B.N      ??set_walkingmotor_rduty_6
+    213                  break;
+    214              case MOTOR_CTRL_STATE_BACKWARD:
+    215                  PIN_SET(MOTO_GPIO, MOTO_RB_EN, LOW);
+   \                     ??set_walkingmotor_rduty_5: (+1)
+   \       0x6A   0x2180             MOVS     R1,#+128
+   \       0x6C   0x6071             STR      R1,[R6, #+4]
+    216                  PIN_SET(MOTO_GPIO, MOTO_RF_EN, HIGH);
+   \       0x6E   0x2040             MOVS     R0,#+64
+   \                     ??set_walkingmotor_rduty_6: (+1)
+   \       0x70   0x6030             STR      R0,[R6, #+0]
+    217                  break;
+    218              }
+    219              if (dutyCycle && (_motorCtrlStates[WALKINGMOTOR_RIGHT_ID] != ctrl)) {
+   \                     ??set_walkingmotor_rduty_3: (+1)
+   \       0x72   0x2D00             CMP      R5,#+0
+   \       0x74   0xBF1C             ITT      NE
+   \       0x76   0x7878             LDRBNE   R0,[R7, #+1]
+   \       0x78   0x42A0             CMPNE    R0,R4
+   \       0x7A   0xD006             BEQ.N    ??set_walkingmotor_rduty_7
+    220                  pinMode(MOTO_R_PWM_GPIO_PORT, MOTO_R_PWM_GPIO_PIN, GPIO_Mode_AF_PP, GPIO_Speed_50MHz);
+   \       0x7C   0x2303             MOVS     R3,#+3
+   \       0x7E   0x2218             MOVS     R2,#+24
+   \       0x80   0xF44F 0x5100      MOV      R1,#+8192
+   \       0x84   0x4640             MOV      R0,R8
+   \       0x86   0x.... 0x....      BL       pinMode
+    221              }
+    222              _motorCtrlStates[WALKINGMOTOR_RIGHT_ID] = ctrl;
+   \                     ??set_walkingmotor_rduty_7: (+1)
+   \       0x8A   0x707C             STRB     R4,[R7, #+1]
+    223          }
+   \       0x8C   0xE8BD 0x81F0      POP      {R4-R8,PC}
+    224          /*
+    225           * 左右行走电机编码器初始化函数
+    226           * 外部中断接收，双边沿触发
+    227           */
+    228          static void init_extix(void)
+    229          {
+    230              EXTI_InitTypeDef EXTI_InitStructure;
+    231              NVIC_InitTypeDef NVIC_InitStructure;
+    232          
+    233              RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO, ENABLE);
+    234          
+    235              GPIO_InitTypeDef GPIO_InitStructure;
+    236              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+    237              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+    238              GPIO_InitStructure.GPIO_Pin = ODOMETER_RIGHT | ODOMETER_LEFT;
+    239              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+    240          
+    241              GPIO_Init(ODOMETER_GPIO, &GPIO_InitStructure);
+    242              GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource2);
+    243              GPIO_EXTILineConfig(GPIO_PortSourceGPIOD, GPIO_PinSource3);
+    244          
+    245              EXTI_InitStructure.EXTI_Line = EXTI_Line2;
+    246              EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    247              EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
+    248              EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    249              EXTI_Init(&EXTI_InitStructure);
+    250          
+    251              EXTI_InitStructure.EXTI_Line = EXTI_Line3;
+    252              EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    253              EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Rising_Falling;
+    254              EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    255              EXTI_Init(&EXTI_InitStructure);
+    256              NVIC_InitStructure.NVIC_IRQChannel = EXTI2_IRQn;
+    257              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
+    258              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
+    259              NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    260              NVIC_Init(&NVIC_InitStructure);
+    261          
+    262              NVIC_InitStructure.NVIC_IRQChannel = EXTI3_IRQn;
+    263              NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 2;
+    264              NVIC_InitStructure.NVIC_IRQChannelSubPriority = 1;
+    265              NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    266              NVIC_Init(&NVIC_InitStructure);
+    267          }
+    268          /*
+    269           * 右行走电机编码器中断函数
+    270           * 外部中断，双边沿触发
+    271           */
+
+   \                                 In section .text, align 2, keep-with-next
+    272          void EXTI2_IRQHandler(void)
+    273          {
+   \                     EXTI2_IRQHandler: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    274              if (EXTI_GetITStatus(EXTI_Line2) != RESET) {
+   \        0x2   0x2004             MOVS     R0,#+4
+   \        0x4   0x.... 0x....      BL       EXTI_GetITStatus
+   \        0x8   0xB138             CBZ.N    R0,??EXTI2_IRQHandler_0
+    275          
+    276                  EXTI_ClearITPendingBit(EXTI_Line2);
+   \        0xA   0x2004             MOVS     R0,#+4
+   \        0xC   0x.... 0x....      BL       EXTI_ClearITPendingBit
+    277                  ++_encoderTicksDelta[WALKINGMOTOR_RIGHT_ID];
+   \       0x10   0x.... 0x....      LDR.W    R0,??DataTable22_4
+   \       0x14   0x6981             LDR      R1,[R0, #+24]
+   \       0x16   0x1C49             ADDS     R1,R1,#+1
+   \       0x18   0x6181             STR      R1,[R0, #+24]
+    278              }
+    279          }
+   \                     ??EXTI2_IRQHandler_0: (+1)
+   \       0x1A   0xBD01             POP      {R0,PC}
+    280          /*
+    281           * 左行走电机编码器中断函数
+    282           * 外部中断，双边沿触发
+    283           */
+
+   \                                 In section .text, align 2, keep-with-next
+    284          void EXTI3_IRQHandler(void)
+    285          {
+   \                     EXTI3_IRQHandler: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    286              if (EXTI_GetITStatus(EXTI_Line3) != RESET) {
+   \        0x2   0x2008             MOVS     R0,#+8
+   \        0x4   0x.... 0x....      BL       EXTI_GetITStatus
+   \        0x8   0xB138             CBZ.N    R0,??EXTI3_IRQHandler_0
+    287          
+    288                  EXTI_ClearITPendingBit(EXTI_Line3);
+   \        0xA   0x2008             MOVS     R0,#+8
+   \        0xC   0x.... 0x....      BL       EXTI_ClearITPendingBit
+    289                  ++_encoderTicksDelta[WALKINGMOTOR_LEFT_ID];
+   \       0x10   0x.... 0x....      LDR.W    R0,??DataTable22_4
+   \       0x14   0x6941             LDR      R1,[R0, #+20]
+   \       0x16   0x1C49             ADDS     R1,R1,#+1
+   \       0x18   0x6141             STR      R1,[R0, #+20]
+    290              }
+    291          }
+   \                     ??EXTI3_IRQHandler_0: (+1)
+   \       0x1A   0xBD01             POP      {R0,PC}
+    292          /*
+    293           * 左右行走电机编码器初始化函数
+    294           */
+
+   \                                 In section .text, align 2, keep-with-next
+    295          void init_walkingmotor_odometer(void)
+    296          {
+   \                     init_walkingmotor_odometer: (+1)
+   \        0x0   0xB51F             PUSH     {R0-R4,LR}
+    297              memset(_motorDeltaTicks, 0, sizeof(_motorDeltaTicks));
+   \        0x2   0x.... 0x....      LDR.W    R4,??DataTable22_4
+   \        0x6   0x2108             MOVS     R1,#+8
+   \        0x8   0x1D20             ADDS     R0,R4,#+4
+   \        0xA   0x.... 0x....      BL       __aeabi_memclr
+    298              memset(_motorDistAccumulated, 0, sizeof(_motorDistAccumulated));
+   \        0xE   0x2108             MOVS     R1,#+8
+   \       0x10   0xF104 0x000C      ADD      R0,R4,#+12
+   \       0x14   0x.... 0x....      BL       __aeabi_memclr
+    299              memset(_motorDistTailing, 0, sizeof(_motorDistTailing));
+   \       0x18   0x2108             MOVS     R1,#+8
+   \       0x1A   0xF104 0x0034      ADD      R0,R4,#+52
+   \       0x1E   0x.... 0x....      BL       __aeabi_memclr
+    300              
+    301              memset(_encoderTicksDelta, 0, sizeof(_encoderTicksDelta));
+   \       0x22   0x2108             MOVS     R1,#+8
+   \       0x24   0xF104 0x0014      ADD      R0,R4,#+20
+   \       0x28   0x.... 0x....      BL       __aeabi_memclr
+    302              memset(_lastEncoderTicksDelta, 0, sizeof(_lastEncoderTicksDelta));
+   \       0x2C   0x2108             MOVS     R1,#+8
+   \       0x2E   0xF104 0x001C      ADD      R0,R4,#+28
+   \       0x32   0x.... 0x....      BL       __aeabi_memclr
+    303              memset(_lastOdometerSpeedAbs, 0, sizeof(_lastOdometerSpeedAbs));
+   \       0x36   0x2108             MOVS     R1,#+8
+   \       0x38   0xF104 0x0024      ADD      R0,R4,#+36
+   \       0x3C   0x.... 0x....      BL       __aeabi_memclr
+    304              init_extix();
+   \       0x40   0x2101             MOVS     R1,#+1
+   \       0x42   0x2001             MOVS     R0,#+1
+   \       0x44   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+   \       0x48   0x.... 0x....      BL       ?Subroutine4
+   \                     ??CrossCallReturnLabel_3: (+1)
+   \       0x4C   0x2003             MOVS     R0,#+3
+   \       0x4E   0x210C             MOVS     R1,#+12
+   \       0x50   0xF88D 0x000E      STRB     R0,[SP, #+14]
+   \       0x54   0xF8AD 0x100C      STRH     R1,[SP, #+12]
+   \       0x58   0x2248             MOVS     R2,#+72
+   \       0x5A   0xF88D 0x200F      STRB     R2,[SP, #+15]
+   \       0x5E   0xA903             ADD      R1,SP,#+12
+   \       0x60   0x....             LDR.N    R0,??DataTable22_1
+   \       0x62   0x.... 0x....      BL       GPIO_Init
+   \       0x66   0x2102             MOVS     R1,#+2
+   \       0x68   0x2003             MOVS     R0,#+3
+   \       0x6A   0x.... 0x....      BL       GPIO_EXTILineConfig
+   \       0x6E   0x2103             MOVS     R1,#+3
+   \       0x70   0x2003             MOVS     R0,#+3
+   \       0x72   0x.... 0x....      BL       GPIO_EXTILineConfig
+   \       0x76   0x2104             MOVS     R1,#+4
+   \       0x78   0x.... 0x....      BL       ?Subroutine3
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x7C   0x2108             MOVS     R1,#+8
+   \       0x7E   0x.... 0x....      BL       ?Subroutine3
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \       0x82   0x2108             MOVS     R1,#+8
+   \       0x84   0x2202             MOVS     R2,#+2
+   \       0x86   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \       0x8A   0xF88D 0x2001      STRB     R2,[SP, #+1]
+   \       0x8E   0x2100             MOVS     R1,#+0
+   \       0x90   0x2201             MOVS     R2,#+1
+   \       0x92   0xF88D 0x1002      STRB     R1,[SP, #+2]
+   \       0x96   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \       0x9A   0x4668             MOV      R0,SP
+   \       0x9C   0x.... 0x....      BL       NVIC_Init
+   \       0xA0   0x2109             MOVS     R1,#+9
+   \       0xA2   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \       0xA6   0x2202             MOVS     R2,#+2
+   \       0xA8   0x2101             MOVS     R1,#+1
+   \       0xAA   0xF88D 0x2001      STRB     R2,[SP, #+1]
+   \       0xAE   0xF88D 0x1002      STRB     R1,[SP, #+2]
+   \       0xB2   0xF88D 0x1003      STRB     R1,[SP, #+3]
+   \       0xB6   0x4668             MOV      R0,SP
+   \       0xB8   0x.... 0x....      BL       NVIC_Init
+    305          }
+   \       0xBC   0xBD1F             POP      {R0-R4,PC}
+    306          /*
+    307           * 刷新行走电机的里程数据函数
+    308           */
+    309          static void _refresh_walkingmotor_odometer(_u32 durationMs)
+    310          {
+    311              _u8 cnt;
+    312              float dist_mm;
+    313              // disable interrupt :
+    314              _u32 irqSave = enter_critical_section();                                    //临界资源保护
+    315              for (cnt = 0; cnt < WALKINGMOTOR_CNT; ++cnt) {                       //得到这段时间内的编码器数据
+    316                  _lastEncoderTicksDelta[cnt] = _encoderTicksDelta[cnt];
+    317                  _encoderTicksDelta[cnt] = 0;
+    318              }
+    319              leave_critical_section(irqSave);
+    320          
+    321              if (durationMs == 0)                                                        //防止除零
+    322                  durationMs = 1;
+    323          
+    324              for (cnt = 0; cnt < WALKINGMOTOR_CNT; ++cnt) {                       //根据这段时间内的编码器数据计算这段时间内速度，即当前速度
+    325                  dist_mm = (float)_lastEncoderTicksDelta[cnt] * (1000.0/ODOMETER_EST_PULSE_PER_METER);
+    326          		
+    327                  _lastOdometerSpeedAbs[cnt] = dist_mm * 1000.0 / durationMs;
+    328          
+    329                  dist_mm += _motorDistTailing[cnt];
+    330                  _motorDistAccumulated[cnt] += (_u32)dist_mm;
+    331                  _motorDistTailing[cnt] = dist_mm - (_u32)dist_mm;
+    332          
+    333                  _motorDeltaTicks[cnt] += _lastEncoderTicksDelta[cnt];
+    334              }
+    335          
+    336          }
+    337          /*
+    338           * 计算左行走电机累计里程函数
+    339           * 单位：mm
+    340           */
+
+   \                                 In section .text, align 2, keep-with-next
+    341          _u32 walkingmotor_cumulate_ldist_mm(void)
+    342          {
+    343              return _motorDistAccumulated[WALKINGMOTOR_LEFT_ID];
+   \                     walkingmotor_cumulate_ldist_mm: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable22_4
+   \        0x2   0x68C0             LDR      R0,[R0, #+12]
+   \        0x4   0x4770             BX       LR
+    344          }
+    345          /*
+    346           * 计算右行走电机累计里程函数
+    347           * 单位：mm
+    348           */
+
+   \                                 In section .text, align 2, keep-with-next
+    349          _u32 walkingmotor_cumulate_rdist_mm(void)
+    350          {
+    351              return _motorDistAccumulated[WALKINGMOTOR_RIGHT_ID];
+   \                     walkingmotor_cumulate_rdist_mm: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable22_4
+   \        0x2   0x6900             LDR      R0,[R0, #+16]
+   \        0x4   0x4770             BX       LR
+    352          }
+    353          
+
+   \                                 In section .text, align 2, keep-with-next
+    354          float walkingmotor_delta_ldist_mm_f(void)
+    355          {
+   \                     walkingmotor_delta_ldist_mm_f: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    356              _u32 delta_dist = _motorDeltaTicks[WALKINGMOTOR_LEFT_ID];
+   \        0x2   0x....             LDR.N    R1,??DataTable22_4
+   \        0x4   0x6848             LDR      R0,[R1, #+4]
+    357              _motorDeltaTicks[WALKINGMOTOR_LEFT_ID] = 0;
+   \        0x6   0x2200             MOVS     R2,#+0
+   \        0x8   0x604A             STR      R2,[R1, #+4]
+    358              return delta_dist * (1000.f / ODOMETER_EST_PULSE_PER_METER);
+   \        0xA   0x....             B.N      ?Subroutine1
+    359          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine1: (+1)
+   \        0x0   0x.... 0x....      BL       __aeabi_ui2f
+   \        0x4   0xE8BD 0x4004      POP      {R2,LR}
+   \        0x8   0x....             LDR.N    R1,??DataTable22_8
+   \        0xA   0x.... 0x....      B.W      __aeabi_fmul
+    360          
+
+   \                                 In section .text, align 2, keep-with-next
+    361          float walkingmotor_delta_rdist_mm_f(void)
+    362          {
+   \                     walkingmotor_delta_rdist_mm_f: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    363              _u32 delta_dist = _motorDeltaTicks[WALKINGMOTOR_RIGHT_ID];
+   \        0x2   0x....             LDR.N    R1,??DataTable22_4
+   \        0x4   0x6888             LDR      R0,[R1, #+8]
+    364              _motorDeltaTicks[WALKINGMOTOR_RIGHT_ID] = 0;
+   \        0x6   0x2200             MOVS     R2,#+0
+   \        0x8   0x608A             STR      R2,[R1, #+8]
+    365              return delta_dist * (1000.f / ODOMETER_EST_PULSE_PER_METER);
+   \        0xA                      REQUIRE ?Subroutine1
+   \        0xA                      ;; // Fall through to label ?Subroutine1
+    366          }
+    367          
+    368          /*
+    369           * 计算左行走电机当前速度函数
+    370           * 单位：mm/s
+    371           */
+
+   \                                 In section .text, align 2, keep-with-next
+    372          _u32 get_walkingmotor_lspeed_mm_q16(void)
+    373          {
+   \                     get_walkingmotor_lspeed_mm_q16: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    374              return (_u32)(_lastOdometerSpeedAbs[WALKINGMOTOR_LEFT_ID] * 65536.0);
+   \        0x2   0x....             LDR.N    R0,??DataTable22_4
+   \        0x4   0x6A40             LDR      R0,[R0, #+36]
+   \        0x6   0x....             B.N      ?Subroutine2
+    375          }
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine2: (+1)
+   \        0x0   0x.... 0x....      BL       __aeabi_f2d
+   \        0x4   0x2200             MOVS     R2,#+0
+   \        0x6   0x....             LDR.N    R3,??DataTable22_9
+   \        0x8   0x.... 0x....      BL       __aeabi_dmul
+   \        0xC   0xE8BD 0x4004      POP      {R2,LR}
+   \       0x10   0x.... 0x....      B.W      __aeabi_d2uiz
+    376          /*
+    377           * 计算右行走电机当前速度函数
+    378           * 单位：mm/s
+    379           */
+
+   \                                 In section .text, align 2, keep-with-next
+    380          _u32 get_walkingmotor_rspeed_mm_q16(void)
+    381          {
+   \                     get_walkingmotor_rspeed_mm_q16: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    382              return (_u32)(_lastOdometerSpeedAbs[WALKINGMOTOR_RIGHT_ID] * 65536.0);
+   \        0x2   0x....             LDR.N    R0,??DataTable22_4
+   \        0x4   0x6A80             LDR      R0,[R0, #+40]
+   \        0x6                      REQUIRE ?Subroutine2
+   \        0x6                      ;; // Fall through to label ?Subroutine2
+    383          }
+    384          /*
+    385           * PID调节行走电机当前PWM输出函数
+    386           */
+    387          static void _control_walkingmotor_speed_byid(int id)
+    388          {
+    389              const float PWM_OUT_MAX = PWM_MAX;
+    390              if (_motorSpeedMm[id] == 0) {                                               //设定速度为0，则立即停止行走电机
+    391                  _set_walkingmotor_duty(id, 0, MOTOR_CTRL_STATE_BRAKE);
+    392              } else {
+    393                  int desiredCtrl = (_motorSpeedMm[id] > 0) ? MOTOR_CTRL_STATE_FORWARD : MOTOR_CTRL_STATE_BACKWARD;
+    394          
+    395                  if (desiredCtrl != _motorCtrlStates[id]) {                              //方向改变，则先停止行走电机
+    396                      if (_lastOdometerSpeedAbs[id] > 1.0f) {
+    397                          _set_walkingmotor_duty(id, 0, MOTOR_CTRL_STATE_BRAKE);
+    398                          return;
+    399                      }
+    400                      speedLastErr[id] = 0;
+    401                      speedErri[id] = 0;
+    402                  }
+    403                  int desiredSpdAbs = abs(_motorSpeedMm[id]);
+    404                  float speedCurrentErr = (float) desiredSpdAbs - _lastOdometerSpeedAbs[id];
+    405                  float speedCurrentErrd = speedCurrentErr - speedLastErr[id];
+    406                  speedErri[id] += speedCurrentErr;
+    407                  speedLastErr[id] = speedCurrentErr;
+    408          
+    409                  float speed_PWMOUT = (Kp * speedCurrentErr + Ki * speedErri[id] + Kd * speedCurrentErrd); //PID计算下一个PWM占空比值
+    410                  if (speed_PWMOUT > PWM_OUT_MAX)
+    411                      speed_PWMOUT = PWM_OUT_MAX;
+    412                  if (speed_PWMOUT < 0)
+    413                      speed_PWMOUT = 0;
+    414          
+    415                  _set_walkingmotor_duty(id, (int) speed_PWMOUT, desiredCtrl);            //将PID计算得到的PWM占空比值设定
+    416          }
+    417          
+    418          }
+    419          /*
+    420           * 左右行走电机速度控制函数
+    421           */
+
+   \                                 In section .text, align 2, keep-with-next
+    422          void control_walkingmotor_speed(void)
+    423          {
+   \                     control_walkingmotor_speed: (+1)
+   \        0x0   0xE92D 0x4EF0      PUSH     {R4-R7,R9-R11,LR}
+    424              for (size_t id = 0; id < WALKINGMOTOR_CNT; ++id) {
+   \        0x4   0x2500             MOVS     R5,#+0
+   \        0x6   0x....             LDR.N    R4,??DataTable22_4
+    425                  _control_walkingmotor_speed_byid(id);
+   \                     ??control_walkingmotor_speed_0: (+1)
+   \        0x8   0xEB04 0x0685      ADD      R6,R4,R5, LSL #+2
+   \        0xC   0x6AF2             LDR      R2,[R6, #+44]
+   \        0xE   0x2A00             CMP      R2,#+0
+   \       0x10   0xD00C             BEQ.N    ??control_walkingmotor_speed_1
+   \       0x12   0x5D60             LDRB     R0,[R4, R5]
+   \       0x14   0xF8D6 0x9024      LDR      R9,[R6, #+36]
+   \       0x18   0xBFCC             ITE      GT
+   \       0x1A   0x2701             MOVGT    R7,#+1
+   \       0x1C   0x2702             MOVLE    R7,#+2
+   \       0x1E   0x4287             CMP      R7,R0
+   \       0x20   0xD00A             BEQ.N    ??control_walkingmotor_speed_2
+   \       0x22   0x4648             MOV      R0,R9
+   \       0x24   0x....             LDR.N    R1,??DataTable22_10
+   \       0x26   0x.... 0x....      BL       __aeabi_cfrcmple
+   \       0x2A   0xD802             BHI.N    ??control_walkingmotor_speed_3
+   \                     ??control_walkingmotor_speed_1: (+1)
+   \       0x2C   0x2203             MOVS     R2,#+3
+   \       0x2E   0x2100             MOVS     R1,#+0
+   \       0x30   0xE03B             B.N      ??control_walkingmotor_speed_4
+   \                     ??control_walkingmotor_speed_3: (+1)
+   \       0x32   0x2000             MOVS     R0,#+0
+   \       0x34   0x63F0             STR      R0,[R6, #+60]
+   \       0x36   0x6470             STR      R0,[R6, #+68]
+   \                     ??control_walkingmotor_speed_2: (+1)
+   \       0x38   0x0010             MOVS     R0,R2
+   \       0x3A   0xBF48             IT       MI
+   \       0x3C   0x4240             RSBMI    R0,R0,#+0
+   \       0x3E   0x.... 0x....      BL       __aeabi_i2f
+   \       0x42   0x4649             MOV      R1,R9
+   \       0x44   0x.... 0x....      BL       __aeabi_fsub
+   \       0x48   0x6BF1             LDR      R1,[R6, #+60]
+   \       0x4A   0x4683             MOV      R11,R0
+   \       0x4C   0x.... 0x....      BL       __aeabi_fsub
+   \       0x50   0x4681             MOV      R9,R0
+   \       0x52   0x6C70             LDR      R0,[R6, #+68]
+   \       0x54   0x4659             MOV      R1,R11
+   \       0x56   0x.... 0x....      BL       __aeabi_fadd
+   \       0x5A   0x4682             MOV      R10,R0
+   \       0x5C   0xF8C6 0xA044      STR      R10,[R6, #+68]
+   \       0x60   0xF8C6 0xB03C      STR      R11,[R6, #+60]
+   \       0x64   0x4659             MOV      R1,R11
+   \       0x66   0x....             LDR.N    R0,??DataTable22_11
+   \       0x68   0x.... 0x....      BL       __aeabi_fmul
+   \       0x6C   0x4606             MOV      R6,R0
+   \       0x6E   0x....             LDR.N    R0,??DataTable22_12
+   \       0x70   0x4651             MOV      R1,R10
+   \       0x72   0x.... 0x....      BL       __aeabi_fmul
+   \       0x76   0x4631             MOV      R1,R6
+   \       0x78   0x.... 0x....      BL       __aeabi_fadd
+   \       0x7C   0x4606             MOV      R6,R0
+   \       0x7E   0x2000             MOVS     R0,#+0
+   \       0x80   0x4649             MOV      R1,R9
+   \       0x82   0x.... 0x....      BL       __aeabi_fmul
+   \       0x86   0x4631             MOV      R1,R6
+   \       0x88   0x.... 0x....      BL       __aeabi_fadd
+   \       0x8C   0x....             LDR.N    R1,??DataTable22_13
+   \       0x8E   0x.... 0x....      BL       __aeabi_cfrcmple
+   \       0x92   0xBF98             IT       LS
+   \       0x94   0x....             LDRLS.N  R0,??DataTable22_14
+   \       0x96   0xD904             BLS.N    ??control_walkingmotor_speed_5
+   \       0x98   0x2100             MOVS     R1,#+0
+   \       0x9A   0x.... 0x....      BL       __aeabi_cfcmple
+   \       0x9E   0xBF38             IT       CC
+   \       0xA0   0x2000             MOVCC    R0,#+0
+   \                     ??control_walkingmotor_speed_5: (+1)
+   \       0xA2   0x.... 0x....      BL       __aeabi_f2iz
+   \       0xA6   0x4601             MOV      R1,R0
+   \       0xA8   0x463A             MOV      R2,R7
+   \                     ??control_walkingmotor_speed_4: (+1)
+   \       0xAA   0x4628             MOV      R0,R5
+   \       0xAC   0x.... 0x....      BL       _set_walkingmotor_duty
+    426              }
+   \       0xB0   0x1C6D             ADDS     R5,R5,#+1
+   \       0xB2   0x2D01             CMP      R5,#+1
+   \       0xB4   0xD9A8             BLS.N    ??control_walkingmotor_speed_0
+    427          }
+   \       0xB6   0xE8BD 0x8EF0      POP      {R4-R7,R9-R11,PC}
+    428          /*
+    429           * 设定左右电机速度，单位：mm/s
+    430           */
+
+   \                                 In section .text, align 2, keep-with-next
+    431          void set_walkingmotor_speed(_s32 lSpeed, _s32 rSpeed)
+    432          {
+    433              _motorSpeedMm[WALKINGMOTOR_LEFT_ID] = lSpeed;
+   \                     set_walkingmotor_speed: (+1)
+   \        0x0   0x....             LDR.N    R2,??DataTable22_4
+   \        0x2   0x62D0             STR      R0,[R2, #+44]
+    434              _motorSpeedMm[WALKINGMOTOR_RIGHT_ID] = rSpeed;
+   \        0x4   0x6311             STR      R1,[R2, #+48]
+    435          }
+   \        0x6   0x4770             BX       LR
+    436          /*
+    437           * 获得左电机速度，单位：mm/s
+    438           */
+
+   \                                 In section .text, align 2, keep-with-next
+    439          _s32 get_walkingmotor_lspeed_set(void)
+    440          {
+    441              return (_motorSpeedMm[WALKINGMOTOR_LEFT_ID]);
+   \                     get_walkingmotor_lspeed_set: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable22_4
+   \        0x2   0x6AC0             LDR      R0,[R0, #+44]
+   \        0x4   0x4770             BX       LR
+    442          }
+    443          /*
+    444           * 获得右电机速度，单位：mm/s
+    445           */
+
+   \                                 In section .text, align 2, keep-with-next
+    446          _s32 get_walkingmotor_rspeed_set(void)
+    447          {
+    448              return (_motorSpeedMm[WALKINGMOTOR_RIGHT_ID]);
+   \                     get_walkingmotor_rspeed_set: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable22_4
+   \        0x2   0x6B00             LDR      R0,[R0, #+48]
+   \        0x4   0x4770             BX       LR
+    449          }
+    450          /*
+    451           * 行走电机停止并等待函数
+    452           * 预留
+    453           */
+
+   \                                 In section .text, align 2, keep-with-next
+    454          void wait_walkingmotor_brake(void)
+    455          {
+   \                     wait_walkingmotor_brake: (+1)
+   \        0x0   0xB5E0             PUSH     {R5-R7,LR}
+    456              brake_walkingmotor();
+   \        0x2   0x.... 0x....      BL       brake_walkingmotor
+    457              _u32 startts = getms();
+   \        0x6   0x.... 0x....      BL       getms
+   \        0xA   0x4607             MOV      R7,R0
+   \        0xC   0x....             LDR.N    R5,??DataTable22_9
+   \        0xE   0x....             LDR.N    R6,??DataTable22_4
+    458              while ((0 != get_walkingmotor_lspeed_mm_q16()) || (0 != get_walkingmotor_rspeed_mm_q16())) {
+   \                     ??wait_walkingmotor_brake_0: (+1)
+   \       0x10   0x6A70             LDR      R0,[R6, #+36]
+   \       0x12   0x.... 0x....      BL       __aeabi_f2d
+   \       0x16   0x2200             MOVS     R2,#+0
+   \       0x18   0x462B             MOV      R3,R5
+   \       0x1A   0x.... 0x....      BL       __aeabi_dmul
+   \       0x1E   0x.... 0x....      BL       __aeabi_d2uiz
+   \       0x22   0xB948             CBNZ.N   R0,??wait_walkingmotor_brake_1
+   \       0x24   0x6AB0             LDR      R0,[R6, #+40]
+   \       0x26   0x.... 0x....      BL       __aeabi_f2d
+   \       0x2A   0x2200             MOVS     R2,#+0
+   \       0x2C   0x462B             MOV      R3,R5
+   \       0x2E   0x.... 0x....      BL       __aeabi_dmul
+   \       0x32   0x.... 0x....      BL       __aeabi_d2uiz
+   \       0x36   0xB130             CBZ.N    R0,??wait_walkingmotor_brake_2
+    459                  if (getms() - startts > 30000) {
+   \                     ??wait_walkingmotor_brake_1: (+1)
+   \       0x38   0x.... 0x....      BL       getms
+   \       0x3C   0x1BC0             SUBS     R0,R0,R7
+   \       0x3E   0xF247 0x5131      MOVW     R1,#+30001
+   \       0x42   0x4288             CMP      R0,R1
+   \       0x44   0xD3E4             BCC.N    ??wait_walkingmotor_brake_0
+    460                      return;
+   \                     ??wait_walkingmotor_brake_2: (+1)
+   \       0x46   0xBDE0             POP      {R5-R7,PC}
+    461                  }
+    462              }
+    463          }
+    464          /*
+    465           * 行走电机停止函数
+    466           */
+
+   \                                 In section .text, align 2, keep-with-next
+    467          void brake_walkingmotor(void)
+    468          {
+   \                     brake_walkingmotor: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    469              set_walkingmotor_lduty(0, MOTOR_CTRL_STATE_BRAKE);
+   \        0x2   0x2103             MOVS     R1,#+3
+   \        0x4   0x2000             MOVS     R0,#+0
+   \        0x6   0x.... 0x....      BL       set_walkingmotor_lduty
+    470              set_walkingmotor_rduty(0, MOTOR_CTRL_STATE_BRAKE);
+   \        0xA   0xE8BD 0x4004      POP      {R2,LR}
+   \        0xE   0x2103             MOVS     R1,#+3
+   \       0x10   0x2000             MOVS     R0,#+0
+   \       0x12   0x....             B.N      set_walkingmotor_rduty
+    471          }
+    472          /*
+    473           * 机器人是否在地上检测初始化函数
+    474           */
+
+   \                                 In section .text, align 2, keep-with-next
+    475          void init_ontheground_detect(void)
+    476          {
+   \                     init_ontheground_detect: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    477              GPIO_InitTypeDef GPIO_InitStructure;
+    478              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOD, ENABLE);
+   \        0x2   0x.... 0x....      BL       ?Subroutine4
+    479              GPIO_InitStructure.GPIO_Pin = ONGROUND_RIGHT | ONGROUND_LEFT;
+   \                     ??CrossCallReturnLabel_2: (+1)
+   \        0x6   0xF240 0x4102      MOVW     R1,#+1026
+   \        0xA   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+    480              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+   \        0xE   0x2201             MOVS     R2,#+1
+    481              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+   \       0x10   0x2148             MOVS     R1,#+72
+   \       0x12   0xF88D 0x1003      STRB     R1,[SP, #+3]
+   \       0x16   0xF88D 0x2002      STRB     R2,[SP, #+2]
+    482              GPIO_Init(ONGROUND_GPIO, &GPIO_InitStructure);
+   \       0x1A   0x4669             MOV      R1,SP
+   \       0x1C   0x....             LDR.N    R0,??DataTable22_1
+   \       0x1E                      REQUIRE ?Subroutine0
+   \       0x1E                      ;; // Fall through to label ?Subroutine0
+    483          }
+    484          /*
+    485           * 机器人是否在地上检测函数
+    486           */
+
+   \                                 In section .text, align 2, keep-with-next
+    487          _u8 is_ontheground(void)
+    488          {
+   \                     is_ontheground: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    489              if ((0 == GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_1)) || (0 == GPIO_ReadInputDataBit(GPIOD, GPIO_Pin_10))) {
+   \        0x2   0x....             LDR.N    R4,??DataTable22_1
+   \        0x4   0x2102             MOVS     R1,#+2
+   \        0x6   0x4620             MOV      R0,R4
+   \        0x8   0x.... 0x....      BL       GPIO_ReadInputDataBit
+   \        0xC   0xB128             CBZ.N    R0,??is_ontheground_0
+   \        0xE   0xF44F 0x6180      MOV      R1,#+1024
+   \       0x12   0x4620             MOV      R0,R4
+   \       0x14   0x.... 0x....      BL       GPIO_ReadInputDataBit
+   \       0x18   0xB908             CBNZ.N   R0,??is_ontheground_1
+    490                  return 0;
+   \                     ??is_ontheground_0: (+1)
+   \       0x1A   0x2000             MOVS     R0,#+0
+   \       0x1C   0xBD10             POP      {R4,PC}
+    491              } else {
+    492                  return 1;
+   \                     ??is_ontheground_1: (+1)
+   \       0x1E   0x2001             MOVS     R0,#+1
+   \       0x20   0xBD10             POP      {R4,PC}
+    493              }
+    494          }
+    495          /*
+    496           * 边刷电机初始化函数
+    497           */
+
+   \                                 In section .text, align 2, keep-with-next
+    498          void init_brushmotor(void)
+    499          {
+   \                     init_brushmotor: (+1)
+   \        0x0   0xB538             PUSH     {R3-R5,LR}
+    500              PIN_SET(BRUSH_L_GPIO, BRUSH_L_PIN, LOW);
+   \        0x2   0x....             LDR.N    R0,??DataTable22_15
+    501              PIN_SET(BRUSH_R_GPIO, BRUSH_R_PIN, LOW);
+   \        0x4   0x....             LDR.N    R4,??DataTable22_16
+   \        0x6   0xF44F 0x7180      MOV      R1,#+256
+   \        0xA   0x6141             STR      R1,[R0, #+20]
+   \        0xC   0x2501             MOVS     R5,#+1
+   \        0xE   0x6165             STR      R5,[R4, #+20]
+    502              pinMode(BRUSH_L_GPIO, BRUSH_L_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+   \       0x10   0x2303             MOVS     R3,#+3
+   \       0x12   0x2210             MOVS     R2,#+16
+   \       0x14   0x.... 0x....      BL       pinMode
+    503              pinMode(BRUSH_R_GPIO, BRUSH_R_PIN, GPIO_Mode_Out_PP, GPIO_Speed_50MHz);
+   \       0x18   0x4620             MOV      R0,R4
+   \       0x1A   0xB001             ADD      SP,SP,#+4
+   \       0x1C   0xE8BD 0x4030      POP      {R4,R5,LR}
+   \       0x20   0x2303             MOVS     R3,#+3
+   \       0x22   0x2210             MOVS     R2,#+16
+   \       0x24   0x2101             MOVS     R1,#+1
+   \       0x26   0x....             B.N      pinMode
+    504          }
+
+   \                                 In section .bss, align 4
+   \                     _motorCtrlStates:
+   \        0x0                      DS8 2
+   \        0x2                      DS8 2
+   \        0x4                      DS8 8
+   \        0xC                      DS8 8
+   \       0x14                      DS8 8
+   \       0x1C                      DS8 8
+   \       0x24                      DS8 8
+   \       0x2C                      DS8 8
+   \       0x34                      DS8 8
+   \       0x3C                      DS8 8
+   \       0x44                      DS8 8
+   \       0x4C                      DS8 4
+   \       0x50                      DS8 4
+    505          static _u32 speedctl_frequency = 0;
+    506          static _u32 ontheground_frequency = 0;
+    507          /*
+    508           * 行走电机速度控制和反馈编码检测函数
+    509           */
+
+   \                                 In section .text, align 2, keep-with-next
+    510          void speedctl_heartbeat(void)
+    511          {
+   \                     speedctl_heartbeat: (+1)
+   \        0x0   0xE92D 0x4FF8      PUSH     {R3-R11,LR}
+    512              _u32 currentTs = getms();
+   \        0x4   0x.... 0x....      BL       getms
+    513              _u32 delta = currentTs - speedctl_frequency;
+   \        0x8   0x....             LDR.N    R7,??DataTable22_4
+   \        0xA   0x9000             STR      R0,[SP, #+0]
+   \        0xC   0x6CFC             LDR      R4,[R7, #+76]
+   \        0xE   0x1B04             SUBS     R4,R0,R4
+    514          
+    515              if (delta >= CONF_MOTOR_HEARTBEAT_DURATION) {
+   \       0x10   0x2C10             CMP      R4,#+16
+   \       0x12   0xD34A             BCC.N    ??speedctl_heartbeat_0
+    516                  speedctl_frequency = currentTs;
+   \       0x14   0x64F8             STR      R0,[R7, #+76]
+    517                  _refresh_walkingmotor_odometer(delta);                  //定时获取反馈编码值
+   \       0x16   0xF3EF 0x8010      MRS      R0,PRIMASK
+   \       0x1A   0xB672             CPSID    I
+   \       0x1C   0x6979             LDR      R1,[R7, #+20]
+   \       0x1E   0x61F9             STR      R1,[R7, #+28]
+   \       0x20   0x2200             MOVS     R2,#+0
+   \       0x22   0x617A             STR      R2,[R7, #+20]
+   \       0x24   0x69B9             LDR      R1,[R7, #+24]
+   \       0x26   0x6239             STR      R1,[R7, #+32]
+   \       0x28   0x61BA             STR      R2,[R7, #+24]
+   \       0x2A   0xF380 0x8810      MSR      PRIMASK,R0
+   \       0x2E   0x2500             MOVS     R5,#+0
+   \                     ??speedctl_heartbeat_1: (+1)
+   \       0x30   0xEB07 0x0685      ADD      R6,R7,R5, LSL #+2
+   \       0x34   0x1C6D             ADDS     R5,R5,#+1
+   \       0x36   0xF8D6 0xB01C      LDR      R11,[R6, #+28]
+   \       0x3A   0x4658             MOV      R0,R11
+   \       0x3C   0x.... 0x....      BL       __aeabi_ui2f
+   \       0x40   0x.... 0x....      BL       __aeabi_f2d
+   \       0x44   0x....             LDR.N    R2,??DataTable22_17
+   \       0x46   0x....             LDR.N    R3,??DataTable22_18
+   \       0x48   0x.... 0x....      BL       __aeabi_dmul
+   \       0x4C   0x.... 0x....      BL       __aeabi_d2f
+   \       0x50   0x4682             MOV      R10,R0
+   \       0x52   0x.... 0x....      BL       __aeabi_f2d
+   \       0x56   0x2200             MOVS     R2,#+0
+   \       0x58   0x....             LDR.N    R3,??DataTable22_19
+   \       0x5A   0x.... 0x....      BL       __aeabi_dmul
+   \       0x5E   0x4680             MOV      R8,R0
+   \       0x60   0x4689             MOV      R9,R1
+   \       0x62   0x4620             MOV      R0,R4
+   \       0x64   0x.... 0x....      BL       __aeabi_ui2d
+   \       0x68   0x4602             MOV      R2,R0
+   \       0x6A   0x460B             MOV      R3,R1
+   \       0x6C   0x4640             MOV      R0,R8
+   \       0x6E   0x4649             MOV      R1,R9
+   \       0x70   0x.... 0x....      BL       __aeabi_ddiv
+   \       0x74   0x.... 0x....      BL       __aeabi_d2f
+   \       0x78   0x6270             STR      R0,[R6, #+36]
+   \       0x7A   0x4651             MOV      R1,R10
+   \       0x7C   0x6B70             LDR      R0,[R6, #+52]
+   \       0x7E   0x.... 0x....      BL       __aeabi_fadd
+   \       0x82   0x4682             MOV      R10,R0
+   \       0x84   0x.... 0x....      BL       __aeabi_f2uiz
+   \       0x88   0x68F1             LDR      R1,[R6, #+12]
+   \       0x8A   0x1841             ADDS     R1,R0,R1
+   \       0x8C   0x60F1             STR      R1,[R6, #+12]
+   \       0x8E   0x.... 0x....      BL       __aeabi_ui2f
+   \       0x92   0x4601             MOV      R1,R0
+   \       0x94   0x4650             MOV      R0,R10
+   \       0x96   0x.... 0x....      BL       __aeabi_fsub
+   \       0x9A   0x6370             STR      R0,[R6, #+52]
+   \       0x9C   0x2D01             CMP      R5,#+1
+   \       0x9E   0x6870             LDR      R0,[R6, #+4]
+   \       0xA0   0x4458             ADD      R0,R11,R0
+   \       0xA2   0x6070             STR      R0,[R6, #+4]
+   \       0xA4   0xDDC4             BLE.N    ??speedctl_heartbeat_1
+    518                  control_walkingmotor_speed();                           //进而进行速度控制
+   \       0xA6   0x.... 0x....      BL       control_walkingmotor_speed
+    519          
+    520              }
+    521          
+    522              if ((currentTs - ontheground_frequency) >= 1000) {          //1秒落地检测 ，落地发声
+   \                     ??speedctl_heartbeat_0: (+1)
+   \       0xAA   0x9900             LDR      R1,[SP, #+0]
+   \       0xAC   0x6D38             LDR      R0,[R7, #+80]
+   \       0xAE   0x1A09             SUBS     R1,R1,R0
+   \       0xB0   0xF5B1 0x7F7A      CMP      R1,#+1000
+   \       0xB4   0xD30C             BCC.N    ??speedctl_heartbeat_2
+    523                  ontheground_frequency = currentTs;
+   \       0xB6   0x9800             LDR      R0,[SP, #+0]
+   \       0xB8   0x6538             STR      R0,[R7, #+80]
+    524                  if (!is_ontheground()) {
+   \       0xBA   0x.... 0x....      BL       is_ontheground
+   \       0xBE   0xB938             CBNZ.N   R0,??speedctl_heartbeat_2
+    525                      beep_beeper(4000, 80, 2);
+   \       0xC0   0xE8BD 0x4FF8      POP      {R3-R11,LR}
+   \       0xC4   0x2202             MOVS     R2,#+2
+   \       0xC6   0x2150             MOVS     R1,#+80
+   \       0xC8   0xF44F 0x607A      MOV      R0,#+4000
+   \       0xCC   0x.... 0x....      B.W      beep_beeper
+    526                  }
+    527              }
+    528          }
+   \                     ??speedctl_heartbeat_2: (+1)
+   \       0xD0   0xE8BD 0x8FF1      POP      {R0,R4-R11,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine5: (+1)
+   \        0x0   0xF8C8 0x1010      STR      R1,[R8, #+16]
+   \        0x4   0x2303             MOVS     R3,#+3
+   \        0x6   0x2210             MOVS     R2,#+16
+   \        0x8   0x4640             MOV      R0,R8
+   \        0xA   0x....             B.N      pinMode
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine3: (+1)
+   \        0x0   0x2200             MOVS     R2,#+0
+   \        0x2   0x9101             STR      R1,[SP, #+4]
+   \        0x4   0xF88D 0x2008      STRB     R2,[SP, #+8]
+   \        0x8   0x2110             MOVS     R1,#+16
+   \        0xA   0x2201             MOVS     R2,#+1
+   \        0xC   0xF88D 0x1009      STRB     R1,[SP, #+9]
+   \       0x10   0xF88D 0x200A      STRB     R2,[SP, #+10]
+   \       0x14   0xA801             ADD      R0,SP,#+4
+   \       0x16   0x.... 0x....      B.W      EXTI_Init
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22:
+   \        0x0   0x0016'00C0        DC32     0x1600c0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_1:
+   \        0x0   0x4001'1400        DC32     0x40011400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_2:
+   \        0x0   0x4001'1800        DC32     0x40011800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_3:
+   \        0x0   0x4001'2C00        DC32     0x40012c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_4:
+   \        0x0   0x....'....        DC32     _motorCtrlStates
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_5:
+   \        0x0   0x4001'2C40        DC32     0x40012c40
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_6:
+   \        0x0   0x4001'2C3C        DC32     0x40012c3c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_7:
+   \        0x0   0x4001'1410        DC32     0x40011410
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_8:
+   \        0x0   0x3E20'401A        DC32     0x3e20401a
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_9:
+   \        0x0   0x40F0'0000        DC32     0x40f00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_10:
+   \        0x0   0x3F80'0001        DC32     0x3f800001
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_11:
+   \        0x0   0x41C8'0000        DC32     0x41c80000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_12:
+   \        0x0   0x40C0'0000        DC32     0x40c00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_13:
+   \        0x0   0x461C'4001        DC32     0x461c4001
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_14:
+   \        0x0   0x461C'4000        DC32     0x461c4000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_15:
+   \        0x0   0x4001'1000        DC32     0x40011000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_16:
+   \        0x0   0x4001'0C00        DC32     0x40010c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_17:
+   \        0x0   0x347B'648F        DC32     0x347b648f
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_18:
+   \        0x0   0x3FC4'0803        DC32     0x3fc40803
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable22_19:
+   \        0x0   0x408F'4000        DC32     0x408f4000
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   EXTI2_IRQHandler
+         8   -> EXTI_ClearITPendingBit
+         8   -> EXTI_GetITStatus
+       8   EXTI3_IRQHandler
+         8   -> EXTI_ClearITPendingBit
+         8   -> EXTI_GetITStatus
+       0   _set_walkingmotor_duty
+         0   -> set_walkingmotor_lduty
+         0   -> set_walkingmotor_rduty
+       8   brake_walkingmotor
+         8   -> set_walkingmotor_lduty
+         0   -> set_walkingmotor_rduty
+      32   control_walkingmotor_speed
+        32   -> __aeabi_f2iz
+        32   -> __aeabi_fadd
+        32   -> __aeabi_fmul
+        32   -> __aeabi_fsub
+        32   -> __aeabi_i2f
+        32   -> _set_walkingmotor_duty
+        32 __aeabi_cfcmple
+        32 __aeabi_cfrcmple
+       8   get_walkingmotor_lspeed_mm_q16
+         0   -> __aeabi_d2uiz
+         8   -> __aeabi_dmul
+         8   -> __aeabi_f2d
+       0   get_walkingmotor_lspeed_set
+       8   get_walkingmotor_rspeed_mm_q16
+         0   -> __aeabi_d2uiz
+         8   -> __aeabi_dmul
+         8   -> __aeabi_f2d
+       0   get_walkingmotor_rspeed_set
+      16   init_brushmotor
+         0   -> pinMode
+        16   -> pinMode
+       8   init_ontheground_detect
+         8   -> GPIO_Init
+         8   -> RCC_APB2PeriphClockCmd
+      40   init_walkingmotor
+        40   -> GPIO_Init
+        40   -> GPIO_PinRemapConfig
+        40   -> RCC_APB2PeriphClockCmd
+        40   -> TIM_ARRPreloadConfig
+        40   -> TIM_Cmd
+        40   -> TIM_CtrlPWMOutputs
+        40   -> TIM_OC3Init
+        40   -> TIM_OC3PreloadConfig
+        40   -> TIM_OC4Init
+        40   -> TIM_OC4PreloadConfig
+        40   -> TIM_TimeBaseInit
+        40   -> __aeabi_memclr
+        40   -> set_walkingmotor_lduty
+        40   -> set_walkingmotor_rduty
+      24   init_walkingmotor_odometer
+        24   -> EXTI_Init
+        24   -> GPIO_EXTILineConfig
+        24   -> GPIO_Init
+        24   -> NVIC_Init
+        24   -> RCC_APB2PeriphClockCmd
+        24   -> __aeabi_memclr
+       8   is_ontheground
+         8   -> GPIO_ReadInputDataBit
+       8   pinMode
+         8   -> GPIO_Init
+      32   set_walkingmotor_lduty
+        32   -> _delay_us
+        32   -> pinMode
+      24   set_walkingmotor_rduty
+        24   -> _delay_us
+        24   -> pinMode
+       0   set_walkingmotor_speed
+      40   speedctl_heartbeat
+        40   -> __aeabi_d2f
+        40   -> __aeabi_ddiv
+        40   -> __aeabi_dmul
+        40   -> __aeabi_f2d
+        40   -> __aeabi_f2uiz
+        40   -> __aeabi_fadd
+        40   -> __aeabi_fsub
+        40   -> __aeabi_ui2d
+        40   -> __aeabi_ui2f
+         0   -> beep_beeper
+        40   -> control_walkingmotor_speed
+        40   -> getms
+        40   -> is_ontheground
+      16   wait_walkingmotor_brake
+        16   -> __aeabi_d2uiz
+        16   -> __aeabi_dmul
+        16   -> __aeabi_f2d
+        16   -> brake_walkingmotor
+        16   -> getms
+       0   walkingmotor_cumulate_ldist_mm
+       0   walkingmotor_cumulate_rdist_mm
+       8   walkingmotor_delta_ldist_mm_f
+         0   -> __aeabi_fmul
+         8   -> __aeabi_ui2f
+       8   walkingmotor_delta_rdist_mm_f
+         0   -> __aeabi_fmul
+         8   -> __aeabi_ui2f
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable22
+       4  ??DataTable22_1
+       4  ??DataTable22_10
+       4  ??DataTable22_11
+       4  ??DataTable22_12
+       4  ??DataTable22_13
+       4  ??DataTable22_14
+       4  ??DataTable22_15
+       4  ??DataTable22_16
+       4  ??DataTable22_17
+       4  ??DataTable22_18
+       4  ??DataTable22_19
+       4  ??DataTable22_2
+       4  ??DataTable22_3
+       4  ??DataTable22_4
+       4  ??DataTable22_5
+       4  ??DataTable22_6
+       4  ??DataTable22_7
+       4  ??DataTable22_8
+       4  ??DataTable22_9
+       6  ?Subroutine0
+      14  ?Subroutine1
+      20  ?Subroutine2
+      26  ?Subroutine3
+       8  ?Subroutine4
+      12  ?Subroutine5
+      12  ?Subroutine6
+      28  EXTI2_IRQHandler
+      28  EXTI3_IRQHandler
+       4  Kd
+       4  Ki
+       4  Kp
+      84  _motorCtrlStates
+          _motorDeltaTicks
+          _motorDistAccumulated
+          _encoderTicksDelta
+          _lastEncoderTicksDelta
+          _lastOdometerSpeedAbs
+          _motorSpeedMm
+          _motorDistTailing
+          speedLastErr
+          speedErri
+          speedctl_frequency
+          ontheground_frequency
+      16  _set_walkingmotor_duty
+      20  brake_walkingmotor
+     186  control_walkingmotor_speed
+       8  get_walkingmotor_lspeed_mm_q16
+       6  get_walkingmotor_lspeed_set
+       6  get_walkingmotor_rspeed_mm_q16
+       6  get_walkingmotor_rspeed_set
+      40  init_brushmotor
+      30  init_ontheground_detect
+     300  init_walkingmotor
+     190  init_walkingmotor_odometer
+      34  is_ontheground
+      18  pinMode
+     144  set_walkingmotor_lduty
+     144  set_walkingmotor_rduty
+       8  set_walkingmotor_speed
+     212  speedctl_heartbeat
+      72  wait_walkingmotor_brake
+       6  walkingmotor_cumulate_ldist_mm
+       6  walkingmotor_cumulate_rdist_mm
+      12  walkingmotor_delta_ldist_mm_f
+      10  walkingmotor_delta_rdist_mm_f
+
+ 
+    84 bytes in section .bss
+    12 bytes in section .rodata
+ 1'708 bytes in section .text
+ 
+ 1'708 bytes of CODE  memory
+    12 bytes of CONST memory
+    84 bytes of DATA  memory
+
+Errors: none
+Warnings: none

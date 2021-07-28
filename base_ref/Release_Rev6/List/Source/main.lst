@@ -1,0 +1,506 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:39
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\main.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source\main.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\main.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\main.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source\main.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\main.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\main.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          /**
+     32           @breif PCB REF REV 3.0
+     33           *   
+     34           *    I/O     DEFINITION                   I/O    DEFINITION                 I/O     DEFINITION                    I/O    DEFINITION              I/O     DEFINITION
+     35           *
+     36           *    PA0     CHARGE_PWM(ADC123_IN0)       PB0                               PC0                                   PD0                            PE0 
+     37           *    PA1                                  PB1                               PC1     BOTTOM_IR_R2(ADC123_IN11)     PD1    GROUND_DETECT_L(GPIO)   PE1 
+     38           *    PA2     DISPLAY_RX(USART2_TX)        PB2                               PC2     BOTTOM_IR_R1(ADC123_IN12)     PD2    ENCODER_SENSOR_R(EXTI)  PE2     BATT_READY(GPIO)      
+     39           *    PA3     DISPLAY_TX(USART2_RX)        PB3                               PC3     BATT_MONITOR(ADC123_IN13)     PD3    ENCODER_SENSOR_L(EXTI)  PE3     BATT_CHRG(GPIO)     
+     40           *    PA4     BOTTOM_IR_R4(ADC12_IN4)      PB4                               PC4     BOTTOM_IR_R3(ADC12_IN14)      PD4    MOTO_LF_EN(GPIO)        PE4     BATT_FAULT(GPIO)        
+     41           *    PA5                                  PB5    BUMP_DETECT_L(GPIO)        PC5     MOTO_RI_MONITOR(GPIO)         PD5    MOTO_LI_MONITOR(GPIO)   PE5     SONAR_ECHO1(GPIO)      
+     42           *    PA6     BATT_DETECT(ADC12_IN6)       PB6                               PC6                                   PD6    MOTO_RF_EN(GPIO)        PE6     
+     43           *    PA7                                  PB7                               PC7     BOTTOM_IR_E(BASIC TIMER)      PD7    MOTO_RB_EN(GPIO)        PE7     SONAR_ECHO2
+     44           *    PA8                                  PB8    HOCHARGE_DETECT(GPIO)      PC8                                   PD8                            PE8     SONAR_ECHO3
+     45           *    PA9     PCIE_CRX(USART1_TX)          PB9    DCCHARGE_DETECT(GPIO)      PC9     PCIE_nCCMD(GPIO)              PD9    MOTO_LB_EN(GPIO)        PE9     SONAR_ECHO4
+     46           *    PA10    PCIE_CTX(USART1_RX)          PB10                              PC10    PC10_TX(USART3_TX)            PD10   GROUND_DETECT_R(GPIO)   PE10    SONAR_TRIG1
+     47           *    PA11                                 PB11                              PC11    PC11_RX(USART3_RX)            PD11                           PE11    SONAR_TRIG2
+     48           *    PA12    PCIE_CBUSY(GPIO)             PB12   LED_WS2812(GPIO)           PC12                                  PD12   HOME_IR_R1(TIM4_CH1)    PE12    SONAR_TRIG3
+     49           *    PA13    PROGRAMMER(SWDIO)            PB13   BUMP_DETECT_R(GPIO)        PC13                                  PD13   HOME_IR_R2(TIM4_CH2)    PE13    MOTO_R_PWM(TIM1_CH3)
+     50           *    PA14    PROGRAMMER(SWCLK)            PB14                              PC14                                  PD14   HOME_IR_R3(TIM4_CH3)    PE14    MOTO_L_PWM(TIM1_CH4)
+     51           *    PA15    BEEP_PWM(TIM2_CH1_ETR)       PB15   CURRENT_SET(GPIO)          PC15                                  PD15                           PE15    SONAR_TRIG4
+     52           *
+     53           * Change since PCB REV 1.0
+     54           *    PE5, PE7 ~ PE12, PE15 as SONAR interface
+     55           *    MOTO_L_PWM move to PE14
+     56           *    BOTTOM_IR_R1 move to PC2
+     57           *    PC10, PC11 as UART
+     58           *    Remove FRONT_IR
+     59           *    PB12 as color LED WS2812 control.
+     60           */
+     61           
+     62          #include "common/common.h"
+     63          #include "drv/serial_channel.h"
+     64          #include "drv/time.h"
+     65          #include "drv/beep.h"
+     66          #include "drv/battery.h"
+     67          #include "drv/motor.h"
+     68          #include "drv/bump.h"
+     69          #include "drv/distir.h"
+     70          #include "drv/homeir.h"
+     71          #include "drv/watchdog.h"
+     72          #include "drv/sonar.h"
+     73          #include "drv/led.h"
+     74          #include "drv/drv_ctrlbus.h"
+     75          #include "drv/health_monitor.h"
+     76          #include "bump_monitor.h"
+     77          /*
+     78           * Low battery alarm health monitor callback function
+     79           */
+
+   \                                 In section .text, align 2, keep-with-next
+     80          static _u8 battery_low_cb(void)
+     81          {
+   \                     battery_low_cb: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     82              _u8 percent = get_electricitypercentage();
+   \        0x2   0x.... 0x....      BL       get_electricitypercentage
+     83          
+     84              if (percent < 10) {
+   \        0x6   0x280A             CMP      R0,#+10
+   \        0x8   0xDA01             BGE.N    ??battery_low_cb_0
+     85                  return (SLAMWARECORECB_HEALTH_FLAG_ERROR);
+   \        0xA   0x2002             MOVS     R0,#+2
+   \        0xC   0xBD02             POP      {R1,PC}
+     86              } else if (percent < 30) {
+   \                     ??battery_low_cb_0: (+1)
+   \        0xE   0x281E             CMP      R0,#+30
+   \       0x10   0xDA01             BGE.N    ??battery_low_cb_1
+     87                  return (SLAMWARECORECB_HEALTH_FLAG_WARN);
+   \       0x12   0x2001             MOVS     R0,#+1
+   \       0x14   0xBD02             POP      {R1,PC}
+     88              }
+     89              return (SLAMWARECORECB_HEALTH_FLAG_OK);
+   \                     ??battery_low_cb_1: (+1)
+   \       0x16   0x2000             MOVS     R0,#+0
+   \       0x18   0xBD02             POP      {R1,PC}
+     90          }
+     91          /*
+     92          * Initialize board-level peripheral functions
+     93          */
+     94          static _s32 init_dev(void)
+     95          {
+     96          #ifdef _DEBUG
+     97              usart_begin(GET_USART(DBG_USART_ID), 115200);                       //Initialize debug serial port 2
+     98          #endif
+     99          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    100              drv_led_init();
+    101          #endif
+    102              drv_serialchannel_init(GET_USART(USART_CTRLBUS_ID), 115200);        //Initialize the serial port that communicates with slamcore 1
+    103              net_bind(drv_serialchannel_getchannel());                           //Bind the serial port to the interchip protocol
+    104              init_battery();                                                     //Initialize battery power, charging related
+    105              init_beep();                                                        //Initialize the buzzer for various sound prompts
+    106              init_drv_ctrlbus();                                                 //Initialize ctrlbus relate
+    107              init_distir();                                                      //Initialize ctrlbus relate
+    108              init_homeir();                                                      //Initial IR ranging related, including 3 Homeir
+    109              init_brushmotor();                                                  //
+    110              init_walkingmotor();                                                //Initialize the two-way walking motors, the output speed resolution is -1000 ~ 1000
+    111              init_walkingmotor_odometer();                                       //Initialize the encoders on the two-way walking motors and interrupt the input
+    112              set_walkingmotor_speed(0, 0);                                       //Speed ​​setting Left: 0mm/s Right: 0mm/s
+    113              init_ontheground_detect();                                          //Initialize the detection foot whether it is on the ground, which is used to judge whether the machine is on the ground or overhead
+    114              init_bump_detect();                                                 //Initialize the collision detection foot
+    115              init_bumpermonitor();
+    116          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    117              init_sonar();
+    118          #endif
+    119              health_monitor_init();
+    120          
+    121              /* Register the low battery alarm callback function. */
+    122              health_monitor_register(BASE_POWER_LOW(NONE),
+    123                                      "Low battery.",
+    124                                      battery_low_cb);
+    125              return 1;
+    126          }
+    127          
+
+   \                                 In section .bss, align 4
+    128          _u32 shutdownHeartbeatFrequency = 0;
+   \                     shutdownHeartbeatFrequency:
+   \        0x0                      DS8 4
+    129          /*
+    130           *  Connect with slamcore to maintain decision function
+    131           */
+
+   \                                 In section .text, align 2, keep-with-next
+    132          void shutdown_heartbeat(void)
+    133          {
+   \                     shutdown_heartbeat: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    134              if ((getms() - shutdownHeartbeatFrequency) > 1000)
+   \        0x2   0x.... 0x....      BL       getms
+   \        0x6   0x....             LDR.N    R2,??DataTable4
+   \        0x8   0x6811             LDR      R1,[R2, #+0]
+   \        0xA   0x1A40             SUBS     R0,R0,R1
+   \        0xC   0xF240 0x33E9      MOVW     R3,#+1001
+   \       0x10   0x4298             CMP      R0,R3
+   \       0x12   0xD305             BCC.N    ??shutdown_heartbeat_0
+    135              {
+    136                  set_walkingmotor_speed(0, 0);                           //Disconnect from slamcore and stop walking
+   \       0x14   0xE8BD 0x4004      POP      {R2,LR}
+   \       0x18   0x2100             MOVS     R1,#+0
+   \       0x1A   0x2000             MOVS     R0,#+0
+   \       0x1C   0x.... 0x....      B.W      set_walkingmotor_speed
+    137              }
+    138          }
+   \                     ??shutdown_heartbeat_0: (+1)
+   \       0x20   0xBD01             POP      {R0,PC}
+    139          /*
+    140           *  Close device function
+    141           * Some peripherals can be turned off here, depending on the situation
+    142           */
+    143          static void dev_shutdown(void)
+    144          {
+    145          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    146              drv_led_shutdown();
+    147          #endif
+    148              drv_serialchannel_shutdown(GET_USART(DATAOUT_USART_ID));
+    149              shutdown_bumpermonitor();
+    150          }
+    151          /*
+    152           * Module loop processing function
+    153           */
+    154          static void dev_heartbeat(void)
+    155          {
+    156              heartbeat_battery();
+    157              heartbeat_bumpermonitor();
+    158              heartbeat_beep();
+    159              heartbeat_distir();
+    160              heartbeat_homeir();
+    161          
+    162          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    163              heartbeat_sonar();
+    164          #endif
+    165              shutdown_heartbeat();
+    166              speedctl_heartbeat();
+    167              health_monitor_heartbeat();
+    168          }
+    169          /*
+    170           * Failure mode handling function
+    171           */
+
+   \                                 In section .text, align 2, keep-with-next
+    172          static void on_abort_mode(void)                                 //Fault mode processing, here you can shut down, shut down and interrupt, etc., depending on the specific situation
+    173          {
+   \                     on_abort_mode: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+    174              dev_shutdown();
+   \        0x2   0x.... 0x....      BL       drv_led_shutdown
+   \        0x6   0x....             LDR.N    R0,??DataTable4_1
+   \        0x8   0x.... 0x....      BL       drv_serialchannel_shutdown
+   \        0xC   0x.... 0x....      BL       shutdown_bumpermonitor
+    175              cli();
+   \       0x10   0xB672             CPSID    I
+    176              while (1);
+   \                     ??on_abort_mode_0: (+1)
+   \       0x12   0xE7FE             B.N      ??on_abort_mode_0
+    177          }
+    178          
+    179          extern void on_host_request(infra_channel_desc_t * channel);
+    180          
+    181          /*
+    182           * Main loop function
+    183           */
+    184          static inline _s32 loop(void)
+    185          {
+    186          
+    187              if (net_poll_request(drv_serialchannel_getchannel())) {    //Listen to interchip protocol messages from slamcore
+    188          
+    189                  on_host_request(drv_serialchannel_getchannel());        //Respond to the interchip protocol message from slamcore
+    190              }
+    191              dev_heartbeat();                                           //Process each functional module
+    192              return 1;
+    193          }
+    194          /*
+    195           * Main program function
+    196           */
+
+   \                                 In section .text, align 4, keep-with-next
+    197          int main(void)
+    198          {
+   \                     main: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+    199              board_set_abort_proc(on_abort_mode);                //Set fault handling function
+   \        0x2   0x....             LDR.N    R0,??DataTable4_2
+   \        0x4   0x.... 0x....      BL       board_set_abort_proc
+    200              _delay_ms(100);                                     //Wait for the power supply to stabilize
+   \        0x8   0x2464             MOVS     R4,#+100
+   \        0xA   0xE003             B.N      ??main_0
+   \                     ??main_1: (+1)
+   \        0xC   0xF44F 0x707A      MOV      R0,#+1000
+   \       0x10   0x.... 0x....      BL       _delay_us
+   \                     ??main_0: (+1)
+   \       0x14   0x4620             MOV      R0,R4
+   \       0x16   0x1E44             SUBS     R4,R0,#+1
+   \       0x18   0x2800             CMP      R0,#+0
+   \       0x1A   0xD1F7             BNE.N    ??main_1
+    201          
+    202              init_board();                                       //MCU low-level initialization
+   \       0x1C   0x.... 0x....      BL       init_board
+    203              if (!init_dev()) {                                  //Initialize all peripherals
+   \       0x20   0x.... 0x....      BL       drv_led_init
+   \       0x24   0xF44F 0x31E1      MOV      R1,#+115200
+   \       0x28   0x....             LDR.N    R0,??DataTable4_3
+   \       0x2A   0x.... 0x....      BL       drv_serialchannel_init
+   \       0x2E   0x.... 0x....      BL       drv_serialchannel_getchannel
+   \       0x32   0x.... 0x....      BL       net_bind
+   \       0x36   0x.... 0x....      BL       init_battery
+   \       0x3A   0x.... 0x....      BL       init_beep
+   \       0x3E   0x.... 0x....      BL       init_drv_ctrlbus
+   \       0x42   0x.... 0x....      BL       init_distir
+   \       0x46   0x.... 0x....      BL       homeir_Init
+   \       0x4A   0x.... 0x....      BL       init_brushmotor
+   \       0x4E   0x.... 0x....      BL       init_walkingmotor
+   \       0x52   0x.... 0x....      BL       init_walkingmotor_odometer
+   \       0x56   0x2100             MOVS     R1,#+0
+   \       0x58   0x2000             MOVS     R0,#+0
+   \       0x5A   0x.... 0x....      BL       set_walkingmotor_speed
+   \       0x5E   0x.... 0x....      BL       init_ontheground_detect
+   \       0x62   0x.... 0x....      BL       init_bump_detect
+   \       0x66   0x.... 0x....      BL       init_bumpermonitor
+   \       0x6A   0x.... 0x....      BL       sonar_init
+   \       0x6E   0x.... 0x....      BL       health_monitor_init
+   \       0x72   0x....             LDR.N    R2,??DataTable4_4
+   \       0x74   0x....             ADR.N    R1,?_0
+   \       0x76   0x....             LDR.N    R0,??DataTable4_5
+   \       0x78   0x.... 0x....      BL       health_monitor_register
+    204                  goto _on_fail;
+    205              }
+    206          
+    207              play_poweron();                                     //Sound at boot
+   \       0x7C   0x.... 0x....      BL       play_poweron
+    208              enable_watchdog();
+   \       0x80   0x.... 0x....      BL       enable_watchdog
+    209          
+    210          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    211              DBG_OUT("Slamware base breakout rev %d.0.\r\n", CONFIG_BREAKOUT_REV);
+    212          #endif
+    213          
+    214              while (loop()) {
+   \                     ??main_2: (+1)
+   \       0x84   0x.... 0x....      BL       drv_serialchannel_getchannel
+   \       0x88   0x.... 0x....      BL       net_poll_request
+   \       0x8C   0xB118             CBZ.N    R0,??main_3
+   \       0x8E   0x.... 0x....      BL       drv_serialchannel_getchannel
+   \       0x92   0x.... 0x....      BL       on_host_request
+   \                     ??main_3: (+1)
+   \       0x96   0x.... 0x....      BL       heartbeat_battery
+   \       0x9A   0x.... 0x....      BL       heartbeat_bumpermonitor
+   \       0x9E   0x.... 0x....      BL       heartbeat_beep
+   \       0xA2   0x.... 0x....      BL       heartbeat_distir
+   \       0xA6   0x.... 0x....      BL       homeir_heartbeat
+   \       0xAA   0x.... 0x....      BL       sonar_heartbeat
+   \       0xAE   0x.... 0x....      BL       shutdown_heartbeat
+   \       0xB2   0x.... 0x....      BL       speedctl_heartbeat
+   \       0xB6   0x.... 0x....      BL       health_monitor_heartbeat
+    215                  mark_watchdog();
+   \       0xBA   0x.... 0x....      BL       mark_watchdog
+   \       0xBE   0xE7E1             B.N      ??main_2
+    216              }
+    217          
+    218            _on_fail:
+    219              disable_watchdog();
+    220              board_abort_mode();
+    221              return 0;
+    222          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4:
+   \        0x0   0x....'....        DC32     shutdownHeartbeatFrequency
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_1:
+   \        0x0   0x4000'4400        DC32     0x40004400
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_2:
+   \        0x0   0x....'....        DC32     on_abort_mode
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_3:
+   \        0x0   0x4000'4800        DC32     0x40004800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_4:
+   \        0x0   0x....'....        DC32     battery_low_cb
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable4_5:
+   \        0x0   0x0002'0100        DC32     0x20100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_0:
+   \        0x0   0x4C 0x6F          DC8 "Low battery."
+
+   \              0x77 0x20    
+
+   \              0x62 0x61    
+
+   \              0x74 0x74    
+
+   \              0x65 0x72    
+
+   \              0x79 0x2E    
+
+   \              0x00
+   \        0xD                      DS8 3
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   battery_low_cb
+         8   -> get_electricitypercentage
+       8   main
+         8   -> _delay_us
+         8   -> board_set_abort_proc
+         8   -> drv_led_init
+         8   -> drv_serialchannel_getchannel
+         8   -> drv_serialchannel_init
+         8   -> enable_watchdog
+         8   -> health_monitor_heartbeat
+         8   -> health_monitor_init
+         8   -> health_monitor_register
+         8   -> heartbeat_battery
+         8   -> heartbeat_beep
+         8   -> heartbeat_bumpermonitor
+         8   -> heartbeat_distir
+         8   -> homeir_Init
+         8   -> homeir_heartbeat
+         8   -> init_battery
+         8   -> init_beep
+         8   -> init_board
+         8   -> init_brushmotor
+         8   -> init_bump_detect
+         8   -> init_bumpermonitor
+         8   -> init_distir
+         8   -> init_drv_ctrlbus
+         8   -> init_ontheground_detect
+         8   -> init_walkingmotor
+         8   -> init_walkingmotor_odometer
+         8   -> mark_watchdog
+         8   -> net_bind
+         8   -> net_poll_request
+         8   -> on_host_request
+         8   -> play_poweron
+         8   -> set_walkingmotor_speed
+         8   -> shutdown_heartbeat
+         8   -> sonar_heartbeat
+         8   -> sonar_init
+         8   -> speedctl_heartbeat
+       8   on_abort_mode
+         8   -> drv_led_shutdown
+         8   -> drv_serialchannel_shutdown
+         8   -> shutdown_bumpermonitor
+       8   shutdown_heartbeat
+         8   -> getms
+         0   -> set_walkingmotor_speed
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable4
+       4  ??DataTable4_1
+       4  ??DataTable4_2
+       4  ??DataTable4_3
+       4  ??DataTable4_4
+       4  ??DataTable4_5
+      16  ?_0
+      26  battery_low_cb
+     192  main
+      20  on_abort_mode
+       4  shutdownHeartbeatFrequency
+      34  shutdown_heartbeat
+
+ 
+   4 bytes in section .bss
+ 312 bytes in section .text
+ 
+ 312 bytes of CODE memory
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: none

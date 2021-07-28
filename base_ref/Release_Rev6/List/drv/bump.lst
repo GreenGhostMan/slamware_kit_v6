@@ -1,0 +1,204 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:27
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\bump.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\bump.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\bump.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\bump.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\bump.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\bump.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\bump.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "bump.h"
+     32          
+     33          /*
+     34           * 碰撞检测脚初始化函数
+     35           */
+
+   \                                 In section .text, align 2, keep-with-next
+     36          void init_bump_detect(void)
+     37          {
+   \                     init_bump_detect: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     38              GPIO_InitTypeDef GPIO_InitStructure;
+     39              RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+   \        0x2   0x2101             MOVS     R1,#+1
+   \        0x4   0x2008             MOVS     R0,#+8
+   \        0x6   0x.... 0x....      BL       RCC_APB2PeriphClockCmd
+     40              GPIO_InitStructure.GPIO_Pin = BUMP_PIN_L | BUMP_PIN_R;
+   \        0xA   0xF242 0x0120      MOVW     R1,#+8224
+   \        0xE   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+     41              GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+   \       0x12   0x2201             MOVS     R2,#+1
+     42              GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;
+   \       0x14   0x2148             MOVS     R1,#+72
+   \       0x16   0xF88D 0x1003      STRB     R1,[SP, #+3]
+   \       0x1A   0xF88D 0x2002      STRB     R2,[SP, #+2]
+     43          
+     44              GPIO_Init(BUMP_GPIO, &GPIO_InitStructure);
+   \       0x1E   0x4669             MOV      R1,SP
+   \       0x20   0x....             LDR.N    R0,??DataTable1
+   \       0x22   0x.... 0x....      BL       GPIO_Init
+     45          }
+   \       0x26   0xBD01             POP      {R0,PC}
+     46          /*
+     47           * 获取碰撞状态信息函数
+     48           */
+
+   \                                 In section .text, align 2, keep-with-next
+     49          _u8 get_bump_bitmap(void)
+     50          {
+     51              _u8 isBumpedflag = 0;
+     52              if ((!PIN_READ(BUMP_GPIO, BUMP_PIN_L))) {
+   \                     get_bump_bitmap: (+1)
+   \        0x0   0x....             LDR.N    R1,??DataTable1_1
+   \        0x2   0x6808             LDR      R0,[R1, #+0]
+     53                  isBumpedflag &= ~(1 << 0);
+     54              } else {
+     55                  isBumpedflag |= (1 << 0);
+     56              }
+     57          
+     58              if ((!PIN_READ(BUMP_GPIO, BUMP_PIN_R))) {
+   \        0x4   0x6809             LDR      R1,[R1, #+0]
+   \        0x6   0x0940             LSRS     R0,R0,#+5
+   \        0x8   0xF000 0x0001      AND      R0,R0,#0x1
+   \        0xC   0x048A             LSLS     R2,R1,#+18
+   \        0xE   0xBF48             IT       MI
+   \       0x10   0xF040 0x0002      ORRMI    R0,R0,#0x2
+     59                  isBumpedflag &= ~(1 << 1);
+     60              } else {
+     61                  isBumpedflag |= (1 << 1);
+     62              }
+     63          
+     64              return isBumpedflag;
+   \       0x14   0x4770             BX       LR
+     65          
+     66          }
+     67          /*
+     68           * 碰撞发生判定函数
+     69           */
+
+   \                                 In section .text, align 2, keep-with-next
+     70          _u8 is_bumped(void)
+     71          {
+   \                     is_bumped: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+     72              return ((get_bump_bitmap() & 0x3) != 0x3);
+   \        0x2   0x.... 0x....      BL       get_bump_bitmap
+   \        0x6   0xF000 0x0003      AND      R0,R0,#0x3
+   \        0xA   0x2803             CMP      R0,#+3
+   \        0xC   0xD001             BEQ.N    ??is_bumped_0
+   \        0xE   0x2001             MOVS     R0,#+1
+   \       0x10   0xBD02             POP      {R1,PC}
+   \                     ??is_bumped_0: (+1)
+   \       0x12   0x2000             MOVS     R0,#+0
+   \       0x14   0xBD02             POP      {R1,PC}
+     73          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x4001'0C00        DC32     0x40010c00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x4001'0C08        DC32     0x40010c08
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   get_bump_bitmap
+       8   init_bump_detect
+         8   -> GPIO_Init
+         8   -> RCC_APB2PeriphClockCmd
+       8   is_bumped
+         8   -> get_bump_bitmap
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+      22  get_bump_bitmap
+      40  init_bump_detect
+      22  is_bumped
+
+ 
+ 92 bytes in section .text
+ 
+ 92 bytes of CODE memory
+
+Errors: none
+Warnings: none

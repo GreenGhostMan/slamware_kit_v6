@@ -1,0 +1,1100 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:38
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\request_handler.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source\request_handler.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\request_handler.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\request_handler.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\Source\request_handler.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\Source\request_handler.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_file_descriptor     =  0
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\request_handler.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+     32          #include "net/interchip.h"
+     33          #include "drv/ctrl_bus_cmd.h"
+     34          
+     35          #include "drv/battery.h"
+     36          #include "drv/motor.h"
+     37          #include "drv/distir.h"
+     38          #include "drv/homeir.h"
+     39          #include "drv/bump.h"
+     40          #include "drv/sonar.h"
+     41          #include "drv/drv_ctrlbus.h"
+     42          #include "drv/beep.h"
+     43          #include "drv/health_monitor.h"
+     44          #include "bump_monitor.h"
+     45          #include <math.h>
+     46          
+     47          #ifndef M_PIf
+     48          #define M_PIf  3.14159265358979f
+     49          #endif
+     50          
+     51          extern _u32 shutdownHeartbeatFrequency;
+     52          extern unsigned char slamware_config[];
+     53          extern size_t slamware_config_size;
+     54          
+     55          static void update_shutdown_ticks(void)
+     56          {
+     57              shutdownHeartbeatFrequency = getms();
+     58          }
+     59          
+
+   \                                 In section .text, align 2, keep-with-next
+     60          static inline _u8 envSensorData2CtrlBusData(_u8 v) {
+   \                     envSensorData2CtrlBusData: (+1)
+   \        0x0   0x4601             MOV      R1,R0
+     61              // the internal order is main - left - right
+     62              // while the control bus required order is left - main - right
+     63              // so this function is responsible to swap left and main bit
+     64              return (v & 0xfcu)     // erase lower 2 bits
+     65                  |  ((v & 1) << 1)  // rise main bit
+     66                  |  ((v & 2) >> 1); // drop left bit
+   \        0x2   0x004A             LSLS     R2,R1,#+1
+   \        0x4   0xF001 0x00FC      AND      R0,R1,#0xFC
+   \        0x8   0xF002 0x0202      AND      R2,R2,#0x2
+   \        0xC   0x4310             ORRS     R0,R2,R0
+   \        0xE   0xF3C1 0x0140      UBFX     R1,R1,#+1,#+1
+   \       0x12   0x4308             ORRS     R0,R1,R0
+   \       0x14   0x4770             BX       LR
+     67          }
+     68          
+     69          #ifdef FEATURE_SET_V
+     70          
+     71          static const float robot_radius_mm = 118.f;
+     72          
+
+   \                                 In section .data, align 4
+     73          static bool is_first_motor_data = true;
+   \                     is_first_motor_data:
+   \        0x0   0x01               DC8 1
+   \        0x1   0x00 0x00          DC8 0, 0, 0
+
+   \              0x00
+   \        0x4   0x0000'0000        DC32 0
+   \        0x8   0x0000'0000        DC32 0
+     74          static int last_motor_l_speed = 0;
+     75          static int last_motor_r_speed = 0;
+     76          
+     77          static void calculateMotorStatus(base_deadreckon_response_t* ans_pkt)
+     78          {
+     79              memset(ans_pkt, 0, sizeof(*ans_pkt));
+     80              
+     81              float d_dist_l_mm_f = walkingmotor_delta_ldist_mm_f();
+     82              float d_dist_r_mm_f = walkingmotor_delta_rdist_mm_f();
+     83              
+     84              if(is_first_motor_data)
+     85              {
+     86              is_first_motor_data = false;
+     87              ans_pkt->base_dx_mm_q16 = 0;
+     88              ans_pkt->base_dy_mm_q16 = 0;
+     89              ans_pkt->base_dtheta_degree_q16 = 0;        
+     90              }
+     91              else
+     92              {
+     93                  if(last_motor_l_speed < 0)
+     94                  {
+     95                      d_dist_l_mm_f = -d_dist_l_mm_f;
+     96                  }
+     97                  if(last_motor_r_speed < 0)
+     98                  {
+     99                      d_dist_r_mm_f = -d_dist_r_mm_f;
+    100                  }
+    101                  float d_yaw = (d_dist_r_mm_f - d_dist_l_mm_f) / 2.0f / robot_radius_mm;
+    102                  float displacement = (d_dist_l_mm_f + d_dist_r_mm_f) / 2.0f;
+    103                  
+    104                  float dx = cos(d_yaw)*displacement;
+    105                  float dy = sin(d_yaw)*displacement;
+    106                  
+    107                  ans_pkt->base_dx_mm_q16 = (_s32)(dx * (1<<16));
+    108                  ans_pkt->base_dy_mm_q16 = (_s32)(dy * (1<<16));
+    109                  ans_pkt->base_dtheta_degree_q16 = (_s32)(d_yaw / M_PIf * 180 * (1<<16));       
+    110              }   
+    111          }
+    112          #endif
+    113          
+    114          /*
+    115           * ctrl bus用户报文处理函数
+    116           */
+    117          static void on_request_slamcore_cb(infra_channel_desc_t * channel)
+    118          {
+    119              slamcore_cb_cmd_t *request = (slamcore_cb_cmd_t *) _request_data;
+    120          
+    121              switch (request->cmd) {
+    122              case SLAMWARECORECB_CMD_CONNECT_BASE:
+    123                  {
+    124                      base_connect_request_t *req_pkt = (base_connect_request_t *) request->payload;
+    125                      if (req_pkt->protocol_version != SLAMWARECORE_PROTOCOL_VERSION) {
+    126                          goto on_error;
+    127                      } else {
+    128                          base_connect_response_t ans_pkt;
+    129                          memcpy(&ans_pkt.model, &baseInfo.model, sizeof(ans_pkt.model));
+    130                          ans_pkt.firmware_version = baseInfo.firmwareVersion;
+    131                          ans_pkt.hardware_version = baseInfo.hardwareVersion;
+    132                          //memcpy(&ans_pkt.serial_number, &baseInfo.serialNumber, sizeof(ans_pkt.serial_number));
+    133                          ans_pkt.serial_number[0] = baseInfo.serialNumber[0];
+    134                          ans_pkt.serial_number[1] = baseInfo.serialNumber[1];
+    135                          ans_pkt.serial_number[2] = baseInfo.serialNumber[2];
+    136          
+    137                          net_send_ans(channel, &ans_pkt, sizeof(base_connect_response_t));
+    138                          beep_beeper(6000, 300, 2);
+    139                      }
+    140                  }
+    141                  break;
+    142              case SLAMWARECORECB_CMD_GET_BASE_CONF:
+    143                  {
+    144                      base_conf_response_t ans_pkt;                                               //  ^ z
+    145                      ans_pkt.base_type = CIRCLE;                                                 //  |          . y
+    146                      ans_pkt.base_radius_q8 = (_u32) (FP_Q8(180));                               //  |        .
+    147                      ans_pkt.base_motor_type = TWO_WHEEL;                                        //  |      .
+    148                      ans_pkt.base_sensor_num = 4;                                                //  |    .
+    149                      memset(ans_pkt.base_sensors, 0, sizeof(base_pos_t) * 8);                    //  |   .
+    150                      ans_pkt.base_bumper_num = 2;                                                //  | .
+    151                      memset(ans_pkt.base_bumpers, 0, sizeof(base_pos_t) * 8);                    //  |- - - - - - - > x   右手笛卡尔坐标系
+    152          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    153                      // base_sensors
+    154                      ans_pkt.base_sensors[0].y_to_center_mm_q8 = (_s32)(FP_Q8(0.0));
+    155                      ans_pkt.base_sensors[0].x_to_center_mm_q8 = (_s32)(FP_Q8(170.0));
+    156                      ans_pkt.base_sensors[0].z_to_center_mm_q8 = (_s32)(FP_Q8(60.0));
+    157                      ans_pkt.base_sensors[0].anti_clockwise_angle_to_center_degree_q8 = (_s32)(FP_Q8(0.0));
+    158                    
+    159                      ans_pkt.base_sensors[1].y_to_center_mm_q8 = (_s32)(FP_Q8(-120.0));
+    160                      ans_pkt.base_sensors[1].x_to_center_mm_q8 = (_s32)(FP_Q8(120.0));
+    161                      ans_pkt.base_sensors[1].z_to_center_mm_q8 = (_s32)(FP_Q8(60.0));
+    162                      ans_pkt.base_sensors[1].anti_clockwise_angle_to_center_degree_q8 = (_s32)(FP_Q8(315.0));
+    163                    
+    164                      ans_pkt.base_sensors[2].y_to_center_mm_q8 = (_s32)(FP_Q8(120.0));
+    165                      ans_pkt.base_sensors[2].x_to_center_mm_q8 = (_s32)(FP_Q8(120.0));
+    166                      ans_pkt.base_sensors[2].z_to_center_mm_q8 = (_s32)(FP_Q8(60.0));
+    167                      ans_pkt.base_sensors[2].anti_clockwise_angle_to_center_degree_q8 = (_s32)(FP_Q8(45.0));   
+    168                    
+    169                      ans_pkt.base_sensors[3].y_to_center_mm_q8 = (_s32)(FP_Q8(147.0));
+    170                      ans_pkt.base_sensors[3].x_to_center_mm_q8 = (_s32)(FP_Q8(85.0));
+    171                      ans_pkt.base_sensors[3].z_to_center_mm_q8 = (_s32)(FP_Q8(60.0));
+    172                      ans_pkt.base_sensors[3].anti_clockwise_angle_to_center_degree_q8 = (_s32)(FP_Q8(75.0));
+    173          #endif
+    174                      // base_bumpers
+    175                      ans_pkt.base_bumpers[0].x_to_center_mm_q8 = (_s32) (FP_Q8(120.0));
+    176                      ans_pkt.base_bumpers[0].y_to_center_mm_q8 = (_s32) (FP_Q8(120.0));
+    177                      ans_pkt.base_bumpers[0].z_to_center_mm_q8 = (_s32) (FP_Q8(50.0));
+    178                      ans_pkt.base_bumpers[0].anti_clockwise_angle_to_center_degree_q8 = (_s32) (FP_Q8(45.0));
+    179                      ans_pkt.base_bumpers[1].x_to_center_mm_q8 = (_s32) (FP_Q8(120.0));
+    180                      ans_pkt.base_bumpers[1].y_to_center_mm_q8 = (_s32) (FP_Q8(-120.0));
+    181                      ans_pkt.base_bumpers[1].z_to_center_mm_q8 = (_s32) (FP_Q8(50.0));
+    182                      ans_pkt.base_bumpers[1].anti_clockwise_angle_to_center_degree_q8 = (_s32) (FP_Q8(315.0));
+    183          
+    184                      net_send_ans(channel, &ans_pkt, sizeof(base_conf_response_t));
+    185                  }
+    186                  break;
+    187                  
+    188              case SLAMWARECORECB_CMD_GET_BINARY_CONF:
+    189                  {
+    190                      net_send_ans(channel, slamware_config, slamware_config_size);
+    191                  }
+    192                  break;
+    193                  
+    194              case SLAMWARECORECB_CMD_GET_BASE_STATUS:
+    195                  {
+    196                      base_status_response_t ans_pkt;
+    197                      ans_pkt.power_status = PowerStatusNone;
+    198                      ans_pkt.power_status |= (charge_detect_getstatus() == ISCHARGE_CHRG) ? PowerStatusCharging : PowerStatusNone;
+    199                      ans_pkt.power_status |= get_home_charge_status() ? PowerStatusOnChargingDock : PowerStatusNone;
+    200                      ans_pkt.power_status |= get_dc_charge_status() ? PowerStatusDcConnected : PowerStatusNone;
+    201                      ans_pkt.battery_percentage = get_electricitypercentage();
+    202                      net_send_ans(channel, &ans_pkt, sizeof(base_status_response_t));
+    203                  }
+    204                  break;
+    205              case SLAMWARECORECB_CMD_GET_BASE_MOTOR_DATA:
+    206                  {
+    207                      base_motor_status_response_t ans_pkt;
+    208                      memset(&ans_pkt, 0, sizeof(ans_pkt));
+    209                      ans_pkt.left_motor_cumulate_dist_mm = (_s32) (walkingmotor_cumulate_ldist_mm());
+    210                      ans_pkt.right_motor_cumulate_dist_mm = (_s32) (walkingmotor_cumulate_rdist_mm());
+    211                      ans_pkt.status_bitmap |= is_ontheground()?0:BASE_MOTOR_TRACTION_LOST;
+    212                      net_send_ans(channel, &ans_pkt, sizeof(base_motor_status_response_t));
+    213                  }
+    214                  break;
+    215              case SLAMWARECORECB_CMD_GET_BASE_SENSOR_DATA:
+    216                  {
+    217                      base_sensor_data_response_t ans_pkt;
+    218                      memset(&ans_pkt, 0, sizeof(ans_pkt));
+    219          #if defined(CONFIG_BREAKOUT_REV) && (CONFIG_BREAKOUT_REV >= 3)
+    220                      /* Sonar sensor. */
+    221                      for (size_t ch = 0; ch < CONFIG_SONAR_CHANNEL_NUM; ch++) {
+    222                          ans_pkt.sensor_data_mm_q16[ch] = FP_Q16(sonar_get(ch));
+    223                      }
+    224          #if USE_FRONT_IR_SENSORS
+    225                      ans_pkt.sensor_data_mm_q16[8] = (_u32)((float)FP_Q16(homeir_getmaindata()));
+    226                      ans_pkt.sensor_data_mm_q16[9] = (_u32)((float)FP_Q16(homeir_getleftdata()));
+    227                      ans_pkt.sensor_data_mm_q16[10] = (_u32)((float)FP_Q16(homeir_getrightdata()));
+    228          #endif
+    229          #endif
+    230                      net_send_ans(channel, &ans_pkt, sizeof(base_sensor_data_response_t));
+    231                  }
+    232                  break;
+    233              case SLAMWARECORECB_CMD_GET_BASE_BUMPER_DATA:
+    234                  {
+    235                      base_bumper_data_response_t ans_pkt;
+    236                      ans_pkt.bumper_data = get_bump_bitmap();
+    237                      ans_pkt.bumper_data |= (get_distir_value()->bottomSensorBitmap << 2);
+    238                      net_send_ans(channel, &ans_pkt, sizeof(base_bumper_data_response_t));
+    239                  }
+    240                  break;
+    241              case SLAMWARECORECB_CMD_GET_AUTO_HOME_DATA:
+    242                  {
+    243                      base_auto_home_data_request_t* req = (base_auto_home_data_request_t*)request->payload;
+    244                      if (req->data_type == SLAMWARECORECB_AUTO_HOME_GET_BEACON) {
+    245                          base_auto_home_beacon_data_response_t ans_pkt;
+    246                          
+    247                          ans_pkt.beacon_count = 3;
+    248                          ans_pkt.probe_count = 3;
+    249                          ans_pkt.probe_data[0] = envSensorData2CtrlBusData(homeir_getleftdata());
+    250                          ans_pkt.probe_data[1] = envSensorData2CtrlBusData(homeir_getmaindata());
+    251                          ans_pkt.probe_data[2] = envSensorData2CtrlBusData(homeir_getrightdata());
+    252          
+    253                          net_send_ans(channel, &ans_pkt, 2 + ans_pkt.probe_count);
+    254                      } else {
+    255                          net_send_errorcode(channel, PKT_ERRORCODE_NOT_SUPPORT);
+    256                      }
+    257                  }
+    258                  break;
+    259              case SLAMWARECORECB_CMD_SET_BASE_MOTOR:
+    260                  {
+    261                      base_set_motor_request_t *ans_pkt = (base_set_motor_request_t *) request->payload;
+    262                      if (!bumpermonitor_filter_motorcmd(ans_pkt->motor_speed_mm[0], ans_pkt->motor_speed_mm[1])) {
+    263                          set_walkingmotor_speed(ans_pkt->motor_speed_mm[0], ans_pkt->motor_speed_mm[1]);
+    264          #ifdef FEATURE_SET_V
+    265                          if(ans_pkt->motor_speed_mm[0] != 0)
+    266                          {
+    267                              last_motor_l_speed = ans_pkt->motor_speed_mm[0];
+    268                          }
+    269                          if(ans_pkt->motor_speed_mm[1] != 0)
+    270                          {
+    271                              last_motor_r_speed = ans_pkt->motor_speed_mm[1];
+    272                          }
+    273          #endif
+    274                      }
+    275                      net_send_ans(channel, NULL, 0);
+    276                  }
+    277                  break;
+    278          #ifdef FEATURE_SET_V
+    279              case SLAMWARECORECB_CMD_SET_V_AND_GET_DEADRECKON:
+    280                  {
+    281                      base_deadreckon_response_t ans_pkt;
+    282                      calculateMotorStatus(&ans_pkt);
+    283                    
+    284                      base_set_velocity_request_t *req = (base_set_velocity_request_t*)request->payload;
+    285                      float speed_l_mm = (float)req->velocity_x_q16 * 1000.0 / (1 << 16);
+    286                      float speed_r_mm = speed_l_mm;
+    287                      float line_speed_mm = (float)req->angular_velocity_q16 / (1 << 16) * robot_radius_mm;
+    288                      speed_l_mm -= line_speed_mm;
+    289                      speed_r_mm += line_speed_mm;
+    290                    
+    291                      set_walkingmotor_speed((int32_t)bumpermonitor_clamp_motorcmd(speed_l_mm)
+    292                                          , (int32_t)bumpermonitor_clamp_motorcmd(speed_r_mm));
+    293                      if(speed_l_mm != 0)
+    294                      {
+    295                          last_motor_l_speed = (int)speed_l_mm;
+    296                      }
+    297                      if(speed_r_mm != 0)
+    298                      {
+    299                          last_motor_r_speed = (int)speed_r_mm;
+    300                      }
+    301                      ans_pkt.status_bitmap |= (is_ontheground()?0:BASE_MOTOR_TRACTION_LOST);
+    302                      net_send_ans(channel, &ans_pkt, sizeof(base_deadreckon_response_t));
+    303                  }
+    304                  break;
+    305          #endif
+    306              case SLAMWARECORECB_CMD_POLL_BASE_CMD:
+    307                  {
+    308                      if (is_drv_ctrlbus_ncmd()) {
+    309                          base_cmd_t cmd;
+    310                          cmd.base_cmd = get_drv_ctrlbus_ncmd();
+    311                          net_send_ans(channel, &cmd, sizeof(cmd));
+    312                      } else {
+    313                          net_send_ans(channel, NULL, 0);
+    314                      }
+    315                  }
+    316                  break;
+    317              case SLAMWARECORECB_CMD_POLL_BASE_ANS_CMD:
+    318                  {
+    319                      net_send_ans(channel, NULL, 0);
+    320                      clear_drv_ctrlbus_ncmd();
+    321                  }
+    322                  break;
+    323              case SLAMWARECORECB_CMD_SEND_EVENT:
+    324                  {
+    325                      slamcore_event_t *event = (slamcore_event_t *) request->payload;
+    326                      switch (event->slamcore_event) {
+    327                      case SLAMWARECORECB_EVENT_SYSTEM_UP_OK:
+    328                          {
+    329                          }
+    330                          break;
+    331                      case SLAMWARECORECB_EVENT_FIRMWARE_UPDATE:
+    332                          {
+    333                          }
+    334                          break;
+    335                      case SLAMWARECORECB_EVENT_CORE_DISCONNECT:
+    336                          {
+    337                          }
+    338                        	break;
+    339                      case SLAMWARECORECB_EVENT_START_SWEEP:
+    340          			 	{
+    341                              // Do sweep action, like starting brush and blower.
+    342          				}
+    343                          break;
+    344                      case SLAMWARECORECB_EVENT_END_SWEEP: 
+    345          				{
+    346                              // Stop sweep action.
+    347                        	}
+    348          				break;
+    349                      }
+    350                      net_send_ans(channel, NULL, 0);
+    351                  }
+    352                  break;
+    353              case SLAMWARECORECB_CMD_HEALTH_MGMT:
+    354                  {
+    355                      health_mgmt_cmd_t *health_request = (health_mgmt_cmd_t *)request->payload;
+    356                      
+    357                      switch(health_request->cmd) {
+    358                      case SLAMWARECORECB_CMD_HEALTH_GET_HEALTH:
+    359                          {
+    360                              get_health_response_t ans_pkt;
+    361          
+    362                              health_monitor_get_status(&ans_pkt.health_flag, &ans_pkt.error_count);
+    363                              net_send_ans(channel, &ans_pkt, sizeof(get_health_response_t));
+    364                          }
+    365                          break;
+    366                      case SLAMWARECORECB_CMD_HEALTH_GET_ERROR:
+    367                          {
+    368                              health_error_request_t *req_pkt = (health_error_request_t *)health_request->payload;
+    369                              health_error_response_t ans_pkt;
+    370          
+    371                              if (health_monitor_get_desc(req_pkt->error_id) != NULL) {
+    372                                  ans_pkt.error_code = health_monitor_get_error(req_pkt->error_id);
+    373                                  strcpy((char *)ans_pkt.error_msg, health_monitor_get_desc(req_pkt->error_id));
+    374                                  net_send_ans(channel, &ans_pkt, sizeof(health_error_response_t));
+    375                              } else {
+    376                                  net_send_errorcode(channel, PKT_ERRORCODE_OPERATION_FAIL);
+    377                              }
+    378                          }
+    379                          break;
+    380                      case SLAMWARECORECB_CMD_HEALTH_CLR_ERROR:
+    381                          {
+    382                              health_clear_error_request_t *req_pkt = (health_clear_error_request_t *)health_request->payload;
+    383          
+    384                              if (health_monitor_clear(req_pkt->error_code)) {
+    385                                  net_send_ans(channel, NULL, 0);
+    386                              } else {
+    387                                  net_send_errorcode(channel, PKT_ERRORCODE_OPERATION_FAIL);
+    388                              }
+    389                          }
+    390                          break;
+    391                      default:
+    392                          {
+    393                              net_send_errorcode(channel, PKT_ERRORCODE_OPERATION_FAIL);
+    394                          }
+    395                      }
+    396                  }
+    397                  break;
+    398              default:
+    399                  goto on_error;
+    400              }
+    401              return;
+    402            on_error:
+    403              net_send_errorcode(channel, PKT_ERRORCODE_NOT_SUPPORT);
+    404          }
+    405          /*
+    406           * 响应interchip协议处理函数
+    407           * 主要是处理ctrl bus用户报文
+    408           */
+
+   \                                 In section .text, align 2, keep-with-next
+    409          void on_host_request(infra_channel_desc_t * channel)
+    410          {
+   \                     on_host_request: (+1)
+   \        0x0   0xE92D 0x4FF8      PUSH     {R3-R11,LR}
+   \        0x4   0x.... 0x....      LDR.W    R6,??DataTable1
+   \        0x8   0xB0C2             SUB      SP,SP,#+264
+   \        0xA   0x6874             LDR      R4,[R6, #+4]
+   \        0xC   0x68B5             LDR      R5,[R6, #+8]
+   \        0xE   0x4680             MOV      R8,R0
+    411              switch (net_get_request_cmd(channel)) {
+   \       0x10   0x.... 0x....      BL       net_get_request_cmd
+   \       0x14   0x28F8             CMP      R0,#+248
+   \       0x16   0xD12D             BNE.N    ??on_host_request_0
+    412              case CMD_CODE_SLAMWARECORE_CTRL_BUS:
+    413                  update_shutdown_ticks();
+   \       0x18   0x.... 0x....      BL       getms
+   \       0x1C   0x.... 0x....      LDR.W    R1,??DataTable1_1
+   \       0x20   0x6008             STR      R0,[R1, #+0]
+    414                  on_request_slamcore_cb(channel);
+   \       0x22   0x4640             MOV      R0,R8
+   \       0x24   0x.... 0x....      BL       net_get_request_data
+   \       0x28   0x1C47             ADDS     R7,R0,#+1
+   \       0x2A   0x7800             LDRB     R0,[R0, #+0]
+   \       0x2C   0x2810             CMP      R0,#+16
+   \       0x2E   0xF000 0x821E      BEQ.W    ??on_host_request_1
+   \       0x32   0x2820             CMP      R0,#+32
+   \       0x34   0xF000 0x81BE      BEQ.W    ??on_host_request_2
+   \       0x38   0x2821             CMP      R0,#+33
+   \       0x3A   0xF000 0x81B3      BEQ.W    ??on_host_request_3
+   \       0x3E   0x2830             CMP      R0,#+48
+   \       0x40   0xF000 0x8189      BEQ.W    ??on_host_request_4
+   \       0x44   0x2831             CMP      R0,#+49
+   \       0x46   0xF000 0x816F      BEQ.W    ??on_host_request_5
+   \       0x4A   0x2832             CMP      R0,#+50
+   \       0x4C   0xF000 0x8144      BEQ.W    ??on_host_request_6
+   \       0x50   0x2833             CMP      R0,#+51
+   \       0x52   0xF000 0x8135      BEQ.W    ??on_host_request_7
+   \       0x56   0x2834             CMP      R0,#+52
+   \       0x58   0xF000 0x8112      BEQ.W    ??on_host_request_8
+   \       0x5C   0x2840             CMP      R0,#+64
+   \       0x5E   0xF000 0x80FD      BEQ.W    ??on_host_request_9
+   \       0x62   0x2841             CMP      R0,#+65
+   \       0x64   0xD041             BEQ.N    ??on_host_request_10
+   \       0x66   0x2850             CMP      R0,#+80
+   \       0x68   0xD037             BEQ.N    ??on_host_request_11
+   \       0x6A   0x285F             CMP      R0,#+95
+   \       0x6C   0xD02D             BEQ.N    ??on_host_request_12
+   \       0x6E   0x2860             CMP      R0,#+96
+   \       0x70   0xD011             BEQ.N    ??on_host_request_13
+   \       0x72   0x2890             CMP      R0,#+144
+   \                     ??on_host_request_0: (+1)
+   \       0x74   0xF040 0x821D      BNE.W    ??on_host_request_14
+   \       0x78   0x7839             LDRB     R1,[R7, #+0]
+   \       0x7A   0x2901             CMP      R1,#+1
+   \       0x7C   0xF248 0x0902      MOVW     R9,#+32770
+   \       0x80   0xD01B             BEQ.N    ??on_host_request_15
+   \       0x82   0xD320             BCC.N    ??on_host_request_16
+   \       0x84   0x2903             CMP      R1,#+3
+   \       0x86   0xD001             BEQ.N    ??on_host_request_17
+   \       0x88   0xD306             BCC.N    ??on_host_request_18
+   \       0x8A   0xE01C             B.N      ??on_host_request_16
+   \                     ??on_host_request_17: (+1)
+   \       0x8C   0xF8D7 0x0001      LDR      R0,[R7, #+1]
+   \       0x90   0x.... 0x....      BL       health_monitor_clear
+   \       0x94   0xB1B8             CBZ.N    R0,??on_host_request_16
+   \                     ??on_host_request_13: (+1)
+   \       0x96   0xE0F0             B.N      ??on_host_request_19
+   \                     ??on_host_request_18: (+1)
+   \       0x98   0x7878             LDRB     R0,[R7, #+1]
+   \       0x9A   0x.... 0x....      BL       health_monitor_get_desc
+   \       0x9E   0xB190             CBZ.N    R0,??on_host_request_16
+   \       0xA0   0x7878             LDRB     R0,[R7, #+1]
+   \       0xA2   0x.... 0x....      BL       health_monitor_get_error
+   \       0xA6   0x9000             STR      R0,[SP, #+0]
+   \       0xA8   0x7878             LDRB     R0,[R7, #+1]
+   \       0xAA   0x.... 0x....      BL       health_monitor_get_desc
+   \       0xAE   0x4601             MOV      R1,R0
+   \       0xB0   0xA801             ADD      R0,SP,#+4
+   \       0xB2   0x.... 0x....      BL       strcpy
+   \       0xB6   0x2224             MOVS     R2,#+36
+   \       0xB8   0xE1D4             B.N      ??on_host_request_20
+   \                     ??on_host_request_15: (+1)
+   \       0xBA   0xF10D 0x0101      ADD      R1,SP,#+1
+   \       0xBE   0x4668             MOV      R0,SP
+   \       0xC0   0x.... 0x....      BL       health_monitor_get_status
+   \       0xC4   0xE16C             B.N      ??on_host_request_21
+   \                     ??on_host_request_16: (+1)
+   \       0xC6   0x4649             MOV      R1,R9
+   \       0xC8   0xE1F5             B.N      ??on_host_request_22
+   \                     ??on_host_request_12: (+1)
+   \       0xCA   0x2200             MOVS     R2,#+0
+   \       0xCC   0x2100             MOVS     R1,#+0
+   \       0xCE   0x4640             MOV      R0,R8
+   \       0xD0   0x.... 0x....      BL       net_send_ans
+   \       0xD4   0x.... 0x....      BL       clear_drv_ctrlbus_ncmd
+   \       0xD8   0xE1F0             B.N      ??on_host_request_23
+   \                     ??on_host_request_11: (+1)
+   \       0xDA   0x.... 0x....      BL       is_drv_ctrlbus_ncmd
+   \       0xDE   0xB908             CBNZ     R0,.+6
+   \       0xE0   0xF000 0xB8CB      B.W      ??on_host_request_19
+   \       0xE4   0x.... 0x....      BL       get_drv_ctrlbus_ncmd
+   \       0xE8   0xE158             B.N      ??on_host_request_24
+   \                     ??on_host_request_10: (+1)
+   \       0xEA   0x210D             MOVS     R1,#+13
+   \       0xEC   0xA801             ADD      R0,SP,#+4
+   \       0xEE   0x.... 0x....      BL       __aeabi_memclr4
+   \       0xF2   0x.... 0x....      BL       walkingmotor_delta_ldist_mm_f
+   \       0xF6   0x4681             MOV      R9,R0
+   \       0xF8   0x.... 0x....      BL       walkingmotor_delta_rdist_mm_f
+   \       0xFC   0x4682             MOV      R10,R0
+   \       0xFE   0x7830             LDRB     R0,[R6, #+0]
+   \      0x100   0xB128             CBZ.N    R0,??on_host_request_25
+   \      0x102   0x2100             MOVS     R1,#+0
+   \      0x104   0x7031             STRB     R1,[R6, #+0]
+   \      0x106   0x9101             STR      R1,[SP, #+4]
+   \      0x108   0x9102             STR      R1,[SP, #+8]
+   \      0x10A   0x9103             STR      R1,[SP, #+12]
+   \      0x10C   0xE052             B.N      ??on_host_request_26
+   \                     ??on_host_request_25: (+1)
+   \      0x10E   0x2C00             CMP      R4,#+0
+   \      0x110   0xBF48             IT       MI
+   \      0x112   0xF089 0x4900      EORMI    R9,R9,#0x80000000
+   \      0x116   0x2D00             CMP      R5,#+0
+   \      0x118   0xBF48             IT       MI
+   \      0x11A   0xF08A 0x4A00      EORMI    R10,R10,#0x80000000
+   \      0x11E   0x4650             MOV      R0,R10
+   \      0x120   0x4649             MOV      R1,R9
+   \      0x122   0x.... 0x....      BL       __aeabi_fsub
+   \      0x126   0x.... 0x....      LDR.W    R1,??DataTable1_2
+   \      0x12A   0x.... 0x....      BL       __aeabi_fdiv
+   \      0x12E   0x9000             STR      R0,[SP, #+0]
+   \      0x130   0x4651             MOV      R1,R10
+   \      0x132   0x4648             MOV      R0,R9
+   \      0x134   0x.... 0x....      BL       __aeabi_fadd
+   \      0x138   0xF04F 0x517C      MOV      R1,#+1056964608
+   \      0x13C   0x.... 0x....      BL       __aeabi_fmul
+   \      0x140   0x4681             MOV      R9,R0
+   \      0x142   0x9800             LDR      R0,[SP, #+0]
+   \      0x144   0x.... 0x....      BL       __aeabi_f2d
+   \      0x148   0x4682             MOV      R10,R0
+   \      0x14A   0x468B             MOV      R11,R1
+   \      0x14C   0x.... 0x....      BL       cos
+   \      0x150   0xE9CD 0x0108      STRD     R0,R1,[SP, #+32]
+   \      0x154   0x4650             MOV      R0,R10
+   \      0x156   0x4659             MOV      R1,R11
+   \      0x158   0x.... 0x....      BL       sin
+   \      0x15C   0xE9CD 0x0106      STRD     R0,R1,[SP, #+24]
+   \      0x160   0xF04F 0x4A8F      MOV      R10,#+1199570944
+   \      0x164   0x4648             MOV      R0,R9
+   \      0x166   0x.... 0x....      BL       __aeabi_f2d
+   \      0x16A   0xE9DD 0x2308      LDRD     R2,R3,[SP, #+32]
+   \      0x16E   0x.... 0x....      BL       __aeabi_dmul
+   \      0x172   0x.... 0x....      BL       __aeabi_d2f
+   \      0x176   0x4651             MOV      R1,R10
+   \      0x178   0x.... 0x....      BL       __aeabi_fmul
+   \      0x17C   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x180   0x9001             STR      R0,[SP, #+4]
+   \      0x182   0x4648             MOV      R0,R9
+   \      0x184   0x.... 0x....      BL       __aeabi_f2d
+   \      0x188   0xE9DD 0x2306      LDRD     R2,R3,[SP, #+24]
+   \      0x18C   0x.... 0x....      BL       __aeabi_dmul
+   \      0x190   0x.... 0x....      BL       __aeabi_d2f
+   \      0x194   0x4651             MOV      R1,R10
+   \      0x196   0x.... 0x....      BL       __aeabi_fmul
+   \      0x19A   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x19E   0x9002             STR      R0,[SP, #+8]
+   \      0x1A0   0x....             LDR.N    R1,??DataTable1_3
+   \      0x1A2   0x9800             LDR      R0,[SP, #+0]
+   \      0x1A4   0x.... 0x....      BL       __aeabi_fdiv
+   \      0x1A8   0x....             LDR.N    R1,??DataTable1_4
+   \      0x1AA   0x.... 0x....      BL       __aeabi_fmul
+   \      0x1AE   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x1B2   0x9003             STR      R0,[SP, #+12]
+   \                     ??on_host_request_26: (+1)
+   \      0x1B4   0x6838             LDR      R0,[R7, #+0]
+   \      0x1B6   0x.... 0x....      BL       __aeabi_i2f
+   \      0x1BA   0x.... 0x....      BL       __aeabi_f2d
+   \      0x1BE   0x2200             MOVS     R2,#+0
+   \      0x1C0   0x....             LDR.N    R3,??DataTable1_5
+   \      0x1C2   0x.... 0x....      BL       __aeabi_dmul
+   \      0x1C6   0x2200             MOVS     R2,#+0
+   \      0x1C8   0x....             LDR.N    R3,??DataTable1_6
+   \      0x1CA   0x.... 0x....      BL       __aeabi_dmul
+   \      0x1CE   0x.... 0x....      BL       __aeabi_d2f
+   \      0x1D2   0x4681             MOV      R9,R0
+   \      0x1D4   0x68B8             LDR      R0,[R7, #+8]
+   \      0x1D6   0x.... 0x....      BL       __aeabi_i2f
+   \      0x1DA   0xF04F 0x515E      MOV      R1,#+931135488
+   \      0x1DE   0x.... 0x....      BL       __aeabi_fmul
+   \      0x1E2   0x....             LDR.N    R1,??DataTable1_7
+   \      0x1E4   0x.... 0x....      BL       __aeabi_fmul
+   \      0x1E8   0x4682             MOV      R10,R0
+   \      0x1EA   0x4648             MOV      R0,R9
+   \      0x1EC   0x4651             MOV      R1,R10
+   \      0x1EE   0x.... 0x....      BL       __aeabi_fsub
+   \      0x1F2   0x4607             MOV      R7,R0
+   \      0x1F4   0x4648             MOV      R0,R9
+   \      0x1F6   0x4651             MOV      R1,R10
+   \      0x1F8   0x.... 0x....      BL       __aeabi_fadd
+   \      0x1FC   0x4681             MOV      R9,R0
+   \      0x1FE   0x.... 0x....      BL       bumpermonitor_clamp_motorcmd
+   \      0x202   0x4683             MOV      R11,R0
+   \      0x204   0x4638             MOV      R0,R7
+   \      0x206   0x.... 0x....      BL       bumpermonitor_clamp_motorcmd
+   \      0x20A   0x4682             MOV      R10,R0
+   \      0x20C   0x4658             MOV      R0,R11
+   \      0x20E   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x212   0x4683             MOV      R11,R0
+   \      0x214   0x4650             MOV      R0,R10
+   \      0x216   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x21A   0x4659             MOV      R1,R11
+   \      0x21C   0x.... 0x....      BL       set_walkingmotor_speed
+   \      0x220   0x4638             MOV      R0,R7
+   \      0x222   0x2100             MOVS     R1,#+0
+   \      0x224   0x.... 0x....      BL       __aeabi_cfcmpeq
+   \      0x228   0xD002             BEQ.N    ??on_host_request_27
+   \      0x22A   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x22E   0x4604             MOV      R4,R0
+   \                     ??on_host_request_27: (+1)
+   \      0x230   0x4648             MOV      R0,R9
+   \      0x232   0x2100             MOVS     R1,#+0
+   \      0x234   0x.... 0x....      BL       __aeabi_cfcmpeq
+   \      0x238   0xD002             BEQ.N    ??on_host_request_28
+   \      0x23A   0x.... 0x....      BL       __aeabi_f2iz
+   \      0x23E   0x4605             MOV      R5,R0
+   \                     ??on_host_request_28: (+1)
+   \      0x240   0x.... 0x....      BL       is_ontheground
+   \      0x244   0x2800             CMP      R0,#+0
+   \      0x246   0xF89D 0x1010      LDRB     R1,[SP, #+16]
+   \      0x24A   0xBF14             ITE      NE
+   \      0x24C   0x2000             MOVNE    R0,#+0
+   \      0x24E   0x2004             MOVEQ    R0,#+4
+   \      0x250   0x4308             ORRS     R0,R0,R1
+   \      0x252   0xF88D 0x0010      STRB     R0,[SP, #+16]
+   \      0x256   0x220D             MOVS     R2,#+13
+   \      0x258   0xA901             ADD      R1,SP,#+4
+   \      0x25A   0xE104             B.N      ??on_host_request_29
+   \                     ??on_host_request_9: (+1)
+   \      0x25C   0x6879             LDR      R1,[R7, #+4]
+   \      0x25E   0x6838             LDR      R0,[R7, #+0]
+   \      0x260   0x.... 0x....      BL       bumpermonitor_filter_motorcmd
+   \      0x264   0xB948             CBNZ.N   R0,??on_host_request_19
+   \      0x266   0x6879             LDR      R1,[R7, #+4]
+   \      0x268   0x6838             LDR      R0,[R7, #+0]
+   \      0x26A   0x.... 0x....      BL       set_walkingmotor_speed
+   \      0x26E   0x6838             LDR      R0,[R7, #+0]
+   \      0x270   0xB100             CBZ.N    R0,??on_host_request_30
+   \      0x272   0x4604             MOV      R4,R0
+   \                     ??on_host_request_30: (+1)
+   \      0x274   0x6878             LDR      R0,[R7, #+4]
+   \      0x276   0xB100             CBZ.N    R0,??on_host_request_19
+   \      0x278   0x4605             MOV      R5,R0
+   \                     ??on_host_request_19: (+1)
+   \      0x27A   0x2200             MOVS     R2,#+0
+   \      0x27C   0x2100             MOVS     R1,#+0
+   \      0x27E   0xE095             B.N      ??on_host_request_31
+   \                     ??on_host_request_8: (+1)
+   \      0x280   0x7838             LDRB     R0,[R7, #+0]
+   \      0x282   0x2800             CMP      R0,#+0
+   \      0x284   0xF040 0x8115      BNE.W    ??on_host_request_14
+   \      0x288   0x2103             MOVS     R1,#+3
+   \      0x28A   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \      0x28E   0xF88D 0x1001      STRB     R1,[SP, #+1]
+   \      0x292   0x.... 0x....      BL       homeir_getleftdata
+   \      0x296   0x.... 0x....      BL       envSensorData2CtrlBusData
+   \      0x29A   0xF88D 0x0002      STRB     R0,[SP, #+2]
+   \      0x29E   0x.... 0x....      BL       homeir_getmaindata
+   \      0x2A2   0x.... 0x....      BL       envSensorData2CtrlBusData
+   \      0x2A6   0xF88D 0x0003      STRB     R0,[SP, #+3]
+   \      0x2AA   0x.... 0x....      BL       homeir_getrightdata
+   \      0x2AE   0x.... 0x....      BL       envSensorData2CtrlBusData
+   \      0x2B2   0xF89D 0x2001      LDRB     R2,[SP, #+1]
+   \      0x2B6   0xF88D 0x0004      STRB     R0,[SP, #+4]
+   \      0x2BA   0x1C92             ADDS     R2,R2,#+2
+   \      0x2BC   0xB292             UXTH     R2,R2
+   \      0x2BE   0xE0D1             B.N      ??on_host_request_20
+   \                     ??on_host_request_7: (+1)
+   \      0x2C0   0x.... 0x....      BL       get_bump_bitmap
+   \      0x2C4   0x9000             STR      R0,[SP, #+0]
+   \      0x2C6   0x.... 0x....      BL       get_distir_value
+   \      0x2CA   0x9900             LDR      R1,[SP, #+0]
+   \      0x2CC   0x6900             LDR      R0,[R0, #+16]
+   \      0x2CE   0xEA41 0x0180      ORR      R1,R1,R0, LSL #+2
+   \      0x2D2   0x9100             STR      R1,[SP, #+0]
+   \      0x2D4   0x2204             MOVS     R2,#+4
+   \      0x2D6   0xE0C5             B.N      ??on_host_request_20
+   \                     ??on_host_request_6: (+1)
+   \      0x2D8   0x2140             MOVS     R1,#+64
+   \      0x2DA   0x4668             MOV      R0,SP
+   \      0x2DC   0x.... 0x....      BL       __aeabi_memclr4
+   \      0x2E0   0x2700             MOVS     R7,#+0
+   \                     ??on_host_request_32: (+1)
+   \      0x2E2   0xB2F8             UXTB     R0,R7
+   \      0x2E4   0x.... 0x....      BL       sonar_get
+   \      0x2E8   0x0400             LSLS     R0,R0,#+16
+   \      0x2EA   0xF84D 0x0027      STR      R0,[SP, R7, LSL #+2]
+   \      0x2EE   0x1C7F             ADDS     R7,R7,#+1
+   \      0x2F0   0x2F04             CMP      R7,#+4
+   \      0x2F2   0xD3F6             BCC.N    ??on_host_request_32
+   \      0x2F4   0x.... 0x....      BL       homeir_getmaindata
+   \      0x2F8   0x0400             LSLS     R0,R0,#+16
+   \      0x2FA   0x.... 0x....      BL       __aeabi_i2f
+   \      0x2FE   0x.... 0x....      BL       __aeabi_f2uiz
+   \      0x302   0x9008             STR      R0,[SP, #+32]
+   \      0x304   0x.... 0x....      BL       homeir_getleftdata
+   \      0x308   0x0400             LSLS     R0,R0,#+16
+   \      0x30A   0x.... 0x....      BL       __aeabi_i2f
+   \      0x30E   0x.... 0x....      BL       __aeabi_f2uiz
+   \      0x312   0x9009             STR      R0,[SP, #+36]
+   \      0x314   0x.... 0x....      BL       homeir_getrightdata
+   \      0x318   0x0400             LSLS     R0,R0,#+16
+   \      0x31A   0x.... 0x....      BL       __aeabi_i2f
+   \      0x31E   0x.... 0x....      BL       __aeabi_f2uiz
+   \      0x322   0x900A             STR      R0,[SP, #+40]
+   \      0x324   0x2240             MOVS     R2,#+64
+   \      0x326   0xE09D             B.N      ??on_host_request_20
+   \                     ??on_host_request_5: (+1)
+   \      0x328   0x2109             MOVS     R1,#+9
+   \      0x32A   0x4668             MOV      R0,SP
+   \      0x32C   0x.... 0x....      BL       __aeabi_memclr4
+   \      0x330   0x.... 0x....      BL       walkingmotor_cumulate_ldist_mm
+   \      0x334   0x9000             STR      R0,[SP, #+0]
+   \      0x336   0x.... 0x....      BL       walkingmotor_cumulate_rdist_mm
+   \      0x33A   0x9001             STR      R0,[SP, #+4]
+   \      0x33C   0x.... 0x....      BL       is_ontheground
+   \      0x340   0x2800             CMP      R0,#+0
+   \      0x342   0xF89D 0x1008      LDRB     R1,[SP, #+8]
+   \      0x346   0xBF14             ITE      NE
+   \      0x348   0x2000             MOVNE    R0,#+0
+   \      0x34A   0x2004             MOVEQ    R0,#+4
+   \      0x34C   0x4308             ORRS     R0,R0,R1
+   \      0x34E   0xF88D 0x0008      STRB     R0,[SP, #+8]
+   \      0x352   0x2209             MOVS     R2,#+9
+   \      0x354   0xE086             B.N      ??on_host_request_20
+   \                     ??on_host_request_4: (+1)
+   \      0x356   0x2000             MOVS     R0,#+0
+   \      0x358   0xF88D 0x0001      STRB     R0,[SP, #+1]
+   \      0x35C   0x.... 0x....      BL       charge_detect_getstatus
+   \      0x360   0x2801             CMP      R0,#+1
+   \      0x362   0xF89D 0x1001      LDRB     R1,[SP, #+1]
+   \      0x366   0xBF18             IT       NE
+   \      0x368   0x2000             MOVNE    R0,#+0
+   \      0x36A   0x4308             ORRS     R0,R0,R1
+   \      0x36C   0xF88D 0x0001      STRB     R0,[SP, #+1]
+   \      0x370   0x.... 0x....      BL       get_home_charge_status
+   \      0x374   0xB100             CBZ.N    R0,??on_host_request_33
+   \      0x376   0x2004             MOVS     R0,#+4
+   \                     ??on_host_request_33: (+1)
+   \      0x378   0xF89D 0x1001      LDRB     R1,[SP, #+1]
+   \      0x37C   0x4308             ORRS     R0,R0,R1
+   \      0x37E   0xF88D 0x0001      STRB     R0,[SP, #+1]
+   \      0x382   0x.... 0x....      BL       get_dc_charge_status
+   \      0x386   0x2800             CMP      R0,#+0
+   \      0x388   0xF89D 0x2001      LDRB     R2,[SP, #+1]
+   \      0x38C   0xBF14             ITE      NE
+   \      0x38E   0x2102             MOVNE    R1,#+2
+   \      0x390   0x2100             MOVEQ    R1,#+0
+   \      0x392   0x4311             ORRS     R1,R1,R2
+   \      0x394   0xF88D 0x1001      STRB     R1,[SP, #+1]
+   \      0x398   0x.... 0x....      BL       get_electricitypercentage
+   \                     ??on_host_request_24: (+1)
+   \      0x39C   0xF88D 0x0000      STRB     R0,[SP, #+0]
+   \                     ??on_host_request_21: (+1)
+   \      0x3A0   0x2202             MOVS     R2,#+2
+   \      0x3A2   0xE05F             B.N      ??on_host_request_20
+   \                     ??on_host_request_3: (+1)
+   \      0x3A4   0x....             LDR.N    R0,??DataTable1_8
+   \      0x3A6   0x....             LDR.N    R1,??DataTable1_9
+   \      0x3A8   0x6802             LDR      R2,[R0, #+0]
+   \      0x3AA   0xB292             UXTH     R2,R2
+   \                     ??on_host_request_31: (+1)
+   \      0x3AC   0x4640             MOV      R0,R8
+   \      0x3AE   0x.... 0x....      BL       net_send_ans
+   \      0x3B2   0xE083             B.N      ??on_host_request_23
+   \                     ??on_host_request_2: (+1)
+   \      0x3B4   0xF44F 0x4234      MOV      R2,#+46080
+   \      0x3B8   0xF8CD 0x2001      STR      R2,[SP, #+1]
+   \      0x3BC   0x2100             MOVS     R1,#+0
+   \      0x3BE   0xF88D 0x1000      STRB     R1,[SP, #+0]
+   \      0x3C2   0xF88D 0x1005      STRB     R1,[SP, #+5]
+   \      0x3C6   0x2204             MOVS     R2,#+4
+   \      0x3C8   0xF88D 0x2006      STRB     R2,[SP, #+6]
+   \      0x3CC   0x2180             MOVS     R1,#+128
+   \      0x3CE   0xF10D 0x0007      ADD      R0,SP,#+7
+   \      0x3D2   0x.... 0x....      BL       __aeabi_memclr
+   \      0x3D6   0x2002             MOVS     R0,#+2
+   \      0x3D8   0xF88D 0x0087      STRB     R0,[SP, #+135]
+   \      0x3DC   0x2180             MOVS     R1,#+128
+   \      0x3DE   0xA822             ADD      R0,SP,#+136
+   \      0x3E0   0x.... 0x....      BL       __aeabi_memclr4
+   \      0x3E4   0x2000             MOVS     R0,#+0
+   \      0x3E6   0xF8CD 0x000B      STR      R0,[SP, #+11]
+   \      0x3EA   0xF8CD 0x0013      STR      R0,[SP, #+19]
+   \      0x3EE   0xF44F 0x412A      MOV      R1,#+43520
+   \      0x3F2   0xF44F 0x4013      MOV      R0,#+37632
+   \      0x3F6   0xF8CD 0x003B      STR      R0,[SP, #+59]
+   \      0x3FA   0xF8CD 0x1007      STR      R1,[SP, #+7]
+   \      0x3FE   0xF44F 0x40AA      MOV      R0,#+21760
+   \      0x402   0xF8CD 0x0037      STR      R0,[SP, #+55]
+   \      0x406   0xF44F 0x42F0      MOV      R2,#+30720
+   \      0x40A   0xF44F 0x4096      MOV      R0,#+19200
+   \      0x40E   0xF8CD 0x0043      STR      R0,[SP, #+67]
+   \      0x412   0xF8CD 0x2017      STR      R2,[SP, #+23]
+   \      0x416   0xA822             ADD      R0,SP,#+136
+   \      0x418   0xF8CD 0x202B      STR      R2,[SP, #+43]
+   \      0x41C   0xF8CD 0x2027      STR      R2,[SP, #+39]
+   \      0x420   0x9222             STR      R2,[SP, #+136]
+   \      0x422   0x6042             STR      R2,[R0, #+4]
+   \      0x424   0x6102             STR      R2,[R0, #+16]
+   \      0x426   0xF44F 0x5E70      MOV      LR,#+15360
+   \      0x42A   0x....             LDR.N    R1,??DataTable1_10
+   \      0x42C   0x....             LDR.N    R3,??DataTable1_11
+   \      0x42E   0xF44F 0x5734      MOV      R7,#+11520
+   \      0x432   0xF44F 0x5C48      MOV      R12,#+12800
+   \      0x436   0xF8CD 0xE00F      STR      LR,[SP, #+15]
+   \      0x43A   0xF8CD 0x101B      STR      R1,[SP, #+27]
+   \      0x43E   0xF8CD 0xE01F      STR      LR,[SP, #+31]
+   \      0x442   0xF8CD 0x3023      STR      R3,[SP, #+35]
+   \      0x446   0xF8CD 0xE02F      STR      LR,[SP, #+47]
+   \      0x44A   0xF8CD 0x7033      STR      R7,[SP, #+51]
+   \      0x44E   0xF8CD 0xE03F      STR      LR,[SP, #+63]
+   \      0x452   0xF8C0 0xC008      STR      R12,[R0, #+8]
+   \      0x456   0x60C7             STR      R7,[R0, #+12]
+   \      0x458   0x6141             STR      R1,[R0, #+20]
+   \      0x45A   0xF8C0 0xC018      STR      R12,[R0, #+24]
+   \      0x45E   0x61C3             STR      R3,[R0, #+28]
+   \      0x460   0xF44F 0x7284      MOV      R2,#+264
+   \                     ??on_host_request_20: (+1)
+   \      0x464   0x4669             MOV      R1,SP
+   \                     ??on_host_request_29: (+1)
+   \      0x466   0x4640             MOV      R0,R8
+   \      0x468   0x.... 0x....      BL       net_send_ans
+   \      0x46C   0xE026             B.N      ??on_host_request_23
+   \                     ??on_host_request_1: (+1)
+   \      0x46E   0x7838             LDRB     R0,[R7, #+0]
+   \      0x470   0x2801             CMP      R0,#+1
+   \      0x472   0xD11E             BNE.N    ??on_host_request_14
+   \      0x474   0x....             LDR.N    R7,??DataTable1_12
+   \      0x476   0x220C             MOVS     R2,#+12
+   \      0x478   0x4639             MOV      R1,R7
+   \      0x47A   0x4668             MOV      R0,SP
+   \      0x47C   0x.... 0x....      BL       __aeabi_memcpy
+   \      0x480   0x89B8             LDRH     R0,[R7, #+12]
+   \      0x482   0xF8AD 0x000C      STRH     R0,[SP, #+12]
+   \      0x486   0x221C             MOVS     R2,#+28
+   \      0x488   0x89F8             LDRH     R0,[R7, #+14]
+   \      0x48A   0xF8AD 0x000E      STRH     R0,[SP, #+14]
+   \      0x48E   0x4669             MOV      R1,SP
+   \      0x490   0x6938             LDR      R0,[R7, #+16]
+   \      0x492   0x9004             STR      R0,[SP, #+16]
+   \      0x494   0x6978             LDR      R0,[R7, #+20]
+   \      0x496   0x9005             STR      R0,[SP, #+20]
+   \      0x498   0x69B8             LDR      R0,[R7, #+24]
+   \      0x49A   0x9006             STR      R0,[SP, #+24]
+   \      0x49C   0x4640             MOV      R0,R8
+   \      0x49E   0x.... 0x....      BL       net_send_ans
+   \      0x4A2   0x2202             MOVS     R2,#+2
+   \      0x4A4   0xF44F 0x7196      MOV      R1,#+300
+   \      0x4A8   0xF241 0x7070      MOVW     R0,#+6000
+   \      0x4AC   0x.... 0x....      BL       beep_beeper
+   \      0x4B0   0xE004             B.N      ??on_host_request_23
+    415                  break;
+    416              default:
+    417                  net_send_errorcode(channel, PKT_ERRORCODE_NOT_SUPPORT);
+   \                     ??on_host_request_14: (+1)
+   \      0x4B2   0xF44F 0x4100      MOV      R1,#+32768
+   \                     ??on_host_request_22: (+1)
+   \      0x4B6   0x4640             MOV      R0,R8
+   \      0x4B8   0x.... 0x....      BL       net_send_errorcode
+    418              }
+    419          }
+   \                     ??on_host_request_23: (+1)
+   \      0x4BC   0x60B5             STR      R5,[R6, #+8]
+   \      0x4BE   0x6074             STR      R4,[R6, #+4]
+   \      0x4C0   0xB043             ADD      SP,SP,#+268
+   \      0x4C2   0xE8BD 0x8FF0      POP      {R4-R11,PC}
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \        0x0   0x....'....        DC32     is_first_motor_data
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \        0x0   0x....'....        DC32     shutdownHeartbeatFrequency
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \        0x0   0x436C'0000        DC32     0x436c0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \        0x0   0x4049'0FDB        DC32     0x40490fdb
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \        0x0   0x4B34'0000        DC32     0x4b340000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \        0x0   0x408F'4000        DC32     0x408f4000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_6:
+   \        0x0   0x3EF0'0000        DC32     0x3ef00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_7:
+   \        0x0   0x42EC'0000        DC32     0x42ec0000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_8:
+   \        0x0   0x....'....        DC32     slamware_config_size
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_9:
+   \        0x0   0x....'....        DC32     slamware_config
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_10:
+   \        0x0   0xFFFF'8800        DC32     0xffff8800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_11:
+   \        0x0   0x0001'3B00        DC32     0x13b00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_12:
+   \        0x0   0x....'....        DC32     baseInfo
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   envSensorData2CtrlBusData
+     304   on_host_request
+       304   -> __aeabi_d2f
+       304   -> __aeabi_dmul
+       304   -> __aeabi_f2d
+       304   -> __aeabi_f2iz
+       304   -> __aeabi_f2uiz
+       304   -> __aeabi_fadd
+       304   -> __aeabi_fdiv
+       304   -> __aeabi_fmul
+       304   -> __aeabi_fsub
+       304   -> __aeabi_i2f
+       304   -> __aeabi_memclr
+       304   -> __aeabi_memclr4
+       304   -> __aeabi_memcpy
+       304   -> beep_beeper
+       304   -> bumpermonitor_clamp_motorcmd
+       304   -> bumpermonitor_filter_motorcmd
+       304   -> charge_detect_getstatus
+       304   -> clear_drv_ctrlbus_ncmd
+       304   -> cos
+       304   -> envSensorData2CtrlBusData
+       304   -> get_bump_bitmap
+       304   -> get_dc_charge_status
+       304   -> get_distir_value
+       304   -> get_drv_ctrlbus_ncmd
+       304   -> get_electricitypercentage
+       304   -> get_home_charge_status
+       304   -> getms
+       304   -> health_monitor_clear
+       304   -> health_monitor_get_desc
+       304   -> health_monitor_get_error
+       304   -> health_monitor_get_status
+       304   -> homeir_getleftdata
+       304   -> homeir_getmaindata
+       304   -> homeir_getrightdata
+       304   -> is_drv_ctrlbus_ncmd
+       304   -> is_ontheground
+       304   -> net_get_request_cmd
+       304   -> net_get_request_data
+       304   -> net_send_ans
+       304   -> net_send_errorcode
+       304   -> set_walkingmotor_speed
+       304   -> sin
+       304   -> sonar_get
+       304   -> strcpy
+       304   -> walkingmotor_cumulate_ldist_mm
+       304   -> walkingmotor_cumulate_rdist_mm
+       304   -> walkingmotor_delta_ldist_mm_f
+       304   -> walkingmotor_delta_rdist_mm_f
+       304 __aeabi_cfcmpeq
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_10
+       4  ??DataTable1_11
+       4  ??DataTable1_12
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+      22  envSensorData2CtrlBusData
+      12  is_first_motor_data
+          last_motor_l_speed
+          last_motor_r_speed
+   1'222  on_host_request
+
+ 
+    12 bytes in section .data
+ 1'296 bytes in section .text
+ 
+ 1'296 bytes of CODE memory
+    12 bytes of DATA memory
+
+Errors: none
+Warnings: none

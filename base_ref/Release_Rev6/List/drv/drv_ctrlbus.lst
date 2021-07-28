@@ -1,0 +1,347 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V9.10.2.313/W64 for ARM         28/Jul/2021  15:57:27
+# Copyright 1999-2021 IAR Systems AB.
+#
+#    Cpu mode                     =  thumb
+#    Endian                       =  little
+#    Source file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\drv_ctrlbus.c
+#    Command line                 =
+#        -f
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\drv_ctrlbus.lst.rsp
+#        (C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\drv_ctrlbus.c
+#        -D USE_STDPERIPH_DRIVER -D STM32F10X_HD -D USART_ENABLE_USART3 -D
+#        CONFIG_BREAKOUT_REV=6 -D USE_FRONT_IR_SENSORS -D FEATURE_SET_V -lCN
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv
+#        --diag_suppress Pa050 -o
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv
+#        --debug --endian=little --cpu=Cortex-M3 -e --fpu=None --dlib_config
+#        "C:\Program Files\IAR Systems\Embedded Workbench
+#        9.0\arm\inc\c\DLib_Config_Normal.h" -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\..\common\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\CoreSupport\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\CMSIS\CM3\DeviceSupport\ST\STM32F10x\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\st_fwlib\STM32F10x_StdPeriph_Driver\inc\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\
+#        -I
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\..\infra_pub\arch\infra_stm32\32f10x\
+#        -Ohz --use_c++_inline) --dependencies=n
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\drv_ctrlbus.o.d
+#    Locale                       =  C
+#    List file                    =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\List\drv\drv_ctrlbus.lst
+#    Object file                  =
+#        C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\Release_Rev6\Obj\drv\drv_ctrlbus.o
+#    Runtime model:                  
+#      __SystemLibrary            =  DLib
+#      __dlib_full_locale_support =  0
+#      __dlib_version             =  6
+#
+###############################################################################
+
+C:\Users\linux\Desktop\SLAMWARE\breakoutBoardVersion6ReferenceCode\slamwarekit_reference_v6_code.20181120\slamwarekit_reference_v6_code.20181120\base_ref\src\drv\drv_ctrlbus.c
+      1          /*
+      2           * SlamTec Base Ref Design
+      3           * Copyright 2009 - 2017 RoboPeak
+      4           * Copyright 2013 - 2017 Shanghai SlamTec Co., Ltd.
+      5           * http://www.slamtec.com
+      6           * All rights reserved.
+      7           */
+      8          /*
+      9           * Redistribution and use in source and binary forms, with or without modification,
+     10           * are permitted provided that the following conditions are met:
+     11           *
+     12           * 1. Redistributions of source code must retain the above copyright notice,
+     13           *    this list of conditions and the following disclaimer.
+     14           *
+     15           * 2. Redistributions in binary form must reproduce the above copyright notice,
+     16           *    this list of conditions and the following disclaimer in the documentation
+     17           *    and/or other materials provided with the distribution.
+     18           *
+     19           * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+     20           * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+     21           * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+     22           * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+     23           * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+     24           * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+     25           * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+     26           * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+     27           * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+     28           *
+     29           */
+     30          
+     31          #include "common/common.h"
+
+   \                                 In section .text, align 2, keep-with-next
+   \   static __softfp void pinMode(GPIO_TypeDef *, uint16_t, GPIOMode_TypeDef, GPIOSpeed_TypeDef)
+   \                     pinMode: (+1)
+   \        0x0   0xB580             PUSH     {R7,LR}
+   \        0x2   0xF8AD 0x1000      STRH     R1,[SP, #+0]
+   \        0x6   0xF88D 0x3002      STRB     R3,[SP, #+2]
+   \        0xA   0xF88D 0x2003      STRB     R2,[SP, #+3]
+   \        0xE   0x4669             MOV      R1,SP
+   \       0x10   0x.... 0x....      BL       GPIO_Init
+   \       0x14   0xBD01             POP      {R0,PC}
+     32          
+
+   \                                 In section .bss, align 4
+     33          baseInfo_t baseInfo;
+     34          static _u8 currentNcmd;
+   \                     currentNcmd:
+   \        0x0                      DS8 1
+   \        0x1                      DS8 3
+   \                     baseInfo:
+   \        0x4                      DS8 28
+     35          /*
+     36           * ctrlbus nCMD脚初始化函数
+     37           * 填充baseInfo，slamcore会要
+     38           */
+
+   \                                 In section .text, align 4, keep-with-next
+     39          void init_drv_ctrlbus()
+     40          {
+   \                     init_drv_ctrlbus: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     41              pinMode(CTRLBUS_CBUSY_PORT, CTRLBUS_CBUSY_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_50MHz);
+   \        0x2   0x2303             MOVS     R3,#+3
+   \        0x4   0x2204             MOVS     R2,#+4
+   \        0x6   0xF44F 0x5180      MOV      R1,#+4096
+   \        0xA   0x....             LDR.N    R0,??DataTable7
+   \        0xC   0x....             LDR.N    R4,??DataTable7_1
+   \        0xE   0x.... 0x....      BL       pinMode
+     42              pinMode(CTRLBUS_CCMD_PORT, CTRLBUS_CCMD_PIN, GPIO_Mode_Out_OD, GPIO_Speed_50MHz);
+   \       0x12   0x.... 0x....      BL       ?Subroutine0
+     43              PIN_SET(CTRLBUS_CCMD_PORT, CTRLBUS_CCMD_PIN, HIGH);
+   \                     ??CrossCallReturnLabel_1: (+1)
+   \       0x16   0xF44F 0x7000      MOV      R0,#+512
+   \       0x1A   0x6120             STR      R0,[R4, #+16]
+     44          
+     45              memset(&baseInfo, 0, sizeof(baseInfo_t));
+   \       0x1C   0x211C             MOVS     R1,#+28
+   \       0x1E   0x....             LDR.N    R4,??DataTable7_2
+   \       0x20   0x1D20             ADDS     R0,R4,#+4
+   \       0x22   0x.... 0x....      BL       __aeabi_memclr4
+     46              baseInfo.firmwareVersion = (FIRMWARE_VERSION_MAJOR << 8) | FIRMWARE_VERSION_MINOR;
+   \       0x26   0x205A             MOVS     R0,#+90
+     47              baseInfo.hardwareVersion = HARDWARE_VERSION_MAJOR;
+   \       0x28   0x2101             MOVS     R1,#+1
+   \       0x2A   0x8220             STRH     R0,[R4, #+16]
+   \       0x2C   0x8261             STRH     R1,[R4, #+18]
+     48              memcpy(&baseInfo.model, "ref base\0", 9);
+   \       0x2E   0x2209             MOVS     R2,#+9
+   \       0x30   0x....             ADR.N    R1,?_0
+   \       0x32   0x1D20             ADDS     R0,R4,#+4
+   \       0x34   0x.... 0x....      BL       __aeabi_memcpy4
+     49              for (_s32 pos = 0; pos < STM32_SELFID_LEN; ++pos) {
+   \       0x38   0x2000             MOVS     R0,#+0
+   \       0x3A   0x....             LDR.N    R1,??DataTable7_3
+     50                  baseInfo.serialNumber[pos] = get_self_id()[pos];
+   \                     ??init_drv_ctrlbus_0: (+1)
+   \       0x3C   0xF851 0x2020      LDR      R2,[R1, R0, LSL #+2]
+   \       0x40   0xEB04 0x0380      ADD      R3,R4,R0, LSL #+2
+   \       0x44   0x1C40             ADDS     R0,R0,#+1
+   \       0x46   0x2803             CMP      R0,#+3
+   \       0x48   0x615A             STR      R2,[R3, #+20]
+   \       0x4A   0xDBF7             BLT.N    ??init_drv_ctrlbus_0
+     51              }
+     52              currentNcmd = -1;
+   \       0x4C   0x20FF             MOVS     R0,#+255
+   \       0x4E   0x7020             STRB     R0,[R4, #+0]
+     53          }
+   \       0x50   0xBD10             POP      {R4,PC}
+
+   \                                 In section .text, align 2, keep-with-next
+   \                     ?Subroutine0: (+1)
+   \        0x0   0x2303             MOVS     R3,#+3
+   \        0x2   0x2214             MOVS     R2,#+20
+   \        0x4   0xF44F 0x7100      MOV      R1,#+512
+   \        0x8   0x4620             MOV      R0,R4
+   \        0xA   0x....             B.N      pinMode
+     54          /*
+     55           * ctrlbus nCMD脚拉低函数
+     56           * 预留
+     57           */
+
+   \                                 In section .text, align 2, keep-with-next
+     58          void set_drv_ctrlbus_ncmd(_u8 ncmd)
+     59          {
+     60              PIN_SET(CTRLBUS_CCMD_PORT, CTRLBUS_CCMD_PIN, LOW);
+   \                     set_drv_ctrlbus_ncmd: (+1)
+   \        0x0   0x....             LDR.N    R2,??DataTable7_4
+     61              currentNcmd = ncmd;
+   \        0x2   0x....             LDR.N    R3,??DataTable7_2
+   \        0x4   0xF44F 0x7100      MOV      R1,#+512
+   \        0x8   0x6011             STR      R1,[R2, #+0]
+   \        0xA   0x7018             STRB     R0,[R3, #+0]
+     62          }
+   \        0xC   0x4770             BX       LR
+     63          /*
+     64           * ctrlbus nCMD脚拉高函数
+     65           */
+
+   \                                 In section .text, align 2, keep-with-next
+     66          void clear_drv_ctrlbus_ncmd(void)
+     67          {
+   \                     clear_drv_ctrlbus_ncmd: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     68              pinMode(CTRLBUS_CCMD_PORT, CTRLBUS_CCMD_PIN, GPIO_Mode_Out_OD, GPIO_Speed_50MHz);
+   \        0x2   0x....             LDR.N    R4,??DataTable7_1
+   \        0x4   0x.... 0x....      BL       ?Subroutine0
+     69              PIN_SET(CTRLBUS_CCMD_PORT, CTRLBUS_CCMD_PIN, HIGH);
+   \                     ??CrossCallReturnLabel_0: (+1)
+   \        0x8   0xF44F 0x7200      MOV      R2,#+512
+     70              currentNcmd = -1;
+   \        0xC   0x....             LDR.N    R1,??DataTable7_2
+   \        0xE   0x6122             STR      R2,[R4, #+16]
+   \       0x10   0x20FF             MOVS     R0,#+255
+   \       0x12   0x7008             STRB     R0,[R1, #+0]
+     71          }
+   \       0x14   0xBD10             POP      {R4,PC}
+     72          /*
+     73           * 获取ctrlbus nCMD脚状态函数
+     74           * 预留
+     75           */
+
+   \                                 In section .text, align 2, keep-with-next
+     76          bool is_drv_ctrlbus_ncmd(void)
+     77          {
+     78              return !(currentNcmd == (_u8) - 1);
+   \                     is_drv_ctrlbus_ncmd: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable7_2
+   \        0x2   0x7801             LDRB     R1,[R0, #+0]
+   \        0x4   0x29FF             CMP      R1,#+255
+   \        0x6   0xD001             BEQ.N    ??is_drv_ctrlbus_ncmd_0
+   \        0x8   0x2001             MOVS     R0,#+1
+   \        0xA   0x4770             BX       LR
+   \                     ??is_drv_ctrlbus_ncmd_0: (+1)
+   \        0xC   0x2000             MOVS     R0,#+0
+   \        0xE   0x4770             BX       LR
+     79          }
+     80          /*
+     81           * 获取ctrlbus nCMD函数
+     82           * 预留
+     83           */
+
+   \                                 In section .text, align 2, keep-with-next
+     84          _u8 get_drv_ctrlbus_ncmd(void)
+     85          {
+     86              return currentNcmd;
+   \                     get_drv_ctrlbus_ncmd: (+1)
+   \        0x0   0x....             LDR.N    R0,??DataTable7_2
+   \        0x2   0x7800             LDRB     R0,[R0, #+0]
+   \        0x4   0x4770             BX       LR
+     87          }
+     88          /*
+     89           * 获取ctrlbus nCMD脚状态忙函数
+     90           * 预留
+     91           */
+
+   \                                 In section .text, align 2, keep-with-next
+     92          bool is_drv_ctrlbus_busy(void)
+     93          {
+   \                     is_drv_ctrlbus_busy: (+1)
+   \        0x0   0xB510             PUSH     {R4,LR}
+     94              pinMode(CTRLBUS_CBUSY_PORT, CTRLBUS_CBUSY_PIN, GPIO_Mode_IN_FLOATING, GPIO_Speed_50MHz);
+   \        0x2   0x....             LDR.N    R4,??DataTable7
+   \        0x4   0x2303             MOVS     R3,#+3
+   \        0x6   0x2204             MOVS     R2,#+4
+   \        0x8   0xF44F 0x5180      MOV      R1,#+4096
+   \        0xC   0x4620             MOV      R0,R4
+   \        0xE   0x.... 0x....      BL       pinMode
+     95              return PIN_READ(CTRLBUS_CBUSY_PORT, CTRLBUS_CBUSY_PIN);
+   \       0x12   0x68A0             LDR      R0,[R4, #+8]
+   \       0x14   0x0B00             LSRS     R0,R0,#+12
+   \       0x16   0xF000 0x0001      AND      R0,R0,#0x1
+   \       0x1A   0xBD10             POP      {R4,PC}
+     96          }
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7:
+   \        0x0   0x4001'0800        DC32     0x40010800
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_1:
+   \        0x0   0x4001'1000        DC32     0x40011000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_2:
+   \        0x0   0x....'....        DC32     currentNcmd
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_3:
+   \        0x0   0x1FFF'F7E8        DC32     0x1ffff7e8
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable7_4:
+   \        0x0   0x4001'1014        DC32     0x40011014
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ?_0:
+   \        0x0   0x72 0x65          DC8 0x72, 0x65, 0x66, 0x20, 0x62, 0x61, 0x73, 0x65
+
+   \              0x66 0x20    
+
+   \              0x62 0x61    
+
+   \              0x73 0x65
+   \        0x8   0x00 0x00          DC8 0, 0
+   \        0xA                      DS8 2
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   clear_drv_ctrlbus_ncmd
+         8   -> pinMode
+       0   get_drv_ctrlbus_ncmd
+       8   init_drv_ctrlbus
+         8   -> __aeabi_memclr4
+         8   -> __aeabi_memcpy4
+         8   -> pinMode
+       8   is_drv_ctrlbus_busy
+         8   -> pinMode
+       0   is_drv_ctrlbus_ncmd
+       8   pinMode
+         8   -> GPIO_Init
+       0   set_drv_ctrlbus_ncmd
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable7
+       4  ??DataTable7_1
+       4  ??DataTable7_2
+       4  ??DataTable7_3
+       4  ??DataTable7_4
+      12  ?Subroutine0
+      12  ?_0
+      22  clear_drv_ctrlbus_ncmd
+      32  currentNcmd
+          baseInfo
+       6  get_drv_ctrlbus_ncmd
+      82  init_drv_ctrlbus
+      28  is_drv_ctrlbus_busy
+      16  is_drv_ctrlbus_ncmd
+      22  pinMode
+      14  set_drv_ctrlbus_ncmd
+
+ 
+  32 bytes in section .bss
+ 234 bytes in section .text
+ 
+ 234 bytes of CODE memory
+  32 bytes of DATA memory
+
+Errors: none
+Warnings: none
